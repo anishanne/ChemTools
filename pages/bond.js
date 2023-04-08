@@ -523,7 +523,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="p-8 h-screen bg-gray-200 dark:bg-gray-900">
+      <div className= "h-screen bg-gray-200 dark:bg-gray-900">
         <Head>
           <title>ChemTools</title>
         </Head>{" "}

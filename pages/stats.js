@@ -835,18 +835,18 @@ export default function Home() {
         <main className="flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full  bg-gray-900 text-lg">
+              <div className="flex justify-left h-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-10 flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-900">
+                <div className="top-0 z-10 flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <img
-                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-56 bg-gray-900"
-                    src="/logo.png"
+                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-48 bg-gray-800"
+                    src="/chemlogo.png"
                   />
-                  <div className="bg-gray-900 col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
-                    <h1 className="bg-gray-900 mb-6 text-5xl font-bold md:text-6xl">
+                  <div className="bg-gray-800 col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
+                    <h1 className="bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
                       Chemistry Tools
                     </h1>
-                    <p className="bg-gray-900 text-2xl font-light md:text-2xl">
+                    <p className="bg-gray-800 text-2xl font-light md:text-2xl">
                       Taking Chemistry to the Next Energy Level
                     </p>
                   </div>

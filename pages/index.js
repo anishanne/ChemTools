@@ -85,10 +85,10 @@ export default function Home() {
                 {" "}
                 <div className="top-0 z-10 flex h-64 flex-shrink-0 bg-gray-200  dark:bg-gray-800">
                   <img
-                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-56 bg-gray-800"
-                    src="/public/toolsofthechem.png"
+                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-48 bg-gray-800"
+                    src="/chemlogo.png"
                   />
-                  <div className="bg-gray-800 col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
+                  <div className="bg-gray-800 col-md-9 col-sm-8 col-12 smallcenter mx-auto text-center my-auto md:m-16">
                     <h1 className="bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
                       Chemistry Tools
                     </h1>
@@ -99,12 +99,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-32">
+              <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-8">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                  <h2 className="text-lg font-semibold text-blue-500">
+                  <h2 className="text-5xl tracking-tight font-bold text-blue-500">
                     Transforming chemistry education.
                   </h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
+                  <p className="mt-2 mb-20 text-4xl font-bold tracking-tight text-gray-200 sm:text-4xl">
                     One Student At a Time.
                   </p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">

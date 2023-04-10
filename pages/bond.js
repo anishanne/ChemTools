@@ -25,9 +25,9 @@ const colors = {
     "bg-gray-400 hover:brightness-150 hover:text-black border-2 border-white",
   reference: "bg-teal-600 hover:none border-2 border-white pointer-events-none",
   reference2:
-    "bg-blue-900 hover:none border-2 border-white pointer-events-none",
+    "bg-blue-800 hover:none border-2 border-white pointer-events-none",
   heading: "font-xl",
-  none: "border-t border-slate-900 bg-slate-900 cursor-default",
+  none: "border-t border-slate-800 bg-slate-800 cursor-default",
 };
 
 const fiftyseven71 = [
@@ -523,7 +523,7 @@ export default function Home() {
 
   return (
     <>
-      <div className= "h-screen bg-gray-200 dark:bg-gray-900">
+      <div className= "h-screen bg-gray-200 dark:bg-gray-800">
         <Head>
           <title>ChemTools</title>
         </Head>{" "}
@@ -536,9 +536,9 @@ export default function Home() {
           />
         </div>
         <main className="flex-1">
-          <div className="h-full bg-gray-800 py-6 dark:bg-gray-900 text-wrap">
-            <div className="bg-gray-900 h-full ml-8 md:ml-48 lg:ml-72 px-3 pb-3 sm:px-6 md:mx-auto md:px-8 text-wrap ">
-              <table className="mt-96 bg-gray-900 cursor-pointer">
+          <div className="h-full bg-gray-800 py-6 dark:bg-gray-800 text-wrap">
+            <div className="bg-gray-800 h-full ml-8 md:ml-48 lg:ml-72 px-3 pb-3 sm:px-6 md:mx-auto md:px-8 text-wrap ">
+              <table className="mt-96 bg-gray-800 cursor-pointer">
                 {JSON.stringify(difference)}
                 <tbody>
                   <tr>
@@ -697,7 +697,7 @@ export default function Home() {
 
                   <tr>
                     <td
-                      className="cursor-default bg-gray-900 border-l border-b border-gray-900 "
+                      className="cursor-default bg-gray-800 border-l border-b border-gray-800 "
                       colSpan="2"
                       rowSpan="2"
                     ></td>
@@ -720,7 +720,7 @@ export default function Home() {
                       </td>
                     ))}
                     <td
-                      className="bg-gray-900 border cursor-default border-gray-900"
+                      className="bg-gray-800 border cursor-default border-gray-800"
                       colSpan="1"
                       rowSpan="1"
                     ></td>
@@ -745,7 +745,7 @@ export default function Home() {
                         {element.symbol}
                       </td>
                     ))}
-                    <td className="cursor-default bg-gray-900"></td>
+                    <td className="cursor-default bg-gray-800"></td>
                   </tr>
                 </tbody>
               </table>

@@ -89,10 +89,10 @@ export default function Home() {
                     src="/chemlogo.png"
                   />
                   <div className="bg-gray-800 col-md-9 col-sm-8 col-12 smallcenter mx-auto text-center my-auto md:m-16">
-                    <h1 className="bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
+                    <h1 className="bg-gray-800 mb-6 text-6xl font-bold text-center">
                       Chemistry Tools
                     </h1>
-                    <p className="bg-gray-800 text-2xl font-light md:text-2xl">
+                    <p className="bg-gray-800 text-2xl font-light">
                       Taking Chemistry to the Next Energy Level
                     </p>
                   </div>

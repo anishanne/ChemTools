@@ -30,7 +30,7 @@ const colors = {
   reference2:
     "bg-blue-800 hover:none border-2 border-white pointer-events-none",
   heading: "font-xl",
-  none: "border-t border-slate-800 bg-slate-800 cursor-default",
+  none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 
 const fiftyseven71 = [
@@ -448,7 +448,7 @@ const thirteenEighteen = [
     symbol: "P",
     name: "Phosphorus",
     color: colors.color1,
-    mass: 20.974,
+    mass: 30.974,
   },
   {
     number: 16,
@@ -1002,7 +1002,7 @@ export default function Home() {
               </div>
 
               <div className="w-full max-w-xs"></div>
-              <table className="w-full mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td

@@ -852,7 +852,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <table className="my-36 mx-8  bg-gray-800 cursor-pointer">
+              <table className="my-36 mx-8 w-11/12  bg-gray-800 cursor-pointer">
                 <tbody className="bg-gray-800">
                   <tr>
                     <td

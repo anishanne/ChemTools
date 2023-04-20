@@ -917,28 +917,24 @@ export default function Home() {
         <main className="flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full  bg-gray-800 text-lg">
+              <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-10 flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
-                  <img
-                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-48 bg-gray-800"
-                    src="/chemlogo.png"
-                  />
-                  <div className="bg-gray-800 col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
-                    <h1 className="bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
+                <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                  <div className="bg-gray-800 w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
+                    <h1 className="text-center bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
                       Chemistry Tools
                     </h1>
-                    <p className="bg-gray-800 text-2xl font-light md:text-2xl">
+                    <p className="text-center bg-gray-800 text-2xl font-light md:text-2xl">
                       Taking Chemistry to the Next Energy Level
                     </p>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">
-                <form className="bg-gray-800  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
-                  <div className="bg-gray-800 mb-3">
+                <form className="bg-gray-900  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                  <div className=" mb-3">
                     <label
-                      className="bg-gray-800 block text-gray-300 text-sm font-bold mb-2"
+                      className=" block text-gray-300 text-sm font-bold mb-2"
                       htmlFor="username"
                     >
                       Formula
@@ -979,9 +975,9 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                  <div className="bg-gray-800 mb-6">
+                  <div className=" mb-6">
                     <label
-                      className="block text-gray-300 bg-gray-800 text-sm font-bold mb-2"
+                      className="block text-gray-300  text-sm font-bold mb-2"
                       htmlFor="password"
                     >
                       Gram Formula Mass

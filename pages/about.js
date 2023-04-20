@@ -121,32 +121,6 @@ export default function Home() {
                     of resources including calculators for chemistry and
                     information on the periodic table.
                   </p>
-                  <div className="mt-12">
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                      {features.map((feature) => (
-                        <div key={feature.name} className="pt-6">
-                          <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4">
-                            <div className="-mt-6">
-                              <div>
-                                <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
-                                  <feature.icon
-                                    className="h-6 w-6 text-white"
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                              </div>
-                              <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-50">
-                                {feature.name}
-                              </h3>
-                              <p className="mt-5 my-auto  text-base text-gray-300">
-                                {feature.description}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

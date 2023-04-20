@@ -16,6 +16,7 @@ const navigation = [
   { name: "Molar Masses", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Type", href: "/bond", icon: CubeTransparentIcon },
+  { name: "About Us", href: "/about", icon: CubeTransparentIcon },
 ];
 export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
   return (
@@ -74,9 +75,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                 </Transition.Child>
                 <div className="flex flex-shrink-0 items-center px-4">
                   <img
-                    className="h-8 w-8 rounded-full"
-                    src="/moleculelogo.png"
-                    alt="Your Company"
+                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-52 bg-gray-900"
+                    src="/chemlogo.png"
                   />
                   <h4 className="text-same px-4 font-medium dark:text-gray-100">
                     Chem Tools Bro
@@ -124,9 +124,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
         <div className="flex min-h-0 flex-1 flex-col bg-gray-200 dark:bg-gray-900">
           <div className="flex h-36 lg:h-48 flex-shrink-0 items-center bg-gray-200 px-4 dark:bg-gray-900">
             <img
-              className="bg-gray-900 mt-8 max-w-full h-auto ml-8 lg:max-w-none lg:h-36 lg:w-auto"
-              src="https://cdn.jaybots.org/logo/birdtransparent.png"
-              alt="Chem tools bro"
+              className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-52 bg-gray-900"
+              src="/chemlogo.png"
             />
           </div>
           <div className="flex flex-1 flex-col bg-gray-900 overflow-y-auto">

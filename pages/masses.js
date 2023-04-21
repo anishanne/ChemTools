@@ -317,7 +317,7 @@ const eightyseven118 = [
   },
   { number: 88, symbol: "Ra", name: "Radium", color: colors.color3, mass: 226 },
   {
-    number: "",
+    number: "89-103",
     name: "Lanth",
     color: colors.reference2,
     mass: 0.0,
@@ -731,7 +731,7 @@ const row3 = [
     color: colors.color3,
     mass: 137.33,
   },
-  { number: "Act", color: colors.reference, mass: 0.0 },
+  { number: "57-71", color: colors.reference, mass: 0.0 },
   {
     number: 72,
     symbol: "Hf",
@@ -920,14 +920,15 @@ export default function Home() {
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
                 <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
-                  <div className="bg-gray-800 w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto md:m-16">
-                    <h1 className="text-center bg-gray-800 mb-6 text-5xl font-bold md:text-6xl">
+                <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
+                    <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
                     </h1>
-                    <p className="text-center bg-gray-800 text-2xl font-light md:text-2xl">
-                      Taking Chemistry to the Next Energy Level
+                    <p className="text-center text-2xl font-light md:text-3xl">
+                      Taking Chemistry to the next energy level.
                     </p>
-                  </div>
+                    <hr className="text-white my-16 border-dotted "></hr>
+                  </div>{" "}
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">

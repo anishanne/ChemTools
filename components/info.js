@@ -74,7 +74,7 @@ export default function Classwork({
                                   </dt>
                                   <dd className="mt-1 bg-inherit text-sm text-gray-100 sm:col-span-2 sm:mt-0 whitespace-normal break-words">
                                     {ionizationString
-                                      ? ionizationString
+                                      ? ionizationString.replaceAll(",", ", ")
                                       : "Not Found"}
                                   </dd>
                                 </div>

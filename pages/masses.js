@@ -7,28 +7,37 @@ import { useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
+import { useCallback } from "react";
 
 const colors = {
   color1:
-    "bg-red-600 hover:brightness-150 hover:text-black border-white border-2",
-  color2: "bg-blue-700 hover:brightness-150 border-2 border-white",
-  color3: "bg-blue-500 hover:brightness-150 border-2 border-white",
+    "bg-red-600 text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black ",
+  color2:
+    "bg-blue-700 text-center font-bold align-middle w-12 hover:brightness-150 ",
+  color3:
+    " text-center font-bold align-middle bg-blue-500 w-12 hover:brightness-150 ",
   color4:
-    "bg-teal-600 hover:brightness-150 hover:text-black border-white border-2",
-  color5: "bg-red-500 hover:brightness-150 border-2 border-white",
+    "text-center font-bold align-middle bg-teal-600 w-12 hover:brightness-150 hover:text-black ",
+  color5:
+    "text-center font-bold align-middle bg-red-500 w-12 hover:brightness-150 ",
   color6:
-    "bg-yellow-500 hover:brightness-150 border-2 border-white hover:text-black",
-  color7: "bg-orange-500 hover:brightness-150 border-2 border-white",
-  color8: "bg-green-400 border-2 border-white hover:brightness-150",
-  color9: "bg-teal-700 hover:brightness-150 border-white border-2",
-  color10: "bg-blue-800 hover:brightness-150 border-2 border-white",
+    "text-center font-bold align-middle bg-yellow-500 w-12 hover:brightness-150  hover:text-black",
+  color7:
+    "text-center font-bold align-middle bg-orange-500 w-12 hover:brightness-150 ",
+  color8:
+    "text-center font-bold align-middle bg-green-400 w-12  hover:brightness-150",
+  color9:
+    "text-center font-bold align-middle bg-teal-700  w-12 hover:brightness-150 ",
+  color10:
+    "text-center font-bold align-middle bg-blue-800 w-12 hover:brightness-150 ",
   color11:
-    "bg-gray-200 hover:brightness-150 hover:text-black borer-2 border-white",
+    "text-center font-bold align-middle bg-gray-200 w-12 hover:brightness-150 hover:text-black borer-2 ",
   color12:
-    "bg-gray-400 hover:brightness-150 hover:text-black border-2 border-white",
-  reference: "bg-teal-600 hover:none border-2 border-white pointer-events-none",
+    "text-center font-bold align-middle bg-gray-400 w-12 hover:brightness-150 hover:text-black ",
+  reference:
+    "text-center font-bold align-middle w-12 bg-teal-600 hover:none  pointer-events-none",
   reference2:
-    "bg-blue-800 hover:none border-2 border-white pointer-events-none",
+    "text-center font-bold align-middle w-12 bg-blue-800 hover:none  pointer-events-none",
   heading: "font-xl",
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
@@ -854,40 +863,40 @@ export default function Home() {
       )
     );
 
+  const handleBackspace = () => {
+    // keyCode 8 is the code for the backspace key
+    const updatedElements = [...elementString];
+    updatedElements.pop(); // remove the last added element
+
+    // update state directly
+    setElements(updatedElements);
+    setMass((prevMass) => {
+      const removedElement = data.elements.find(
+        (element) =>
+          element.symbol === updatedElements[updatedElements.length - 1]
+      );
+      return removedElement ? prevMass - removedElement.atomic_mass : 0;
+    });
+    setH2("");
+  };
+
   useEffect(() => {
     setH2("");
     getOccurrences();
-    const handleBackspace = (event) => {
-      // keyCode 8 is the code for the backspace key
-      if (elementString.length > 0) {
-        const updatedElements = [...elementString];
-        updatedElements.pop(); // remove the last added element
+  }, [getOccurrences]);
 
-        // update state directly
-        setElements(updatedElements);
-        setMass((prevMass) => {
-          const removedElement = data.elements.find(
-            (element) =>
-              element.symbol === updatedElements[updatedElements.length - 1]
-          );
-          return removedElement ? prevMass - removedElement.atomic_mass : 0;
-        });
-        setH2("");
-      }
-    };
+  const [inputValue, setInputValue] = useState(1);
 
-    document.addEventListener("keydown", handleBackspace);
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+  const reset = useCallback(() => {
+    setInput("");
 
-    return () => {
-      document.removeEventListener("keydown", handleBackspace);
-    };
-  }, [elementString, gram]);
-
-  const reset = () => {
     setMass(0);
     setElements([]);
     setH2("");
-  };
+  });
 
   const specialSetElements = (index, name) => {
     const { atomic_mass } = data.elements[index];
@@ -899,6 +908,7 @@ export default function Home() {
     setMass(gram + mass);
     setElements((prev) => [...prev, name]);
   };
+  const [input, setInput] = useState("");
 
   return (
     <>
@@ -920,19 +930,19 @@ export default function Home() {
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
                 <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
-                <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
+                  <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
+                    <h1 className="text-center font-bold mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
                     </h1>
-                    <p className="text-center text-2xl font-light md:text-3xl">
-                      Taking Chemistry to the next energy level.
+                    <p className="text-center font-bold text-2xl font-light md:text-3xl">
+                      We've got solutions... not just reactions
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">
-                <form className="bg-gray-900  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                <form className="bg-gray-900 mx-4 mx-8 ml-8  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
                   <div className=" mb-3">
                     <label
                       className=" block text-gray-300 text-sm font-bold mb-2"
@@ -988,12 +998,51 @@ export default function Home() {
                     </div>
                   </div>
                 </form>
+                <form className="bg-gray-900 mx-4 mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                  <div className="mb-3">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="input"
+                    >
+                      Number input
+                    </label>
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                      <input
+                        id="input"
+                        type="number"
+                        value={inputValue}
+                        onChange={handleChange}
+                        className="w-full bg-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="output"
+                    >
+                      Moles
+                    </label>
+                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                      {inputValue && gram
+                        ? (inputValue / gram).toFixed(3) + "mol"
+                        : "Moles will show here"}
+                    </div>
+                  </div>
+                </form>
                 <div className="grid mt-16 bg-inherit">
                   <button
                     onClick={() => reset()}
-                    className="bg-indigo-500 py-1 px-2 h-1/6 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                    className="bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
                   >
                     Reset
+                  </button>
+
+                  <button
+                    onClick={() => handleBackspace()}
+                    className="bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                  >
+                    Delete
                   </button>
                 </div>
               </div>
@@ -1006,12 +1055,12 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(0, data.elements[0].symbol)
                       }
-                      className={`${colors.color1} text-xs sm:text-xl`}
+                      className={`${colors.color1} `}
                     >
                       1<br></br>H
                     </td>
                     <td
-                      className={`${colors.none} cursor-default text-xs sm:text-xl `}
+                      className={`${colors.none} cursor-default  `}
                       colSpan="16"
                     ></td>
                     <td
@@ -1198,7 +1247,7 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-              <h1 className=" bg-gray-800 text-center font-bold text-2xl mt-24 m-8">
+              <h1 className=" bg-gray-800 text-center font-bold font-bold text-2xl mt-24 m-8">
                 Common Polyatomic Ions
               </h1>
               <table className="mx-auto p-3 bg-gray-800 border-2 w-3/4">

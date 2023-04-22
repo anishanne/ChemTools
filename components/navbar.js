@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
-  { name: "Molar Masses", href: "/masses", icon: BeakerIcon },
+  { name: "Molar Mass", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Type", href: "/bond", icon: CubeTransparentIcon },
   { name: "About Us", href: "/about", icon: CubeTransparentIcon },

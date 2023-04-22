@@ -16,6 +16,7 @@ import {
   CubeTransparentIcon,
   NewspaperIcon,
   BeakerIcon,
+  FingerPrintIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [

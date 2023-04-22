@@ -8,6 +8,7 @@ import {
   BookOpenIcon,
   CubeTransparentIcon,
   NewspaperIcon,
+  FingerPrintIcon,
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -16,7 +17,7 @@ const navigation = [
   { name: "Molar Masses", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Type", href: "/bond", icon: CubeTransparentIcon },
-  { name: "About Us", href: "/about", icon: CubeTransparentIcon },
+  { name: "About Us", href: "/about", icon: FingerPrintIcon },
 ];
 export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
   return (

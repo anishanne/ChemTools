@@ -1004,7 +1004,7 @@ export default function Home() {
                       className="block text-gray-300 text-sm font-bold mb-2"
                       htmlFor="input"
                     >
-                      Number input
+                      Grams
                     </label>
                     <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
                       <input

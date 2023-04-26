@@ -76,11 +76,10 @@ export default function Home() {
               <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-20">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                   <h2 className="text-5xl font-bold text-blue-500">
-                    Are you made of Gold Titatinium, Sulfur, Titanium, and
-                    Carbon?
+                   
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
-                    because you are autistic
+                    
                   </p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
                     At Chem Tools, we are passionate about chemistry and believe
@@ -100,7 +99,7 @@ export default function Home() {
                     most
                   </p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Joey is a clown at John Jay who loves honors chemistry
+                    Joe money is a clown at John Jay who loves being physics captain of John Jay SciOily
                   </p>
                 </div>
               </div>

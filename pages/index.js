@@ -106,7 +106,6 @@ export default function Home() {
                   </div>{" "}
                 </div>
               </div>
-
               <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-20">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                   <h2 className="text-5xl font-bold text-blue-500">

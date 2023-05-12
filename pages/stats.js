@@ -851,7 +851,7 @@ export default function Home() {
                       Chemistry Tools
                     </h1>
                     <p className="text-center text-2xl font-light md:text-3xl">
-                      A mole of ester makes a molester
+                
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>
                   </div>{" "}

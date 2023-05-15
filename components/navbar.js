@@ -10,7 +10,7 @@ import {
   NewspaperIcon,
   UserCircleIcon,
   BoltSlashIcon,
-  CurrencyRupeeIcon,
+  FireIcon,
 
 } from "@heroicons/react/24/outline";
 
@@ -21,7 +21,7 @@ const navigation = [
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Type", href: "/bond", icon: CubeTransparentIcon },
   {name: "Oxidation States", href:"/oxidation", icon: BoltSlashIcon},
-  {name: "Acid Base", href:"/acidbase", icon: CurrencyRupeeIcon},
+  {name: "Acid Base", href:"/acidbase", icon: FireIcon},
   { name: "About", href: "/about", icon: UserCircleIcon},
 
   

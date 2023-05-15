@@ -844,15 +844,15 @@ export default function Home() {
   const capitalizeFirstLetter = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1);
 
-  const checkOccurrence = (elementsString, element) =>
+  function checkOccurrence(elementsString, element){
     capitalizeFirstLetter(element) +
     (elementsString.flat().filter((item) => item.toLowerCase() === element)
       .length === 1
       ? ""
       : elementsString.flat().filter((item) => item.toLowerCase() === element)
-          .length);
+          .length)}
 
-  const getOccurrences = () =>
+  function getOccurrences(){
     setH2(
       Array.from(
         new Set(
@@ -861,7 +861,7 @@ export default function Home() {
           )
         )
       )
-    );
+    )}
 
   const handleBackspace = () => {
     // keyCode 8 is the code for the backspace key
@@ -872,7 +872,7 @@ export default function Home() {
     setElements(updatedElements);
     setMass((prevMass) => {
       const removedElement = data.elements.find(
-        (element) =>
+        (element) =>    
           element.symbol === updatedElements[updatedElements.length - 1]
       );
       return removedElement ? prevMass - removedElement.atomic_mass : 0;
@@ -880,17 +880,14 @@ export default function Home() {
     setH2("");
   };
 
-  useEffect(() => {
-    setH2("");
-    getOccurrences();
-  }, [getOccurrences]);
+
 
   const [inputValue, setInputValue] = useState(1);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
-  const reset = useCallback(() => {
+  const reset = (() => {
     setInput("");
 
     setMass(0);
@@ -921,7 +918,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Molar Masses"
+            page="Molar Mass"
           />
         </div>
         <main className="flex-1">

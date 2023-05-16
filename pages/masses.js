@@ -844,15 +844,15 @@ export default function Home() {
   const capitalizeFirstLetter = (str) =>
     str.charAt(0).toUpperCase() + str.slice(1);
 
-  function checkOccurrence(elementsString, element){
+  const checkOccurrence = (elementsString, element) =>
     capitalizeFirstLetter(element) +
     (elementsString.flat().filter((item) => item.toLowerCase() === element)
       .length === 1
       ? ""
       : elementsString.flat().filter((item) => item.toLowerCase() === element)
-          .length)}
+          .length);
 
-  function getOccurrences(){
+  const getOccurrences = () =>
     setH2(
       Array.from(
         new Set(
@@ -861,7 +861,7 @@ export default function Home() {
           )
         )
       )
-    )}
+    );
 
   const handleBackspace = () => {
     // keyCode 8 is the code for the backspace key
@@ -872,7 +872,7 @@ export default function Home() {
     setElements(updatedElements);
     setMass((prevMass) => {
       const removedElement = data.elements.find(
-        (element) =>    
+        (element) =>
           element.symbol === updatedElements[updatedElements.length - 1]
       );
       return removedElement ? prevMass - removedElement.atomic_mass : 0;
@@ -880,18 +880,21 @@ export default function Home() {
     setH2("");
   };
 
-
+  useEffect(() => {
+    setH2("");
+    getOccurrences();
+  }, [elementString]);
 
   const [inputValue, setInputValue] = useState(1);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
-  const reset = (() => {
-    setInput("");
+  const reset = useCallback(() => {
 
     setMass(0);
     setElements([]);
+    setInputValue(1)
     setH2("");
   });
 
@@ -1024,6 +1027,39 @@ export default function Home() {
                       {inputValue && gram
                         ? (inputValue / gram).toFixed(3) + "mol"
                         : "Moles will show here"}
+                    </div>
+                  </div>
+                </form>
+                <form className="bg-gray-900 mx-4 mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                  <div className="mb-3">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="input"
+                    >
+                      Moles
+                    </label>
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                   
+                            <input
+                        id="input"
+                        type="number"
+                        value={(inputValue/gram).toFixed(3)}
+                        onChange={handleChange}
+                        className="w-full bg-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="output"
+                    >
+                      Grams
+                    </label>
+                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                     
+                         {inputValue}
+                       
                     </div>
                   </div>
                 </form>

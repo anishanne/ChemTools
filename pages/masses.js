@@ -918,7 +918,7 @@ export default function Home() {
     <>
       <div className="h-max pb-8  bg-gray-200 dark:bg-gray-800">
         <Head>
-          <title>ChemTools</title>
+          <title>ChemTools | Molar Mass</title>
         </Head>{" "}
         <div className="z-0">
           {" "}

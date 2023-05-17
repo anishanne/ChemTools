@@ -883,7 +883,7 @@ export default function Home() {
   useEffect(() => {
     setH2("");
     getOccurrences();
-  }, [getOccurrences]);
+  }, [elementString]);
 
   const [inputValue, setInputValue] = useState(1);
 
@@ -891,8 +891,7 @@ export default function Home() {
     setInputValue(event.target.value);
   };
   const reset = useCallback(() => {
-    setInput("");
-
+    handleChange(target(1));
     setMass(0);
     setElements([]);
     setH2("");
@@ -1004,18 +1003,17 @@ export default function Home() {
                       className="block text-gray-300 text-sm font-bold mb-2"
                       htmlFor="input"
                     >
-                      Number input
+                      Grams
                     </label>
-                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
-                      <input
-                        id="input"
-                        type="number"
-                        value={inputValue}
-                        onChange={handleChange}
-                        className="w-full bg-white focus:outline-none"
-                      />
-                    </div>
+                    <input
+                      id="input"
+                      type="number"
+                      value={inputValue ? inputValue : null}
+                      onChange={handleChange}
+                      className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white"
+                    />
                   </div>
+
                   <div className="mb-6">
                     <label
                       className="block text-gray-300 text-sm font-bold mb-2"
@@ -1024,9 +1022,12 @@ export default function Home() {
                       Moles
                     </label>
                     <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                      {inputValue && gram
-                        ? (inputValue / gram).toFixed(3) + "mol"
-                        : "Moles will show here"}
+                      <input
+                        id="gram"
+                        type="number"
+                        value={(inputValue / gram).toFixed(3)}
+                        className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white"
+                      />{" "}
                     </div>
                   </div>
                 </form>

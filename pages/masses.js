@@ -891,9 +891,14 @@ export default function Home() {
     setInputValue(event.target.value);
   };
   const reset = useCallback(() => {
+<<<<<<< HEAD
     handleChange(target(1));
+=======
+
+>>>>>>> 068a439f5d8e916e3d2e62d0e3c88efa3f02e45c
     setMass(0);
     setElements([]);
+    setInputValue(1)
     setH2("");
   });
 
@@ -920,7 +925,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Molar Masses"
+            page="Molar Mass"
           />
         </div>
         <main className="flex-1">
@@ -1028,6 +1033,39 @@ export default function Home() {
                         value={(inputValue / gram).toFixed(3)}
                         className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white"
                       />{" "}
+                    </div>
+                  </div>
+                </form>
+                <form className="bg-gray-900 mx-4 mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                  <div className="mb-3">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="input"
+                    >
+                      Moles
+                    </label>
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                   
+                            <input
+                        id="input"
+                        type="number"
+                        value={(inputValue/gram).toFixed(3)}
+                        onChange={handleChange}
+                        className="w-full bg-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="output"
+                    >
+                      Grams
+                    </label>
+                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                     
+                         {inputValue}
+                       
                     </div>
                   </div>
                 </form>

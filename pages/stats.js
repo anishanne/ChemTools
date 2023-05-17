@@ -851,7 +851,7 @@ export default function Home() {
                       Chemistry Tools
                     </h1>
                     <p className="text-center text-2xl font-light md:text-3xl">
-                      My chemistry jokes are funny but they get no reaction
+                
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>
                   </div>{" "}

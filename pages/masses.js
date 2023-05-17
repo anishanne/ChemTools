@@ -8,6 +8,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import { useCallback } from "react";
+import { set } from "zod";
 
 const colors = {
   color1:
@@ -886,19 +887,18 @@ export default function Home() {
   }, [elementString]);
 
   const [inputValue, setInputValue] = useState(1);
-
+  const [inputValue2, setInputValue2] = useState(1);
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
+  const handleChange2 = (event) => {
+    setInputValue2(event.target.value);
+  };
   const reset = useCallback(() => {
-<<<<<<< HEAD
-    handleChange(target(1));
-=======
-
->>>>>>> 068a439f5d8e916e3d2e62d0e3c88efa3f02e45c
     setMass(0);
+    setInputValue2(0);
+    setInputValue(1);
     setElements([]);
-    setInputValue(1)
     setH2("");
   });
 
@@ -925,7 +925,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Molar Mass"
+            page="Molar Masses"
           />
         </div>
         <main className="flex-1">
@@ -1002,73 +1002,7 @@ export default function Home() {
                     </div>
                   </div>
                 </form>
-                <form className="bg-gray-900 mx-4 mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
-                  <div className="mb-3">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="input"
-                    >
-                      Grams
-                    </label>
-                    <input
-                      id="input"
-                      type="number"
-                      value={inputValue ? inputValue : null}
-                      onChange={handleChange}
-                      className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white"
-                    />
-                  </div>
 
-                  <div className="mb-6">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="output"
-                    >
-                      Moles
-                    </label>
-                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                      <input
-                        id="gram"
-                        type="number"
-                        value={(inputValue / gram).toFixed(3)}
-                        className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white"
-                      />{" "}
-                    </div>
-                  </div>
-                </form>
-                <form className="bg-gray-900 mx-4 mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
-                  <div className="mb-3">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="input"
-                    >
-                      Moles
-                    </label>
-                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
-                   
-                            <input
-                        id="input"
-                        type="number"
-                        value={(inputValue/gram).toFixed(3)}
-                        onChange={handleChange}
-                        className="w-full bg-white focus:outline-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="output"
-                    >
-                      Grams
-                    </label>
-                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                     
-                         {inputValue}
-                       
-                    </div>
-                  </div>
-                </form>
                 <div className="grid mt-16 bg-inherit">
                   <button
                     onClick={() => reset()}
@@ -1085,7 +1019,76 @@ export default function Home() {
                   </button>
                 </div>
               </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h1 className=" font-bold m-6">Moles to Grams</h1>
 
+                  <div className=" m-6">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="input"
+                    >
+                      Moles
+                    </label>
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                      <input
+                        id="input"
+                        type="number"
+                        value={inputValue}
+                        onChange={handleChange}
+                        className="w-full bg-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="m-6">
+                    <label
+                      className="block text-gray-300  text-sm font-bold mb-2"
+                      htmlFor="password"
+                    >
+                      Grams
+                    </label>
+                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                      {(inputValue * gram).toFixed(3)}g
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h1 className=" font-bold m-6">Grams to Moles</h1>
+                  <div className="m-6">
+                    <label
+                      className="block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="input"
+                    >
+                      Grams
+                    </label>
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                      <input
+                        id="input"
+                        type="number"
+                        value={inputValue2}
+                        onChange={handleChange2}
+                        className="w-full bg-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="m-6">
+                    <label
+                      className="block text-gray-300  text-sm font-bold mb-2"
+                      htmlFor="password"
+                    >
+                      Moles
+                    </label>
+                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                      {gram > 0
+                        ? inputValue2
+                          ? (inputValue2 / gram).toFixed(3)
+                          : "0.000"
+                        : "0.000"}
+                      mol
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="w-full max-w-xs"></div>
               <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>

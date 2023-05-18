@@ -158,9 +158,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                 </Link>
               ))}
             </nav>
-            <div className="m-8  font-semibold">
-              <h1 className="bg-gray-900 justify-items-center text-center text-gray-500 dark:text-gray-100">
-                Made by Joey Marra and Arnav Mishra
+            <div className="m-2  font-semibold">
+              <h1 className="bg-gray-900 justify-items-center text-center text-gray-500 dark:text-gray-100 text-sm">
+                © Copyright 2023 JoeMoney, Professor Mishra, and Matthew Glasser
               </h1>
             </div>
           </div>

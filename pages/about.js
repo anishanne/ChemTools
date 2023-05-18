@@ -99,6 +99,9 @@ export default function Home() {
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
                     Joe money is a sophomore who loves being physics captain of John Jay SciOily
                   </p>
+                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
+                    Matthew is a freshman who is along for the ride
+                  </p>
                 </div>
               </div>
             </div>

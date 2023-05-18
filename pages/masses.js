@@ -912,7 +912,6 @@ export default function Home() {
     setMass(gram + mass);
     setElements((prev) => [...prev, name]);
   };
-  const [input, setInput] = useState("");
 
   return (
     <>
@@ -935,10 +934,10 @@ export default function Home() {
                 {" "}
                 <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center font-bold mb-6 text-5xl font-bold md:text-7xl">
+                    <h1 className="text-center  mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
                     </h1>
-                    <p className="text-center font-bold text-2xl font-light md:text-3xl">
+                    <p className="text-center  text-2xl font-light md:text-3xl">
                       We've got solutions... not just reactions
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>

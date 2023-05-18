@@ -7,27 +7,35 @@ import React from "react";
 import Navbar from "../components/navbar";
 const colors = {
   color1:
-    "bg-red-600 hover:brightness-150 hover:text-black border-white border-2",
-  color2: "bg-blue-700 hover:brightness-150 border-2 border-white",
-  color3: "bg-blue-500 hover:brightness-150 border-2 border-white",
+    "bg-red-600 text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black ",
+  color2:
+    "bg-blue-700 text-center font-bold align-middle w-12 hover:brightness-150 ",
+  color3:
+    " text-center font-bold align-middle bg-blue-500 w-12 hover:brightness-150 ",
   color4:
-    "bg-teal-600 hover:brightness-150 hover:text-black border-white border-2",
-  color5: "bg-red-500 hover:brightness-150 border-2 border-white",
+    "text-center font-bold align-middle bg-teal-600 w-12 hover:brightness-150 hover:text-black ",
+  color5:
+    "text-center font-bold align-middle bg-red-500 w-12 hover:brightness-150 ",
   color6:
-    "bg-yellow-500 hover:brightness-150 border-2 border-white hover:text-black",
-  color7: "bg-orange-500 hover:brightness-150 border-2 border-white",
-  color8: "bg-green-400 border-2 border-white hover:brightness-150",
-  color9: "bg-teal-700 hover:brightness-150 border-white border-2",
-  color10: "bg-blue-800 hover:brightness-150 border-2 border-white",
+    "text-center font-bold align-middle bg-yellow-500 w-12 hover:brightness-150  hover:text-black",
+  color7:
+    "text-center font-bold align-middle bg-orange-500 w-12 hover:brightness-150 ",
+  color8:
+    "text-center font-bold align-middle bg-green-400 w-12  hover:brightness-150",
+  color9:
+    "text-center font-bold align-middle bg-teal-700  w-12 hover:brightness-150 ",
+  color10:
+    "text-center font-bold align-middle bg-blue-800 w-12 hover:brightness-150 ",
   color11:
-    "bg-gray-200 hover:brightness-150 hover:text-black borer-2 border-white",
+    "text-center font-bold align-middle bg-gray-200 w-12 hover:brightness-150 hover:text-black borer-2 ",
   color12:
-    "bg-gray-400 hover:brightness-150 hover:text-black border-2 border-white",
-  reference: "bg-teal-600 hover:none border-2 border-white pointer-events-none",
+    "text-center font-bold align-middle bg-gray-400 w-12 hover:brightness-150 hover:text-black ",
+  reference:
+    "text-center font-bold align-middle w-12 bg-teal-600 hover:none  pointer-events-none",
   reference2:
-    "bg-blue-800 hover:none border-2 border-white pointer-events-none",
+    "text-center font-bold align-middle w-12 bg-blue-800 hover:none  pointer-events-none",
   heading: "font-xl",
-  none: "border-t border-slate-800 bg-slate-800 cursor-default",
+  none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 
 const fiftyseven71 = [
@@ -496,21 +504,8 @@ const row3 = [
 ];
 
 export default function Home() {
-  const [gram, setMass] = useState(0);
-  const [elementString, setElements] = useState([]);
-  const [h2string, setH2] = useState("");
-  const [info, setInfoOpen] = useState(false);
-  const [ionization, setIonization] = useState([]);
-  const [en, setElectronegativity] = useState("");
-  const [configuration, setConfiguration] = useState("");
-  const [boil, setBoil] = useState("");
-  const [melt, setMelt] = useState("");
-  const [dense, setDense] = useState("");
-  const [affinity, setAffinity] = useState("");
-  const [phase, setPhase] = useState("");
-  const [appearance, setAppearance] = useState("");
-  const [name, setName] = useState("");
-  const [symbol, setSymbol] = useState("");
+  const [element1Name, setElement1Name] = useState("");
+  const [element2Name, setElement2Name] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [element1, setElement1] = useState("");
   const [element2, setElement2] = useState("");
@@ -523,7 +518,7 @@ export default function Home() {
 
   return (
     <>
-      <div className= "h-screen bg-gray-200 dark:bg-gray-800">
+      <div className="h-screen bg-gray-200 dark:bg-gray-800">
         <Head>
           <title>ChemTools</title>
         </Head>{" "}
@@ -538,8 +533,11 @@ export default function Home() {
         <main className="flex-1">
           <div className="h-full bg-gray-800 py-6 dark:bg-gray-800 text-wrap">
             <div className="bg-gray-800 h-full ml-8 md:ml-48 lg:ml-72 px-3 pb-3 sm:px-6 md:mx-auto md:px-8 text-wrap ">
-              <table className="mt-96 bg-gray-800 cursor-pointer">
-                {JSON.stringify(difference)}
+              <h1>{element1Name}</h1>
+              <h1>{element2Name}</h1>
+              {JSON.stringify(difference)}
+
+              <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td className={`${colors.color1} text-xs sm:text-xl`}>
@@ -566,14 +564,17 @@ export default function Home() {
                     ></td>
                     {fiveTen.map((element, key) => (
                       <td
-                        onClick={() =>
-                          element1
-                            ? calculateElectronegativityDifference(
+                        onClick={() => {
+                          element1 && element2
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -597,14 +598,17 @@ export default function Home() {
                     ></td>
                     {thirteenEighteen.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -617,14 +621,17 @@ export default function Home() {
                   <tr>
                     {row1.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -637,14 +644,17 @@ export default function Home() {
                   <tr>
                     {row2.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -657,14 +667,17 @@ export default function Home() {
                   <tr>
                     {row3.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -677,14 +690,17 @@ export default function Home() {
                   <tr>
                     {eightyseven118.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -703,14 +719,17 @@ export default function Home() {
                     ></td>
                     {fiftyseven71.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >
@@ -729,14 +748,17 @@ export default function Home() {
                   <tr>
                     {eightynineonehundredand3.map((element, key) => (
                       <td
-                        onClick={() =>
+                        onClick={() => {
                           element1
-                            ? calculateElectronegativityDifference(
+                            ? (calculateElectronegativityDifference(
                                 element1,
                                 element.en
-                              )
-                            : (setElement2(""), setElement1(element.en))
-                        }
+                              ),
+                              setElement2Name(element.name))
+                            : (setElement2(""),
+                              setElement1(element.en),
+                              setElement1Name(element.name));
+                        }}
                         key={key}
                         className={element.color}
                       >

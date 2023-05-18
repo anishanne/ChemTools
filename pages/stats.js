@@ -10,33 +10,33 @@ import Info from "../components/info";
 import Navbar from "../components/navbar";
 const colors = {
   color1:
-    "bg-red-600 text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black ",
+    "rounded-lg border-2 border-primary bg-red-600 text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black",
   color2:
-    "bg-blue-700 text-center font-bold align-middle w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary bg-blue-700 text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black",
   color3:
-    " text-center font-bold align-middle bg-blue-500 w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-blue-500 w-12 hover:brightness-150 hover:text-black",
   color4:
-    "text-center font-bold align-middle bg-teal-600 w-12 hover:brightness-150 hover:text-black ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-teal-600 w-12 hover:brightness-150 hover:text-black ",
   color5:
-    "text-center font-bold align-middle bg-red-500 w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-red-500 w-12 hover:brightness-150 hover:text-black",
   color6:
-    "text-center font-bold align-middle bg-yellow-500 w-12 hover:brightness-150  hover:text-black",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-yellow-500 w-12 hover:brightness-150  hover:text-black",
   color7:
-    "text-center font-bold align-middle bg-orange-500 w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-orange-500 w-12 hover:brightness-150 hover:text-black",
   color8:
-    "text-center font-bold align-middle bg-green-400 w-12  hover:brightness-150",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-green-400 w-12  hover:brightness-150 hover:text-black",
   color9:
-    "text-center font-bold align-middle bg-teal-700  w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-teal-700  w-12 hover:brightness-150 hover:text-black",
   color10:
-    "text-center font-bold align-middle bg-blue-800 w-12 hover:brightness-150 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-blue-800 w-12 hover:brightness-150 hover:text-black",
   color11:
-    "text-center font-bold align-middle bg-gray-200 w-12 hover:brightness-150 hover:text-black borer-2 ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-gray-200 w-12 hover:brightness-150 hover:text-black borer-2 ",
   color12:
-    "text-center font-bold align-middle bg-gray-400 w-12 hover:brightness-150 hover:text-black ",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle bg-gray-400 w-12 hover:brightness-150 hover:text-black ",
   reference:
-    "text-center font-bold align-middle w-12 bg-teal-600 hover:none  pointer-events-none",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle w-12 bg-teal-600 hover:none  pointer-events-none",
   reference2:
-    "text-center font-bold align-middle w-12 bg-blue-800 hover:none  pointer-events-none",
+    "rounded-lg border-2 border-primary text-center font-bold align-middle w-12 bg-blue-800 hover:none  pointer-events-none",
   heading: "font-xl",
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
@@ -830,7 +830,7 @@ export default function Home() {
     <>
       <div className="h-screen bg-gray-200 dark:bg-gray-800">
         <Head>
-          <title>ChemTools</title>
+          <title>ChemTools | Element Info</title>
         </Head>{" "}
         <div className="z-0">
           {" "}

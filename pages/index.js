@@ -59,7 +59,7 @@ export default function Home() {
     <>
       <div className="h-screen bg-gray-800 ">
         <Head>
-          <title>ChemTools</title>
+          <title>ChemTools | Home</title>
         </Head>{" "}
         <Navbar
           sidebarOpen={sidebarOpen}

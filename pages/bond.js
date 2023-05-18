@@ -520,7 +520,7 @@ export default function Home() {
     <>
       <div className="h-screen bg-gray-200 dark:bg-gray-800">
         <Head>
-          <title>ChemTools</title>
+          <title>ChemTools | Bond Type</title>
         </Head>{" "}
         <div className="z-0">
           {" "}

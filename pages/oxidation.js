@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <div className="h-screen bg-gray-800 ">
         <Head>
-          <title>ChemTools</title>
+          <title>ChemTools | Oxidation Types</title>
         </Head>{" "}
         <Navbar
           sidebarOpen={sidebarOpen}

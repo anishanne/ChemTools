@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import data from "../data.json";
 import { useState } from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 import { useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/router";
@@ -24,18 +24,21 @@ const features = [
     description:
       "Calculate the molar mass of any compound using a user-friendly and clickable periodic table!",
     icon: BeakerIcon,
+    href: "/masses",
   },
   {
     name: "Element Information",
     description:
       "Find out information on elements such as electronegativity, electron configuration, ionization energies!",
     icon: NewspaperIcon,
+    href: "/stats",
   },
   {
     name: "Bond Type Predictor",
     description:
       "Predict bond type on any two elements by clicking any two elements on the periodic table!",
     icon: CubeTransparentIcon,
+    href: "/bond",
   },
   // {
   // 	name: "Advanced Security",
@@ -123,26 +126,28 @@ export default function Home() {
                   <div className="mt-12">
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                       {features.map((feature) => (
-                        <div key={feature.name} className="pt-6">
-                          <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4">
-                            <div className="-mt-6">
-                              <div>
-                                <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
-                                  <feature.icon
-                                    className="h-6 w-6 text-white"
-                                    aria-hidden="true"
-                                  />
-                                </span>
+                        <Link href={feature.href}>
+                          <div key={feature.name} className="pt-6">
+                            <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4">
+                              <div className="-mt-6">
+                                <div>
+                                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
+                                    <feature.icon
+                                      className="h-6 w-6 text-white"
+                                      aria-hidden="true"
+                                    />
+                                  </span>
+                                </div>
+                                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-50">
+                                  {feature.name}
+                                </h3>
+                                <p className="mt-5 my-auto  text-base text-gray-300">
+                                  {feature.description}
+                                </p>
                               </div>
-                              <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-50">
-                                {feature.name}
-                              </h3>
-                              <p className="mt-5 my-auto  text-base text-gray-300">
-                                {feature.description}
-                              </p>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       ))}
                     </div>
                   </div>

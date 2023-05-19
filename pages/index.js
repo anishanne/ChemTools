@@ -128,7 +128,7 @@ export default function Home() {
                       {features.map((feature) => (
                         <Link href={feature.href}>
                           <div key={feature.name} className="pt-6">
-                            <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4">
+                            <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4 hover:brightness-125">
                               <div className="-mt-6">
                                 <div>
                                   <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">

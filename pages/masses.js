@@ -11,15 +11,20 @@ import { useCallback } from "react";
 import { set } from "zod";
 
 const colors = {
-  color1: "bg-red-600",
-  color2: "bg-blue-700",
-  color3: "bg-blue-500",
-  color4: "bg-teal-600",
+  color1:
+    "border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-red-600",
+  color2:
+    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-700",
+  color3:
+    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-500",
+  color4:
+    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-600",
   color5: "bg-red-500",
   color6: "bg-yellow-500",
   color7: "bg-orange-500",
   color8: "bg-green-400",
-  color9: "bg-teal-700 ",
+  color9:
+    "border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-700 ",
   color10: "bg-blue-800",
   color11: "bg-gray-200",
   color12: "bg-gray-400 ",
@@ -870,6 +875,7 @@ export default function Home() {
     );
 
   const handleBackspace = () => {
+    // keyCode 8 is the code for the backspace key
     const updatedElements = [...elementString];
     updatedElements.pop(); // remove the last added element
 
@@ -893,8 +899,8 @@ export default function Home() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const reset = useCallback(() => {
     setGrams(0);
-    setInputValue2(0);
-    setInputValue(1);
+    setInputGrams(0);
+    setInputMoles(0);
     setElements([]);
     setH2("");
   });
@@ -918,10 +924,9 @@ export default function Home() {
     return !isNaN(parseFloat(value)) && isFinite(value);
   };
   useEffect(() => {
-    if (!inputMoles && isValidNumber(inputGrams)) {
-      const moles = parseFloat(inputGrams) / grams;
-      setInputMoles(isValidNumber(moles) ? moles.toFixed(4) : "");
-    }
+    const moles = parseFloat(inputGrams) / grams;
+    setInputMoles(moles ? moles : 0);
+
     if (!inputGrams && isValidNumber(inputMoles)) {
       const calculatedGrams = parseFloat(inputMoles) * grams;
       setInputGrams(
@@ -990,7 +995,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">
-                <form className="bg-gray-900 mx-4 mx-8 ml-8  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                <form className="grid grid-cols-2 bg-gray-900 mx-8 ml-8  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
                   <div className=" mb-3">
                     <label
                       className=" block text-gray-300 text-sm font-bold mb-2"
@@ -1033,17 +1038,44 @@ export default function Home() {
                         </span>
                       )}
                     </div>
-                  </div>
-                  <div className=" mb-6">
-                    <label
-                      className="block text-gray-300  text-sm font-bold mb-2"
-                      htmlFor="password"
-                    >
-                      Gram Formula Mass
-                    </label>
-                    <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                      {grams.toFixed(3)}g/mol
+                    <div className=" mt-6 mb-6">
+                      <label
+                        className="block text-gray-300  text-sm font-bold mb-2"
+                        htmlFor="password"
+                      >
+                        Gram Formula Mass
+                      </label>
+                      <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                        {grams.toFixed(3)}g/mol
+                      </div>
                     </div>
+                  </div>
+
+                  <div className="mx-8">
+                    <label
+                      className=" block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="username"
+                    >
+                      Grams
+                    </label>
+                    <input
+                      className=" border rounded w-full py-2 px-3 text-black focus:outline-none bg-white "
+                      type="text"
+                      value={inputGrams}
+                      onChange={handleGramsChange}
+                    />
+                    <label
+                      className="mt-6 block text-gray-300 text-sm font-bold mb-2"
+                      htmlFor="username"
+                    >
+                      Moles
+                    </label>
+                    <input
+                      className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text"
+                      value={inputMoles}
+                      onChange={handleMolesChange}
+                    />
                   </div>
                 </form>
 
@@ -1062,26 +1094,6 @@ export default function Home() {
                     Delete
                   </button>
                 </div>
-              </div>
-              <div className="my-4">
-                <label className="block mb-2">
-                  Grams:
-                  <input
-                    className="text-black block border border-gray-300 px-2 py-1 rounded w-32"
-                    type="text"
-                    value={inputGrams ? inputGrams : grams}
-                    onChange={handleGramsChange}
-                  />
-                </label>
-                <label className="block">
-                  Moles:
-                  <input
-                    className="text-black block border border-gray-300 px-2 py-1 rounded w-32"
-                    type="text"
-                    value={inputMoles}
-                    onChange={handleMolesChange}
-                  />
-                </label>
               </div>
 
               <div className="w-full max-w-xs"></div>

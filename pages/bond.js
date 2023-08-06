@@ -3,6 +3,7 @@ import Image from "next/image";
 import data from "../data.json";
 import { useState } from "react";
 import React from "react";
+import PolarCovalent from "../components/bondTypes";
 import {
   calculateElectronegativityDifference,
   getBondType,
@@ -32,7 +33,7 @@ const style =
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
   const [element1, setElement1] = useState(null);
   const [element2, setElement2] = useState(null);
   const [bondType, setBondType] = useState(null);
@@ -69,6 +70,7 @@ export default function Home() {
             page="Bond Type"
           />
         </div>
+        <PolarCovalent open={open} setOpen={setOpen} bondType={bondType} />
         <main className="flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
@@ -86,19 +88,44 @@ export default function Home() {
                   </div>{" "}
                 </div>
               </div>
-              {bondType ? (
-                <div className="mx-16 grid grid-cols-4">
+
+              {element1 ? (
+                <div className="mx-16 grid grid-cols-5">
                   {" "}
-                  {bondType ? (
-                    <p className="m-8 col-span-3 w-full text-center text-2xl font-bold">
-                      Predicted bond type between {element1.name} and{" "}
-                      {element2.name}: {bondType}
-                    </p>
+                  {element1 ? (
+                    <>
+                      {" "}
+                      <p
+                        className={`col-span-${
+                          bondType ? "2" : "4"
+                        } m-8 w-full text-center text-xl font-bold`}
+                      >
+                        Predicted bond type between {element1.name} (
+                        {element1.en}) and{" "}
+                        {element2?.name ? element2.name : "..."} (
+                        {element2?.en ? element2.en : "..."}) :
+                      </p>
+                      {bondType ? (
+                        <p
+                          onClick={() => setOpen(true)}
+                          className="m-8 col-span-2 w-full hover:underline  cursor-pointer text-center text-3xl font-bold"
+                        >
+                          <div class="tooltip-container">
+                            {bondType}
+
+                            <sup className="text-sm text-purple-600 ">
+                              {bondType ? "ⓘ" : ""}
+                            </sup>
+                            <div class="tooltip-text">What does this mean?</div>
+                          </div>
+                        </p>
+                      ) : null}
+                    </>
                   ) : (
                     <div className="w-full col-span-1"></div>
                   )}
                   <button
-                    className=" m-8 bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                    className="mt-8  bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
                     onClick={() => {
                       setElement1();
                       setElement2();

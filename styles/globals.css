@@ -25,3 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  border-radius: 4px;
+  padding-left: 2px;
+  display: none;
+  top: -30px; /* Adjust this value to change the tooltip's position */
+  right: -20px; /* Adjust this value to change the tooltip's position */
+}
+
+.tooltip-container:hover .tooltip-text {
+  display: block;
+}

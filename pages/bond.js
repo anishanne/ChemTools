@@ -3,6 +3,10 @@ import Image from "next/image";
 import data from "../data.json";
 import { useState } from "react";
 import React from "react";
+import {
+  calculateElectronegativityDifference,
+  getBondType,
+} from "@/utils/bondUtils";
 
 import Navbar from "../components/navbar";
 const colors = {
@@ -27,17 +31,29 @@ const style =
   " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
-  const [element1Name, setElement1Name] = useState("");
-  const [element2Name, setElement2Name] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [element1, setElement1] = useState("");
-  const [element2, setElement2] = useState("");
-  const [difference, setDifference] = useState("");
 
-  function calculateElectronegativityDifference(element1, element2) {
-    const difference = Math.abs(element1 - element2);
-    setDifference(difference.toFixed(2));
-  }
+  const [element1, setElement1] = useState(null);
+  const [element2, setElement2] = useState(null);
+  const [bondType, setBondType] = useState(null);
+
+  const handleElementClick = (element) => {
+    if (!element1) {
+      setElement1(element);
+    } else if (!element2) {
+      setElement2(element);
+      calculateBondType(element1, element);
+    }
+  };
+
+  const calculateBondType = (el1, el2) => {
+    const electronegativityDiff = calculateElectronegativityDifference(
+      el1.en,
+      el2.en
+    );
+    const bondType = getBondType(electronegativityDiff);
+    setBondType(bondType);
+  };
 
   return (
     <>
@@ -50,7 +66,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Molar Masses"
+            page="Bond Type"
           />
         </div>
         <main className="flex-1">
@@ -70,6 +86,43 @@ export default function Home() {
                   </div>{" "}
                 </div>
               </div>
+              {bondType ? (
+                <div className="mx-16 grid grid-cols-4">
+                  {" "}
+                  {bondType ? (
+                    <p className="m-8 col-span-3 w-full text-center text-2xl font-bold">
+                      Predicted bond type between {element1.name} and{" "}
+                      {element2.name}: {bondType}
+                    </p>
+                  ) : (
+                    <div className="w-full col-span-1"></div>
+                  )}
+                  <button
+                    className=" m-8 bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                    onClick={() => {
+                      setElement1();
+                      setElement2();
+                      setBondType();
+                    }}
+                  >
+                    Reset
+                  </button>
+                </div>
+              ) : (
+                <div className="flex mx-auto items-center">
+                  <button
+                    className="m-8 mx-auto text-center bg-indigo-500 py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
+                    onClick={() => {
+                      setElement1();
+                      setElement2();
+                      setBondType();
+                    }}
+                  >
+                    Reset
+                  </button>
+                </div>
+              )}
+
               <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
@@ -100,6 +153,7 @@ export default function Home() {
                     {data.fiveTen.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -123,6 +177,7 @@ export default function Home() {
                     {data.thirteenEighteen.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -135,6 +190,7 @@ export default function Home() {
                     {data.row1.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -147,6 +203,7 @@ export default function Home() {
                     {data.row2.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -159,6 +216,7 @@ export default function Home() {
                     {data.row3.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -171,6 +229,7 @@ export default function Home() {
                     {data.eightyseven118.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -189,6 +248,7 @@ export default function Home() {
                     {data.fiftyseven71.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}
@@ -207,6 +267,7 @@ export default function Home() {
                     {data.eightynineonehundredand3.map((element, key) => (
                       <td
                         key={key}
+                        onClick={() => handleElementClick(element)}
                         className={colors[element.color] + style || ""}
                       >
                         {element.number}

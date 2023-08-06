@@ -4887,213 +4887,242 @@
       "symbol": "La",
       "name": "Lanthanum",
       "color": "color4",
-      "mass": 138.91
+      "mass": 138.91,
+      "en": 1.1
     },
     {
       "number": 58,
       "symbol": "Ce",
       "name": "Cerium",
       "color": "color4",
-      "mass": 140.12
+      "mass": 140.12,
+      "en": 1.12
     },
     {
       "number": 59,
       "symbol": "Pr",
       "name": "Praseodymium",
       "color": "color4",
-      "mass": 140.91
+      "mass": 140.91,
+      "en": 1.13
     },
     {
       "number": 60,
       "symbol": "Nd",
       "name": "Neodymium",
       "color": "color4",
-      "mass": 144.24
+      "mass": 144.24,
+      "en": 1.14
     },
     {
       "number": 61,
       "symbol": "Pm",
       "name": "Promethium",
       "color": "color4",
-      "mass": 150
+      "mass": 150,
+      "en": 1.13
     },
     {
       "number": 62,
       "symbol": "Sm",
       "name": "Samarium",
       "color": "color4",
-      "mass": 150.36
+      "mass": 150.36,
+      "en": 1.17
     },
     {
       "number": 63,
       "symbol": "Eu",
       "name": "Europium",
       "color": "color4",
-      "mass": 151.96
+      "mass": 151.96,
+      "en": 1.2
     },
     {
       "number": 64,
       "symbol": "Gd",
       "name": "Gadolinium",
       "color": "color4",
-      "mass": 157.25
+      "mass": 157.25,
+      "en": 1.2
     },
     {
       "number": 65,
       "symbol": "Tb",
       "name": "Terbium",
       "color": "color4",
-      "mass": 158.93
+      "mass": 158.93,
+      "en": 1.2
     },
     {
       "number": 66,
       "symbol": "Dy",
       "name": "Dysprosium",
       "color": "color4",
-      "mass": 162.5
+      "mass": 162.5,
+      "en": 1.22
     },
     {
       "number": 67,
       "symbol": "Ho",
       "name": "Holmium",
       "color": "color4",
-      "mass": 164.93
+      "mass": 164.93,
+      "en": 1.23
     },
     {
       "number": 68,
       "symbol": "Er",
       "name": "Erbium",
       "color": "color4",
-      "mass": 167.26
+      "mass": 167.26,
+      "en": 1.24
     },
     {
       "number": 69,
       "symbol": "Tm",
       "name": "Thulium",
       "color": "color4",
-      "mass": 168.93
+      "mass": 168.93,
+      "en": 1.25
     },
     {
       "number": 70,
       "symbol": "Yb",
       "name": "Ytterbium",
       "color": "color4",
-      "mass": 173.05
+      "mass": 173.05,
+      "en": 1.1
     },
     {
       "number": 71,
       "symbol": "Lu",
       "name": "Lutetium",
       "color": "color4",
-      "mass": 174.97
+      "mass": 174.97,
+      "en": 1.27
     }
   ],
-
   "eightynineonehundredand3": [
     {
       "number": 89,
       "symbol": "Ac",
       "name": "Actinium",
       "color": "color10",
-      "mass": 227
+      "mass": 227,
+      "en": 1.1
     },
     {
       "number": 90,
       "symbol": "Th",
       "name": "Thorium",
       "color": "color10",
-      "mass": 232.04
+      "mass": 232.04,
+      "en": 1.3
     },
     {
       "number": 91,
       "symbol": "Pa",
       "name": "Protactinium",
       "color": "color10",
-      "mass": 231.04
+      "mass": 231.04,
+      "en": 1.5
     },
     {
       "number": 92,
       "symbol": "U",
       "name": "Uranium",
       "color": "color10",
-      "mass": 238.03
+      "mass": 238.03,
+      "en": 1.38
     },
     {
       "number": 93,
       "symbol": "Np",
       "name": "Neptunium",
       "color": "color10",
-      "mass": 237
+      "mass": 237,
+      "en": 1.36
     },
     {
       "number": 94,
       "symbol": "Pu",
       "name": "Plutonium",
       "color": "color10",
-      "mass": 244
+      "mass": 244,
+      "en": 1.28
     },
     {
       "number": 95,
       "symbol": "Am",
       "name": "Americium",
       "color": "color10",
-      "mass": 243
+      "mass": 243,
+      "en": 1.3
     },
     {
       "number": 96,
       "symbol": "Cm",
       "name": "Curium",
       "color": "color10",
-      "mass": 247
+      "mass": 247,
+      "en": 1.3
     },
     {
       "number": 97,
       "symbol": "Bk",
       "name": "Berkelium",
       "color": "color10",
-      "mass": 247
+      "mass": 247,
+      "en": 1.3
     },
     {
       "number": 98,
       "symbol": "Cf",
       "name": "Californium",
       "color": "color10",
-      "mass": 251
+      "mass": 251,
+      "en": 1.3
     },
     {
       "number": 99,
       "symbol": "Es",
       "name": "Einsteinium",
       "color": "color10",
-      "mass": 252
+      "mass": 252,
+      "en": 1.3
     },
     {
       "number": 100,
       "symbol": "Fm",
       "name": "Fermium",
       "color": "color10",
-      "mass": 257
+      "mass": 257,
+      "en": 1.3
     },
     {
       "number": 101,
       "symbol": "Md",
       "name": "Mendelevium",
       "color": "color10",
-      "mass": 258
+      "mass": 258,
+      "en": 1.3
     },
     {
       "number": 102,
       "symbol": "No",
       "name": "Nobelium",
       "color": "color10",
-      "mass": 259
+      "mass": 259,
+      "en": 1.3
     },
     {
       "number": 103,
       "symbol": "Lr",
       "name": "Lawrencium",
       "color": "color10",
-      "mass": 266
+      "mass": 266,
+      "en": 1.3
     }
   ],
   "fiveTen": [
@@ -5102,42 +5131,48 @@
       "symbol": "B",
       "name": "Boron",
       "color": "color6",
-      "mass": 10.81
+      "mass": 10.81,
+      "en": 2.04
     },
     {
       "number": 6,
       "symbol": "C",
       "name": "Carbon",
       "color": "color1",
-      "mass": 12.011
+      "mass": 12.011,
+      "en": 2.55
     },
     {
       "number": 7,
       "symbol": "N",
       "name": "Nitrogen",
       "color": "color1",
-      "mass": 14.007
+      "mass": 14.007,
+      "en": 3.04
     },
     {
       "number": 8,
       "symbol": "O",
       "name": "Oxygen",
       "color": "color1",
-      "mass": 15.999
+      "mass": 15.999,
+      "en": 3.44
     },
     {
       "number": 9,
       "symbol": "F",
       "name": "Fluorine",
       "color": "color8",
-      "mass": 18.998
+      "mass": 18.998,
+      "en": 3.98
     },
     {
       "number": 10,
       "symbol": "Ne",
       "name": "Neon",
       "color": "color9",
-      "mass": 20.18
+      "mass": 20.18,
+      "en": 0.0
     }
   ],
   "eightyseven118": [
@@ -5146,14 +5181,16 @@
       "symbol": "Fr",
       "name": "Francium",
       "color": "color2",
-      "mass": 223
+      "mass": 223,
+      "en": 0.7
     },
     {
       "number": 88,
       "symbol": "Ra",
       "name": "Radium",
       "color": "color3",
-      "mass": 226
+      "mass": 226,
+      "en": 0.9
     },
     {
       "number": "89 - 103",
@@ -5166,105 +5203,120 @@
       "symbol": "Rf",
       "name": "Rutherfordium",
       "color": "color5",
-      "mass": 267
+      "mass": 267,
+      "en": 0.0
     },
     {
       "number": 105,
       "symbol": "Db",
       "name": "Dubnium",
       "color": "color5",
-      "mass": 268
+      "mass": 268,
+      "en": 0.0
     },
     {
       "number": 106,
       "symbol": "Sg",
       "name": "Seaborgium",
       "color": "color5",
-      "mass": 269
+      "mass": 269,
+      "en": 0.0
     },
     {
       "number": 107,
       "symbol": "Bh",
       "name": "Bohrium",
       "color": "color5",
-      "mass": 270
+      "mass": 270,
+      "en": 0.0
     },
     {
       "number": 108,
       "symbol": "Hs",
       "name": "Hassium",
       "color": "color5",
-      "mass": 277
+      "mass": 277,
+      "en": 0.0
     },
     {
       "number": 109,
       "symbol": "Mt",
       "name": "Meitnerium",
       "color": "color5",
-      "mass": 278
+      "mass": 278,
+      "en": 0.0
     },
     {
       "number": 110,
       "symbol": "Ds",
       "name": "Darmstadtium",
       "color": "color5",
-      "mass": 281
+      "mass": 281,
+      "en": 0.0
     },
     {
       "number": 111,
       "symbol": "Rg",
       "name": "Roentgenium",
       "color": "color5",
-      "mass": 282
+      "mass": 282,
+      "en": 0.0
     },
     {
       "number": 112,
       "symbol": "Cn",
       "name": "Copernicium",
       "color": "color5",
-      "mass": 285
+      "mass": 285,
+      "en": 0.0
     },
     {
       "number": 113,
       "symbol": "Nh",
       "name": "Nihonium",
       "color": "color12",
-      "mass": 286
+      "mass": 286,
+      "en": 0.0
     },
     {
       "number": 114,
       "symbol": "Fl",
       "name": "Flerovium",
       "color": "color12",
-      "mass": 289
+      "mass": 289,
+      "en": 0.0
     },
     {
       "number": 115,
       "symbol": "Mc",
       "name": "Moscovium",
       "color": "color12",
-      "mass": 290
+      "mass": 290,
+      "en": 0.0
     },
     {
       "number": 116,
       "symbol": "Lv",
       "name": "Livermorium",
       "color": "color12",
-      "mass": 293
+      "mass": 293,
+      "en": 0.0
     },
     {
       "number": 117,
       "symbol": "Ts",
       "name": "Tennessine",
       "color": "color12",
-      "mass": 294
+      "mass": 294,
+      "en": 0.0
     },
     {
       "number": 118,
       "symbol": "Og",
       "name": "Oganesson",
       "color": "color12",
-      "mass": 294
+      "mass": 294,
+      "en": 0.0
     }
   ],
   "thirteenEighteen": [
@@ -5273,42 +5325,48 @@
       "symbol": "Al",
       "name": "Aluminum",
       "color": "color7",
-      "mass": 26.982
+      "mass": 26.982,
+      "en": 1.61
     },
     {
       "number": 14,
       "symbol": "Si",
       "name": "Silicon",
       "color": "color6",
-      "mass": 28.085
+      "mass": 28.085,
+      "en": 1.9
     },
     {
       "number": 15,
       "symbol": "P",
       "name": "Phosphorus",
       "color": "color1",
-      "mass": 20.974
+      "mass": 20.974,
+      "en": 2.19
     },
     {
       "number": 16,
       "symbol": "S",
       "name": "Sulfur",
       "color": "color1",
-      "mass": 32.06
+      "mass": 32.06,
+      "en": 2.58
     },
     {
       "number": 17,
       "symbol": "Cl",
       "name": "Chlorine",
       "color": "color8",
-      "mass": 35.45
+      "mass": 35.45,
+      "en": 3.16
     },
     {
       "number": 18,
       "symbol": "Ar",
       "name": "Argon",
       "color": "color9",
-      "mass": 39.948
+      "mass": 39.948,
+      "en": 0.0
     }
   ],
   "row1": [
@@ -5317,126 +5375,144 @@
       "symbol": "K",
       "name": "Potassium",
       "color": "color2",
-      "mass": 39.098
+      "mass": 39.098,
+      "en": 0.82
     },
     {
       "number": 20,
       "symbol": "Ca",
       "name": "Calcium",
       "color": "color3",
-      "mass": 40.078
+      "mass": 40.078,
+      "en": 1.0
     },
     {
       "number": 21,
       "symbol": "Sc",
       "name": "Scandium",
       "color": "color5",
-      "mass": 44.956
+      "mass": 44.956,
+      "en": 1.36
     },
     {
       "number": 22,
       "symbol": "Ti",
       "name": "Titanium",
       "color": "color5",
-      "mass": 47.867
+      "mass": 47.867,
+      "en": 1.54
     },
     {
       "number": 23,
       "symbol": "V",
       "name": "Vanadium",
       "color": "color5",
-      "mass": 50.942
+      "mass": 50.942,
+      "en": 1.63
     },
     {
       "number": 24,
       "symbol": "Cr",
       "name": "Chromium",
       "color": "color5",
-      "mass": 51.996
+      "mass": 51.996,
+      "en": 1.66
     },
     {
       "number": 25,
       "symbol": "Mn",
       "name": "Manganese",
       "color": "color5",
-      "mass": 54.938
+      "mass": 54.938,
+      "en": 1.55
     },
     {
       "number": 26,
       "symbol": "Fe",
       "name": "Iron",
       "color": "color5",
-      "mass": 55.845
+      "mass": 55.845,
+      "en": 1.83
     },
     {
       "number": 27,
       "symbol": "Co",
       "name": "Cobalt",
       "color": "color5",
-      "mass": 58.933
+      "mass": 58.933,
+      "en": 1.88
     },
     {
       "number": 28,
       "symbol": "Ni",
       "name": "Nickel",
       "color": "color5",
-      "mass": 58.693
+      "mass": 58.693,
+      "en": 1.91
     },
     {
       "number": 29,
       "symbol": "Cu",
       "name": "Copper",
       "color": "color5",
-      "mass": 63.546
+      "mass": 63.546,
+      "en": 1.9
     },
     {
       "number": 30,
       "symbol": "Zn",
       "name": "Zinc",
       "color": "color5",
-      "mass": 65.38
+      "mass": 65.38,
+      "en": 1.65
     },
     {
       "number": 31,
       "symbol": "Ga",
       "name": "Gallium",
       "color": "color7",
-      "mass": 69.723
+      "mass": 69.723,
+      "en": 1.81
     },
     {
       "number": 32,
       "symbol": "Ge",
       "name": "Germanium",
       "color": "color6",
-      "mass": 72.63
+      "mass": 72.63,
+      "en": 2.01
     },
     {
       "number": 33,
       "symbol": "As",
       "name": "Arsenic",
       "color": "color1",
-      "mass": 74.922
+      "mass": 74.922,
+      "en": 2.18
     },
     {
       "number": 34,
       "symbol": "Se",
       "name": "Selenium",
       "color": "color1",
-      "mass": 78.971
+      "mass": 78.971,
+      "en": 2.55
     },
     {
       "number": 35,
       "symbol": "Br",
       "name": "Bromine",
       "color": "color8",
-      "mass": 79.904
+      "mass": 79.904,
+      "en": 2.96
     },
     {
       "number": 36,
       "symbol": "Kr",
       "name": "Krypton",
       "color": "color9",
-      "mass": 83.798
+      "mass": 83.798,
+      "en": 3.0
     }
   ],
   "row2": [
@@ -5445,126 +5521,144 @@
       "symbol": "Rb",
       "name": "Rubidium",
       "color": "color2",
-      "mass": 85.468
+      "mass": 85.468,
+      "en": 0.82
     },
     {
       "number": 38,
       "symbol": "Sr",
       "name": "Strontium",
       "color": "color3",
-      "mass": 87.62
+      "mass": 87.62,
+      "en": 0.95
     },
     {
       "number": 39,
       "symbol": "Y",
       "name": "Yttrium",
       "color": "color5",
-      "mass": 88.906
+      "mass": 88.906,
+      "en": 1.22
     },
     {
       "number": 40,
       "symbol": "Zr",
       "name": "Zirconium",
       "color": "color5",
-      "mass": 91.224
+      "mass": 91.224,
+      "en": 1.33
     },
     {
       "number": 41,
       "symbol": "Nb",
       "name": "Niobium",
       "color": "color5",
-      "mass": 92.906
+      "mass": 92.906,
+      "en": 1.6
     },
     {
       "number": 42,
       "symbol": "Mo",
       "name": "Molybdenum",
       "color": "color5",
-      "mass": 95.95
+      "mass": 95.95,
+      "en": 2.16
     },
     {
       "number": 43,
       "symbol": "Tc",
       "name": "Technetium",
       "color": "color5",
-      "mass": 98
+      "mass": 98,
+      "en": 1.9
     },
     {
       "number": 44,
       "symbol": "Ru",
       "name": "Ruthenium",
       "color": "color5",
-      "mass": 101.07
+      "mass": 101.07,
+      "en": 2.2
     },
     {
       "number": 45,
       "symbol": "Rh",
       "name": "Rhodium",
       "color": "color5",
-      "mass": 102.91
+      "mass": 102.91,
+      "en": 2.28
     },
     {
       "number": 46,
       "symbol": "Pd",
       "name": "Palladium",
       "color": "color5",
-      "mass": 106.42
+      "mass": 106.42,
+      "en": 2.2
     },
     {
       "number": 47,
       "symbol": "Ag",
       "name": "Silver",
       "color": "color5",
-      "mass": 107.87
+      "mass": 107.87,
+      "en": 1.93
     },
     {
       "number": 48,
       "symbol": "Cd",
       "name": "Cadmium",
       "color": "color5",
-      "mass": 112.41
+      "mass": 112.41,
+      "en": 1.69
     },
     {
       "number": 49,
       "symbol": "In",
       "name": "Indium",
       "color": "color7",
-      "mass": 114.82
+      "mass": 114.82,
+      "en": 1.78
     },
     {
       "number": 50,
       "symbol": "Sn",
       "name": "Tin",
       "color": "color7",
-      "mass": 188.71
+      "mass": 118.71,
+      "en": 1.96
     },
     {
       "number": 51,
       "symbol": "Sb",
       "name": "Antimony",
       "color": "color6",
-      "mass": 121.76
+      "mass": 121.76,
+      "en": 2.05
     },
     {
       "number": 52,
       "symbol": "Te",
       "name": "Tellurium",
       "color": "color6",
-      "mass": 127.6
+      "mass": 127.6,
+      "en": 2.1
     },
     {
       "number": 53,
       "symbol": "I",
       "name": "Iodine",
       "color": "color8",
-      "mass": 126.9
+      "mass": 126.9,
+      "en": 2.66
     },
     {
       "number": 54,
       "symbol": "Xe",
       "name": "Xenon",
       "color": "color9",
-      "mass": 131.29
+      "mass": 131.29,
+      "en": 2.6
     }
   ],
   "row3": [
@@ -5573,120 +5667,141 @@
       "symbol": "Cs",
       "name": "Cesium",
       "color": "color2",
-      "mass": 132.91
+      "mass": 132.91,
+      "en": 0.79
     },
     {
       "number": 56,
       "symbol": "Ba",
       "name": "Barium",
       "color": "color3",
-      "mass": 137.33
+      "mass": 137.33,
+      "en": 0.89
     },
-    { "number": "57 - 71", "color": "reference", "mass": 0.0 },
+    {
+      "number": "57 - 71",
+      "color": "reference",
+      "mass": 0.0
+    },
     {
       "number": 72,
       "symbol": "Hf",
       "name": "Hafnium",
       "color": "color5",
-      "mass": 87.49
+      "mass": 178.49,
+      "en": 1.3
     },
     {
       "number": 73,
       "symbol": "Ta",
       "name": "Tantalum",
       "color": "color5",
-      "mass": 180.95
+      "mass": 180.95,
+      "en": 1.5
     },
     {
       "number": 74,
       "symbol": "W",
       "name": "Tungsten",
       "color": "color5",
-      "mass": 18384
+      "mass": 183.84,
+      "en": 2.36
     },
     {
       "number": 75,
       "symbol": "Re",
       "name": "Rhenium",
       "color": "color5",
-      "mass": 86.21
+      "mass": 186.21,
+      "en": 1.9
     },
     {
       "number": 76,
       "symbol": "Os",
       "name": "Osmium",
       "color": "color5",
-      "mass": 190.23
+      "mass": 190.23,
+      "en": 2.2
     },
     {
       "number": 77,
       "symbol": "Ir",
       "name": "Iridium",
       "color": "color5",
-      "mass": 192.22
+      "mass": 192.22,
+      "en": 2.2
     },
     {
       "number": 78,
       "symbol": "Pt",
       "name": "Platinum",
       "color": "color5",
-      "mass": 195.08
+      "mass": 195.08,
+      "en": 2.28
     },
     {
       "number": 79,
       "symbol": "Au",
       "name": "Gold",
       "color": "color5",
-      "mass": 196.97
+      "mass": 196.97,
+      "en": 2.54
     },
     {
       "number": 80,
       "symbol": "Hg",
       "name": "Mercury",
       "color": "color5",
-      "mass": 200.59
+      "mass": 200.59,
+      "en": 2.0
     },
     {
       "number": 81,
       "symbol": "Tl",
       "name": "Thallium",
       "color": "color7",
-      "mass": 204.38
+      "mass": 204.38,
+      "en": 1.62
     },
     {
       "number": 82,
       "symbol": "Pb",
       "name": "Lead",
       "color": "color7",
-      "mass": 207.2
+      "mass": 207.2,
+      "en": 2.33
     },
     {
       "number": 83,
       "symbol": "Bi",
       "name": "Bismuth",
       "color": "color7",
-      "mass": 208.98
+      "mass": 208.98,
+      "en": 2.02
     },
     {
       "number": 84,
       "symbol": "Po",
       "name": "Polonium",
       "color": "color6",
-      "mass": 209
+      "mass": 209,
+      "en": 2.0
     },
     {
       "number": 85,
       "symbol": "At",
       "name": "Astatine",
       "color": "color8",
-      "mass": 210
+      "mass": 210,
+      "en": 2.2
     },
     {
       "number": 86,
       "symbol": "Rn",
       "name": "Radon",
       "color": "color9",
-      "mass": 222
+      "mass": 222,
+      "en": 2.2
     }
   ]
 }

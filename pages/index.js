@@ -126,7 +126,7 @@ export default function Home() {
                   <div className="mt-12">
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                       {features.map((feature) => (
-                        <Link href={feature.href}>
+                        <Link key={feature.name} href={feature.href}>
                           <div key={feature.name} className="pt-6">
                             <div className="flow-root lg:h-56 h-64 rounded-lg bg-gray-700 px-4 pb-4 hover:brightness-125">
                               <div className="-mt-6">

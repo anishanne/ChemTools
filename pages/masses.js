@@ -512,7 +512,7 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-              <h1 className=" bg-gray-800 text-center font-bold font-bold text-2xl mt-24 m-8">
+              <h1 className=" bg-gray-800 text-center font-bold text-2xl mt-24 m-8">
                 Common Polyatomic Ions
               </h1>
               <table className="mx-auto p-3 bg-gray-800 border-2 w-3/4">
@@ -520,7 +520,7 @@ export default function Home() {
                   {data.dataArray.map((row) => (
                     <tr
                       key={row.id}
-                      className="border-2 p-3 bg-gray-800 hover:bg-gray-800 cursor-pointer"
+                      className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                     >
                       <td
                         onClick={() => {
@@ -531,7 +531,7 @@ export default function Home() {
                           );
                           scrollToTop();
                         }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-800 cursor-pointer"
+                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                       >
                         {row.cell1.name + " " + row.cell1.formula}
                       </td>
@@ -544,7 +544,7 @@ export default function Home() {
                           );
                           scrollToTop();
                         }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-800 cursor-pointer"
+                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                       >
                         {row.cell2.name + " " + row.cell2.formula}
                       </td>
@@ -557,7 +557,7 @@ export default function Home() {
                           );
                           scrollToTop();
                         }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-800 cursor-pointer"
+                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                       >
                         {row.cell3.name + " " + row.cell3.formula}
                       </td>

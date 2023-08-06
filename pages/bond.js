@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Image from "next/image";
 import data from "../data.json";
@@ -90,14 +91,14 @@ export default function Home() {
               </div>
 
               {element1 ? (
-                <div className="mx-16 grid grid-cols-5">
+                <div className="mx-8 grid grid-cols-5">
                   {" "}
                   {element1 ? (
                     <>
                       {" "}
                       <p
-                        className={`col-span-${
-                          bondType ? "2" : "4"
+                        className={`${
+                          bondType ? "col-span-2" : "col-span-4"
                         } m-8 w-full text-center text-xl font-bold`}
                       >
                         Predicted bond type between {element1.name} (

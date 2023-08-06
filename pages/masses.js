@@ -570,7 +570,7 @@ export default function Home() {
                           );
                           scrollToTop();
                         }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-800 cursor-pointer"
+                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                       >
                         {row.cell4.name + " " + row.cell4.formula}
                       </td>

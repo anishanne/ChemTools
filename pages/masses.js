@@ -870,7 +870,6 @@ export default function Home() {
     );
 
   const handleBackspace = () => {
-    // keyCode 8 is the code for the backspace key
     const updatedElements = [...elementString];
     updatedElements.pop(); // remove the last added element
 

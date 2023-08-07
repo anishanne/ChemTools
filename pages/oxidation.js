@@ -11,6 +11,39 @@ import {
 } from "../utils/calculator";
 
 export default function Calculations() {
+  const [products, setProducts] = useState([{ coeff: "", concentration: "" }]);
+  const [reactants, setReactants] = useState([
+    { coeff: "", concentration: "" },
+  ]);
+  const [result, setResult] = useState("");
+
+  const handleAddProduct = () => {
+    setProducts([...products, { coeff: "", concentration: "" }]);
+  };
+
+  const handleAddReactant = () => {
+    setReactants([...reactants, { coeff: "", concentration: "" }]);
+  };
+
+  const handleCalculate = () => {
+    // Check if any input is empty
+    if (
+      Object.values(products).some(
+        (product) => product.coeff === "" || product.concentration === ""
+      ) ||
+      Object.values(reactants).some(
+        (reactant) => reactant.coeff === "" || reactant.concentration === ""
+      )
+    ) {
+      setResult(
+        "Please enter coefficients and concentrations for all products and reactants."
+      );
+    } else {
+      const KQ = calculateEquilibriumKQ(products, reactants);
+      setResult(`K = ${KQ.K}, Q = ${KQ.Q}`);
+    }
+  };
+
   const [molarityInputs, setMolarityInputs] = useState({
     Ma: "",
     Va: "",
@@ -99,6 +132,77 @@ export default function Calculations() {
         Calculate Sig Figs
       </button>
       <p className="text-white">{sigFigsResult}</p>
+      <h2 className="text-white">Equilibrium K vs Q Calculator</h2>
+      <div>
+        <h3 className="text-white">Products:</h3>
+        {products.map((product, index) => (
+          <div key={index}>
+            <label className="text-white">Coefficient:</label>
+            <input
+              type="number"
+              className="text-black"
+              value={product.coeff}
+              onChange={(e) => {
+                const newProducts = [...products];
+                newProducts[index].coeff = e.target.value;
+                setProducts(newProducts);
+              }}
+            />
+            <label className="text-white">Concentration:</label>
+            <input
+              type="number"
+              className="text-black"
+              value={product.concentration}
+              onChange={(e) => {
+                const newProducts = [...products];
+                newProducts[index].concentration = e.target.value;
+                setProducts(newProducts);
+              }}
+            />
+          </div>
+        ))}
+        <button className="text-white" onClick={handleAddProduct}>
+          Add Product
+        </button>
+      </div>
+      <div>
+        <h3 className="text-white">Reactants:</h3>
+        {reactants.map((reactant, index) => (
+          <div key={index}>
+            <label className="text-white">Coefficient:</label>
+            <input
+              type="number"
+              className="text-black"
+              value={reactant.coeff}
+              onChange={(e) => {
+                const newReactants = [...reactants];
+                newReactants[index].coeff = e.target.value;
+                setReactants(newReactants);
+              }}
+            />
+            <label className="text-white">Concentration:</label>
+            <input
+              type="number"
+              className="text-black"
+              value={reactant.concentration}
+              onChange={(e) => {
+                const newReactants = [...reactants];
+                newReactants[index].concentration = e.target.value;
+                setReactants(newReactants);
+              }}
+            />
+          </div>
+        ))}
+        <button className="text-white" onClick={handleAddReactant}>
+          Add Reactant
+        </button>
+      </div>
+      <button className="text-white" onClick={handleCalculate}>
+        Calculate
+      </button>
+      <div>
+        <p>{result}</p>
+      </div>
     </div>
   );
 }

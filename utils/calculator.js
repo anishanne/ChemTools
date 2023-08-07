@@ -72,16 +72,22 @@ export function countSigFigs(number) {
   return count;
 }
 
-// Function to calculate equilibrium constant (K) and reaction quotient (Q)
 export function calculateEquilibriumKQ(products, reactants) {
-  // Assume products and reactants are arrays of objects with 'coeff' and 'concentration' properties
-  const K = products.reduce(
+  // Convert products and reactants objects to arrays
+  const productArray = Object.values(products);
+  const reactantArray = Object.values(reactants);
+
+  // Calculate K
+  const K = productArray.reduce(
     (acc, product) => acc * Math.pow(product.concentration, product.coeff),
     1
   );
-  const Q = reactants.reduce(
+
+  // Calculate Q
+  const Q = reactantArray.reduce(
     (acc, reactant) => acc * Math.pow(reactant.concentration, reactant.coeff),
-    1
+    1 // Set the initial value for Q to K
   );
+
   return { K, Q };
 }

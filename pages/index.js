@@ -69,8 +69,8 @@ export default function Home() {
           setSidebarOpen={setSidebarOpen}
           page="Home"
         />
-        <div className="bg-gray-700 flex flex-col md:pl-64">
-          <div className=" sticky top-0 z-10 flex flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
+        <div className="bg-gray-800 flex flex-col md:pl-64">
+          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
             <button
               type="button"
               className=" px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-500 md:hidden"
@@ -81,23 +81,12 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <main className="bg-gray-800 h-full flex-1">
+        <main className="z-0 bg-gray-800 h-full flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="mx-auto  flex justify-left h-full w-full bg-gray-800 text-lg">
                 {" "}
                 <div className="top-0 z-10 flex h-64 flex-shrink-0 bg-gray-300 shadow w-full dark:bg-gray-800">
-                  <button
-                    type="button"
-                    className="left-0 h-16 bg-white px-4 text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:bg-gray-900 md:hidden"
-                    onClick={() => setSidebarOpen(true)}
-                  >
-                    <span className="sr-only">Open sidebar</span>
-                    <Bars3BottomLeftIcon
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                    />
-                  </button>
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools

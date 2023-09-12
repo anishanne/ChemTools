@@ -29,7 +29,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-0 md:hidden"
+          className="relative z-10 md:hidden"
           onClose={setSidebarOpen}
         >
           <Transition.Child
@@ -80,8 +80,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                 </Transition.Child>
                 <div className="flex flex-shrink-0 items-center px-4">
                   <img
-                    className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-52 bg-gray-900"
-                    src="/chemlogo.png"
+                    className=" m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-52 bg-gray-900"
+                    src="chemlogo.png"
                   />
                   <h4 className="text-same px-4 font-medium dark:text-gray-100">
                     Chem Tools Bro
@@ -129,8 +129,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
         <div className="flex min-h-0 flex-1 flex-col bg-gray-200 dark:bg-gray-900">
           <div className="flex h-36 lg:h-48 flex-shrink-0 items-center bg-gray-200 px-4 dark:bg-gray-900">
             <img
-              className="xl:unhidden m-6 hidden mr-9 xl:inline-flex xl:h-48 xl:w-52 bg-gray-900"
-              src="/chemlogo.png"
+              className=" lg:unhidden m-6 hidden mr-9 lg:inline-flex lg:h-48 lg:w-52 bg-gray-900"
+              src="chemlogo.png"
             />
           </div>
           <div className="flex flex-1 flex-col bg-gray-900 overflow-y-auto">
@@ -157,7 +157,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             </nav>
             <div className="m-2  font-semibold">
               <h1 className="bg-gray-900 justify-items-center text-center text-gray-500 dark:text-gray-100 text-sm">
-                © Copyright 2023 JoeMoney, Professor Mishra
+                Made By: Arnav Mishra, Joseph Marra
               </h1>
             </div>
           </div>

@@ -93,14 +93,11 @@ export default function Home() {
                     
                   </h2>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Arnav is a junior who loves AP Chemistry
+                    Arnav is a senior
                  
                   </p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Joe money is a sophomore who loves being physics captain of John Jay SciOily
-                  </p>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Matthew is a freshman who is along for the ride
+                    Joe money is a junior
                   </p>
                 </div>
               </div>

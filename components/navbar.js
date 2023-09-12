@@ -11,7 +11,6 @@ import {
   UserCircleIcon,
   BoltSlashIcon,
   FireIcon,
-
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -20,11 +19,9 @@ const navigation = [
   { name: "Molar Mass", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Type", href: "/bond", icon: CubeTransparentIcon },
-  { name: "Oxidation States", href:"/oxidation", icon: BoltSlashIcon},
-  { name: "Acid Base", href:"/acidbase", icon: FireIcon},
-  { name: "About", href: "/about", icon: UserCircleIcon},
-
-  
+  { name: "Oxidation States", href: "/oxidation", icon: BoltSlashIcon },
+  { name: "Acid Base", href: "/acidbase", icon: FireIcon },
+  { name: "About", href: "/about", icon: UserCircleIcon },
 ];
 export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
   return (
@@ -160,7 +157,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             </nav>
             <div className="m-2  font-semibold">
               <h1 className="bg-gray-900 justify-items-center text-center text-gray-500 dark:text-gray-100 text-sm">
-                © Copyright 2023 JoeMoney, Professor Mishra, and Matthew Glasser
+                © Copyright 2023 JoeMoney, Professor Mishra
               </h1>
             </div>
           </div>

@@ -16,9 +16,11 @@ export default function Classwork({
   appearance,
   name,
   symbol,
+  oxidation,
 }) {
   const cancelButtonRef = useRef(null);
   const ionizationString = ionization.toString();
+  const oxidationString = oxidation.toString();
   return (
     <Transition.Root show={open}>
       <Dialog
@@ -78,6 +80,7 @@ export default function Classwork({
                                       : "Not Found"}
                                   </dd>
                                 </div>
+
                                 <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                   <dt className="text-sm bg-inherit font-medium text-gray-50">
                                     Electronegativity{" "}
@@ -160,6 +163,16 @@ export default function Classwork({
                                   </dt>
                                   <dd className="mt-1 bg-inherit text-sm text-gray-100 sm:col-span-2 sm:mt-0">
                                     {appearance ? appearance : "Not Found"}
+                                  </dd>
+                                </div>
+                                <div className="bg-gray-800 rounded-t-md px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                  <dt className="text-sm bg-inherit font-medium text-gray-50">
+                                    Possible Oxidation States{" "}
+                                  </dt>
+                                  <dd className="mt-1 bg-inherit text-sm text-gray-100 sm:col-span-2 sm:mt-0 whitespace-normal break-words">
+                                    {oxidationString
+                                      ? oxidationString.replaceAll(",", ", ")
+                                      : "Not Found"}
                                   </dd>
                                 </div>
                               </dl>

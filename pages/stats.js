@@ -866,6 +866,7 @@ export default function Home() {
   const [name, setName] = useState("");
   const [symbol, setSymbol] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [oxidation, setOxidation] = useState([]);
 
   return (
     <>
@@ -929,10 +930,9 @@ export default function Home() {
                         setMelt(data.elements[0].melt);
                         setName(data.elements[0].name);
                         setSymbol(data.elements[0].symbol);
+                        setOxidation(data.elements[0].oxidationStates);
 
-                        setElectronegativity(
-                          data.elements[0].electronegativity_pauling
-                        );
+                        setElectronegativity(data.elements[0].en);
                         setPhase(data.elements[0].phase);
                       }}
                       className={`${colors.color1 + style} `}
@@ -957,10 +957,9 @@ export default function Home() {
                         setMelt(data.elements[1].melt);
                         setName(data.elements[1].name);
                         setSymbol(data.elements[1].symbol);
+                        setOxidation(data.elements[1].oxidationStates);
 
-                        setElectronegativity(
-                          data.elements[1].electronegativity_pauling
-                        );
+                        setElectronegativity(data.elements[1].en);
                         setPhase(data.elements[1].phase);
                       }}
                       className={colors.color9 + style}
@@ -983,10 +982,9 @@ export default function Home() {
                         setMelt(data.elements[2].melt);
                         setName(data.elements[2].name);
                         setSymbol(data.elements[2].symbol);
+                        setOxidation(data.elements[2].oxidationStates);
 
-                        setElectronegativity(
-                          data.elements[2].electronegativity_pauling
-                        );
+                        setElectronegativity(data.elements[2].en);
                         setPhase(data.elements[2].phase);
                       }}
                       className={colors.color2 + style}
@@ -999,15 +997,15 @@ export default function Home() {
                         setIonization(data.elements[3].ionization_energies);
                         setAffinity(data?.elements[3].electron_affinity);
                         setAppearance(data.elements[3].appearance);
+                        setOxidation(data.elements[3].oxidationStates);
+
                         setBoil(data.elements[3].boil);
                         setConfiguration(
                           data.elements[3].electron_configuration
                         );
                         setDense(data.elements[3].density);
                         setMelt(data.elements[3].melt);
-                        setElectronegativity(
-                          data.elements[3].electronegativity_pauling
-                        );
+                        setElectronegativity(data.elements[3].en);
                         setName(data.elements[3].name);
                         setSymbol(data.elements[3].symbol);
                         setPhase(data.elements[3].phase);
@@ -1029,6 +1027,11 @@ export default function Home() {
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
                             )[0].ionization_energies
+                          );
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
                           );
                           setAffinity(
                             data.elements.filter(
@@ -1063,7 +1066,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1075,6 +1078,7 @@ export default function Home() {
                               (name) => name.symbol === element.symbol
                             )[0].name
                           );
+
                           setSymbol(element.symbol);
                         }}
                         className={element.color}
@@ -1098,12 +1102,11 @@ export default function Home() {
                         );
                         setDense(data.elements[10].density);
                         setMelt(data.elements[10].melt);
-                        setElectronegativity(
-                          data.elements[10].electronegativity_pauling
-                        );
+                        setElectronegativity(data.elements[10].en);
                         setPhase(data.elements[10].phase);
                         setName(data.elements[10].name);
                         setSymbol(data.elements[10].symbol);
+                        setOxidation(data.elements[10].oxidationStates);
                       }}
                       className={colors.color2 + style}
                     >
@@ -1121,9 +1124,8 @@ export default function Home() {
                         );
                         setDense(data.elements[11].density);
                         setMelt(data.elements[11].melt);
-                        setElectronegativity(
-                          data.elements[11].electronegativity_pauling
-                        );
+                        setOxidation(data.elements[11].oxidationStates);
+                        setElectronegativity(data.elements[11].en);
                         setPhase(data.elements[11].phase);
                         setName(data.elements[11].name);
                         setSymbol(data.elements[11].symbol);
@@ -1172,6 +1174,11 @@ export default function Home() {
                               (name) => name.symbol === element.symbol
                             )[0].density
                           );
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setMelt(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1180,7 +1187,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1213,6 +1220,11 @@ export default function Home() {
                               (name) => name.symbol === element.symbol
                             )[0].ionization_energies
                           );
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setAffinity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1246,7 +1258,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1274,6 +1286,11 @@ export default function Home() {
                         key={key}
                         onClick={() => {
                           setInfoOpen(true);
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setIonization(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1312,7 +1329,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1340,6 +1357,11 @@ export default function Home() {
                         key={key}
                         onClick={() => {
                           setInfoOpen(true);
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setIonization(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1378,7 +1400,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1406,6 +1428,11 @@ export default function Home() {
                         key={key}
                         onClick={() => {
                           setInfoOpen(true);
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setIonization(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1444,7 +1471,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1477,6 +1504,11 @@ export default function Home() {
                       <td
                         onClick={() => {
                           setInfoOpen(true);
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setIonization(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1515,7 +1547,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1555,6 +1587,11 @@ export default function Home() {
                               (name) => name.symbol === element.symbol
                             )[0].ionization_energies
                           );
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
                           setAffinity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
@@ -1588,7 +1625,7 @@ export default function Home() {
                           setElectronegativity(
                             data.elements.filter(
                               (name) => name.symbol === element.symbol
-                            )[0].electronegativity_pauling
+                            )[0].en
                           );
                           setPhase(
                             data.elements.filter(
@@ -1626,6 +1663,7 @@ export default function Home() {
                 phase={phase}
                 appearance={appearance}
                 name={name}
+                oxidation={oxidation}
                 symbol={symbol}
               />
             </div>

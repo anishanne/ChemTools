@@ -59,8 +59,8 @@ export default function Home() {
 
   const calculateBondType = (el1, el2) => {
     const electronegativityDiff = calculateElectronegativityDifference(
-      el1.en,
-      el2.en
+      el1.en === null ? null : el1.en,
+      el2.en === null ? null : el2.en
     );
     const bondType = getBondType(electronegativityDiff);
     setBondType(bondType);
@@ -77,7 +77,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Bond Type"
+            page="Bond Character"
           />
           <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
             <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
@@ -98,7 +98,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                <div className="top-0 z-0 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center  mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
@@ -120,12 +120,17 @@ export default function Home() {
                       <p
                         className={`${
                           bondType ? "col-span-2" : "col-span-4"
-                        } m-8 w-full text-center text-xl font-bold`}
+                        } m-8 w-full text-center text-base md:text-xl font-bold`}
                       >
                         Predicted bond type between {element1.name} (
-                        {element1.en}) and{" "}
+                        {element1.en ? element1.en : "Undefined"}) and{" "}
                         {element2?.name ? element2.name : "..."} (
-                        {element2?.en ? element2.en : "..."}) :
+                        {element2?.en === null
+                          ? "Undefined"
+                          : element2?.en
+                          ? element2.en
+                          : "..."}
+                        )" :
                       </p>
                       {bondType ? (
                         <p
@@ -147,7 +152,7 @@ export default function Home() {
                     <div className="w-full col-span-1"></div>
                   )}
                   <button
-                    className="mt-8  bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                    className="mt-8   bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
                     onClick={() => {
                       setElement1();
                       setElement2();
@@ -177,6 +182,7 @@ export default function Home() {
                   <tr>
                     <td
                       className={`${colors.color1 + style} text-xs sm:text-xl`}
+                      onClick={() => handleElementClick(data.elements[0])}
                     >
                       1<br></br>H
                     </td>
@@ -184,15 +190,24 @@ export default function Home() {
                       className={`${colors.none} cursor-default text-xs sm:text-xl `}
                       colSpan="16"
                     ></td>
-                    <td className={colors.color9 + style}>
+                    <td
+                      onClick={() => handleElementClick(data.elements[1])}
+                      className={colors.color9 + style}
+                    >
                       2<br></br>He
                     </td>
                   </tr>
                   <tr>
-                    <td className={colors.color2 + style}>
+                    <td
+                      onClick={() => handleElementClick(data.elements[2])}
+                      className={colors.color2 + style}
+                    >
                       3<br></br>Li
                     </td>
-                    <td className={colors.color3 + style}>
+                    <td
+                      onClick={() => handleElementClick(data.elements[3])}
+                      className={colors.color3 + style}
+                    >
                       4<br></br>Be
                     </td>
                     <td
@@ -212,10 +227,16 @@ export default function Home() {
                     ))}
                   </tr>
                   <tr>
-                    <td className={colors.color2 + style}>
+                    <td
+                      onClick={() => handleElementClick(data.elements[10])}
+                      className={colors.color2 + style}
+                    >
                       11<br></br>Na
                     </td>
-                    <td className={colors.color3 + style}>
+                    <td
+                      onClick={() => handleElementClick(data.elements[11])}
+                      className={colors.color3 + style}
+                    >
                       12<br></br>Mg
                     </td>
 

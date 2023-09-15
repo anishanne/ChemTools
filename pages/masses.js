@@ -194,7 +194,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Molar Masses"
+            page="Molar Mass"
           />
           <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
             <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">

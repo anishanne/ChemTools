@@ -10,6 +10,16 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import { useCallback } from "react";
 import { set } from "zod";
+import {
+  CloudArrowUpIcon,
+  Bars3BottomLeftIcon,
+  LockClosedIcon,
+  ArrowPathIcon,
+  BookOpenIcon,
+  CubeTransparentIcon,
+  NewspaperIcon,
+  BeakerIcon,
+} from "@heroicons/react/24/outline";
 
 const colors = {
   color1:
@@ -186,13 +196,25 @@ export default function Home() {
             setSidebarOpen={setSidebarOpen}
             page="Molar Masses"
           />
+          <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
+            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
+              <button
+                type="button"
+                className=" px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-500 md:hidden"
+                onClick={() => setSidebarOpen(true)}
+              >
+                <span className="sr-only">Open sidebar</span>
+                <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
         </div>
         <main className="flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-10 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center  mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
@@ -200,12 +222,12 @@ export default function Home() {
                     <p className="text-center  text-2xl font-light md:text-3xl">
                       We've got solutions... not just reactions
                     </p>
-                    <hr className="text-white my-16 border-dotted "></hr>
+                    <hr className="text-white mt-16 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">
-                <form className="grid grid-cols-2 bg-gray-900 mx-8 ml-8  mt-16 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                <form className="grid grid-cols-2 bg-gray-900 mx-8 ml-8  mt-8 shadow-md rounded px-8 pt-6 pb-8 mb-3">
                   <div className=" mb-3">
                     <label
                       className=" block text-gray-300 text-sm font-bold mb-2"
@@ -213,8 +235,8 @@ export default function Home() {
                     >
                       Formula
                     </label>
-                    {polyatomic == "" ? (
-                      <div className=" border rounded w-full py-2 px-3 text-black focus:outline-none bg-white ">
+                    {polyatomic === "" ? (
+                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
                         {h2string.length > 0 ? (
                           h2string.map((text, index) => {
                             const match = text.match(/\d+/);
@@ -250,10 +272,11 @@ export default function Home() {
                         )}
                       </div>
                     ) : (
-                      <div className=" border rounded w-full py-2 px-3 text-black focus:outline-none bg-white ">
+                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
                         {polyatomic}
                       </div>
                     )}
+
                     <div className=" mt-6 mb-6">
                       <label
                         className="block text-gray-300  text-sm font-bold mb-2"
@@ -563,8 +586,8 @@ export default function Home() {
                       </td>
                       <td
                         onClick={() => {
-                          setGrams(row.cell4.mass),
-                            setInputGrams(row.cell4.mass);
+                          setGrams(grams + row.cell4.mass),
+                            setInputGrams(grams + row.cell4.mass);
                           setPolyatomic(
                             row.cell4.name + " " + row.cell4.formula
                           );

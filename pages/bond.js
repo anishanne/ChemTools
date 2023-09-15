@@ -9,7 +9,16 @@ import {
   calculateElectronegativityDifference,
   getBondType,
 } from "@/utils/bondUtils";
-
+import {
+  CloudArrowUpIcon,
+  Bars3BottomLeftIcon,
+  LockClosedIcon,
+  ArrowPathIcon,
+  BookOpenIcon,
+  CubeTransparentIcon,
+  NewspaperIcon,
+  BeakerIcon,
+} from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 const colors = {
   color1: "bg-red-600",
@@ -70,6 +79,18 @@ export default function Home() {
             setSidebarOpen={setSidebarOpen}
             page="Bond Type"
           />
+          <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
+            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
+              <button
+                type="button"
+                className=" px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-500 md:hidden"
+                onClick={() => setSidebarOpen(true)}
+              >
+                <span className="sr-only">Open sidebar</span>
+                <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
         </div>
         <PolarCovalent open={open} setOpen={setOpen} bondType={bondType} />
         <main className="flex-1">

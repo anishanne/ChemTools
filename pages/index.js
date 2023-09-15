@@ -69,7 +69,7 @@ export default function Home() {
           setSidebarOpen={setSidebarOpen}
           page="Home"
         />
-        <div className="bg-gray-800 flex flex-col md:pl-64">
+        <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
           <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
             <button
               type="button"
@@ -86,7 +86,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="mx-auto  flex justify-left h-full w-full bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-10 flex h-64 flex-shrink-0 bg-gray-300 shadow w-full dark:bg-gray-800">
+                <div className="top-0 z-0 flex flex-shrink-0 bg-gray-300 shadow w-full dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
@@ -94,11 +94,11 @@ export default function Home() {
                     <p className="text-center text-2xl font-light md:text-3xl">
                       Taking Chemistry to the next energy level.
                     </p>
-                    <hr className="text-white my-16 border-dotted "></hr>
+                    <hr className="text-white mt-8 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>
-              <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-20">
+              <div className="relative z-0 bg-gray-800 py-8 ">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                   <h2 className="text-5xl font-bold text-blue-500">
                     Transforming chemistry education.

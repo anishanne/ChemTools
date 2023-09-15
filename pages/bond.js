@@ -130,7 +130,7 @@ export default function Home() {
                           : element2?.en
                           ? element2.en
                           : "..."}
-                        )" :
+                        )
                       </p>
                       {bondType ? (
                         <p

@@ -195,15 +195,16 @@ export default function Home() {
                       }}
                       className={`${
                         colors[element.color]
-                      } h-12 text-center flex items-center justify-center text-base ${style2}`}
+                      } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
                     >
-                      {element.symbol}
+                      <div className="text-sm">{element.number}</div>
+                      <div>{element.symbol}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <table className="md:block hidden w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <table className="md:visible w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td

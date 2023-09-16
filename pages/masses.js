@@ -45,7 +45,7 @@ const colors = {
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 const style =
-  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  lg:text-xl text-xs w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle   w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -346,15 +346,17 @@ export default function Home() {
                       }
                       className={`${
                         colors[element.color]
-                      } h-12 text-center flex items-center justify-center text-base ${style2}`}
+                      } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
                     >
-                      {element.symbol}
+                      <div className="text-sm"> {element.number}</div>
+
+                      <div> {element.symbol}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <table className="md:block hidden w-11/12 mx-8 bg-gray-800 mt-8  lg:text-xl text-xs cursor-pointer">
+              <table className="md:visible w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td

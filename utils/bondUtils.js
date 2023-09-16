@@ -17,6 +17,7 @@ export const calculateElectronegativityDifference = (
 
 export const getBondType = (electronegativityDifference) => {
   console.log(electronegativityDifference);
+  if (electronegativityDifference === 0) return "Non-polar covalent";
   if (electronegativityDifference < 0.5 && electronegativityDifference > 0) {
     return "Non-polar covalent";
   } else if (

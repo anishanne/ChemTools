@@ -33,16 +33,19 @@ export default function Home() {
           setSidebarOpen={setSidebarOpen}
           page="About Us"
         />
-        <div className="bg-gray-700 flex flex-col md:pl-64">
-          <div className=" sticky top-0 z-10 flex flex-shrink-0   bg-gray-900">
-            <button
-              type="button"
-              className=" px-4  focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
-              onClick={() => setSidebarOpen(true)}
-            >
-              <span className="sr-only">Open sidebar</span>
-              <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
+        <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
+          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow bg-gray-900">
+            <div className="w-full flex justify-between items-center">
+              <button
+                type="button"
+                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
+                onClick={() => setSidebarOpen(true)}
+              >
+                <span className="sr-only">Open sidebar</span>
+                <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+              <img className="w-16 h-16 bg-gray-900 mr-4" src="chemlogo.png" />
+            </div>
           </div>
         </div>
         <main className="bg-gray-800 h-full flex-1">

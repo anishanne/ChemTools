@@ -44,6 +44,12 @@ const style2 =
   " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [element1, setElement1] = useState(null);
@@ -183,7 +189,10 @@ export default function Home() {
                   {data.elements.map((element, index) => (
                     <div
                       key={index}
-                      onClick={() => handleElementClick(element)}
+                      onClick={() => {
+                        handleElementClick(element);
+                        scrollToTop();
+                      }}
                       className={`${
                         colors[element.color]
                       } h-12 text-center flex items-center justify-center text-base ${style2}`}

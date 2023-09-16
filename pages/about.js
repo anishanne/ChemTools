@@ -34,10 +34,10 @@ export default function Home() {
           page="About Us"
         />
         <div className="bg-gray-700 flex flex-col md:pl-64">
-          <div className=" sticky top-0 z-10 flex flex-shrink-0 bg-gray-300  dark:bg-gray-900">
+          <div className=" sticky top-0 z-10 flex flex-shrink-0   bg-gray-900">
             <button
               type="button"
-              className=" px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 dark:text-gray-500 md:hidden"
+              className=" px-4  focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
@@ -50,7 +50,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="mx-auto  flex justify-left h-full w-full bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-0 flex h-64 flex-shrink-0 bg-gray-300  w-full dark:bg-gray-800">
+                <div className="top-0 z-0 flex h-64 flex-shrink-0  w-full bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center my-8 text-5xl font-bold md:text-7xl">
                       About

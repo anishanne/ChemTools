@@ -23,19 +23,19 @@ import {
 
 const colors = {
   color1:
-    "border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-red-600",
+    "border-2 border-gray-200 border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-red-600",
   color2:
-    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-700",
+    " border-2 border-gray-200 border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-700",
   color3:
-    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-500",
+    " border-2 border-gray-200 border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-500",
   color4:
-    " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-600",
+    " border-2 border-gray-200 border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-600",
   color5: "bg-red-500",
   color6: "bg-yellow-500",
   color7: "bg-orange-500",
   color8: "bg-green-400",
   color9:
-    "border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-700 ",
+    "border-2 border-gray-200 border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-700 ",
   color10: "bg-blue-800",
   color11: "bg-gray-200",
   color12: "bg-gray-400 ",
@@ -45,9 +45,9 @@ const colors = {
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 const style =
-  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle   w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle   w-12 hover:brightness-150 hover:text-black";
 const style2 =
-  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [grams, setGrams] = useState(0);
@@ -186,7 +186,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-max pb-8  bg-gray-200 dark:bg-gray-800">
+      <div className="h-max pb-8   bg-gray-800">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}
@@ -198,10 +198,10 @@ export default function Home() {
             page="Molar Mass"
           />
           <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
-            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-300 shadow dark:bg-gray-900">
+            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  shadow bg-gray-900">
               <button
                 type="button"
-                className=" px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-500 md:hidden"
+                className=" px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>
@@ -215,7 +215,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                <div className="top-0 z-0 w-full flex  flex-shrink-0 p  bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
                       Gram Formula Mass Calculator

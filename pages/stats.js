@@ -899,7 +899,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="flex justify-left h-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-0 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
@@ -907,13 +907,84 @@ export default function Home() {
                     <p className="text-center  text-2xl font-light md:text-3xl">
                       We've got solutions... not just reactions
                     </p>
-                    <hr className="text-white my-16 border-dotted "></hr>
+                    <hr className="text-white  mt-8 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>
               <div className="w-full max-w-xs"></div>
+              <div className="m-8 md:hidden block">
+                <div className="flex flex-wrap p-4 -mx-2">
+                  {data.elements.map((element, index) => (
+                    <div
+                      key={index}
+                      onClick={() => {
+                        setInfoOpen(true);
+                        setIonization(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].ionization_energies
+                        );
+                        setOxidation(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].oxidationStates
+                        );
+                        setAffinity(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].electron_affinity
+                        );
+                        setAppearance(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].appearance
+                        );
+                        setBoil(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].boil
+                        );
+                        setConfiguration(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].electron_configuration
+                        );
+                        setDense(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].density
+                        );
+                        setMelt(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].melt
+                        );
+                        setElectronegativity(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].en
+                        );
+                        setPhase(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].phase
+                        );
+                        setName(
+                          data.elements.filter(
+                            (name) => name.symbol === element.symbol
+                          )[0].name
+                        );
 
-              <table className="w-11/12  mx-auto bg-gray-800 mt-8 cursor-pointer">
+                        setSymbol(element.symbol);
+                      }}
+                      className={colors[element.color] + style || ""}
+                    >
+                      {element.symbol}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <table className="w-11/12 md:block hidden   mx-auto bg-gray-800 mt-8 cursor-pointer">
                 <tbody className="bg-gray-800">
                   <tr>
                     <td

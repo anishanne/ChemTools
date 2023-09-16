@@ -45,7 +45,7 @@ const colors = {
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 const style =
-  " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  lg:text-xl text-xs w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [grams, setGrams] = useState(0);
@@ -81,7 +81,17 @@ export default function Home() {
     const updatedElements = [...elementString];
     updatedElements.pop(); // remove the last added element
 
-    // update state directly
+    // Check if the last element is a polyatomic segment
+    if (polyatomic && updatedElements.length > 0) {
+      const lastElement = updatedElements[updatedElements.length - 1];
+      if (lastElement === polyatomic) {
+        console.log(polyatomic);
+        // Remove the polyatomic segment if it matches the last element
+        updatedElements.pop();
+      }
+    }
+
+    // Update state directly
     setPolyatomic("");
     setElements(updatedElements);
     setGrams((prevMass) => {
@@ -227,7 +237,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center  bg-gray-800 ">
-                <form className="grid grid-cols-2 bg-gray-900 mx-8 ml-8  mt-8 shadow-md rounded px-8 pt-6 pb-8 mb-3">
+                <form className="grid grid-cols-1 md:grid-cols-2 bg-gray-900 mx-8 ml-8  mt-8 shadow-md rounded px-8 pt-6 pb-8 mb-3">
                   <div className=" mb-3">
                     <label
                       className=" block text-gray-300 text-sm font-bold mb-2"
@@ -235,10 +245,13 @@ export default function Home() {
                     >
                       Formula
                     </label>
-                    {polyatomic === "" ? (
-                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
-                        {h2string.length > 0 ? (
-                          h2string.map((text, index) => {
+
+                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                      {(h2string.length > 0 || polyatomic) && (
+                        <div className="rounded w-full text-black focus:outline-none bg-white">
+                          {polyatomic}
+                          {h2string.length > 0 && polyatomic ? " + " : ""}
+                          {h2string.map((text, index) => {
                             const match = text.match(/\d+/);
                             if (match) {
                               const [count] = match;
@@ -264,18 +277,15 @@ export default function Home() {
                                 </React.Fragment>
                               );
                             }
-                          })
-                        ) : (
-                          <span className="text-black bg-white">
-                            Formula will Appear Here
-                          </span>
-                        )}
-                      </div>
-                    ) : (
-                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
-                        {polyatomic}
-                      </div>
-                    )}
+                          })}
+                        </div>
+                      )}
+                      {h2string.length === 0 && !polyatomic && (
+                        <span className="text-black bg-white">
+                          Formula will Appear Here
+                        </span>
+                      )}
+                    </div>
 
                     <div className=" mt-6 mb-6">
                       <label
@@ -317,26 +327,40 @@ export default function Home() {
                     />
                   </div>
                 </form>
+              </div>
+              <div className=" grid grid-cols-2 mt-16 bg-inherit">
+                <button
+                  onClick={() => reset()}
+                  className="bg-indigo-500 py-1 px-2 md:w-1/2 w-1/2  mx-auto h-full rounded-md hover:bg-indigo-600 "
+                >
+                  Reset
+                </button>
 
-                <div className="grid mt-16 bg-inherit">
-                  <button
-                    onClick={() => reset()}
-                    className="bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
-                  >
-                    Reset
-                  </button>
-
-                  <button
-                    onClick={() => handleBackspace()}
-                    className="bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  onClick={() => handleBackspace()}
+                  className="bg-indigo-500 py-1 px-2 h-full md:w-1/2 w-1/2  mx-auto rounded-md hover:bg-indigo-600 "
+                >
+                  Delete
+                </button>
               </div>
 
               <div className="w-full max-w-xs"></div>
-              <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <div className="m-8">
+                <div className="md:hidden  flex flex-wrap -mx-2">
+                  {data.elements.map((element, index) => (
+                    <div
+                      key={index}
+                      onClick={() =>
+                        elementStates(element.mass, element.symbol)
+                      }
+                      className={colors[element.color] + style || ""}
+                    >
+                      {element.symbol}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <table className="md:block hidden w-11/12 mx-8 bg-gray-800 mt-8  lg:text-xl text-xs cursor-pointer">
                 <tbody>
                   <tr>
                     <td
@@ -535,72 +559,29 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-              <h1 className=" bg-gray-800 text-center font-bold text-2xl mt-24 m-8">
-                Common Polyatomic Ions
-              </h1>
-              <table className="mx-auto p-3 bg-gray-800 border-2 w-3/4">
-                <tbody className="bg-gray-800 border-2 p-3 b">
-                  {data.dataArray.map((row) => (
-                    <tr
-                      key={row.id}
-                      className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
-                    >
-                      <td
+              <div className="text-center mt-24 m-8">
+                <h1 className="bg-gray-800 text-center font-bold text-2xl m-8">
+                  Common Polyatomic Ions
+                </h1>
+                <div className="mx-auto text-center font-bold text-base mt-4">
+                  <div className="mx-auto flex flex-wrap -m-2">
+                    {" "}
+                    {data.dataArray.map((element, index) => (
+                      <div
+                        key={index}
+                        className="border-2 p-3 w-64 mx-auto bg-gray-800 hover:bg-gray-700 cursor-pointer"
                         onClick={() => {
-                          setGrams(row.cell1.mass),
-                            setInputGrams(row.cell1.mass);
-                          setPolyatomic(
-                            row.cell1.name + " " + row.cell1.formula
-                          );
+                          setGrams(element.mass), setInputGrams(element.mass);
+                          setPolyatomic(element.formula);
                           scrollToTop();
                         }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
                       >
-                        {row.cell1.name + " " + row.cell1.formula}
-                      </td>
-                      <td
-                        onClick={() => {
-                          setGrams(row.cell2.mass),
-                            setInputGrams(row.cell2.mass);
-                          setPolyatomic(
-                            row.cell2.name + " " + row.cell2.formula
-                          );
-                          scrollToTop();
-                        }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
-                      >
-                        {row.cell2.name + " " + row.cell2.formula}
-                      </td>
-                      <td
-                        onClick={() => {
-                          setGrams(row.cell3.mass),
-                            setInputGrams(row.cell3.mass);
-                          setPolyatomic(
-                            row.cell3.name + " " + row.cell3.formula
-                          );
-                          scrollToTop();
-                        }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
-                      >
-                        {row.cell3.name + " " + row.cell3.formula}
-                      </td>
-                      <td
-                        onClick={() => {
-                          setGrams(grams + row.cell4.mass),
-                            setInputGrams(grams + row.cell4.mass);
-                          setPolyatomic(
-                            row.cell4.name + " " + row.cell4.formula
-                          );
-                          scrollToTop();
-                        }}
-                        className="border-2 p-3 bg-gray-800 hover:bg-gray-700 cursor-pointer"
-                      >
-                        {row.cell4.name + " " + row.cell4.formula}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                        {element.name + " " + element.formula}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

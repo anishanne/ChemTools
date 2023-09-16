@@ -39,7 +39,7 @@ const colors = {
   none: "border-t border-gray-800 bg-gray-800 cursor-default",
 };
 const style =
-  " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function Home() {
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
               <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
-                <div className="top-0 z-0 w-full flex h-64 flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
+                <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center  mb-6 text-5xl font-bold md:text-7xl">
                       Chemistry Tools
@@ -106,13 +106,13 @@ export default function Home() {
                     <p className="text-center  text-2xl font-light md:text-3xl">
                       We've got solutions... not just reactions
                     </p>
-                    <hr className="text-white my-16 border-dotted "></hr>
+                    <hr className="text-white mt-8 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>
 
               {element1 ? (
-                <div className="mx-8 grid grid-cols-5">
+                <div className="mx-8 grid  grid-cols-1 md:grid-cols-5">
                   {" "}
                   {element1 ? (
                     <>
@@ -120,7 +120,7 @@ export default function Home() {
                       <p
                         className={`${
                           bondType ? "col-span-2" : "col-span-4"
-                        } m-8 w-full text-center text-base md:text-xl font-bold`}
+                        } md:m-8 mx-auto my-8 w-full text-center text-sm md:text-xl font-bold`}
                       >
                         Predicted bond type between {element1.name} (
                         {element1.en ? element1.en : "Undefined"}) and{" "}
@@ -135,7 +135,7 @@ export default function Home() {
                       {bondType ? (
                         <p
                           onClick={() => setOpen(true)}
-                          className="m-8 col-span-2 w-full hover:underline  cursor-pointer text-center text-3xl font-bold"
+                          className="md:m-8 mx-auto col-span-2 w-full hover:underline  cursor-pointer text-center text-3xl font-bold"
                         >
                           <div class="tooltip-container">
                             {bondType}
@@ -152,7 +152,7 @@ export default function Home() {
                     <div className="w-full col-span-1"></div>
                   )}
                   <button
-                    className="mt-8   bg-indigo-500 py-1 px-2 h-1/3 justify-self-end rounded-md hover:bg-indigo-600 mx-8"
+                    className="mt-8 bg-indigo-500 py-1 px-2 h-1/2 md:h-1/3 w-1/3 rounded-md hover:bg-indigo-600 mx-auto"
                     onClick={() => {
                       setElement1();
                       setElement2();
@@ -165,7 +165,7 @@ export default function Home() {
               ) : (
                 <div className="flex mx-auto items-center">
                   <button
-                    className="m-8 mx-auto text-center bg-indigo-500 py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
+                    className="m-8 mx-auto text-center bg-indigo-500  py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
                     onClick={() => {
                       setElement1();
                       setElement2();
@@ -176,8 +176,21 @@ export default function Home() {
                   </button>
                 </div>
               )}
+              <div className=" m-8 ">
+                <div className="md:hidden mx-auto flex flex-wrap ">
+                  {data.elements.map((element, index) => (
+                    <div
+                      key={index}
+                      onClick={() => handleElementClick(element)}
+                      className={colors[element.color] + style || ""}
+                    >
+                      {element.symbol}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-              <table className="w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <table className="md:block hidden w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td

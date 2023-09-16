@@ -3,12 +3,13 @@
     {
       "name": "Hydrogen",
       "appearance": "colorless gas",
-      "atomic_mass": 1.008,
+      "mass": 1.008,
       "boil": 20.271,
       "category": "diatomic nonmetal",
       "density": 0.08988,
       "discovered_by": "Henry Cavendish",
       "melt": 13.99,
+      "color": "color1",
       "molar_heat": 28.836,
       "named_by": "Antoine Lavoisier",
       "number": 1,
@@ -43,16 +44,18 @@
     {
       "name": "Helium",
       "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
-      "atomic_mass": 4.0026022,
+      "mass": 4.0026022,
       "boil": 4.222,
       "category": "noble gas",
       "oxidationStates": [0],
       "density": 0.1786,
+      "color": "color9",
       "discovered_by": "Pierre Janssen",
       "melt": 0.95,
       "molar_heat": null,
       "named_by": null,
       "number": 2,
+
       "period": 1,
       "group": 18,
       "phase": "Gas",
@@ -83,7 +86,8 @@
     {
       "name": "Lithium",
       "appearance": "silvery-white",
-      "atomic_mass": 6.94,
+      "mass": 6.94,
+      "color": "color2",
       "oxidationStates": [1],
       "boil": 1603,
       "category": "alkali metal",
@@ -123,7 +127,7 @@
     {
       "name": "Beryllium",
       "appearance": "white-gray metallic",
-      "atomic_mass": 9.01218315,
+      "mass": 9.01218315,
       "boil": 2742,
       "category": "alkaline earth metal",
       "density": 1.85,
@@ -131,9 +135,10 @@
       "melt": 1560,
       "oxidationStates": [2],
       "molar_heat": 16.443,
-      "oxidationStates": [2],
       "named_by": null,
       "number": 4,
+
+      "color": "color3",
       "period": 2,
       "group": 2,
       "phase": "Solid",
@@ -164,13 +169,15 @@
     {
       "name": "Boron",
       "appearance": "black-brown",
-      "atomic_mass": 10.81,
+      "mass": 10.81,
       "boil": 4200,
+
       "oxidationStates": [3],
       "category": "metalloid",
       "density": 2.08,
       "discovered_by": "Joseph Louis Gay-Lussac",
       "melt": 2349,
+      "color": "color6",
       "molar_heat": 11.087,
       "named_by": null,
       "number": 5,
@@ -204,8 +211,9 @@
     {
       "name": "Carbon",
       "appearance": null,
-      "atomic_mass": 12.011,
+      "mass": 12.011,
       "boil": null,
+      "color": "color1",
       "oxidationStates": [-4, 2, 4],
       "category": "polyatomic nonmetal",
       "density": 1.821,
@@ -244,8 +252,10 @@
     {
       "name": "Nitrogen",
       "appearance": "colorless gas, liquid or solid",
-      "atomic_mass": 14.007,
+      "mass": 14.007,
       "boil": 77.355,
+      "color": "color1",
+
       "category": "diatomic nonmetal",
       "density": 1.251,
       "discovered_by": "Daniel Rutherford",
@@ -286,9 +296,11 @@
     {
       "name": "Oxygen",
       "appearance": null,
-      "atomic_mass": 15.999,
+      "mass": 15.999,
       "boil": 90.188,
       "oxidationStates": [-2],
+      "color": "color1",
+
       "category": "diatomic nonmetal",
       "density": 1.429,
       "discovered_by": "Carl Wilhelm Scheele",
@@ -328,7 +340,7 @@
     {
       "name": "Fluorine",
       "appearance": null,
-      "atomic_mass": 18.9984031636,
+      "mass": 18.9984031636,
       "boil": 85.03,
       "oxidationStates": [-1],
       "category": "diatomic nonmetal",
@@ -341,6 +353,7 @@
       "period": 2,
       "group": 17,
       "phase": "Gas",
+      "color": "color8",
       "source": "https://en.wikipedia.org/wiki/Fluorine",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_009_fluorine/element_009_fluorine_srp_th.png",
       "bohr_model_3d": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_009_fluorine/element_009_fluorine.glb",
@@ -370,7 +383,7 @@
     {
       "name": "Neon",
       "appearance": "colorless gas exhibiting an orange-red glow when placed in a high voltage electric field",
-      "atomic_mass": 20.17976,
+      "mass": 20.17976,
       "boil": 27.104,
       "category": "noble gas",
       "density": 0.9002,
@@ -378,6 +391,8 @@
       "melt": 24.56,
       "molar_heat": null,
       "named_by": null,
+      "color": "color9",
+
       "oxidationStates": [0],
       "number": 10,
       "period": 2,
@@ -414,7 +429,7 @@
       "name": "Sodium",
       "appearance": "silvery white metallic",
       "oxidationStates": [1],
-      "atomic_mass": 22.989769282,
+      "mass": 22.989769282,
       "boil": 1156.09,
       "category": "alkali metal",
       "density": 0.968,
@@ -424,6 +439,8 @@
       "named_by": null,
       "number": 11,
       "period": 3,
+      "color": "color2",
+
       "group": 1,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Sodium",
@@ -456,7 +473,7 @@
     {
       "name": "Magnesium",
       "appearance": "shiny grey solid",
-      "atomic_mass": 24.305,
+      "mass": 24.305,
       "oxidationStates": [2],
       "boil": 1363,
       "category": "alkaline earth metal",
@@ -465,6 +482,8 @@
       "melt": 923,
       "molar_heat": 24.869,
       "named_by": null,
+      "color": "color3",
+
       "number": 12,
       "period": 3,
       "group": 2,
@@ -499,7 +518,7 @@
     {
       "name": "Aluminium",
       "appearance": "silvery gray metallic",
-      "atomic_mass": 26.98153857,
+      "mass": 26.98153857,
       "boil": 2743,
       "oxidationStates": [3],
       "category": "post-transition metal",
@@ -509,6 +528,8 @@
       "molar_heat": 24.2,
       "named_by": "Humphry Davy",
       "number": 13,
+      "color": "color7",
+
       "period": 3,
       "group": 13,
       "phase": "Solid",
@@ -541,8 +562,10 @@
     },
     {
       "name": "Silicon",
+      "color": "color6",
+
       "appearance": "crystalline, reflective with bluish-tinged faces",
-      "atomic_mass": 28.085,
+      "mass": 28.085,
       "boil": 3538,
       "oxidationStates": [-4, 2, 4],
       "category": "metalloid",
@@ -585,13 +608,15 @@
     {
       "name": "Phosphorus",
       "appearance": "colourless, waxy white, yellow, scarlet, red, violet, black",
-      "atomic_mass": 30.9737619985,
+      "mass": 30.9737619985,
       "boil": null,
       "oxidationStates": [-3, 3, 5],
       "category": "polyatomic nonmetal",
       "density": 1.823,
       "discovered_by": "Hennig Brand",
       "melt": null,
+      "color": "color1",
+
       "molar_heat": 23.824,
       "named_by": null,
       "number": 15,
@@ -628,9 +653,11 @@
     {
       "name": "Sulfur",
       "appearance": "lemon yellow sintered microcrystals",
-      "atomic_mass": 32.06,
+      "mass": 32.06,
       "oxidationStates": [-2, 4, 6],
       "boil": 717.8,
+      "color": "color1",
+
       "category": "polyatomic nonmetal",
       "density": 2.07,
       "discovered_by": "Ancient china",
@@ -671,8 +698,10 @@
     {
       "name": "Chlorine",
       "appearance": "pale yellow-green gas",
-      "atomic_mass": 35.45,
+      "mass": 35.45,
       "boil": 239.11,
+      "color": "color8",
+
       "oxidationStates": [-1, 1, 5, 7],
       "category": "diatomic nonmetal",
       "density": 3.2,
@@ -714,7 +743,7 @@
     {
       "name": "Argon",
       "appearance": "colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field",
-      "atomic_mass": 39.9481,
+      "mass": 39.9481,
       "boil": 87.302,
       "category": "noble gas",
       "density": 1.784,
@@ -724,6 +753,8 @@
       "molar_heat": null,
       "named_by": null,
       "number": 18,
+      "color": "color9",
+
       "period": 3,
       "group": 18,
       "phase": "Gas",
@@ -757,11 +788,13 @@
     {
       "name": "Potassium",
       "appearance": "silvery gray",
-      "atomic_mass": 39.09831,
+      "mass": 39.09831,
       "boil": 1032,
       "oxidationStates": [1],
       "category": "alkali metal",
       "density": 0.862,
+      "color": "color2",
+
       "discovered_by": "Humphry Davy",
       "melt": 336.7,
       "molar_heat": 29.6,
@@ -800,12 +833,14 @@
     {
       "name": "Calcium",
       "appearance": null,
-      "atomic_mass": 40.0784,
+      "mass": 40.0784,
       "boil": 1757,
       "oxidationStates": [2],
       "category": "alkaline earth metal",
       "density": 1.55,
       "discovered_by": "Humphry Davy",
+      "color": "color3",
+
       "melt": 1115,
       "molar_heat": 25.929,
       "named_by": null,
@@ -843,7 +878,7 @@
     {
       "name": "Scandium",
       "appearance": "silvery white",
-      "atomic_mass": 44.9559085,
+      "mass": 44.9559085,
       "boil": 3109,
       "category": "transition metal",
       "density": 2.985,
@@ -862,6 +897,8 @@
       "spectral_img": null,
       "summary": "Scandium is a chemical element with symbol Sc and atomic number 21. A silvery-white metallic d-block element, it has historically been sometimes classified as a rare earth element, together with yttrium and the lanthanoids. It was discovered in 1879 by spectral analysis of the minerals euxenite and gadolinite from Scandinavia.",
       "symbol": "Sc",
+      "color": "color5",
+
       "xpos": 3,
       "ypos": 4,
       "wxpos": 17,
@@ -886,8 +923,10 @@
     },
     {
       "name": "Titanium",
+      "color": "color5",
+
       "appearance": "silvery grey-white metallic",
-      "atomic_mass": 47.8671,
+      "mass": 47.8671,
       "boil": 3560,
       "oxidationStates": [2, 3, 4],
       "category": "transition metal",
@@ -931,10 +970,12 @@
     {
       "name": "Vanadium",
       "appearance": "blue-silver-grey metal",
-      "atomic_mass": 50.94151,
+      "mass": 50.94151,
       "boil": 3680,
       "category": "transition metal",
       "density": 6,
+      "color": "color5",
+
       "oxidationStates": [2, 3, 4, 5],
       "discovered_by": "Andrés Manuel del Río",
       "melt": 2183,
@@ -976,7 +1017,7 @@
       "name": "Chromium",
       "oxidationStates": [2, 3, 6],
       "appearance": "silvery metallic",
-      "atomic_mass": 51.99616,
+      "mass": 51.99616,
       "boil": 2944,
       "category": "transition metal",
       "density": 7.19,
@@ -986,6 +1027,8 @@
       "named_by": null,
       "number": 24,
       "period": 4,
+      "color": "color5",
+
       "group": 6,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Chromium",
@@ -1019,7 +1062,7 @@
     {
       "name": "Manganese",
       "appearance": "silvery metallic",
-      "atomic_mass": 54.9380443,
+      "mass": 54.9380443,
       "boil": 2334,
       "oxidationStates": [2, 3, 4, 6, 7],
       "category": "transition metal",
@@ -1038,6 +1081,8 @@
       "spectral_img": null,
       "summary": "Manganese is a chemical element with symbol Mn and atomic number 25. It is not found as a free element in nature; it is often found in combination with iron, and in many minerals. Manganese is a metal with important industrial metal alloy uses, particularly in stainless steels.",
       "symbol": "Mn",
+      "color": "color5",
+
       "xpos": 7,
       "ypos": 4,
       "wxpos": 21,
@@ -1063,10 +1108,12 @@
     {
       "name": "Iron",
       "appearance": "lustrous metallic with a grayish tinge",
-      "atomic_mass": 55.8452,
+      "mass": 55.8452,
       "boil": 3134,
       "oxidationStates": [2, 3],
       "category": "transition metal",
+      "color": "color5",
+
       "density": 7.874,
       "discovered_by": "5000 BC",
       "melt": 1811,
@@ -1108,11 +1155,13 @@
       "name": "Cobalt",
       "oxidationStates": [2, 3],
       "appearance": "hard lustrous gray metal",
-      "atomic_mass": 58.9331944,
+      "mass": 58.9331944,
       "boil": 3200,
       "category": "transition metal",
       "density": 8.9,
       "discovered_by": "Georg Brandt",
+      "color": "color5",
+
       "melt": 1768,
       "molar_heat": 24.81,
       "named_by": null,
@@ -1151,10 +1200,12 @@
     {
       "name": "Nickel",
       "appearance": "lustrous, metallic, and silver with a gold tinge",
-      "atomic_mass": 58.69344,
+      "mass": 58.69344,
       "boil": 3003,
       "oxidationStates": [2, 3],
       "category": "transition metal",
+      "color": "color5",
+
       "density": 8.908,
       "discovered_by": "Axel Fredrik Cronstedt",
       "melt": 1728,
@@ -1195,9 +1246,11 @@
     {
       "name": "Copper",
       "appearance": "red-orange metallic luster",
-      "atomic_mass": 63.5463,
+      "mass": 63.5463,
       "boil": 2835,
       "category": "transition metal",
+      "color": "color5",
+
       "density": 8.96,
       "discovered_by": "Middle East",
       "melt": 1357.77,
@@ -1239,7 +1292,9 @@
     {
       "name": "Zinc",
       "appearance": "silver-gray",
-      "atomic_mass": 65.382,
+      "mass": 65.382,
+      "color": "color5",
+
       "boil": 1180,
       "category": "transition metal",
       "density": 7.14,
@@ -1284,10 +1339,12 @@
       "name": "Gallium",
       "oxidationStates": [3],
       "appearance": "silver-white",
-      "atomic_mass": 69.7231,
+      "mass": 69.7231,
       "boil": 2673,
       "category": "post-transition metal",
       "density": 5.91,
+      "color": "color7",
+
       "discovered_by": "Lecoq de Boisbaudran",
       "melt": 302.9146,
       "molar_heat": 25.86,
@@ -1324,7 +1381,7 @@
       "name": "Germanium",
       "oxidationStates": [2, 4],
       "appearance": "grayish-white",
-      "atomic_mass": 72.6308,
+      "mass": 72.6308,
       "boil": 3106,
       "category": "metalloid",
       "density": 5.323,
@@ -1333,6 +1390,8 @@
       "molar_heat": 23.222,
       "named_by": null,
       "number": 32,
+      "color": "color6",
+
       "period": 4,
       "group": 14,
       "phase": "Solid",
@@ -1364,10 +1423,12 @@
       "name": "Arsenic",
       "oxidationStates": [-3, 3, -5],
       "appearance": "metallic grey",
-      "atomic_mass": 74.9215956,
+      "mass": 74.9215956,
       "boil": null,
       "category": "metalloid",
       "density": 5.727,
+      "color": "color6",
+
       "discovered_by": "Bronze Age",
       "melt": null,
       "molar_heat": 24.64,
@@ -1403,9 +1464,11 @@
     {
       "name": "Selenium",
       "appearance": "black, red, and gray (not pictured) allotropes",
-      "atomic_mass": 78.9718,
+      "mass": 78.9718,
       "oxidationStates": [-2, 4, 6],
       "boil": 958,
+      "color": "color1",
+
       "category": "polyatomic nonmetal",
       "density": 4.81,
       "discovered_by": "Jöns Jakob Berzelius",
@@ -1443,7 +1506,7 @@
     {
       "name": "Bromine",
       "appearance": null,
-      "atomic_mass": 79.904,
+      "mass": 79.904,
       "boil": 332,
       "oxidationStates": [-1, 1, 5],
       "category": "diatomic nonmetal",
@@ -1453,6 +1516,8 @@
       "molar_heat": null,
       "named_by": null,
       "number": 35,
+      "color": "color8",
+
       "period": 4,
       "group": 17,
       "phase": "Liquid",
@@ -1485,13 +1550,15 @@
     {
       "name": "Krypton",
       "appearance": "colorless gas, exhibiting a whitish glow in a high electric field",
-      "atomic_mass": 83.7982,
+      "mass": 83.7982,
       "boil": 119.93,
       "category": "noble gas",
       "density": 3.749,
       "oxidationStates": [0, 2],
       "discovered_by": "William Ramsay",
       "melt": 115.78,
+      "color": "color9",
+
       "molar_heat": null,
       "named_by": null,
       "number": 36,
@@ -1530,13 +1597,15 @@
     {
       "name": "Rubidium",
       "appearance": "grey white",
-      "atomic_mass": 85.46783,
+      "mass": 85.46783,
       "boil": 961,
       "category": "alkali metal",
       "density": 1.532,
       "discovered_by": "Robert Bunsen",
       "melt": 312.45,
       "molar_heat": 31.06,
+      "color": "color2",
+
       "named_by": null,
       "oxidationStates": [1],
       "number": 37,
@@ -1572,7 +1641,7 @@
     {
       "name": "Strontium",
       "appearance": null,
-      "atomic_mass": 87.621,
+      "mass": 87.621,
       "boil": 1650,
       "category": "alkaline earth metal",
       "density": 2.64,
@@ -1580,6 +1649,8 @@
       "melt": 1050,
       "molar_heat": 26.4,
       "oxidationStates": [2],
+      "color": "color3",
+
       "named_by": null,
       "number": 38,
       "period": 5,
@@ -1614,7 +1685,7 @@
     {
       "name": "Yttrium",
       "appearance": "silvery white",
-      "atomic_mass": 88.905842,
+      "mass": 88.905842,
       "boil": 3203,
       "oxidationStates": [3],
       "category": "transition metal",
@@ -1626,6 +1697,8 @@
       "number": 39,
       "period": 5,
       "group": 3,
+      "color": "color5",
+
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Yttrium",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_039_yttrium/element_039_yttrium_srp_th.png",
@@ -1658,7 +1731,9 @@
       "name": "Zirconium",
       "oxidationStates": [4],
       "appearance": "silvery white",
-      "atomic_mass": 91.2242,
+      "color": "color5",
+
+      "mass": 91.2242,
       "boil": 4650,
       "category": "transition metal",
       "density": 6.52,
@@ -1697,11 +1772,13 @@
     {
       "name": "Niobium",
       "appearance": "gray metallic, bluish when oxidized",
-      "atomic_mass": 92.906372,
+      "mass": 92.906372,
       "boil": 5017,
       "oxidationStates": [3, 5],
       "category": "transition metal",
       "density": 8.57,
+      "color": "color5",
+
       "discovered_by": "Charles Hatchett",
       "melt": 2750,
       "molar_heat": 24.6,
@@ -1737,7 +1814,7 @@
     {
       "name": "Molybdenum",
       "appearance": "gray metallic",
-      "atomic_mass": 95.951,
+      "mass": 95.951,
       "boil": 4912,
       "category": "transition metal",
       "density": 10.28,
@@ -1745,6 +1822,8 @@
       "melt": 2896,
       "molar_heat": 24.06,
       "named_by": null,
+      "color": "color5",
+
       "number": 42,
       "oxidationStates": [6],
       "period": 5,
@@ -1782,12 +1861,14 @@
     {
       "name": "Technetium",
       "appearance": "shiny gray metal",
-      "atomic_mass": 98,
+      "mass": 98,
       "boil": 4538,
       "oxidationStates": [4, 6, 7],
       "category": "transition metal",
       "density": 11,
       "discovered_by": "Emilio Segrè",
+      "color": "color5",
+
       "melt": 2430,
       "molar_heat": 24.27,
       "named_by": null,
@@ -1822,7 +1903,7 @@
     {
       "name": "Ruthenium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 101.072,
+      "mass": 101.072,
       "boil": 4423,
       "category": "transition metal",
       "density": 12.45,
@@ -1831,6 +1912,8 @@
       "molar_heat": 24.06,
       "named_by": null,
       "oxidationStates": [3],
+      "color": "color5",
+
       "number": 44,
       "period": 5,
       "group": 8,
@@ -1862,7 +1945,7 @@
     {
       "name": "Rhodium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 102.905502,
+      "mass": 102.905502,
       "boil": 3968,
       "category": "transition metal",
       "density": 12.41,
@@ -1873,6 +1956,8 @@
       "named_by": null,
       "number": 45,
       "period": 5,
+      "color": "color5",
+
       "group": 9,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Rhodium",
@@ -1902,7 +1987,7 @@
     {
       "name": "Palladium",
       "appearance": "silvery white",
-      "atomic_mass": 106.421,
+      "mass": 106.421,
       "boil": 3236,
       "oxidationStates": [2, 4],
       "category": "transition metal",
@@ -1910,6 +1995,8 @@
       "discovered_by": "William Hyde Wollaston",
       "melt": 1828.05,
       "molar_heat": 25.98,
+      "color": "color5",
+
       "named_by": null,
       "number": 46,
       "period": 5,
@@ -1942,9 +2029,11 @@
     {
       "name": "Silver",
       "appearance": "lustrous white metal",
-      "atomic_mass": 107.86822,
+      "mass": 107.86822,
       "oxidationStates": [1],
       "boil": 2435,
+      "color": "color5",
+
       "category": "transition metal",
       "density": 10.49,
       "discovered_by": "unknown, before 5000 BC",
@@ -1982,9 +2071,11 @@
     {
       "name": "Cadmium",
       "appearance": "silvery bluish-gray metallic",
-      "atomic_mass": 112.4144,
+      "mass": 112.4144,
       "boil": 1040,
       "category": "transition metal",
+      "color": "color5",
+
       "density": 8.65,
       "oxidationStates": [2],
       "discovered_by": "Karl Samuel Leberecht Hermann",
@@ -2022,7 +2113,9 @@
     {
       "name": "Indium",
       "appearance": "silvery lustrous gray",
-      "atomic_mass": 114.8181,
+      "color": "color7",
+
+      "mass": 114.8181,
       "boil": 2345,
       "category": "post-transition metal",
       "density": 7.31,
@@ -2062,7 +2155,7 @@
     {
       "name": "Tin",
       "appearance": "silvery-white (beta, β) or gray (alpha, α)",
-      "atomic_mass": 118.7107,
+      "mass": 118.7107,
       "boil": 2875,
       "oxidationStates": [2, 4],
       "category": "post-transition metal",
@@ -2081,6 +2174,8 @@
       "spectral_img": null,
       "summary": "Tin is a chemical element with the symbol Sn (for Latin:stannum) and atomic number 50. It is a main group metal in group 14 of the periodic table. Tin shows a chemical similarity to both neighboring group-14 elements, germanium and lead, and has two possible oxidation states, +2 and the slightly more stable +4.",
       "symbol": "Sn",
+      "color": "color7",
+
       "xpos": 14,
       "ypos": 5,
       "wxpos": 28,
@@ -2102,7 +2197,7 @@
     {
       "name": "Antimony",
       "appearance": "silvery lustrous gray",
-      "atomic_mass": 121.7601,
+      "mass": 121.7601,
       "boil": 1908,
       "category": "metalloid",
       "density": 6.697,
@@ -2112,6 +2207,8 @@
       "molar_heat": 25.23,
       "named_by": null,
       "number": 51,
+      "color": "color6",
+
       "period": 5,
       "group": 15,
       "phase": "Solid",
@@ -2142,11 +2239,13 @@
     {
       "name": "Tellurium",
       "appearance": null,
-      "atomic_mass": 127.603,
+      "mass": 127.603,
       "boil": 1261,
       "category": "metalloid",
       "density": 6.24,
       "oxidationStates": [-2, 4, 6],
+      "color": "color6",
+
       "discovered_by": "Franz-Joseph Müller von Reichenstein",
       "melt": 722.66,
       "molar_heat": 25.73,
@@ -2182,7 +2281,7 @@
     {
       "name": "Iodine",
       "appearance": "lustrous metallic gray, violet as a gas",
-      "atomic_mass": 126.904473,
+      "mass": 126.904473,
       "boil": 457.4,
       "category": "diatomic nonmetal",
       "density": 4.933,
@@ -2190,6 +2289,8 @@
       "melt": 386.85,
       "molar_heat": null,
       "oxidationStates": [-1, 1, 5, -7],
+      "color": "color8",
+
       "named_by": null,
       "number": 53,
       "period": 5,
@@ -2222,12 +2323,14 @@
     {
       "name": "Xenon",
       "appearance": "colorless gas, exhibiting a blue glow when placed in a high voltage electric field",
-      "atomic_mass": 131.2936,
+      "mass": 131.2936,
       "boil": 165.051,
       "category": "noble gas",
       "density": 5.894,
       "discovered_by": "William Ramsay",
       "melt": 161.4,
+      "color": "color9",
+
       "molar_heat": null,
       "named_by": null,
       "number": 54,
@@ -2261,8 +2364,10 @@
     },
     {
       "name": "Cesium",
+      "color": "color2",
+
       "appearance": "silvery gold",
-      "atomic_mass": 132.905451966,
+      "mass": 132.905451966,
       "boil": 944,
       "category": "alkali metal",
       "density": 1.93,
@@ -2302,7 +2407,7 @@
     {
       "name": "Barium",
       "appearance": null,
-      "atomic_mass": 137.3277,
+      "mass": 137.3277,
       "boil": 2118,
       "category": "alkaline earth metal",
       "density": 3.51,
@@ -2312,6 +2417,8 @@
       "named_by": null,
       "number": 56,
       "period": 6,
+      "color": "color3",
+
       "oxidationStates": [2],
       "group": 2,
       "phase": "Solid",
@@ -2342,10 +2449,12 @@
     {
       "name": "Lanthanum",
       "appearance": "silvery white",
-      "atomic_mass": 138.905477,
+      "mass": 138.905477,
       "boil": 3737,
       "category": "lanthanide",
       "density": 6.162,
+      "color": "color4",
+
       "discovered_by": "Carl Gustaf Mosander",
       "melt": 1193,
       "oxidationStates": [3],
@@ -2382,9 +2491,11 @@
     {
       "name": "Cerium",
       "appearance": "silvery white",
-      "atomic_mass": 140.1161,
+      "mass": 140.1161,
       "boil": 3716,
       "category": "lanthanide",
+      "color": "color4",
+
       "density": 6.77,
       "discovered_by": "Martin Heinrich Klaproth",
       "melt": 1068,
@@ -2422,9 +2533,11 @@
     {
       "name": "Praseodymium",
       "appearance": "grayish white",
-      "atomic_mass": 140.907662,
+      "mass": 140.907662,
       "boil": 3403,
       "category": "lanthanide",
+      "color": "color4",
+
       "density": 6.77,
       "oxidationStates": [3],
       "discovered_by": "Carl Auer von Welsbach",
@@ -2462,10 +2575,12 @@
     {
       "name": "Neodymium",
       "appearance": "silvery white",
-      "atomic_mass": 144.2423,
+      "mass": 144.2423,
       "boil": 3347,
       "category": "lanthanide",
       "density": 7.01,
+      "color": "color4",
+
       "oxidationStates": [3],
       "discovered_by": "Carl Auer von Welsbach",
       "melt": 1297,
@@ -2502,9 +2617,11 @@
     {
       "name": "Promethium",
       "appearance": "metallic",
-      "atomic_mass": 145,
+      "mass": 145,
       "boil": 3273,
       "oxidationStates": [3],
+      "color": "color4",
+
       "category": "lanthanide",
       "density": 7.26,
       "discovered_by": "Chien Shiung Wu",
@@ -2542,7 +2659,7 @@
     {
       "name": "Samarium",
       "appearance": "silvery white",
-      "atomic_mass": 150.362,
+      "mass": 150.362,
       "boil": 2173,
       "oxidationStates": [2, 3],
       "category": "lanthanide",
@@ -2553,6 +2670,8 @@
       "named_by": null,
       "number": 62,
       "period": 6,
+      "color": "color4",
+
       "group": 3,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Samarium",
@@ -2582,7 +2701,7 @@
     {
       "name": "Europium",
       "appearance": null,
-      "atomic_mass": 151.9641,
+      "mass": 151.9641,
       "boil": 1802,
       "category": "lanthanide",
       "density": 5.264,
@@ -2595,6 +2714,8 @@
       "period": 6,
       "group": 3,
       "phase": "Solid",
+      "color": "color4",
+
       "source": "https://en.wikipedia.org/wiki/Europium",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_063_europium/element_063_europium_srp_th.png",
       "bohr_model_3d": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_063_europium/element_063_europium.glb",
@@ -2622,7 +2743,7 @@
     {
       "name": "Gadolinium",
       "appearance": "silvery white",
-      "atomic_mass": 157.253,
+      "mass": 157.253,
       "boil": 3273,
       "category": "lanthanide",
       "density": 7.9,
@@ -2630,6 +2751,8 @@
       "melt": 1585,
       "molar_heat": 37.03,
       "named_by": null,
+      "color": "color4",
+
       "number": 64,
       "oxidationStates": [3],
       "period": 6,
@@ -2662,8 +2785,10 @@
     {
       "name": "Terbium",
       "appearance": "silvery white",
-      "atomic_mass": 158.925352,
+      "mass": 158.925352,
       "boil": 3396,
+      "color": "color4",
+
       "oxidationStates": [3],
       "category": "lanthanide",
       "density": 8.23,
@@ -2702,10 +2827,12 @@
     {
       "name": "Dysprosium",
       "appearance": "silvery white",
-      "atomic_mass": 162.5001,
+      "mass": 162.5001,
       "boil": 2840,
       "category": "lanthanide",
       "density": 8.54,
+      "color": "color4",
+
       "discovered_by": "Lecoq de Boisbaudran",
       "melt": 1680,
       "oxidationStates": [3],
@@ -2742,10 +2869,12 @@
     {
       "name": "Holmium",
       "appearance": "silvery white",
-      "atomic_mass": 164.930332,
+      "mass": 164.930332,
       "boil": 2873,
       "category": "lanthanide",
       "density": 8.79,
+      "color": "color4",
+
       "discovered_by": "Marc Delafontaine",
       "melt": 1734,
       "molar_heat": 27.15,
@@ -2782,7 +2911,7 @@
     {
       "name": "Erbium",
       "appearance": "silvery white",
-      "atomic_mass": 167.2593,
+      "mass": 167.2593,
       "boil": 3141,
       "category": "lanthanide",
       "density": 9.066,
@@ -2793,6 +2922,8 @@
       "oxidationStates": [3],
       "number": 68,
       "period": 6,
+      "color": "color4",
+
       "group": 3,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Erbium",
@@ -2822,7 +2953,7 @@
     {
       "name": "Thulium",
       "appearance": "silvery gray",
-      "atomic_mass": 168.934222,
+      "mass": 168.934222,
       "boil": 2223,
       "category": "lanthanide",
       "density": 9.32,
@@ -2832,6 +2963,8 @@
       "oxidationStates": [3],
       "named_by": null,
       "number": 69,
+      "color": "color4",
+
       "period": 6,
       "group": 3,
       "phase": "Solid",
@@ -2862,8 +2995,10 @@
     {
       "name": "Ytterbium",
       "appearance": null,
-      "atomic_mass": 173.0451,
+      "mass": 173.0451,
       "boil": 1469,
+      "color": "color4",
+
       "category": "lanthanide",
       "density": 6.9,
       "discovered_by": "Jean Charles Galissard de Marignac",
@@ -2902,7 +3037,7 @@
     {
       "name": "Lutetium",
       "appearance": "silvery white",
-      "atomic_mass": 174.96681,
+      "mass": 174.96681,
       "boil": 3675,
       "category": "lanthanide",
       "density": 9.841,
@@ -2910,6 +3045,8 @@
       "melt": 1925,
       "molar_heat": 26.86,
       "named_by": null,
+      "color": "color4",
+
       "number": 71,
       "period": 6,
       "group": 3,
@@ -2942,7 +3079,7 @@
     {
       "name": "Hafnium",
       "appearance": "steel gray",
-      "atomic_mass": 178.492,
+      "mass": 178.492,
       "boil": 4876,
       "category": "transition metal",
       "density": 13.31,
@@ -2951,6 +3088,8 @@
       "molar_heat": 25.73,
       "named_by": null,
       "number": 72,
+      "color": "color5",
+
       "period": 6,
       "group": 4,
       "oxidationStates": [4],
@@ -2982,8 +3121,10 @@
     {
       "name": "Tantalum",
       "appearance": "gray blue",
-      "atomic_mass": 180.947882,
+      "mass": 180.947882,
       "boil": 5731,
+      "color": "color5",
+
       "category": "transition metal",
       "density": 16.69,
       "discovered_by": "Anders Gustaf Ekeberg",
@@ -3022,7 +3163,7 @@
     {
       "name": "Tungsten",
       "appearance": "grayish white, lustrous",
-      "atomic_mass": 183.841,
+      "mass": 183.841,
       "boil": 6203,
       "category": "transition metal",
       "density": 19.25,
@@ -3033,6 +3174,8 @@
       "number": 74,
       "period": 6,
       "oxidationStates": [6],
+      "color": "color5",
+
       "group": 6,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Tungsten",
@@ -3062,7 +3205,7 @@
     {
       "name": "Rhenium",
       "appearance": "silvery-grayish",
-      "atomic_mass": 186.2071,
+      "mass": 186.2071,
       "boil": 5869,
       "category": "transition metal",
       "density": 21.02,
@@ -3074,6 +3217,8 @@
       "number": 75,
       "period": 6,
       "group": 7,
+      "color": "color5",
+
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Rhenium",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_075_rhenium/element_075_rhenium_srp_th.png",
@@ -3102,7 +3247,7 @@
     {
       "name": "Osmium",
       "appearance": "silvery, blue cast",
-      "atomic_mass": 190.233,
+      "mass": 190.233,
       "boil": 5285,
       "oxidationStates": [3, 4],
       "category": "transition metal",
@@ -3112,6 +3257,8 @@
       "molar_heat": 24.7,
       "named_by": null,
       "number": 76,
+      "color": "color5",
+
       "period": 6,
       "group": 8,
       "phase": "Solid",
@@ -3142,7 +3289,7 @@
     {
       "name": "Iridium",
       "appearance": "silvery white",
-      "atomic_mass": 192.2173,
+      "mass": 192.2173,
       "boil": 4403,
       "category": "transition metal",
       "density": 22.56,
@@ -3152,6 +3299,8 @@
       "molar_heat": 25.1,
       "named_by": null,
       "number": 77,
+      "color": "color5",
+
       "period": 6,
       "group": 9,
       "phase": "Solid",
@@ -3182,7 +3331,9 @@
     {
       "name": "Platinum",
       "appearance": "silvery white",
-      "atomic_mass": 195.0849,
+      "mass": 195.0849,
+      "color": "color5",
+
       "boil": 4098,
       "category": "transition metal",
       "density": 21.45,
@@ -3222,12 +3373,14 @@
     {
       "name": "Gold",
       "appearance": "metallic yellow",
-      "atomic_mass": 196.9665695,
+      "mass": 196.9665695,
       "boil": 3243,
       "category": "transition metal",
       "density": 19.3,
       "oxidationStates": [1, 3],
       "discovered_by": "Middle East",
+      "color": "color5",
+
       "melt": 1337.33,
       "molar_heat": 25.418,
       "named_by": null,
@@ -3262,10 +3415,12 @@
     {
       "name": "Mercury",
       "appearance": "silvery",
-      "atomic_mass": 200.5923,
+      "mass": 200.5923,
       "boil": 629.88,
       "category": "transition metal",
       "density": 13.534,
+      "color": "color5",
+
       "discovered_by": "unknown, before 2000 BCE",
       "melt": 234.321,
       "molar_heat": 27.983,
@@ -3302,7 +3457,7 @@
     {
       "name": "Thallium",
       "appearance": "silvery white",
-      "atomic_mass": 204.38,
+      "mass": 204.38,
       "boil": 1746,
       "oxidationStates": [1, 3],
       "category": "post-transition metal",
@@ -3311,6 +3466,8 @@
       "melt": 577,
       "molar_heat": 26.32,
       "named_by": null,
+      "color": "color7",
+
       "number": 81,
       "period": 6,
       "group": 13,
@@ -3342,7 +3499,9 @@
     {
       "name": "Lead",
       "appearance": "metallic gray",
-      "atomic_mass": 207.21,
+      "mass": 207.21,
+      "color": "color7",
+
       "boil": 2022,
       "category": "post-transition metal",
       "density": 11.34,
@@ -3382,7 +3541,7 @@
     {
       "name": "Bismuth",
       "appearance": "lustrous silver",
-      "atomic_mass": 208.980401,
+      "mass": 208.980401,
       "boil": 1837,
       "category": "post-transition metal",
       "density": 9.78,
@@ -3394,6 +3553,8 @@
       "number": 83,
       "period": 6,
       "group": 15,
+      "color": "color7",
+
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Bismuth",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_083_bismuth/element_083_bismuth_srp_th.png",
@@ -3422,7 +3583,7 @@
     {
       "name": "Polonium",
       "appearance": "silvery",
-      "atomic_mass": 209,
+      "mass": 209,
       "boil": 1235,
       "category": "post-transition metal",
       "density": 9.196,
@@ -3445,6 +3606,8 @@
       "ypos": 6,
       "wxpos": 30,
       "wypos": 6,
+      "color": "color6",
+
       "shells": [2, 8, 18, 32, 18, 6],
       "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 5s2 4d10 5p6 6s2 4f14 5d10 6p4",
       "electron_configuration_semantic": "[Xe] 4f14 5d10 6s2 6p4",
@@ -3462,7 +3625,7 @@
     {
       "name": "Astatine",
       "appearance": "unknown, probably metallic",
-      "atomic_mass": 210,
+      "mass": 210,
       "boil": 610,
       "category": "metalloid",
       "density": 6.35,
@@ -3481,6 +3644,8 @@
       "spectral_img": null,
       "summary": "Astatine is a very rare radioactive chemical element with the chemical symbol At and atomic number 85. It occurs on Earth as the decay product of various heavier elements. All its isotopes are short-lived; the most stable is astatine-210, with a half-life of 8.1 hours.",
       "symbol": "At",
+      "color": "color8",
+
       "xpos": 17,
       "ypos": 6,
       "wxpos": 31,
@@ -3502,13 +3667,15 @@
     {
       "name": "Radon",
       "appearance": "colorless gas, occasionally glows green or red in discharge tubes",
-      "atomic_mass": 222,
+      "mass": 222,
       "boil": 211.5,
       "category": "noble gas",
       "density": 9.73,
       "discovered_by": "Friedrich Ernst Dorn",
       "melt": 202,
       "molar_heat": null,
+      "color": "color9",
+
       "named_by": null,
       "oxidationStates": [0],
       "number": 86,
@@ -3542,7 +3709,9 @@
     {
       "name": "Francium",
       "appearance": null,
-      "atomic_mass": 223,
+      "color": "color2",
+
+      "mass": 223,
       "boil": 950,
       "category": "alkali metal",
       "density": 1.87,
@@ -3582,8 +3751,9 @@
     {
       "name": "Radium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 226,
+      "mass": 226,
       "boil": 2010,
+      "color": "color3",
       "category": "alkaline earth metal",
       "density": 5.5,
       "discovered_by": "Pierre Curie",
@@ -3622,7 +3792,7 @@
     {
       "name": "Actinium",
       "appearance": null,
-      "atomic_mass": 227,
+      "mass": 227,
       "boil": 3500,
       "category": "actinide",
       "density": 10,
@@ -3642,6 +3812,7 @@
       "summary": "Actinium is a radioactive chemical element with symbol Ac (not to be confused with the abbreviation for an acetyl group) and atomic number 89, which was discovered in 1899. It was the first non-primordial radioactive element to be isolated. Polonium, radium and radon were observed before actinium, but they were not isolated until 1902.",
       "symbol": "Ac",
       "xpos": 3,
+      "color": "color10",
       "ypos": 10,
       "wxpos": 3,
       "wypos": 7,
@@ -3661,8 +3832,10 @@
     },
     {
       "name": "Thorium",
+      "color": "color10",
+
       "appearance": "silvery, often with black tarnish",
-      "atomic_mass": 232.03774,
+      "mass": 232.03774,
       "boil": 5061,
       "category": "actinide",
       "density": 11.724,
@@ -3702,13 +3875,15 @@
     {
       "name": "Protactinium",
       "appearance": "bright, silvery metallic luster",
-      "atomic_mass": 231.035882,
+      "mass": 231.035882,
       "boil": 4300,
       "category": "actinide",
       "density": 15.37,
       "discovered_by": "William Crookes",
       "melt": 1841,
       "molar_heat": null,
+      "color": "color10",
+
       "named_by": "Otto Hahn",
       "number": 91,
       "period": 7,
@@ -3742,7 +3917,7 @@
     {
       "name": "Uranium",
       "appearance": null,
-      "atomic_mass": 238.028913,
+      "mass": 238.028913,
       "boil": 4404,
       "category": "actinide",
       "density": 19.1,
@@ -3751,6 +3926,8 @@
       "molar_heat": 27.665,
       "named_by": null,
       "number": 92,
+      "color": "color10",
+
       "period": 7,
       "group": 3,
       "oxidationStates": [3, 4, 5, 6],
@@ -3782,7 +3959,9 @@
     {
       "name": "Neptunium",
       "appearance": "silvery metallic",
-      "atomic_mass": 237,
+      "color": "color10",
+
+      "mass": 237,
       "boil": 4447,
       "category": "actinide",
       "density": 20.45,
@@ -3822,9 +4001,11 @@
     {
       "name": "Plutonium",
       "appearance": "silvery white, tarnishing to dark gray in air",
-      "atomic_mass": 244,
+      "mass": 244,
       "boil": 3505,
       "oxidationStates": [3, 4, 5, 6, 7],
+      "color": "color10",
+
       "category": "actinide",
       "density": 19.816,
       "discovered_by": "Glenn T. Seaborg",
@@ -3862,7 +4043,9 @@
     {
       "name": "Americium",
       "appearance": "silvery white",
-      "atomic_mass": 243,
+      "color": "color10",
+
+      "mass": 243,
       "boil": 2880,
       "category": "actinide",
       "density": 12,
@@ -3902,7 +4085,7 @@
     {
       "name": "Curium",
       "appearance": "silvery metallic, glows purple in the dark",
-      "atomic_mass": 247,
+      "mass": 247,
       "boil": 3383,
       "category": "actinide",
       "density": 13.51,
@@ -3911,6 +4094,8 @@
       "molar_heat": null,
       "named_by": null,
       "oxidationStates": [3],
+      "color": "color10",
+
       "number": 96,
       "period": 7,
       "group": 3,
@@ -3942,7 +4127,7 @@
     {
       "name": "Berkelium",
       "appearance": "silvery",
-      "atomic_mass": 247,
+      "mass": 247,
       "boil": 2900,
       "category": "actinide",
       "density": 14.78,
@@ -3964,6 +4149,8 @@
       "xpos": 11,
       "ypos": 10,
       "wxpos": 11,
+      "color": "color10",
+
       "wypos": 7,
       "shells": [2, 8, 18, 32, 27, 8, 2],
       "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 5s2 4d10 5p6 6s2 4f14 5d10 6p6 7s2 5f9",
@@ -3982,7 +4169,7 @@
     {
       "name": "Californium",
       "appearance": "silvery",
-      "atomic_mass": 251,
+      "mass": 251,
       "boil": 1743,
       "category": "actinide",
       "oxidationStates": [3],
@@ -4010,6 +4197,8 @@
       "electron_configuration_semantic": "[Rn] 5f10 7s2",
       "electron_affinity": -97.31,
       "en": 1.3,
+      "color": "color10",
+
       "ionization_energies": [608],
       "cpk-hex": "a136d4",
       "image": {
@@ -4022,8 +4211,9 @@
     {
       "name": "Einsteinium",
       "appearance": "silver-colored",
-      "atomic_mass": 252,
+      "mass": 252,
       "boil": 1269,
+
       "category": "actinide",
       "density": 8.84,
       "discovered_by": "Lawrence Berkeley National Laboratory",
@@ -4050,6 +4240,8 @@
       "electron_configuration_semantic": "[Rn] 5f11 7s2",
       "electron_affinity": -28.6,
       "en": 1.3,
+      "color": "color10",
+
       "ionization_energies": [619],
       "cpk-hex": "b31fd4",
       "image": {
@@ -4062,7 +4254,7 @@
     {
       "name": "Fermium",
       "appearance": null,
-      "atomic_mass": 257,
+      "mass": 257,
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -4081,6 +4273,8 @@
       "spectral_img": null,
       "summary": "Fermium is a synthetic element with symbol Fm and atomic number 100. It is a member of the actinide series. It is the heaviest element that can be formed by neutron bombardment of lighter elements, and hence the last element that can be prepared in macroscopic quantities, although pure fermium metal has not yet been prepared.",
       "symbol": "Fm",
+      "color": "color10",
+
       "xpos": 14,
       "ypos": 10,
       "wxpos": 14,
@@ -4102,10 +4296,12 @@
     {
       "name": "Mendelevium",
       "appearance": null,
-      "atomic_mass": 258,
+      "mass": 258,
       "oxidationStates": [2, 3],
       "boil": null,
       "category": "actinide",
+      "color": "color10",
+
       "density": null,
       "discovered_by": "Lawrence Berkeley National Laboratory",
       "melt": 1100,
@@ -4142,7 +4338,9 @@
     {
       "name": "Nobelium",
       "appearance": null,
-      "atomic_mass": 259,
+      "mass": 259,
+      "color": "color10",
+
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -4182,12 +4380,14 @@
     {
       "name": "Lawrencium",
       "appearance": null,
-      "atomic_mass": 266,
+      "mass": 266,
       "boil": null,
       "category": "actinide",
       "density": null,
       "discovered_by": "Lawrence Berkeley National Laboratory",
       "melt": 1900,
+      "color": "color10",
+
       "oxidationStates": [3],
       "molar_heat": null,
       "named_by": null,
@@ -4222,7 +4422,7 @@
     {
       "name": "Rutherfordium",
       "appearance": null,
-      "atomic_mass": 267,
+      "mass": 267,
       "boil": 5800,
       "category": "transition metal",
       "density": 23.2,
@@ -4231,6 +4431,8 @@
       "molar_heat": null,
       "named_by": null,
       "number": 104,
+      "color": "color5",
+
       "oxidationStates": [4],
       "period": 7,
       "group": 4,
@@ -4262,7 +4464,9 @@
     {
       "name": "Dubnium",
       "appearance": null,
-      "atomic_mass": 268,
+      "mass": 268,
+      "color": "color5",
+
       "boil": null,
       "category": "transition metal",
       "density": 29.3,
@@ -4302,7 +4506,7 @@
     {
       "name": "Seaborgium",
       "appearance": null,
-      "atomic_mass": 269,
+      "mass": 269,
       "oxidationStates": ["Undefined"],
       "boil": null,
       "category": "transition metal",
@@ -4313,6 +4517,8 @@
       "named_by": null,
       "number": 106,
       "period": 7,
+      "color": "color5",
+
       "group": 6,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Seaborgium",
@@ -4344,7 +4550,7 @@
       "appearance": null,
 
       "oxidationStates": ["Undefined"],
-      "atomic_mass": 270,
+      "mass": 270,
       "boil": null,
       "category": "transition metal",
       "density": 37.1,
@@ -4370,6 +4576,8 @@
       "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 5s2 4d10 5p6 6s2 4f14 5d10 6p6 7s2 5f14 6d5",
       "electron_configuration_semantic": "*[Rn] 5f14 6d5 7s2",
       "electron_affinity": null,
+      "color": "color5",
+
       "en": null,
       "ionization_energies": [],
       "cpk-hex": "e00038",
@@ -4383,7 +4591,9 @@
     {
       "name": "Hassium",
       "appearance": null,
-      "atomic_mass": 269,
+      "mass": 269,
+      "color": "color5",
+
       "boil": null,
       "category": "transition metal",
       "density": 40.7,
@@ -4422,8 +4632,10 @@
     },
     {
       "name": "Meitnerium",
+      "color": "color5",
+
       "appearance": null,
-      "atomic_mass": 278,
+      "mass": 278,
       "boil": null,
       "category": "unknown, probably transition metal",
       "density": 37.4,
@@ -4464,7 +4676,9 @@
       "name": "Darmstadtium",
       "appearance": null,
       "oxidationStates": ["Undefined"],
-      "atomic_mass": 281,
+      "mass": 281,
+      "color": "color5",
+
       "boil": null,
       "category": "unknown, probably transition metal",
       "density": 34.8,
@@ -4503,8 +4717,10 @@
     {
       "name": "Roentgenium",
       "appearance": null,
-      "atomic_mass": 282,
+      "mass": 282,
       "boil": null,
+      "color": "color5",
+
       "oxidationStates": ["Undefined"],
       "category": "unknown, probably transition metal",
       "density": 28.7,
@@ -4543,7 +4759,9 @@
     {
       "name": "Copernicium",
       "appearance": null,
-      "atomic_mass": 285,
+      "mass": 285,
+      "color": "color5",
+
       "boil": 3570,
       "oxidationStates": ["Undefined"],
       "category": "transition metal",
@@ -4583,8 +4801,10 @@
     {
       "name": "Nihonium",
       "appearance": null,
-      "atomic_mass": 286,
+      "mass": 286,
       "boil": 1430,
+      "color": "color12",
+
       "category": "unknown, probably transition metal",
       "density": 16,
       "discovered_by": "RIKEN",
@@ -4623,7 +4843,9 @@
     {
       "name": "Flerovium",
       "appearance": null,
-      "atomic_mass": 289,
+      "color": "color12",
+
+      "mass": 289,
       "boil": 420,
       "category": "post-transition metal",
       "density": 14,
@@ -4663,7 +4885,9 @@
     {
       "name": "Moscovium",
       "appearance": null,
-      "atomic_mass": 289,
+      "color": "color12",
+
+      "mass": 289,
       "boil": 1400,
       "category": "unknown, probably post-transition metal",
       "density": 13.5,
@@ -4703,7 +4927,7 @@
     {
       "name": "Livermorium",
       "appearance": null,
-      "atomic_mass": 293,
+      "mass": 293,
       "boil": 1085,
       "category": "unknown, probably post-transition metal",
       "density": 12.9,
@@ -4723,6 +4947,8 @@
       "summary": "Livermorium is a synthetic superheavy element with symbol Lv and atomic number 116. It is an extremely radioactive element that has only been created in the laboratory and has not been observed in nature. The element is named after the Lawrence Livermore National Laboratory in the United States, which collaborated with the Joint Institute for Nuclear Research in Dubna, Russia to discover livermorium in 2000.",
       "symbol": "Lv",
       "xpos": 16,
+      "color": "color12",
+
       "ypos": 7,
       "wxpos": 30,
       "wypos": 7,
@@ -4743,7 +4969,7 @@
     {
       "name": "Tennessine",
       "appearance": null,
-      "atomic_mass": 294,
+      "mass": 294,
       "boil": 883,
       "category": "unknown, probably metalloid",
       "density": 7.17,
@@ -4770,6 +4996,8 @@
       "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 5s2 4d10 5p6 6s2 4f14 5d10 6p6 7s2 5f14 6d10 7p5",
       "electron_configuration_semantic": "*[Rn] 5f14 6d10 7s2 7p5",
       "electron_affinity": 165.9,
+      "color": "color12",
+
       "en": null,
       "ionization_energies": [],
       "cpk-hex": null,
@@ -4783,7 +5011,7 @@
     {
       "name": "Oganesson",
       "appearance": null,
-      "atomic_mass": 294,
+      "mass": 294,
       "boil": 350,
       "category": "unknown, predicted to be noble gas",
       "density": 4.95,
@@ -4795,6 +5023,8 @@
       "period": 7,
       "group": 18,
       "phase": "Solid",
+      "color": "color12",
+
       "source": "https://en.wikipedia.org/wiki/Oganesson",
       "bohr_model_image": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_118_oganesson/element_118_oganesson_srp_th.png",
       "bohr_model_3d": "https://storage.googleapis.com/search-ar-edu/periodic-table/element_118_oganesson/element_118_oganesson.glb",
@@ -4823,7 +5053,9 @@
     {
       "name": "Ununennium",
       "appearance": null,
-      "atomic_mass": 315,
+      "mass": 315,
+      "color": "color12",
+
       "boil": 630,
       "category": "unknown, but predicted to be an alkali metal",
       "density": 3,
@@ -4862,146 +5094,31 @@
     }
   ],
   "dataArray": [
-    {
-      "id": 1,
-      "cell1": {
-        "name": "Hydronium",
-        "formula": "H₃O⁺",
-        "mass": 27.03
-      },
-      "cell2": {
-        "name": "Carbonate",
-        "formula": "CO₃²⁻",
-        "mass": 60.01
-      },
-      "cell3": {
-        "name": "Hydrogen Carbonate",
-        "formula": "HCO₃⁻",
-        "mass": 61.02
-      },
-      "cell4": {
-        "name": "Thiosulfate",
-        "formula": "S₂O₃²⁻",
-        "mass": 112.14
-      }
-    },
-    {
-      "id": 2,
-      "cell1": {
-        "name": "Mercury (I)",
-        "formula": "Hg²⁺",
-        "mass": 200.59
-      },
-      "cell2": {
-        "name": "Oxalate",
-        "formula": "C₂O₄²⁻",
-        "mass": 88.02
-      },
-      "cell3": {
-        "name": "Hypochlorite",
-        "formula": "ClO⁻",
-        "mass": 51.46
-      },
-      "cell4": {
-        "name": "Chlorite",
-        "formula": "ClO₂⁻",
-        "mass": 68.45
-      }
-    },
-    {
-      "id": 3,
-      "cell1": {
-        "name": "Ammonium",
-        "formula": "NH₄⁺",
-        "mass": 18.04
-      },
-      "cell2": {
-        "name": "Chlorate",
-        "formula": "ClO₃⁻",
-        "mass": 83.45
-      },
-      "cell3": {
-        "name": "Perchlorate",
-        "formula": "ClO₄⁻",
-        "mass": 122.44
-      },
-      "cell4": {
-        "name": "Chromate",
-        "formula": "CrO₄²⁻",
-        "mass": 115.99
-      }
-    },
-    {
-      "id": 4,
-      "cell1": {
-        "name": "Acetate",
-        "formula": "CH₃COO⁻",
-        "mass": 59.04
-      },
-      "cell2": {
-        "name": "Dichromate",
-        "formula": "Cr₂O₇²⁻",
-        "mass": 215.99
-      },
-      "cell3": {
-        "name": "Permanganate",
-        "formula": "MnO₄⁻",
-        "mass": 158.03
-      },
-      "cell4": {
-        "name": "Nitrite",
-        "formula": "NO₂⁻",
-        "mass": 46.0
-      }
-    },
-    {
-      "id": 5,
-      "cell1": {
-        "name": "Cyanide",
-        "formula": "CN⁻",
-        "mass": 26.02
-      },
-      "cell2": {
-        "name": "Peroxide",
-        "formula": "O₂²⁻",
-        "mass": 64.0
-      },
-      "cell3": {
-        "name": "Hydroxide",
-        "formula": "OH⁻",
-        "mass": 17.01
-      },
-      "cell4": {
-        "name": "Phosphate",
-        "formula": "PO₄³⁻",
-        "mass": 94.97
-      }
-    },
-    {
-      "id": 6,
-      "cell1": {
-        "name": "Thiocyanate",
-        "formula": "SCN⁻",
-        "mass": 58.08
-      },
-      "cell2": {
-        "name": "Sulfite",
-        "formula": "SO₃²⁻",
-        "mass": 80.06
-      },
-      "cell3": {
-        "name": "Sulfate",
-        "formula": "SO₄²⁻",
-        "mass": 96.06
-      },
-      "cell4": {
-        "name": "Hydrogen Sulfate",
-        "formula": "HSO₃⁻",
-        "mass": 97.08
-      }
-    }
+    { "name": "Hydronium", "formula": "H₃O⁺", "mass": 27.03 },
+    { "name": "Carbonate", "formula": "CO₃²⁻", "mass": 60.01 },
+    { "name": "Hydrogen Carbonate", "formula": "HCO₃⁻", "mass": 61.02 },
+    { "name": "Thiosulfate", "formula": "S₂O₃²⁻", "mass": 112.14 },
+    { "name": "Mercury (I)", "formula": "Hg²⁺", "mass": 200.59 },
+    { "name": "Oxalate", "formula": "C₂O₄²⁻", "mass": 88.02 },
+    { "name": "Hypochlorite", "formula": "ClO⁻", "mass": 51.46 },
+    { "name": "Chlorite", "formula": "ClO₂⁻", "mass": 68.45 },
+    { "name": "Ammonium", "formula": "NH₄⁺", "mass": 18.04 },
+    { "name": "Chlorate", "formula": "ClO₃⁻", "mass": 83.45 },
+    { "name": "Perchlorate", "formula": "ClO₄⁻", "mass": 122.44 },
+    { "name": "Chromate", "formula": "CrO₄²⁻", "mass": 115.99 },
+    { "name": "Acetate", "formula": "CH₃COO⁻", "mass": 59.04 },
+    { "name": "Dichromate", "formula": "Cr₂O₇²⁻", "mass": 215.99 },
+    { "name": "Permanganate", "formula": "MnO₄⁻", "mass": 158.03 },
+    { "name": "Nitrite", "formula": "NO₂⁻", "mass": 46.0 },
+    { "name": "Cyanide", "formula": "CN⁻", "mass": 26.02 },
+    { "name": "Peroxide", "formula": "O₂²⁻", "mass": 64.0 },
+    { "name": "Hydroxide", "formula": "OH⁻", "mass": 17.01 },
+    { "name": "Phosphate", "formula": "PO₄³⁻", "mass": 94.97 },
+    { "name": "Thiocyanate", "formula": "SCN⁻", "mass": 58.08 },
+    { "name": "Sulfite", "formula": "SO₃²⁻", "mass": 80.06 },
+    { "name": "Sulfate", "formula": "SO₄²⁻", "mass": 96.06 },
+    { "name": "Hydrogen Sulfate", "formula": "HSO₃⁻", "mass": 97.08 }
   ],
-
   "fiftyseven71": [
     {
       "number": 57,

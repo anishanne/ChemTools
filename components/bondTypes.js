@@ -76,7 +76,7 @@ export default function Classwork({ open, setOpen, bondType }) {
                                 significantly influence their physical
                                 properties and behavior.
                               </p>
-                            ) : (
+                            ) : bondType === "Ionic" ? (
                               <p className="text-center text-2xl font-medium text-white">
                                 Ionic diatomic compounds undergo a complete
                                 transfer of electrons from one atom to another,
@@ -96,6 +96,13 @@ export default function Classwork({ open, setOpen, bondType }) {
                                 compounds tend to be more soluble in polar
                                 solvents and have a crystalline structure in
                                 their solid form.
+                              </p>
+                            ) : (
+                              <p className="text-center text-2xl font-medium text-white">
+                                This most likely means one or more of the
+                                elements you selected doesnt have a defined
+                                electronegativity, so the calculation cannot
+                                occur.
                               </p>
                             )}
                           </div>

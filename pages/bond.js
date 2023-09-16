@@ -40,6 +40,8 @@ const colors = {
 };
 const style =
   " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+const style2 =
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -152,7 +154,7 @@ export default function Home() {
                     <div className="w-full col-span-1"></div>
                   )}
                   <button
-                    className="mt-8 bg-indigo-500 py-1 px-2 h-1/2 md:h-1/3 w-1/3 rounded-md hover:bg-indigo-600 mx-auto"
+                    className="mt-8  bg-indigo-500 py-1 px-2 h-1/2 md:h-1/3 w-1/3 rounded-md hover:bg-indigo-600 mx-auto"
                     onClick={() => {
                       setElement1();
                       setElement2();
@@ -165,7 +167,7 @@ export default function Home() {
               ) : (
                 <div className="flex mx-auto items-center">
                   <button
-                    className="m-8 mx-auto text-center bg-indigo-500  py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
+                    className="m-8 mx-auto text-xl text-center bg-indigo-500  py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
                     onClick={() => {
                       setElement1();
                       setElement2();
@@ -176,13 +178,15 @@ export default function Home() {
                   </button>
                 </div>
               )}
-              <div className=" m-8 ">
-                <div className="md:hidden mx-auto flex flex-wrap ">
+              <div className="m-8">
+                <div className="md:hidden pb-8 flex flex-wrap -mx-2">
                   {data.elements.map((element, index) => (
                     <div
                       key={index}
                       onClick={() => handleElementClick(element)}
-                      className={colors[element.color] + style || ""}
+                      className={`${
+                        colors[element.color]
+                      } h-12 text-center flex items-center justify-center text-base ${style2}`}
                     >
                       {element.symbol}
                     </div>

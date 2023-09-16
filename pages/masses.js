@@ -46,6 +46,8 @@ const colors = {
 };
 const style =
   " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  lg:text-xl text-xs w-12 hover:brightness-150 hover:text-black";
+const style2 =
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [grams, setGrams] = useState(0);
@@ -346,20 +348,23 @@ export default function Home() {
 
               <div className="w-full max-w-xs"></div>
               <div className="m-8">
-                <div className="md:hidden  flex flex-wrap -mx-2">
+                <div className="md:hidden flex flex-wrap -mx-2">
                   {data.elements.map((element, index) => (
                     <div
                       key={index}
                       onClick={() =>
                         elementStates(element.mass, element.symbol)
                       }
-                      className={colors[element.color] + style || ""}
+                      className={`${
+                        colors[element.color]
+                      } h-12 text-center flex items-center justify-center text-base ${style2}`}
                     >
                       {element.symbol}
                     </div>
                   ))}
                 </div>
               </div>
+
               <table className="md:block hidden w-11/12 mx-8 bg-gray-800 mt-8  lg:text-xl text-xs cursor-pointer">
                 <tbody>
                   <tr>
@@ -563,13 +568,13 @@ export default function Home() {
                 <h1 className="bg-gray-800 text-center font-bold text-2xl m-8">
                   Common Polyatomic Ions
                 </h1>
-                <div className="mx-auto text-center font-bold text-base mt-4">
+                <div className="mx-auto text-center font-bold text-sm md:text-base mt-4">
                   <div className="mx-auto flex flex-wrap -m-2">
                     {" "}
                     {data.dataArray.map((element, index) => (
                       <div
                         key={index}
-                        className="border-2 p-3 w-64 mx-auto bg-gray-800 hover:bg-gray-700 cursor-pointer"
+                        className="border-2 p-3 w-52 md:w-64 mx-auto bg-gray-800 hover:bg-gray-700 cursor-pointer"
                         onClick={() => {
                           setGrams(element.mass), setInputGrams(element.mass);
                           setPolyatomic(element.formula);

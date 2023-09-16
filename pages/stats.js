@@ -39,6 +39,8 @@ const colors = {
 };
 const style =
   " border-2 border-gray-200 dark:border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+const style2 =
+  " border-2 border-gray-200 cursor-pointer dark:border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 const fiftyseven71 = [
   {
@@ -912,8 +914,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full max-w-xs"></div>
-              <div className="m-8 md:hidden block">
-                <div className="flex flex-wrap p-4 -mx-2">
+              <div className="m-8 ">
+                <div className="md:hidden pb-8 flex flex-wrap -mx-2">
                   {data.elements.map((element, index) => (
                     <div
                       key={index}
@@ -977,7 +979,9 @@ export default function Home() {
 
                         setSymbol(element.symbol);
                       }}
-                      className={colors[element.color] + style || ""}
+                      className={`${
+                        colors[element.color]
+                      } h-12 text-center flex items-center justify-center text-base ${style2}`}
                     >
                       {element.symbol}
                     </div>

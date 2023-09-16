@@ -204,7 +204,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <table className="md:visible w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <table className="hidden md:table w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td

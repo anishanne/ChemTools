@@ -218,10 +218,10 @@ export default function Home() {
                 <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center  mb-6 text-5xl font-bold md:text-7xl">
-                      Chemistry Tools
+                      Gram Formula Mass
                     </h1>
                     <p className="text-center  text-2xl font-light md:text-3xl">
-                      We've got solutions... not just reactions
+                      Calculate the GFM of any compound
                     </p>
                     <hr className="text-white mt-16 border-dotted "></hr>
                   </div>{" "}
@@ -356,7 +356,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <table className="md:visible w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
+              <table className="hidden md:table w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td
@@ -565,7 +565,7 @@ export default function Home() {
                     {data.dataArray.map((element, index) => (
                       <div
                         key={index}
-                        className="border-2 p-3 w-52 md:w-64 mx-auto bg-gray-800 hover:bg-gray-700 cursor-pointer"
+                        className=" p-3 w-fit md:w-64 mx-auto bg-gray-800 hover:text-blue-500 cursor-pointer"
                         onClick={() => {
                           setGrams(element.mass), setInputGrams(element.mass);
                           setPolyatomic(element.formula);

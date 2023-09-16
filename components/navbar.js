@@ -19,7 +19,6 @@ const navigation = [
   { name: "Molar Mass", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Character", href: "/bond", icon: CubeTransparentIcon },
-  { name: "Oxidation States", href: "/oxidation", icon: BoltSlashIcon },
   { name: "Acid Base", href: "/acidbase", icon: FireIcon },
   { name: "About", href: "/about", icon: UserCircleIcon },
 ];

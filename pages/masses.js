@@ -83,17 +83,7 @@ export default function Home() {
     const updatedElements = [...elementString];
     updatedElements.pop(); // remove the last added element
 
-    // Check if the last element is a polyatomic segment
-    if (polyatomic && updatedElements.length > 0) {
-      const lastElement = updatedElements[updatedElements.length - 1];
-      if (lastElement === polyatomic) {
-        console.log(polyatomic);
-        // Remove the polyatomic segment if it matches the last element
-        updatedElements.pop();
-      }
-    }
-
-    // Update state directly
+    // update state directly
     setPolyatomic("");
     setElements(updatedElements);
     setGrams((prevMass) => {
@@ -108,9 +98,8 @@ export default function Home() {
         (element) =>
           element.symbol === updatedElements[updatedElements.length - 1]
       );
-      return removedElement
-        ? (prevMass - removedElement.atomic_mass).toFixed(3)
-        : 0;
+
+      return removedElement ? (prevMass - removedElement.mass).toFixed(3) : 0;
     });
     setH2("");
   };

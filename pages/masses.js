@@ -348,7 +348,7 @@ export default function Home() {
 
               <div className="w-full max-w-xs"></div>
               <div className="m-8">
-                <div className="md:hidden flex flex-wrap -mx-2">
+                <div className="md:hidden pb-8 flex flex-wrap justify-center">
                   {data.elements.map((element, index) => (
                     <div
                       key={index}

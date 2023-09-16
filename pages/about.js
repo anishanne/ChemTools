@@ -52,13 +52,13 @@ export default function Home() {
                 {" "}
                 <div className="top-0 z-0 flex h-64 flex-shrink-0 bg-gray-300  w-full dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
+                    <h1 className="text-center my-8 text-5xl font-bold md:text-7xl">
                       About
                     </h1>
-                    <p className="text-center text-2xl font-light md:text-3xl">
+                    <p className="mx-8 text-center text-2xl font-light md:text-3xl">
                       Heres what we do and why we do it...
                     </p>
-                    <hr className="text-white my-16 border-dotted "></hr>
+                    <hr className="text-white my-16 mx-8 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>

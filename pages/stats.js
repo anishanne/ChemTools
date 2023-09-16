@@ -899,17 +899,17 @@ export default function Home() {
         <main className="flex-1">
           <div className="h-full bg-gray-800  text-wrap">
             <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full  bg-gray-800 text-lg">
+              <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
                 {" "}
                 <div className="top-0 z-0 w-full flex  flex-shrink-0 p bg-gray-200  dark:bg-gray-800">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
-                      Element Information
+                    <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
+                      Element Info
                     </h1>
-                    <p className="text-center  text-2xl font-light md:text-3xl">
-                      Quickly view stats on all the elements
+                    <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
+                      View the info on all the elements in the periodic table
                     </p>
-                    <hr className="text-white  mt-8 border-dotted "></hr>
+                    <hr className="mx-8 text-white mt-8 border-dotted "></hr>
                   </div>{" "}
                 </div>
               </div>

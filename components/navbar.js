@@ -152,7 +152,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
               ))}
             </nav>
             <div className="m-2  font-semibold">
-              <h1 className="bg-gray-900 justify-items-center text-center text-gray-500 dark:text-gray-100 text-sm">
+              <h1 className="bg-gray-900 m-8 justify-items-center text-center text-gray-500 dark:text-gray-100 text-sm">
                 Made By: Arnav Mishra, Joseph Marra
               </h1>
             </div>

@@ -258,7 +258,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center   ">
-                <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-900 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
+                <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-800 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
                   <div className="mb-3">
                     <label
                       className="block text-gray-300 text-sm font-bold mb-2"

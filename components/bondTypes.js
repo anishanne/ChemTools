@@ -21,7 +21,7 @@ export default function Classwork({ open, setOpen, bondType }) {
           leaveFrom="opacity-50"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-600  bg-opacity-100 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-900  bg-opacity-100 transition-opacity" />
         </Transition.Child>
 
         <div className=" fixed inset-0 z-10 overflow-y-auto">
@@ -35,7 +35,7 @@ export default function Classwork({ open, setOpen, bondType }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative my-8 mx-8 w-full transform overflow-hidden  rounded-lg bg-gray-800 p-6 pt-5 pb-4 text-left shadow-xl transition-all dark:bg-slate-900 md:w-3/4">
+              <Dialog.Panel className="relative my-8 mx-8 w-full transform overflow-hidden  rounded-lg  p-6 pt-5 pb-4 text-left shadow-xl transition-all bg-gray-900 md:w-3/4">
                 <div className="mt-6 ">
                   <div className="sm:block">
                     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

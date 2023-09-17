@@ -36,13 +36,12 @@ const colors = {
   reference: "bg-teal-600 hover:none  pointer-events-none",
   reference2: "bg-blue-800 hover:none  pointer-events-none",
   heading: "font-xl",
-  none: "border-t border-gray-800 bg-gray-800 cursor-default",
+  none: " cursor-default",
 };
 const style =
-  " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+  "  cursor-pointer   rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
-
 export default function Home() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -76,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="pb-8 h-screen   bg-gray-800">
+      <div className="pb-8 h-screen  ">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}
@@ -87,8 +86,8 @@ export default function Home() {
             setSidebarOpen={setSidebarOpen}
             page="Bond Character"
           />
-          <div className="bg-gray-800 md:hidden unhidden flex flex-col md:pl-64">
-            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow bg-gray-900">
+          <div className=" md:hidden unhidden flex flex-col md:pl-64">
+            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow ">
               <div className="w-full flex justify-between items-center">
                 <button
                   type="button"
@@ -98,21 +97,30 @@ export default function Home() {
                   <span className="sr-only">Open sidebar</span>
                   <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <img
-                  className="w-16 h-16 bg-gray-900 mr-4"
-                  src="chemlogo.png"
-                />
+                <img className="w-16 h-16  mr-4" src="chemlogo.png" />
               </div>
             </div>
           </div>
         </div>
         <PolarCovalent open={open} setOpen={setOpen} bondType={bondType} />
         <main className="flex-1">
-          <div className="h-full bg-gray-800  text-wrap">
-            <div className="bg-gray-800  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full w-full  bg-gray-800 text-lg">
+          <div
+            className="absolute inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+            aria-hidden="true"
+          >
+            <div
+              className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
+              style={{
+                clipPath:
+                  "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+              }}
+            />
+          </div>
+          <div className="h-full my-auto pb-8   text-wrap">
+            <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
+              <div className="flex justify-left h-full w-full   text-lg">
                 {" "}
-                <div className="top-0 z-0 w-full flex  flex-shrink-0 p  bg-gray-800">
+                <div className="top-0 z-0 w-full flex  flex-shrink-0 p ">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
                       Bond Character
@@ -191,6 +199,18 @@ export default function Home() {
                 </div>
               )}
               <div className="m-8">
+                <div
+                  className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
+                    style={{
+                      clipPath:
+                        "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                    }}
+                  />
+                </div>
                 <div className="md:hidden pb-8 flex flex-wrap justify-center">
                   {data.elements.map((element, index) => (
                     <div
@@ -207,11 +227,35 @@ export default function Home() {
                       <div>{element.symbol}</div>
                     </div>
                   ))}
+                  <div
+                    className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+                    aria-hidden="true"
+                  >
+                    <div
+                      className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
+                      style={{
+                        clipPath:
+                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                      }}
+                    />
+                  </div>
+                </div>
+                <div
+                  className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
+                    style={{
+                      clipPath:
+                        "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                    }}
+                  />
                 </div>
               </div>
 
-              <table className="hidden md:table w-11/12 mx-8 bg-gray-800 mt-8 cursor-pointer">
-                <tbody>
+              <table className="hidden md:table w-11/12 m-8 mt-4 cursor-pointer">
+                <tbody className="">
                   <tr>
                     <td
                       className={`${colors.color1 + style} text-xs sm:text-xl`}
@@ -344,7 +388,7 @@ export default function Home() {
 
                   <tr>
                     <td
-                      className="cursor-default bg-gray-800 border-l border-b border-gray-800 "
+                      className="cursor-default  "
                       colSpan="2"
                       rowSpan="2"
                     ></td>
@@ -360,7 +404,7 @@ export default function Home() {
                       </td>
                     ))}
                     <td
-                      className="bg-gray-800 border cursor-default border-gray-800"
+                      className=" cursor-default "
                       colSpan="1"
                       rowSpan="1"
                     ></td>
@@ -378,7 +422,7 @@ export default function Home() {
                         {element.symbol}
                       </td>
                     ))}
-                    <td className="cursor-default bg-gray-800"></td>
+                    <td className="cursor-default"></td>
                   </tr>
                 </tbody>
               </table>

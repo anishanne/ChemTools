@@ -175,7 +175,7 @@
       "oxidationStates": [3],
       "category": "metalloid",
       "density": 2.08,
-      "discovered_by": "Joseph Louis Gay-Lussac",
+      " ": "Joseph Louis Gay-Lussac",
       "melt": 2349,
       "color": "color6",
       "molar_heat": 11.087,

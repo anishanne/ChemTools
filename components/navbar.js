@@ -40,7 +40,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-600 bg-opacity-75" />
+            <div className="fixed inset-0 bg-gray-900 bg-opacity-90" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-0 flex">
@@ -53,7 +53,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
               leaveFrom="trangray-x-0"
               leaveTo="-trangray-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col pt-5 pb-4 bg-gray-900">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-1 flex-col pt-5 pb-4 ">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-300"
@@ -78,10 +78,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                   </div>
                 </Transition.Child>
                 <div className=" flex flex-shrink-0 items-center px-4">
-                  <img
-                    className="w-42 h-48 mx-auto bg-gray-900"
-                    src="chemlogo.png"
-                  />
+                  <img className="w-42 h-48 mx-auto " src="chemlogo.png" />
                 </div>
                 <div className="z-0 text-2xl mt-5 h-0 flex-1 overflow-y-auto">
                   <nav className="space-y-1 text-2xl px-2">
@@ -122,22 +119,22 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
       {/* Static sidebar for desktop */}
       <div className="hidden md:fixed z-10 md:inset-y-0 md:flex  w-52 lg:w-72 md:flex-col">
         {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex min-h-0 flex-1 flex-col  bg-gray-900">
-          <div className="flex h-36 lg:h-48 flex-shrink-0 items-center  px-4 bg-gray-900">
+        <div className="flex min-h-0 flex-1 flex-col  ">
+          <div className="flex h-36 lg:h-48 flex-shrink-0 items-center  px-4 0">
             <img
-              className=" md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex md:h-42 md:w-48 lg:h-48 lg:w-52 bg-gray-900"
+              className=" md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex md:h-42 md:w-48 lg:h-48 lg:w-52 "
               src="chemlogo.png"
             />
           </div>
-          <div className="z-10 flex flex-1 flex-col bg-gray-900 overflow-y-auto">
-            <nav className="flex-1 space-y-1 px-8 py-4 bg-gray-900">
+          <div className="z-10 flex flex-1 flex-col  overflow-y-auto">
+            <nav className="flex-1 space-y-1 px-8 py-4 ">
               {navigation.map((item) => (
                 <Link href={item.href} key={item.name}>
                   <div
                     className={`${
                       page === item.name
-                        ? " bg-gray-700  text-white"
-                        : "   text-gray-100 bg-gray-900 hover:bg-gray-700 hover:text-white"
+                        ? " bg-gray-800  text-white"
+                        : "   text-gray-100  hover:bg-gray-700 hover:text-white"
                     }
 										group cursor-pointer flex items-center rounded-md px-2 py-2 text-sm lg:text-xl font-medium`}
                   >
@@ -152,7 +149,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
               ))}
             </nav>
             <div className="m-2  font-semibold">
-              <h1 className="bg-gray-900 m-8 justify-items-center text-center  text-gray-100 text-sm">
+              <h1 className=" m-8 justify-items-center text-center  text-gray-100 text-sm">
                 Made By: Arnav Mishra, Joseph Marra
               </h1>
             </div>

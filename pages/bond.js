@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-slate-900 via-20% via-[#170132] to-gray-900">
+      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-slate-900 via-20% via-[#120126] to-gray-900">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}

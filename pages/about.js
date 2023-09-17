@@ -34,7 +34,7 @@ export default function Home() {
           page="About Us"
         />
         <div className=" md:hidden unhidden flex flex-col md:pl-64">
-          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow ">
+          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
             <div className="w-full flex justify-between items-center">
               <button
                 type="button"

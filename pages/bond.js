@@ -222,13 +222,13 @@ export default function Home() {
                 <tbody className="">
                   <tr>
                     <td
-                      className={`${colors.color1 + style} text-xs sm:text-xl`}
+                      className={`${colors.color1 + style} `}
                       onClick={() => handleElementClick(data.elements[0])}
                     >
                       1<br></br>H
                     </td>
                     <td
-                      className={`${colors.none} cursor-default text-xs sm:text-xl `}
+                      className={`${colors.none} cursor-default  `}
                       colSpan="16"
                     ></td>
                     <td

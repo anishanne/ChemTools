@@ -45,7 +45,7 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  " cursor-pointer  rounded-lg text-center font-bold align-middle   w-12 hover:brightness-150 hover:text-black";
+  " cursor-pointer  rounded-lg text-center font-bold align-middle  w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -609,7 +609,7 @@ export default function Home() {
                     {data.dataArray.map((element, index) => (
                       <div
                         key={index}
-                        className=" p-3 w-fit md:w-64 mx-auto  hover:text-blue-500 cursor-pointer"
+                        className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
                         onClick={() => {
                           setGrams(element.mass), setInputGrams(element.mass);
                           setPolyatomic(element.formula);

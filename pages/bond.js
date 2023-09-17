@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="pb-8 h-screen  ">
+      <div className="h-screen pb-8 lg:bg-none bg-gray-800 ">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}

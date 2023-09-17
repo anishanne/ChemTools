@@ -871,7 +871,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen pb-8 lg:bg-none bg-gray-800 ">
         <Head>
           <title>ChemTools | Element Info</title>
         </Head>{" "}

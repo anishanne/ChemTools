@@ -60,7 +60,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-screen ">
+      <div className="h-screen pb-8 lg:bg-none bg-gray-800 ">
         <Head>
           <title>ChemTools | Home</title>
         </Head>{" "}

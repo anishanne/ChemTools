@@ -24,7 +24,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-screen ">
+      <div className="h-screen pb-8 lg:bg-none bg-gray-800 ">
         <Head>
           <title>ChemTools | About</title>
         </Head>{" "}
@@ -74,7 +74,7 @@ export default function Home() {
                     <p className="mx-8 text-center text-2xl font-light md:text-3xl">
                       Here's what we do and why we do it...
                     </p>
-                    <hr className="text-white my-16  border-dotted "></hr>
+                    <hr className="mx-8 text-white mt-8 border-dotted "></hr>{" "}
                   </div>
                 </div>
               </div>

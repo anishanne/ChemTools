@@ -70,7 +70,7 @@ export default function Home() {
           page="Home"
         />
         <div className=" md:hidden unhidden flex flex-col md:pl-64">
-          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow bg-gray-900">
+          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0 shadow ">
             <div className="w-full flex justify-between items-center">
               <button
                 type="button"
@@ -80,7 +80,7 @@ export default function Home() {
                 <span className="sr-only">Open sidebar</span>
                 <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
               </button>
-              <img className="w-16 h-16 bg-gray-900 mr-4" src="chemlogo.png" />
+              <img className="w-16 h-16  mr-4" src="chemlogo.png" />
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
                       {features.map((feature) => (
                         <Link key={feature.name} href={feature.href}>
                           <div key={feature.name} className="pt-6 ">
-                            <div className="flow-root lg:h-60 h-72  rounded-lg bg-gray-1000 px-4 pb-4 hover:brightness-125  border-gray-900 border-8 ">
+                            <div className="flow-root lg:h-60 h-72  rounded-lg bg-gray-1000 px-4 pb-4 hover:brightness-125  border-gray-900 border-4 ">
                               <div className="-mt-6 ">
                                 <div>
                                   <div

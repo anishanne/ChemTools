@@ -230,7 +230,7 @@ export default function Home() {
         </div>
         <main className="flex-1">
           <div
-            className="absolute inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+            className="sm:absolute hidden inset-x-0 -z-20 sm:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
           >
             <div
@@ -319,18 +319,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
-                    aria-hidden="true"
-                  >
-                    <div
-                      className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
-                      style={{
-                        clipPath:
-                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                      }}
-                    />
-                  </div>
 
                   <div className="mx-8">
                     <label
@@ -359,21 +347,9 @@ export default function Home() {
                     />
                   </div>
                 </form>
-                <div
-                  className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
-                  aria-hidden="true"
-                >
-                  <div
-                    className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
-                    style={{
-                      clipPath:
-                        "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                    }}
-                  />
-                </div>
               </div>
               <div
-                className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
+                className="sm:absolute hidden inset-x-0 -z-20 sm:flex justify-center overflow-hidden blur-3xl"
                 aria-hidden="true"
               >
                 <div
@@ -403,19 +379,6 @@ export default function Home() {
               <div className="w-full max-w-xs"></div>
               {/* Your content goes here */}
 
-              <div
-                className="absolute inset-x-0  -z-20 flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
-              </div>
-
               <div className="m-8">
                 <div className="md:hidden pb-8 flex flex-wrap justify-center">
                   {data.elements.map((element, index) => (
@@ -433,31 +396,7 @@ export default function Home() {
                       <div> {element.symbol}</div>
                     </div>
                   ))}
-                  <div
-                    className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
-                    aria-hidden="true"
-                  >
-                    <div
-                      className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
-                      style={{
-                        clipPath:
-                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                      }}
-                    />
-                  </div>
                 </div>
-              </div>
-              <div
-                className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
               </div>
 
               <table className="hidden md:table w-11/12 mx-8 border-collapse border-transparent mt-8 cursor-pointer">
@@ -600,18 +539,7 @@ export default function Home() {
                       </td>
                     ))}
                   </tr>
-                  <div
-                    className="absolute inset-x-100 -z-20 flex justify-center overflow-hidden blur-3xl"
-                    aria-hidden="true"
-                  >
-                    <div
-                      className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-                      style={{
-                        clipPath:
-                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                      }}
-                    />
-                  </div>
+
                   <tr>
                     {data.eightyseven118.map((element, key) => (
                       <td
@@ -627,7 +555,18 @@ export default function Home() {
                       </td>
                     ))}
                   </tr>
-
+                  <div
+                    className="sm:absolute hidden inset-x-0 -z-20 sm:flex justify-center overflow-hidden blur-3xl"
+                    aria-hidden="true"
+                  >
+                    <div
+                      className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
+                      style={{
+                        clipPath:
+                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                      }}
+                    />
+                  </div>
                   <tr>
                     <td
                       className="cursor-default   "
@@ -664,22 +603,11 @@ export default function Home() {
                         {element.symbol}
                       </td>
                     ))}
+
                     <td className="cursor-default "></td>
                   </tr>
                 </tbody>
               </table>
-              <div
-                className="absolute sm:hidden inset-x-0 -z-20 flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 sm:opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
-              </div>
 
               <div className="text-center mt-24 m-8">
                 <h1 className=" text-center font-bold text-2xl m-8">

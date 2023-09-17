@@ -201,7 +201,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gray-800 ">
+      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-slate-900 via-20% via-[#170132] to-gray-900">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}
@@ -258,7 +258,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center   ">
-                <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-800 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
+                <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-900 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
                   <div className="mb-3">
                     <label
                       className="block text-gray-300 text-sm font-bold mb-2"
@@ -348,18 +348,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div
-                className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
-              </div>
+
               <div className=" grid grid-cols-2 mt-16 bg-inherit">
                 <button
                   onClick={() => reset()}
@@ -555,18 +544,7 @@ export default function Home() {
                       </td>
                     ))}
                   </tr>
-                  <div
-                    className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-                    aria-hidden="true"
-                  >
-                    <div
-                      className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-                      style={{
-                        clipPath:
-                          "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                      }}
-                    />
-                  </div>
+
                   <tr>
                     <td
                       className="cursor-default   "
@@ -608,6 +586,18 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
+              <div
+                className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+                aria-hidden="true"
+              >
+                <div
+                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                  style={{
+                    clipPath:
+                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                  }}
+                />
+              </div>
 
               <div className="text-center mt-24 m-8">
                 <h1 className=" text-center font-bold text-2xl m-8">

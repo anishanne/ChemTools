@@ -24,7 +24,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-screen pb-8 lg:bg-none bg-gray-800 ">
+      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-slate-900 via-20% via-[#170132] to-gray-900">
         <Head>
           <title>ChemTools | About</title>
         </Head>{" "}
@@ -97,8 +97,6 @@ export default function Home() {
                     on your journey to chemistry success!
                   </p>
 
-                  <br></br>
-                  <br></br>
                   <h2 className="text-4xl mt-8 text-blue-500 font-semibold">
                     Who are we?
                   </h2>

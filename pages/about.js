@@ -14,6 +14,7 @@ import {
   ClockIcon,
   CurrencyDollarIcon,
   ChartPieIcon,
+  ExclamationTriangleIcon,
 } from "@heroicons/react/20/solid";
 
 import {
@@ -79,7 +80,7 @@ export default function Home() {
                       About
                     </h1>
                     <p className="mx-8 text-center text-2xl font-light md:text-3xl">
-                      Here's what we do and why we do it...
+                      Here's what we do and why we do it
                     </p>
                     <hr className="mx-8 text-white mt-8 border-dotted "></hr>{" "}
                   </div>
@@ -91,7 +92,7 @@ export default function Home() {
                   <div className="max-w-xl text-base leading-7 text-white lg:max-w-full">
                     <div className=" lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                       <div>
-                        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">
                           Chem Tools
                         </h1>
                         <p className="mt-6 my-8 text-xl leading-8 text-white">
@@ -100,7 +101,7 @@ export default function Home() {
                           may not be changing the world, we're certainly making
                           your chemistry journey a whole lot easier.
                         </p>
-                        <p>
+                        <p className="mt-6 my-8 text-xl leading-8 text-white">
                           Thank you for choosing Chem Tools; we're here to
                           support you on your journey to chemistry success!
                         </p>
@@ -131,24 +132,28 @@ export default function Home() {
                                 Easy to Use
                               </strong>{" "}
                               <br></br>
-                              Our easy to use interface makes it easy to find
-                              the information you need.
+                              Our straightforward interface makes it effortless
+                              to find the information you need.
                             </span>
                           </li>
                           <li className="flex gap-x-3">
-                            <CurrencyDollarIcon
+                            <ExclamationTriangleIcon
                               className="mt-1 h-5 w-5 flex-none text-indigo-600"
                               aria-hidden="true"
                             />
                             <span>
                               <strong className="font-semibold text-white">
-                                100% Free
+                                Reduce Mistakes
                               </strong>{" "}
                               <br></br>
-                              You don't have to pay a cent to use our tools.
+                              Our calculators help you get accurate results free
+                              from human error.
                             </span>
                           </li>
                         </ul>
+                        <p className="mt-6 my-8 text-xl leading-8 text-white text-center">
+                          Questions? Email mishrarnav@gmail.com.
+                        </p>
                       </div>
                       <div className="lg:text-center text-left">
                         <h1 className="lg:mt-2 mt-10  text-4xl font-bold tracking-tight text-white">

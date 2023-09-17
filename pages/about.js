@@ -10,13 +10,20 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import {
   CloudArrowUpIcon,
+  ServerIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  ChartPieIcon,
+} from "@heroicons/react/20/solid";
+
+import {
   Bars3BottomLeftIcon,
-  LockClosedIcon,
   ArrowPathIcon,
   BookOpenIcon,
   CubeTransparentIcon,
   NewspaperIcon,
   BeakerIcon,
+  LockClosedIcon,
   FingerPrintIcon,
 } from "@heroicons/react/24/outline";
 
@@ -24,7 +31,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-slate-900 via-20% via-[#120126] to-gray-900">
+      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | About</title>
         </Head>{" "}
@@ -79,36 +86,93 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className=" z-0 mt-6">
-                <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                  <h2 className="text-4xl mt-16 font-bold text-blue-500 ">
-                    Thank you for choosing Chem Tools
-                  </h2>
-                  <br></br>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-white-300">
-                    At Chem Tools, we're all about simplifying chemistry making
-                    your chemistry experience hassle-free. While we may not be
-                    changing the world, we're certainly making your chemistry
-                    journey a whole lot easier.
-                  </p>
-
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-white-800">
-                    Thank you for choosing Chem Tools; we're here to support you
-                    on your journey to chemistry success!
-                  </p>
-
-                  <h2 className="text-4xl mt-8 text-blue-500 font-semibold">
-                    Who are we?
-                  </h2>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-100">
-                    Arnav is a senior at John Jay who is currently making light
-                    pink titrations.
-                  </p>
-
-                  <p className="mx-auto my-5 pb-8 max-w-prose text-xl text-gray-100">
-                    Joe Money is a junior at John Jay who loves Nutella
-                    Biscuits.
-                  </p>
+              <div className="mx-auto  mt-16 max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-10">
+                <div className="lg:pr-4">
+                  <div className="max-w-xl text-base leading-7 text-white lg:max-w-full">
+                    <div className=" lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                      <div>
+                        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                          Chem Tools
+                        </h1>
+                        <p className="mt-6 my-8 text-xl leading-8 text-white">
+                          At Chem Tools, we're all about simplifying chemistry
+                          making your chemistry experience hassle-free. While we
+                          may not be changing the world, we're certainly making
+                          your chemistry journey a whole lot easier.
+                        </p>
+                        <p>
+                          Thank you for choosing Chem Tools; we're here to
+                          support you on your journey to chemistry success!
+                        </p>
+                        <ul role="list" className="mt-8 space-y-8 text-white">
+                          <li className="flex gap-x-3">
+                            <ClockIcon
+                              className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span>
+                              <strong className="font-semibold text-white">
+                                Save Time
+                              </strong>{" "}
+                              <br></br>
+                              Without having to waste time looking up info in
+                              the reference table and performing calculations,
+                              you can focus on what's important: learning
+                              chemistry.
+                            </span>
+                          </li>
+                          <li className="flex gap-x-3">
+                            <ChartPieIcon
+                              className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span>
+                              <strong className="font-semibold text-white">
+                                Easy to Use
+                              </strong>{" "}
+                              <br></br>
+                              Our easy to use interface makes it easy to find
+                              the information you need.
+                            </span>
+                          </li>
+                          <li className="flex gap-x-3">
+                            <CurrencyDollarIcon
+                              className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span>
+                              <strong className="font-semibold text-white">
+                                100% Free
+                              </strong>{" "}
+                              <br></br>
+                              You don't have to pay a cent to use our tools.
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="lg:text-center text-left">
+                        <h1 className="lg:mt-2 mt-10  text-4xl font-bold tracking-tight text-white">
+                          About the Team
+                        </h1>
+                        <p className=" mt-6">
+                          Arnav is a senior at John Jay who is currently making
+                          light pink titrations.
+                        </p>
+                        <img
+                          className=" rounded-lg my-8 mx-auto"
+                          src="/smurfcat.jpeg"
+                        ></img>
+                        <p className=" mt-6">
+                          Joe Money is a junior at John Jay who loves Nutella
+                          Biscuits
+                        </p>
+                        <img
+                          className="h-64  rounded-lg my-8 mx-auto"
+                          src="/strawberryele.jpeg"
+                        ></img>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

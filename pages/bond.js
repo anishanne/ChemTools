@@ -5,6 +5,7 @@ import data from "../data.json";
 import { useState } from "react";
 import React from "react";
 import PolarCovalent from "../components/bondTypes";
+import Footer from "../components/footer";
 import {
   calculateElectronegativityDifference,
   getBondType,
@@ -91,7 +92,7 @@ export default function Home() {
               <div className="w-full flex justify-between items-center">
                 <button
                   type="button"
-                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
+                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
                   onClick={() => setSidebarOpen(true)}
                 >
                   <span className="sr-only">Open sidebar</span>
@@ -199,7 +200,7 @@ export default function Home() {
                 </div>
               )}
               <div className="m-8">
-                <div className="md:hidden pb-8 flex flex-wrap justify-center">
+                <div className="md:hidden flex flex-wrap justify-center">
                   {data.elements.map((element, index) => (
                     <div
                       key={index}
@@ -393,6 +394,7 @@ export default function Home() {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );

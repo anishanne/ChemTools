@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import {
   CloudArrowUpIcon,
   ServerIcon,
@@ -46,7 +47,7 @@ export default function Home() {
             <div className="w-full flex justify-between items-center">
               <button
                 type="button"
-                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
+                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>
@@ -95,13 +96,13 @@ export default function Home() {
                         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">
                           Chem Tools
                         </h1>
-                        <p className="mt-6 my-8 text-xl leading-8 text-white">
+                        <p className="mt-6 my-8 text-xl sm:text-left text-center  leading-8 text-white">
                           At Chem Tools, we're all about simplifying chemistry
                           making your chemistry experience hassle-free. While we
                           may not be changing the world, we're certainly making
                           your chemistry journey a whole lot easier.
                         </p>
-                        <p className="mt-6 my-8 text-xl leading-8 text-white">
+                        <p className="mt-6 my-8 text-xl sm:text-left text-center leading-8 text-white">
                           Thank you for choosing Chem Tools; we're here to
                           support you on your journey to chemistry success!
                         </p>
@@ -151,11 +152,17 @@ export default function Home() {
                             </span>
                           </li>
                         </ul>
-                        <p className="mt-6 my-8 text-xl leading-8 text-white text-center">
-                          Questions? Email mishrarnav@gmail.com.
-                        </p>
+                        {/* <a
+                          href="mailto:mishrarnav@gmail.com?subject=Chem Tools Support"
+                          className=" my-8 pt-8 mt-16 text-xl  leading-8 text-white text-center"
+                        >
+                          Questions? Email{" "}
+                          <span className="hover:text-indigo-500">
+                            mishrarnav@gmail.com.
+                          </span>
+                        </a> */}
                       </div>
-                      <div className="lg:text-center text-left">
+                      <div className="sm:text-left text-center">
                         <h1 className="lg:mt-2 mt-10  text-4xl font-bold tracking-tight text-white">
                           About the Team
                         </h1>
@@ -183,6 +190,7 @@ export default function Home() {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );

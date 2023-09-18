@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
@@ -74,7 +75,7 @@ export default function Home() {
             <div className="w-full flex justify-between items-center">
               <button
                 type="button"
-                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
+                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>
@@ -160,6 +161,7 @@ export default function Home() {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );

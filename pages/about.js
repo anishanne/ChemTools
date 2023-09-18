@@ -160,8 +160,8 @@ export default function Home() {
                           About the Team
                         </h1>
                         <p className=" mt-6">
-                          Arnav is a senior at John Jay who is currently making
-                          light pink titrations.
+                          Arnav is a senior at John Jay currently making light
+                          pink titrations.
                         </p>
                         <img
                           className=" rounded-lg my-8 mx-auto"

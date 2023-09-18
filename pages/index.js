@@ -129,7 +129,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Home</title>
         </Head>{" "}
@@ -317,8 +317,8 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

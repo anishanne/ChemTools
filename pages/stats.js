@@ -42,6 +42,16 @@ const style =
   "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
+const navigation = {
+  main: [
+    { name: "About", href: "/about" },
+    {
+      name: "Help",
+      href: "mailto:mishrarnav@gmail.com?subject=Chem Tools Support",
+    },
+    { name: "Home", href: "/" },
+  ],
+};
 const fiftyseven71 = [
   {
     number: 57,
@@ -872,7 +882,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Element Info</title>
         </Head>{" "}
@@ -899,7 +909,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <main className="flex-1">
+        <main className="flex-1s">
           <div
             className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"

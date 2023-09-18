@@ -10,11 +10,11 @@ const navigation = {
 };
 export default function Example() {
   return (
-    <footer className="bg-none md:ml-52 lg:ml-64 pt-16">
+    <footer className="bg-none mt-auto  md:ml-52 lg:ml-64 pt-16">
       <hr className=" text-white md:mx-8 mx-8 mt-8 border-dotted "></hr>
       <div className="mx-auto  max-w-7xl overflow-hidden px-6 pb-16 lg:px-8">
         <nav
-          className=" columns-2 flex justify-center space-x-12"
+          className="  columns-2 flex justify-center space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (

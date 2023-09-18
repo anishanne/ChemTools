@@ -33,7 +33,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | About</title>
         </Head>{" "}
@@ -47,7 +47,7 @@ export default function Home() {
             <div className="w-full flex justify-between items-center">
               <button
                 type="button"
-                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
+                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-gray-500 md:hidden"
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>

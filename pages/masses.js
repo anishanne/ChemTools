@@ -202,7 +202,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Molar Mass</title>
         </Head>{" "}

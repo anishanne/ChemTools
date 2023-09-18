@@ -187,16 +187,16 @@ export default function Home() {
                   <h2 className="text-5xl font-bold text-blue-500">
                     Transforming chemistry education.
                   </h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
+                  <p className="mt-8 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
                     One Student At a Time.
                   </p>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
+                  <p className="mx-auto mt-8 max-w-prose text-xl text-gray-300">
                     Chem Tools is the next generation online platform designed
                     for chemistry students and professionals, offering a variety
                     of resources including calculators for chemistry and
                     information on the periodic table.
                   </p>
-                  <div className="mt-12">
+                  <div className="mt-16">
                     <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3">
                       {features.map((feature) => (
                         <Link key={feature.name} href={feature.href}>
@@ -228,7 +228,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="md:ml-52 lg:ml-64">
+          <div className="md:ml-52 mt-16 lg:ml-64">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="sm:mx-auto max-w-xl mx-8 text-center">
                 <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">

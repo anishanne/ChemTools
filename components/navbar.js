@@ -11,6 +11,7 @@ import {
   NewspaperIcon,
   UserCircleIcon,
   BoltSlashIcon,
+  StarIcon,
   FireIcon,
 } from "@heroicons/react/24/outline";
 
@@ -21,6 +22,8 @@ const navigation = [
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Character", href: "/bond", icon: CubeTransparentIcon },
   { name: "Acid Base", href: "/acidbase", icon: FireIcon },
+  { name: "Other Utilities", href: "/utilities", icon: StarIcon },
+
   { name: "About", href: "/about", icon: UserCircleIcon },
 ];
 export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {

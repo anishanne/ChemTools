@@ -20,10 +20,10 @@ import {
   BeakerIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
-  body: "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero. Hac condimentum dignissim nibh vulputate ut nunc. Amet nibh orci mi venenatis blandit vel et proin. Non hendrerit in vel ac diam.",
+  body: "I love using Chem Tools.",
   author: {
-    name: "Brenna Goyette",
-    handle: "brennagoyette",
+    name: "Leah Miller",
+    handle: "AP Chemistry Teacher",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
@@ -129,7 +129,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-between   pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Home</title>
         </Head>{" "}
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <main className="grow">
+        <main className="pb-48">
           <div
             className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
@@ -251,7 +251,7 @@ export default function Home() {
                 />
               </div>
               <div className="sm:mx-auto mx-8 mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                <figure className="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-black border-white border-2 sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
+                <figure className="col-span-2  block rounded-2xl sm:bg-black border-white border-2 shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
                   <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-50">
                     <p>{`“${featuredTestimonial.body}”`}</p>
                   </blockquote>
@@ -265,11 +265,11 @@ export default function Home() {
                       <div className="font-semibold">
                         {featuredTestimonial.author.name}
                       </div>
-                      <div className="text-gray-300">{`@${featuredTestimonial.author.handle}`}</div>
+                      <div className="text-gray-300">{`${featuredTestimonial.author.handle}`}</div>
                     </div>
                   </figcaption>
                 </figure>
-                {testimonials.map((columnGroup, columnGroupIdx) => (
+                {/* {testimonials.map((columnGroup, columnGroupIdx) => (
                   <div
                     key={columnGroupIdx}
                     className="space-y-8 xl:contents xl:space-y-0"
@@ -312,7 +312,7 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>

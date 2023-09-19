@@ -13,12 +13,12 @@ import Footer from "../components/footer";
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
+  BeakerIcon,
   LockClosedIcon,
   ArrowPathIcon,
   BookOpenIcon,
   CubeTransparentIcon,
   NewspaperIcon,
-  BeakerIcon,
 } from "@heroicons/react/24/outline";
 const navigation = {
   main: [
@@ -45,7 +45,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Acid Base"
+            page="Other Utilities"
           />
           <div className=" md:hidden unhidden flex flex-col md:pl-64">
             <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
@@ -83,10 +83,10 @@ export default function Home() {
                 <div className="top-0 z-0 w-full flex  flex-shrink-0 p   ">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                      Acid Base
+                      Other Utilities
                     </h1>
                     <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      pH, pOH, and more - all in one place
+                      Sig Fig Calculator, Equation Balancer, and more!
                     </p>
                     <hr className="mx-8 text-white mt-8 border-dotted "></hr>
                   </div>{" "}

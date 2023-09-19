@@ -89,32 +89,6 @@ export default function Home() {
       )
     );
 
-  const handleBackspace = () => {
-    // keyCode 8 is the code for the backspace key
-    const updatedElements = [...elementString];
-    updatedElements.pop(); // remove the last added element
-
-    // update state directly
-    setPolyatomic("");
-    setElements(updatedElements);
-    setGrams((prevMass) => {
-      const removedElement = data.elements.find(
-        (element) =>
-          element.symbol === updatedElements[updatedElements.length - 1]
-      );
-      return removedElement ? prevMass - removedElement.atomic_mass : 0;
-    });
-    setInputGrams((prevMass) => {
-      const removedElement = data.elements.find(
-        (element) =>
-          element.symbol === updatedElements[updatedElements.length - 1]
-      );
-
-      return removedElement ? (prevMass - removedElement.mass).toFixed(3) : 0;
-    });
-    setH2("");
-  };
-
   useEffect(() => {
     setH2("");
     getOccurrences();
@@ -283,7 +257,7 @@ export default function Home() {
                         <div className="rounded w-full text-black focus:outline-none bg-white">
                           <div className="flex flex-wrap">
                             {polyatomic}
-                            {h2string.length > 0 && polyatomic ? " + " : ""}
+                            {h2string.length > 0 && polyatomic ? " + " : "  "}
                             {h2string.map((text, index) => {
                               const match = text.match(/\d+/);
                               if (match) {
@@ -291,9 +265,10 @@ export default function Home() {
                                 const parts = text.split(count);
                                 return (
                                   <React.Fragment key={index}>
+                                    {" "}
                                     <span className="flex items-center">
                                       {capitalizeFirstLetter(parts[0])}
-                                      <sub className="bg-white  text-black">
+                                      <sub className="bg-white text-black">
                                         {count}
                                       </sub>
                                       {parts[1]}
@@ -360,23 +335,15 @@ export default function Home() {
                 </form>
               </div>
 
-              <div className=" grid grid-cols-2 mt-16 bg-inherit">
+              <div className="w-full flex justify-center items-center">
                 <button
                   onClick={() => reset()}
-                  className="bg-indigo-500 py-1 px-2 md:w-1/2 w-1/2  mx-auto h-full rounded-md hover:bg-indigo-600 "
+                  className="bg-indigo-500 py-1 px-2 lg:w-1/4 md:w-1/3 rounded-md hover:bg-indigo-600"
                 >
                   Reset
                 </button>
-
-                <button
-                  onClick={() => handleBackspace()}
-                  className="bg-indigo-500 py-1 px-2 h-full md:w-1/2 w-1/2  mx-auto rounded-md hover:bg-indigo-600 "
-                >
-                  Delete
-                </button>
               </div>
 
-              <div className="w-full max-w-xs"></div>
               {/* Your content goes here */}
 
               <div className="m-8">
@@ -622,8 +589,13 @@ export default function Home() {
                         key={index}
                         className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
                         onClick={() => {
-                          setGrams(element.mass), setInputGrams(element.mass);
-                          setPolyatomic(element.formula);
+                          setGrams(grams + element.mass),
+                            setInputGrams(inputGrams + element.mass);
+                          setPolyatomic(
+                            polyatomic
+                              ? element.formula + " + " + polyatomic
+                              : element.formula
+                          );
                           scrollToTop();
                         }}
                       >

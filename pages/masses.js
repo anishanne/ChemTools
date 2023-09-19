@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import { useCallback } from "react";
 import { set } from "zod";
+import Source from "../components/source";
 import Footer from "../components/footer";
 const navigation = {
   main: [
@@ -189,6 +190,11 @@ export default function Home() {
       <div className="min-h-screen flex flex-col justify-between   pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Molar Mass</title>
+          <Source
+            description={
+              "Welcome to ChemTools... We're transforming Chemsitry Education one student at a time."
+            }
+          />
         </Head>{" "}
         <div className="z-0">
           {" "}

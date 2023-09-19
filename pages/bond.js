@@ -6,6 +6,7 @@ import { useState } from "react";
 import React from "react";
 import PolarCovalent from "../components/bondTypes";
 import Footer from "../components/footer";
+import Source from "../components/source";
 import {
   calculateElectronegativityDifference,
   getBondType,
@@ -79,6 +80,11 @@ export default function Home() {
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Molar Mass</title>
+          <Source
+            description={
+              "Welcome to ChemTools... We're transforming Chemsitry Education one student at a time."
+            }
+          />
         </Head>{" "}
         <div className="z-0">
           {" "}

@@ -9,6 +9,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import Source from "../components/source";
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
@@ -132,6 +133,11 @@ export default function Home() {
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Home</title>
+          <Source
+            description={
+              "Welcome to ChemTools... We're transforming Chemsitry Education one student at a time."
+            }
+          />
         </Head>{" "}
         <Navbar
           sidebarOpen={sidebarOpen}

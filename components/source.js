@@ -2,7 +2,7 @@ export default function Source({ description }) {
   return (
     <>
       <link rel="icon" href="/chemlogo.png" />
-      <meta name="theme-color" content="#0097A7" />
+      <meta name="theme-color" content="#1d4ed8" />
       <meta name="description" content={description} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="ChemTools" />

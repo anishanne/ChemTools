@@ -1,11 +1,12 @@
 const navigation = {
   main: [
-    { name: "About", href: "/about" },
+    { name: "Home", href: "/" },
     {
       name: "Contact",
       href: "mailto:mishrarnav@gmail.com?subject=Chem Tools Support",
     },
-    { name: "Home", href: "/" },
+    
+    { name: "About", href: "/about" },
   ],
 };
 export default function Example() {

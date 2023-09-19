@@ -13,7 +13,8 @@ import {
   BoltSlashIcon,
   StarIcon,
   FireIcon,
-  SparklesIcon,
+  FunnelIcon,
+
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -23,8 +24,9 @@ const navigation = [
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Character", href: "/bond", icon: CubeTransparentIcon },
   { name: "Acid Base", href: "/acidbase", icon: FireIcon },
+  { name: "Solubility", href: "/solubility", icon: FunnelIcon },
   { name: "Utilities", href: "/utilities", icon: StarIcon },
-  { name: "Solubility", href: "/solubility", icon: SparklesIcon },
+  
 
   { name: "About", href: "/about", icon: UserCircleIcon },
 ];

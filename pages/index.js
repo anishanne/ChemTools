@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <main className="pb-48">
+        <main className="sm:pb-48">
           <div
             className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"

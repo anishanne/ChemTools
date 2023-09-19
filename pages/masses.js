@@ -213,7 +213,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <main className="grow mb-16">
+        <main className="grow sm:mb-16">
           <div
             className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"

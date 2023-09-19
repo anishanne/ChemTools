@@ -34,20 +34,15 @@ import {
 } from "@heroicons/react/24/outline";
 
 const colors = {
-  color1:
-    " rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-red-600",
-  color2:
-    "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-700",
-  color3:
-    "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-blue-500",
-  color4:
-    "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-600",
+  color1: "bg-red-600",
+  color2: "bg-blue-700",
+  color3: "bg-blue-500",
+  color4: "bg-teal-600",
   color5: "bg-red-500",
   color6: "bg-yellow-500",
   color7: "bg-orange-500",
   color8: "bg-green-400",
-  color9:
-    " rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black bg-teal-700 ",
+  color9: "bg-teal-700 ",
   color10: "bg-blue-800",
   color11: "bg-gray-200",
   color12: "bg-gray-400 ",
@@ -57,7 +52,7 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  " cursor-pointer  rounded-lg text-center font-bold align-middle  w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -385,14 +380,14 @@ export default function Home() {
                 />
               </div>
 
-              <table className="hidden md:table border-separate border-spacing-1   w-11/12 mx-8  border-transparent mt-8 cursor-pointer">
+              <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
                 <tbody>
                   <tr>
                     <td
                       onClick={() =>
                         specialSetElements(0, data.elements[0].symbol)
                       }
-                      className={`${colors.color1} `}
+                      className={`${colors.color1} + ${style} `}
                     >
                       1<br></br>H
                     </td>
@@ -404,7 +399,7 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(1, data.elements[1].symbol)
                       }
-                      className={colors.color9}
+                      className={`${colors.color9} + ${style}`}
                     >
                       2<br></br>He
                     </td>
@@ -415,7 +410,7 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(2, data.elements[2].symbol)
                       }
-                      className={colors.color2}
+                      className={`${colors.color2} + ${style}`}
                     >
                       3<br></br>Li
                     </td>
@@ -423,7 +418,7 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(3, data.elements[3].symbol)
                       }
-                      className={colors.color3}
+                      className={`${colors.color3} + ${style}`}
                     >
                       4<br></br>Be
                     </td>
@@ -450,7 +445,7 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(10, data.elements[10].symbol)
                       }
-                      className={colors.color2}
+                      className={`${colors.color2} + ${style}`}
                     >
                       11<br></br>Na
                     </td>
@@ -458,7 +453,7 @@ export default function Home() {
                       onClick={() =>
                         specialSetElements(11, data.elements[11].symbol)
                       }
-                      className={colors.color3}
+                      className={`${colors.color3} + ${style}`}
                     >
                       12<br></br>Mg
                     </td>

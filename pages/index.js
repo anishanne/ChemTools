@@ -21,12 +21,12 @@ import {
   BeakerIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
-  body: "Chem Tools is an amazing one stop shop. It's a great supplimental tool for students basic chemistry needs. Joey and Arnav are thorough, dedicated and hard working both inside and outide the classroom. This tool will be utalized for years to come and is a wonderful legacy to leave behind!",
+  body: "Chem Tools is an amazing one stop shop. It's a great supplemental tool for students basic chemistry needs. Joey and Arnav are thorough, dedicated and hard working both inside and outside the classroom. This tool will be utilized for years to come and is a wonderful legacy to leave behind!",
   author: {
     name: "Leah Miller",
-    handle: "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
-    imageUrl:
-      "mrsmiller.jpg",
+    handle:
+      "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
+    imageUrl: "mrsmiller.jpg",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };
@@ -264,7 +264,7 @@ export default function Home() {
                   </blockquote>
                   <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
                     <img
-                      className="h-10 w-10 flex-none rounded-full bg-black"
+                      className="h-12 w-12 flex-none rounded-full bg-black"
                       src={featuredTestimonial.author.imageUrl}
                       alt=""
                     />

@@ -63,10 +63,10 @@ export default function Home() {
                   </button>
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center mb-6 text-5xl font-bold md:text-7xl">
-                      About
+                      Acid Base Calculations
                     </h1>
                     <p className="text-center text-2xl font-light md:text-3xl">
-                      You know me
+                      10 on the pH scale cuz u basic
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>
                   </div>{" "}
@@ -75,29 +75,14 @@ export default function Home() {
 
               <div className="relative z-0 bg-gray-800 py-16 sm:py-24 lg:py-20">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                  <h2 className="text-5xl font-bold text-blue-500">
-                   
-                  </h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
-                    
-                  </p>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-white-300">
-                    At Chem Tools, we are passionate about chemistry and believe
-                    that everyone should have access to the best tools and resources to enhance their
-                    learning and understanding of chemistry. Thank you for choosing Chem Tools. We look
-                    forward to helping you on your journey towards mastering
-                    chemistry!
-                  </p>
+                  <h2 className="text-5xl font-bold text-blue-500"></h2>
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl"></p>
+                  <p className="mx-auto mt-5 max-w-prose text-xl text-white-300"></p>
                   <h2 className="text-5xl mt-8 font-semibold">
-                    Chemists behind this app
+                    WORK IN PROGRESS
                   </h2>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Arnav is a junior at John Jay who loves AP Chemistry
-                 
-                  </p>
-                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300">
-                    Joe money is a clown at John Jay who loves being physics captain of John Jay SciOily
-                  </p>
+                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
+                  <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
                 </div>
               </div>
             </div>

@@ -882,7 +882,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Element Info</title>
         </Head>{" "}
@@ -909,7 +909,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <main className="flex-1s">
+        <main className="pb-80">
           <div
             className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
@@ -1771,8 +1771,8 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

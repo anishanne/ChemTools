@@ -33,7 +33,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="flex flex-col min-h-screen h-max pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
+      <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | About</title>
         </Head>{" "}
@@ -163,25 +163,25 @@ export default function Home() {
                         </a> */}
                       </div>
                       <div className="sm:text-left text-center">
-                        <h1 className="lg:mt-2 mt-10  text-4xl font-bold tracking-tight text-white">
+                        <h1 className="lg:mt-2 text-center  text-4xl font-bold tracking-tight text-white">
                           About the Team
                         </h1>
-                        <p className=" mt-6">
+                        <p className=" mt-6 text-center">
                           Arnav is a senior at John Jay currently making light
                           pink titrations.
                         </p>
-                        <img
+                        {/* <img
                           className=" rounded-lg my-8 mx-auto"
                           src="/smurfcat.jpeg"
-                        ></img>
-                        <p className=" mt-6">
+                        ></img> */}
+                        <p className=" mt-6 text-center">
                           Joe Money is a junior at John Jay who loves Nutella
                           Biscuits
                         </p>
-                        <img
+                        {/*}  <img
                           className="h-64  rounded-lg my-8 mx-auto"
                           src="/strawberryele.jpeg"
-                        ></img>
+                        ></img> */}
                       </div>
                     </div>
                   </div>
@@ -190,8 +190,8 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

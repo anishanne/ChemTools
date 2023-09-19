@@ -8,8 +8,8 @@ export default function Source({ description }) {
       <meta name="twitter:title" content="ChemTools" />
       <meta name="twitter:description" content={description} />
       <meta property="twitter:image" content="/chemlogo.png" />
-      <meta property="og:title" content="Chem Tools" />
-      <meta property="og:url" content="https://chemtools.vercel.app" />
+      <meta property="og:title" content="ChemTools" />
+      <meta property="og:url" content="https://chemtools.vercel.app/" />
       <meta property="og:description" content={description} />
       <meta property="og:image" content="/chemlogo.png" />
       <meta property="og:site_name" content="ChemTools" />

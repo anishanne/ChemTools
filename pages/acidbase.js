@@ -66,7 +66,7 @@ export default function Home() {
                       Acid Base Calculations
                     </h1>
                     <p className="text-center text-2xl font-light md:text-3xl">
-                      10 on the pH scale cuz u basic
+                      Too easy
                     </p>
                     <hr className="text-white my-16 border-dotted "></hr>
                   </div>{" "}

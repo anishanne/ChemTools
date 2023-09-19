@@ -179,7 +179,7 @@ export default function Home() {
                 <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
                   <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
                     <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                      Chem Tools
+                      ChemTools
                     </h1>
                     <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
                       Taking chemistry to the next energy level
@@ -197,7 +197,7 @@ export default function Home() {
                     One Student At a Time.
                   </p>
                   <p className="mx-auto mt-8 max-w-prose text-xl text-gray-300">
-                    Chem Tools is the next generation online platform designed
+                    ChemTools is the next generation online platform designed
                     for chemistry students and professionals, offering a variety
                     of resources including calculators for chemistry and
                     information on the periodic table.
@@ -241,7 +241,7 @@ export default function Home() {
                   Testimonials
                 </h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-                  Here's what others are saying about Chem Tools
+                  Here's what others are saying about ChemTools
                 </p>
               </div>
               <div

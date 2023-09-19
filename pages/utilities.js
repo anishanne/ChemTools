@@ -51,7 +51,7 @@ export default function Home() {
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
-            page="Other Utilities"
+            page="Utilities"
           />
           <div className=" md:hidden unhidden flex flex-col md:pl-64">
             <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
@@ -103,9 +103,7 @@ export default function Home() {
                   <h2 className="text-5xl font-bold text-blue-500"></h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl"></p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-white-300"></p>
-                  <h2 className="text-5xl mt-8 font-semibold">
-                    Coming Soon<sup>TM</sup>
-                  </h2>
+                  <h2 className="text-5xl mt-8 font-semibold">Coming Soon</h2>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
                   <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
                 </div>

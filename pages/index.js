@@ -182,7 +182,7 @@ export default function Home() {
                       Chem Tools
                     </h1>
                     <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      Taking chemistry to the next level
+                      Taking chemistry to the next energy level
                     </p>
                     <hr className="mx-8 text-white mt-8 border-dotted "></hr>
                   </div>{" "}

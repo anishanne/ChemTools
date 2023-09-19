@@ -4431,7 +4431,7 @@
       "molar_heat": null,
       "named_by": null,
       "number": 104,
-      "color": "color5",
+      "color": "color12",
 
       "oxidationStates": [4],
       "period": 7,
@@ -4465,7 +4465,7 @@
       "name": "Dubnium",
       "appearance": null,
       "mass": 268,
-      "color": "color5",
+      "color": "color12",
 
       "boil": null,
       "category": "transition metal",
@@ -4517,7 +4517,7 @@
       "named_by": null,
       "number": 106,
       "period": 7,
-      "color": "color5",
+      "color": "color12",
 
       "group": 6,
       "phase": "Solid",
@@ -4576,7 +4576,7 @@
       "electron_configuration": "1s2 2s2 2p6 3s2 3p6 4s2 3d10 4p6 5s2 4d10 5p6 6s2 4f14 5d10 6p6 7s2 5f14 6d5",
       "electron_configuration_semantic": "*[Rn] 5f14 6d5 7s2",
       "electron_affinity": null,
-      "color": "color5",
+      "color": "color12",
 
       "en": null,
       "ionization_energies": [],
@@ -4592,7 +4592,7 @@
       "name": "Hassium",
       "appearance": null,
       "mass": 269,
-      "color": "color5",
+      "color": "color12",
 
       "boil": null,
       "category": "transition metal",
@@ -4632,7 +4632,7 @@
     },
     {
       "name": "Meitnerium",
-      "color": "color5",
+      "color": "color12",
 
       "appearance": null,
       "mass": 278,
@@ -4677,7 +4677,7 @@
       "appearance": null,
       "oxidationStates": ["Undefined"],
       "mass": 281,
-      "color": "color5",
+      "color": "color12",
 
       "boil": null,
       "category": "unknown, probably transition metal",
@@ -4719,7 +4719,7 @@
       "appearance": null,
       "mass": 282,
       "boil": null,
-      "color": "color5",
+      "color": "color12",
 
       "oxidationStates": ["Undefined"],
       "category": "unknown, probably transition metal",
@@ -4760,7 +4760,7 @@
       "name": "Copernicium",
       "appearance": null,
       "mass": 285,
-      "color": "color5",
+      "color": "color12",
 
       "boil": 3570,
       "oxidationStates": ["Undefined"],
@@ -5440,7 +5440,7 @@
       "number": 104,
       "symbol": "Rf",
       "name": "Rutherfordium",
-      "color": "color5",
+      "color": "color12",
       "mass": 267,
       "en": null
     },
@@ -5448,7 +5448,7 @@
       "number": 105,
       "symbol": "Db",
       "name": "Dubnium",
-      "color": "color5",
+      "color": "color12",
       "mass": 268,
       "en": null
     },
@@ -5456,7 +5456,7 @@
       "number": 106,
       "symbol": "Sg",
       "name": "Seaborgium",
-      "color": "color5",
+      "color": "color12",
       "mass": 269,
       "en": null
     },
@@ -5464,7 +5464,7 @@
       "number": 107,
       "symbol": "Bh",
       "name": "Bohrium",
-      "color": "color5",
+      "color": "color12",
       "mass": 270,
       "en": null
     },
@@ -5472,7 +5472,7 @@
       "number": 108,
       "symbol": "Hs",
       "name": "Hassium",
-      "color": "color5",
+      "color": "color12",
       "mass": 277,
       "en": null
     },
@@ -5480,7 +5480,7 @@
       "number": 109,
       "symbol": "Mt",
       "name": "Meitnerium",
-      "color": "color5",
+      "color": "color12",
       "mass": 278,
       "en": null
     },
@@ -5488,7 +5488,7 @@
       "number": 110,
       "symbol": "Ds",
       "name": "Darmstadtium",
-      "color": "color5",
+      "color": "color12",
       "mass": 281,
       "en": null
     },
@@ -5496,7 +5496,7 @@
       "number": 111,
       "symbol": "Rg",
       "name": "Roentgenium",
-      "color": "color5",
+      "color": "color12",
       "mass": 282,
       "en": null
     },
@@ -5504,7 +5504,7 @@
       "number": 112,
       "symbol": "Cn",
       "name": "Copernicium",
-      "color": "color5",
+      "color": "color12",
       "mass": 285,
       "en": null
     },

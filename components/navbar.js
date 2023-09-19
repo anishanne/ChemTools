@@ -44,7 +44,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-900 bg-opacity-90" />
+            <div className="fixed inset-0 bg-black bg-opacity-90" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-0 flex">

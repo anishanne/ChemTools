@@ -26,7 +26,7 @@ const featuredTestimonial = {
     name: "Leah Miller",
     handle: "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
     imageUrl:
-      "https://www.wappingersschools.org/cms/lib/NY01001463/Centricity/Domain/1734/IMG_7318.jpeg",
+      "mrsmiller.jpg",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };

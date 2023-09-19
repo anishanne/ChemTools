@@ -132,7 +132,7 @@ export default function Home() {
     <>
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
-          <title>ChemTools | Home</title>
+          <title>ChemTools</title>
           <Source
             description={
               "ChemTools, transforming chemistry education one student at a time."

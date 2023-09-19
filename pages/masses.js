@@ -189,7 +189,7 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col justify-between   pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
-          <title>ChemTools | Molar Mass</title>
+          <title>ChemTools</title>
           <Source
             description={
               "Using ChemTools, easily find Gram Formula Masses of molecular compounds."

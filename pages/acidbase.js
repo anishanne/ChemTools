@@ -39,7 +39,7 @@ export default function Home() {
     <>
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
-          <title>ChemTools | Element Info</title>
+          <title>ChemTools</title>
           <Source
             description={
               "Using ChemTools, calculate pH, pOH, and more - all in one place."

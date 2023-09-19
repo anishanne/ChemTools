@@ -36,7 +36,7 @@ export default function Home() {
     <>
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
-          <title>ChemTools | About</title>
+          <title>ChemTools</title>
           <Source
             description={
               "Learn more about ChemTools, the team, and our mission."

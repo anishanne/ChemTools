@@ -79,7 +79,7 @@ export default function Home() {
     <>
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
-          <title>ChemTools | Molar Mass</title>
+          <title>ChemTools</title>
           <Source
             description={
               "Using ChemTools, find the bond character of any compound."

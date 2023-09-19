@@ -140,7 +140,7 @@ export default function Home() {
     setElements((prev) => [...prev, name]);
   };
 
-  const [inputGrams, setInputGrams] = useState(0.0);
+  const [inputGrams, setInputGrams] = useState(0);
   const [inputMoles, setInputMoles] = useState(0.0);
   const isValidNumber = (value) => {
     return !isNaN(parseFloat(value)) && isFinite(value);
@@ -321,10 +321,11 @@ export default function Home() {
                     </label>
                     <input
                       className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white "
-                      type="text"
+                      type="number"
                       value={inputGrams}
                       onChange={handleGramsChange}
                     />
+
                     <label
                       className="mt-6 block text-gray-300 text-sm font-bold mb-2"
                       htmlFor="username"
@@ -595,8 +596,13 @@ export default function Home() {
                         key={index}
                         className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
                         onClick={() => {
-                          setGrams(grams + element.mass),
-                            setInputGrams(inputGrams + element.mass);
+                          setGrams(parseFloat(grams + element.mass)),
+                            setInputGrams(
+                              parseFloat(inputGrams) + parseFloat(element.mass)
+                            );
+                          console.log(
+                            parseFloat(inputGrams) + parseFloat(element.mass)
+                          );
                           setPolyatomic(
                             polyatomic
                               ? element.formula + " + " + polyatomic

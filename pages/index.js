@@ -264,7 +264,7 @@ export default function Home() {
                   </blockquote>
                   <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
                     <img
-                      className="h-12 w-12 flex-none rounded-full bg-black"
+                      className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
                       src={featuredTestimonial.author.imageUrl}
                       alt=""
                     />

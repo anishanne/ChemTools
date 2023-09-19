@@ -21,12 +21,12 @@ import {
   BeakerIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
-  body: "I love using Chem Tools. Arnav is really amazing",
+  body: "Chem Tools is an amazing one stop shop. It's a great supplimental tool for students basic chemistry needs. Joey and Arnav are thorough, dedicated and hard working both inside and outide the classroom. This tool will be utalized for years to come and is a wonderful legacy to leave behind!",
   author: {
     name: "Leah Miller",
-    handle: "AP Chemistry Teacher and Science Olympiad Coach",
+    handle: "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
     imageUrl:
-      "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
+      "https://www.wappingersschools.org/cms/lib/NY01001463/Centricity/Domain/1734/IMG_7318.jpeg",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };

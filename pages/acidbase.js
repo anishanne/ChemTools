@@ -92,7 +92,7 @@ export default function Home() {
                       Acid Base
                     </h1>
                     <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      pH, pOH, and more - all in one place
+                      pH, pOH, Ka and Kb calculations - all in one place
                     </p>
                     <hr className="mx-8 text-white mt-8 border-dotted "></hr>
                   </div>{" "}

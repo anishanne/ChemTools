@@ -21,10 +21,10 @@ import {
   BeakerIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
-  body: "I love using Chem Tools.",
+  body: "I love using Chem Tools. Arnav is really amazing",
   author: {
     name: "Leah Miller",
-    handle: "AP Chemistry Teacher",
+    handle: "AP Chemistry Teacher and Science Olympiad Coach",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
@@ -237,9 +237,10 @@ export default function Home() {
           <div className="md:ml-52 mt-16 lg:ml-64">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="sm:mx-auto max-w-xl mx-8 text-center">
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">
-                  Testimonials
+                <h2 className="text-4xl font-semibold leading-8 tracking-tight text-indigo-600">
+                  Teacher Testimonials
                 </h2>
+                <br></br>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
                   Here's what others are saying about ChemTools
                 </p>

@@ -97,9 +97,9 @@ export default function Home() {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const reset = useCallback(() => {
-    setGrams(0);
-    setInputGrams(0);
-    setInputMoles(0);
+    setGrams(0.0);
+    setInputGrams(0.0);
+    setInputMoles(0.0);
     setElements([]);
     setH2("");
     setPolyatomic("");
@@ -140,19 +140,19 @@ export default function Home() {
     setElements((prev) => [...prev, name]);
   };
 
-  const [inputGrams, setInputGrams] = useState(0);
-  const [inputMoles, setInputMoles] = useState(0);
+  const [inputGrams, setInputGrams] = useState(0.0);
+  const [inputMoles, setInputMoles] = useState(0.0);
   const isValidNumber = (value) => {
     return !isNaN(parseFloat(value)) && isFinite(value);
   };
   useEffect(() => {
     const moles = parseFloat(inputGrams) / grams;
-    setInputMoles(moles ? moles.toFixed(3) : 0);
+    setInputMoles(moles ? moles.toFixed(2) : 0.0);
 
     if (!inputGrams && isValidNumber(inputMoles)) {
       const calculatedGrams = parseFloat(inputMoles) * grams;
       setInputGrams(
-        isValidNumber(calculatedGrams) ? calculatedGrams.toFixed(3) : ""
+        isValidNumber(calculatedGrams) ? calculatedGrams.toFixed(2) : ""
       );
     }
   }, [grams]);
@@ -164,7 +164,7 @@ export default function Home() {
       setInputMoles("0");
     } else if (isValidNumber(gramsValue)) {
       const moles = parseFloat(gramsValue) / grams;
-      setInputMoles(isValidNumber(moles) ? moles.toFixed(3) : "");
+      setInputMoles(isValidNumber(moles) ? moles.toFixed(2) : "");
     } else {
       setInputMoles("");
     }
@@ -178,7 +178,7 @@ export default function Home() {
     } else if (isValidNumber(molesValue)) {
       const calculatedGrams = parseFloat(molesValue) * grams;
       setInputGrams(
-        isValidNumber(calculatedGrams) ? calculatedGrams.toFixed(3) : ""
+        isValidNumber(calculatedGrams) ? calculatedGrams.toFixed(2) : ""
       );
     } else {
       setInputGrams("");

@@ -135,7 +135,7 @@ export default function Home() {
           <title>ChemTools | Home</title>
           <Source
             description={
-              "Welcome to ChemTools... We're transforming Chemistry Education one student at a time."
+              "ChemTools, transforming chemistry education one student at a time."
             }
           />
         </Head>{" "}

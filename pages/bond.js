@@ -82,7 +82,7 @@ export default function Home() {
           <title>ChemTools | Molar Mass</title>
           <Source
             description={
-              "Welcome to ChemTools... We're transforming Chemistry Education one student at a time."
+              "Using ChemTools, find the bond character of any compound."
             }
           />
         </Head>{" "}

@@ -886,11 +886,7 @@ export default function Home() {
       <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
         <Head>
           <title>ChemTools | Element Info</title>
-          <Source
-            description={
-              "Welcome to ChemTools... We're transforming Chemistry Education one student at a time."
-            }
-          />
+          <Source description={"Element information at your fingertips."} />
         </Head>{" "}
         <div className="z-0">
           {" "}

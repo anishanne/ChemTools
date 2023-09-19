@@ -59,7 +59,7 @@ export default function Home() {
                 <span className="sr-only">Open sidebar</span>
                 <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
               </button>
-              <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+              <img className="w-16 h-16 mr-4" src="chemlogo.png" />
             </div>
           </div>
         </div>
@@ -169,20 +169,20 @@ export default function Home() {
                         </a> */}
                       </div>
                       <div className="sm:text-left text-center">
-                        <h1 className="lg:mt-2 text-center  text-4xl font-bold tracking-tight text-white">
+                        <h1 className="lg:mt-2 mt-8 text-center  text-4xl font-bold tracking-tight text-white">
                           About the Team
                         </h1>
                         <p className=" mt-6 text-center">
-                          Arnav is a senior at John Jay currently making light
-                          pink titrations.
+                          <strong>Arnav</strong> is a senior at John Jay
+                          currently making light pink titrations.
                         </p>
                         {/* <img
                           className=" rounded-lg my-8 mx-auto"
                           src="/smurfcat.jpeg"
                         ></img> */}
                         <p className=" mt-6 text-center">
-                          Joe Money is a junior at John Jay who loves Nutella
-                          Biscuits
+                          <strong>Joe</strong> is a junior at John Jay who loves
+                          Nutella Biscuits
                         </p>
                         {/*}  <img
                           className="h-64  rounded-lg my-8 mx-auto"

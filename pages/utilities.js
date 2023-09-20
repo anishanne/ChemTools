@@ -73,7 +73,7 @@ export default function Home() {
                     <Image
                       width={70}
                       height={90}
-                      heightclassName=" mx-auto "
+                      className=" mx-auto "
                       src="/chemlogo.png"
                       alt="ChemTools"
                     />

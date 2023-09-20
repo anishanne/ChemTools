@@ -89,7 +89,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                   <Image
                     width={200}
                     height={220}
-                    heightclassName=" mx-auto "
+                    className=" mx-auto "
                     src="/chemlogo.png"
                   />
                 </div>
@@ -138,7 +138,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
               <Image
                 width={200}
                 height={220}
-                heightclassName=" mx-auto "
+                className=" mx-auto "
                 src="/chemlogo.png"
               />
             </div>

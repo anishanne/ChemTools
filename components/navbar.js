@@ -14,7 +14,6 @@ import {
   StarIcon,
   FireIcon,
   FunnelIcon,
-
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
@@ -26,7 +25,6 @@ const navigation = [
   { name: "Acid Base", href: "/acidbase", icon: FireIcon },
   { name: "Solubility", href: "/solubility", icon: FunnelIcon },
   { name: "Utilities", href: "/utilities", icon: StarIcon },
-  
 
   { name: "About", href: "/about", icon: UserCircleIcon },
 ];
@@ -48,7 +46,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-90" />
+            <div className="fixed inset-0 bg-white dark:bg-black bg-opacity-90" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-0 flex">
@@ -74,12 +72,12 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                   <div className="absolute top-0 right-0 -mr-12 pt-2">
                     <button
                       type="button"
-                      className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                      className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black dark:focus:ring-white"
                       onClick={() => setSidebarOpen(false)}
                     >
                       <span className="sr-only">Close sidebar</span>
                       <XMarkIcon
-                        className="h-6 w-6 text-white"
+                        className="h-6 w-6 dark:text-white"
                         aria-hidden="true"
                       />
                     </button>
@@ -95,8 +93,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                         <div
                           className={`${
                             page === item.name
-                              ? "p-8  bg-gray-800 text-white"
-                              : "p-8 text-gray-300 hover:bg-gray-700 hover:text-white"
+                              ? "p-8  dark:bg-gray-800 bg-gray-400  text-white"
+                              : "p-8 text-gray-800 dark:text-gray-100  hover:bg-gray-400 dark:hover:bg-gray-700 hover:text-white"
                           }
 													group flex cursor-pointer text-lg items-center rounded-md px-2 py-2 font-medium`}
                         >
@@ -141,8 +139,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                   <div
                     className={`${
                       page === item.name
-                        ? " bg-gray-800  text-white"
-                        : "   text-gray-100  hover:bg-gray-700 hover:text-white"
+                        ? " dark:bg-gray-800 bg-gray-400  text-white"
+                        : "   text-gray-800 dark:text-gray-100  hover:bg-gray-400 dark:hover:bg-gray-700 hover:text-white"
                     }
 										group cursor-pointer flex items-center rounded-md px-2 py-2 text-sm lg:text-xl font-medium`}
                   >
@@ -157,7 +155,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
               ))}
             </nav>
             <div className="m-2  font-semibold">
-              <h1 className=" m-8 justify-items-center text-center  text-gray-100 text-sm">
+              <h1 className=" m-8 justify-items-center text-center  text-gray-900 dark:text-gray-100 text-sm">
                 Made By: Arnav Mishra and Joseph "Money" Marra
               </h1>
             </div>

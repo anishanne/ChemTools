@@ -21,7 +21,7 @@ export default function Classwork({ open, setOpen, bondType }) {
           leaveFrom="opacity-50"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-900  bg-opacity-100 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-100 dark:bg-gray-900  bg-opacity-100 transition-opacity" />
         </Transition.Child>
 
         <div className=" fixed inset-0 z-10 overflow-y-auto">
@@ -35,15 +35,15 @@ export default function Classwork({ open, setOpen, bondType }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative my-8 mx-8 w-full transform overflow-hidden  rounded-lg  p-6 pt-5 pb-4 text-left shadow-xl transition-all bg-gray-900 md:w-3/4">
+              <Dialog.Panel className="relative my-8 mx-8 w-full transform overflow-hidden  rounded-lg p-6 pt-5 pb-4 text-left shadow-xl transition-all bg-white dark:bg-gray-900 md:w-3/4">
                 <div className="mt-6 ">
                   <div className="sm:block">
                     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                       <div className="mt-2 flex flex-col ">
                         <div className="min-w-full overflow-hidden overflow-x-auto rounded-lg align-middle shadow">
-                          <div className="overflow-hidden bg-gray-800 p-8 shadow sm:rounded-lg">
+                          <div className="overflow-hidden bg-gray-300 dark:bg-gray-800 p-8 shadow sm:rounded-lg">
                             {bondType === "Non-polar covalent" ? (
-                              <p className="text-center text-2xl font-medium text-white">
+                              <p className="text-center text-2xl font-medium text-gray-700 dark:text-white">
                                 Non-polar covalent diatomic compounds are
                                 characterized by a balanced sharing of electrons
                                 between the two atoms, typically with similar
@@ -59,7 +59,7 @@ export default function Classwork({ open, setOpen, bondType }) {
                                 forces.
                               </p>
                             ) : bondType === "Polar covalent" ? (
-                              <p className="text-center text-2xl font-medium text-white">
+                              <p className="text-center text-2xl font-medium text-gray-700 dark:text-white">
                                 Polar covalent diatomic compounds involve an
                                 unequal sharing of electrons, resulting in a
                                 partial positive charge on one atom and a
@@ -77,7 +77,7 @@ export default function Classwork({ open, setOpen, bondType }) {
                                 properties and behavior.
                               </p>
                             ) : bondType === "Ionic" ? (
-                              <p className="text-center text-2xl font-medium text-white">
+                              <p className="text-center text-2xl font-medium text-gray-700 dark:text-white">
                                 Ionic diatomic compounds undergo a complete
                                 transfer of electrons from one atom to another,
                                 resulting in the formation of ions with opposite
@@ -98,7 +98,7 @@ export default function Classwork({ open, setOpen, bondType }) {
                                 their solid form.
                               </p>
                             ) : (
-                              <p className="text-center text-2xl font-medium text-white">
+                              <p className="text-center text-2xl font-medium text-gray-700 dark:text-white">
                                 This most likely means one or more of the
                                 elements you selected doesnt have a defined
                                 electronegativity, so the calculation cannot
@@ -111,7 +111,7 @@ export default function Classwork({ open, setOpen, bondType }) {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="bg-gray-900 flex mt-6">
+                <div className="dark:bg-gray-900 flex mt-6">
                   <button
                     type="button"
                     className=" mx-auto  lg:w-1/4 sm:w-1/2  justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

@@ -130,153 +130,155 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
-        <Head>
-          <title>ChemTools</title>
-          <Source
-            description={
-              "ChemTools, transforming chemistry education one student at a time."
-            }
+      <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
+        <div className="relative pb-8">
+          {" "}
+          <Head>
+            <title>ChemTools</title>
+            <Source
+              description={
+                "ChemTools, transforming chemistry education one student at a time."
+              }
+            />
+          </Head>{" "}
+          <Navbar
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+            page="Home"
           />
-        </Head>{" "}
-        <Navbar
-          sidebarOpen={sidebarOpen}
-          setSidebarOpen={setSidebarOpen}
-          page="Home"
-        />
-        <div className=" md:hidden unhidden flex flex-col md:pl-64">
-          <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
-            <div className="w-full flex justify-between items-center">
-              <button
-                type="button"
-                className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
-                onClick={() => setSidebarOpen(true)}
-              >
-                <span className="sr-only">Open sidebar</span>
-                <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-              <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+          <div className=" md:hidden unhidden flex flex-col md:pl-64">
+            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
+              <div className="w-full flex justify-between items-center">
+                <button
+                  type="button"
+                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
+                  onClick={() => setSidebarOpen(true)}
+                >
+                  <span className="sr-only">Open sidebar</span>
+                  <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+                <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+              </div>
             </div>
           </div>
-        </div>
-        <main className="sm:pb-48">
-          <div
-            className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-            aria-hidden="true"
-          >
+          <main className="sm:pb-48">
             <div
-              className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-              style={{
-                clipPath:
-                  "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-              }}
-            />
-          </div>
-          <div className="h-full   text-wrap">
-            <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full w-full   text-lg">
-                {" "}
-                <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
-                  <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                      ChemTools
-                    </h1>
-                    <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      Taking chemistry to the next energy level
-                    </p>
-                    <hr className="mx-8 text-white mt-8 border-dotted "></hr>
-                  </div>{" "}
+              className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+              aria-hidden="true"
+            >
+              <div
+                className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                style={{
+                  clipPath:
+                    "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                }}
+              />
+            </div>
+            <div className="h-full   text-wrap">
+              <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
+                <div className="flex justify-left h-full w-full   text-lg">
+                  {" "}
+                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
+                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
+                      <h1 className="text-center sm:text-5xl mb-6 dark:text-white text-gray-800 text-4xl font-bold md:text-7xl">
+                        ChemTools
+                      </h1>
+                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
+                        Taking chemistry to the next energy level
+                      </p>
+                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
+                    </div>{" "}
+                  </div>
                 </div>
-              </div>
-              <div className="relative z-0  py-8 ">
-                <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                  <h2 className="text-5xl font-bold text-blue-500">
-                    Transforming chemistry education.
-                  </h2>
-                  <p className="mt-8 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
-                    One Student At a Time.
-                  </p>
-                  <p className="mx-auto mt-8 max-w-prose text-xl text-gray-300">
-                    ChemTools is the next generation online platform designed
-                    for chemistry students and professionals, offering a variety
-                    of resources including calculators for chemistry and
-                    information on the periodic table.
-                  </p>
-                  <div className="mt-16">
-                    <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                      {features.map((feature) => (
-                        <Link key={feature.name} href={feature.href}>
-                          <div key={feature.name} className="pt-6 ">
-                            <div className="flow-root lg:h-60 h-72  rounded-lg bg-gray-1000 px-4 pb-4 hover:brightness-125  border-gray-900 border-4 ">
-                              <div className="-mt-6 ">
-                                <div>
-                                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
-                                    <feature.icon
-                                      className="h-6 w-6 text-white"
-                                      aria-hidden="true"
-                                    />
-                                  </span>
+                <div className="relative z-0  py-8 ">
+                  <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
+                    <h2 className="text-5xl font-bold text-blue-500">
+                      Transforming chemistry education.
+                    </h2>
+                    <p className="mt-8 text-3xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-4xl">
+                      One Student At a Time.
+                    </p>
+                    <p className="mx-auto mt-8 max-w-prose text-xl text-gray-800 dark:text-gray-300">
+                      ChemTools is the next generation online platform designed
+                      for chemistry students and professionals, offering a
+                      variety of resources including calculators for chemistry
+                      and information on the periodic table.
+                    </p>
+                    <div className="mt-16">
+                      <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {features.map((feature) => (
+                          <Link key={feature.name} href={feature.href}>
+                            <div key={feature.name} className="pt-6 ">
+                              <div className="flow-root lg:h-60 h-72  rounded-lg bg-gray-1000 px-4 pb-4 hover:brightness-125  dark:border-gray-900 border-4 ">
+                                <div className="-mt-6 ">
+                                  <div>
+                                    <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
+                                      <feature.icon
+                                        className="h-6 w-6 text-white"
+                                        aria-hidden="true"
+                                      />
+                                    </span>
+                                  </div>
+                                  <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-800 dark:text-gray-50">
+                                    {feature.name}
+                                  </h3>
+                                  <p className="mt-5 my-auto  text-base text-gray-600 dark:text-gray-300">
+                                    {feature.description}
+                                  </p>
                                 </div>
-                                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-50">
-                                  {feature.name}
-                                </h3>
-                                <p className="mt-5 my-auto  text-base text-gray-300">
-                                  {feature.description}
-                                </p>
                               </div>
                             </div>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="md:ml-52 mt-16 lg:ml-64">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="sm:mx-auto max-w-xl mx-8 text-center">
-                <h2 className="text-4xl font-semibold leading-8 tracking-tight text-indigo-600">
-                  Teacher Testimonials
-                </h2>
-                <br></br>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-                  Here's what others are saying about ChemTools
-                </p>
-              </div>
-              <div
-                className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
+            <div className="md:ml-52 mt-16 lg:ml-64">
+              <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="sm:mx-auto max-w-xl mx-8 text-center">
+                  <h2 className="text-4xl font-semibold leading-8 tracking-tight text-indigo-600">
+                    Teacher Testimonials
+                  </h2>
+                  <br></br>
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-600 dark:text-gray-50 sm:text-4xl">
+                    Here's what others are saying about ChemTools
+                  </p>
+                </div>
                 <div
-                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
-              </div>
-              <div className="sm:mx-auto mx-8 mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                <figure className="col-span-2  block rounded-2xl sm:bg-black border-white border-2 shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
-                  <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-50">
-                    <p>{`“${featuredTestimonial.body}”`}</p>
-                  </blockquote>
-                  <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
-                    <img
-                      className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
-                      src={featuredTestimonial.author.imageUrl}
-                      alt=""
-                    />
-                    <div className="flex-auto">
-                      <div className="font-semibold">
-                        {featuredTestimonial.author.name}
+                  className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                    style={{
+                      clipPath:
+                        "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                    }}
+                  />
+                </div>
+                <div className="sm:mx-auto mx-8 mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-800 dark:text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+                  <figure className="col-span-2  block rounded-2xl bg-white dark:sm:bg-black border-white border-2 shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
+                    <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
+                      <p>{`“${featuredTestimonial.body}”`}</p>
+                    </blockquote>
+                    <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
+                      <img
+                        className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
+                        src={featuredTestimonial.author.imageUrl}
+                        alt=""
+                      />
+                      <div className="flex-auto">
+                        <div className="font-semibold">
+                          {featuredTestimonial.author.name}
+                        </div>
+                        <div className="text-gray-800 dark:text-gray-300">{`${featuredTestimonial.author.handle}`}</div>
                       </div>
-                      <div className="text-gray-300">{`${featuredTestimonial.author.handle}`}</div>
-                    </div>
-                  </figcaption>
-                </figure>
-                {/* {testimonials.map((columnGroup, columnGroupIdx) => (
+                    </figcaption>
+                  </figure>
+                  {/* {testimonials.map((columnGroup, columnGroupIdx) => (
                   <div
                     key={columnGroupIdx}
                     className="space-y-8 xl:contents xl:space-y-0"
@@ -320,12 +322,13 @@ export default function Home() {
                     ))}
                   </div>
                 ))} */}
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

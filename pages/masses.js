@@ -34,7 +34,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const colors = {
-  color1: "bg-red-600",
+  color1: "text-white bg-red-600",
   color2: "bg-blue-700",
   color3: "bg-blue-500",
   color4: "bg-teal-600",
@@ -52,9 +52,9 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
-  " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
   const [grams, setGrams] = useState(0);
@@ -182,441 +182,447 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-between   pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
-        <Head>
-          <title>ChemTools</title>
-          <Source
-            description={
-              "Using ChemTools, easily find Gram Formula Masses of molecular compounds."
-            }
-          />
-        </Head>{" "}
-        <div className="z-0">
-          {" "}
-          <Navbar
-            sidebarOpen={sidebarOpen}
-            setSidebarOpen={setSidebarOpen}
-            page="Molar Mass"
-          />
-          <div className=" md:hidden unhidden flex flex-col md:pl-64">
-            <div className="mb-8 sticky top-0 z-10 flex h-max flex-shrink-0  ">
-              <div className="w-full flex justify-between items-center">
-                <button
-                  type="button"
-                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
-                  onClick={() => setSidebarOpen(true)}
-                >
-                  <span className="sr-only">Open sidebar</span>
-                  <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-                <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+      <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
+        <div className="relative pb-8">
+          <Head>
+            <title>ChemTools</title>
+            <Source
+              description={
+                "Using ChemTools, easily find Gram Formula Masses of molecular compounds."
+              }
+            />
+          </Head>{" "}
+          <div className="z-0">
+            {" "}
+            <Navbar
+              sidebarOpen={sidebarOpen}
+              setSidebarOpen={setSidebarOpen}
+              page="Molar Mass"
+            />
+            <div className=" md:hidden unhidden flex flex-col md:pl-64">
+              <div className="mb-8 sticky top-0 z-10 flex h-max flex-shrink-0  ">
+                <div className="w-full flex justify-between items-center">
+                  <button
+                    type="button"
+                    className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
+                    onClick={() => setSidebarOpen(true)}
+                  >
+                    <span className="sr-only">Open sidebar</span>
+                    <Bars3BottomLeftIcon
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <main className="grow sm:mb-16">
-          <div
-            className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-            aria-hidden="true"
-          >
+          <main className="grow sm:mb-16">
             <div
-              className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-              style={{
-                clipPath:
-                  "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-              }}
-            />
-          </div>
-          <div className="h-full  text-wrap">
-            <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full w-full   text-lg">
-                {" "}
-                <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
-                  <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                      Gram Formula Mass Calculator
-                    </h1>
-                    <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      Calculate the GFM of any compound
-                    </p>
-                    <hr className="mx-8 text-white mt-8 border-dotted "></hr>
-                  </div>{" "}
+              className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+              aria-hidden="true"
+            >
+              <div
+                className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                style={{
+                  clipPath:
+                    "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                }}
+              />
+            </div>
+            <div className="h-full  text-wrap">
+              <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
+                <div className="flex justify-left h-full w-full   text-lg">
+                  {" "}
+                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
+                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
+                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
+                        Gram Formula Mass Calculator
+                      </h1>
+                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
+                        Calculate the GFM of any compound
+                      </p>
+                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
+                    </div>{" "}
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-center   ">
-                <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-900 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
-                  <div className="mb-3">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="username"
-                    >
-                      Formula
-                    </label>
-
-                    <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
-                      {(h2string.length > 0 || polyatomic) && (
-                        <div className="rounded w-full text-black focus:outline-none bg-white">
-                          <div className="flex flex-wrap">
-                            {polyatomic}
-                            {h2string.length > 0 && polyatomic ? " + " : "  "}
-                            {h2string.map((text, index) => {
-                              const match = text.match(/\d+/);
-                              if (match) {
-                                const [count] = match;
-                                const parts = text.split(count);
-                                return (
-                                  <React.Fragment key={index}>
-                                    {" "}
-                                    <span className="flex items-center">
-                                      {capitalizeFirstLetter(parts[0])}
-                                      <sub className="bg-white text-black">
-                                        {count}
-                                      </sub>
-                                      {parts[1]}
-                                    </span>
-                                    {parts[1]}
-                                  </React.Fragment>
-                                );
-                              } else {
-                                return (
-                                  <React.Fragment key={index}>
-                                    {text}
-                                  </React.Fragment>
-                                );
-                              }
-                            })}
-                          </div>
-                        </div>
-                      )}
-                      {h2string.length === 0 && !polyatomic && (
-                        <span className="text-black bg-white">
-                          Formula will Appear Here
-                        </span>
-                      )}
-                    </div>
-                    <div className="mt-6 mb-6">
+                <div className="flex justify-center   ">
+                  <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-400 dark:bg-gray-900 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
+                    <div className="mb-3">
                       <label
-                        className="block text-gray-300 text-sm font-bold mb-2"
-                        htmlFor="password"
+                        className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                        htmlFor="username"
                       >
-                        Gram Formula Mass
+                        Formula
                       </label>
-                      <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                        {Math.round(grams * 100) / 100}g/mol
+
+                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                        {(h2string.length > 0 || polyatomic) && (
+                          <div className="rounded w-full text-black focus:outline-none bg-white">
+                            <div className="flex flex-wrap">
+                              {polyatomic}
+                              {h2string.length > 0 && polyatomic ? " + " : "  "}
+                              {h2string.map((text, index) => {
+                                const match = text.match(/\d+/);
+                                if (match) {
+                                  const [count] = match;
+                                  const parts = text.split(count);
+                                  return (
+                                    <React.Fragment key={index}>
+                                      {" "}
+                                      <span className="flex items-center">
+                                        {capitalizeFirstLetter(parts[0])}
+                                        <sub className="bg-white text-black">
+                                          {count}
+                                        </sub>
+                                        {parts[1]}
+                                      </span>
+                                      {parts[1]}
+                                    </React.Fragment>
+                                  );
+                                } else {
+                                  return (
+                                    <React.Fragment key={index}>
+                                      {text}
+                                    </React.Fragment>
+                                  );
+                                }
+                              })}
+                            </div>
+                          </div>
+                        )}
+                        {h2string.length === 0 && !polyatomic && (
+                          <span className="text-black bg-white">
+                            Formula will Appear Here
+                          </span>
+                        )}
+                      </div>
+                      <div className="mt-6 mb-6">
+                        <label
+                          className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                          htmlFor="password"
+                        >
+                          Gram Formula Mass
+                        </label>
+                        <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                          {Math.round(grams * 100) / 100}g/mol
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="mx-8">
-                    <label
-                      className="block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="username"
-                    >
-                      Grams
-                    </label>
-                    <input
-                      className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white "
-                      type="number"
-                      value={inputGrams}
-                      onChange={handleGramsChange}
-                    />
+                    <div className="mx-8">
+                      <label
+                        className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                        htmlFor="username"
+                      >
+                        Grams
+                      </label>
+                      <input
+                        className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white "
+                        type="number"
+                        value={inputGrams}
+                        onChange={handleGramsChange}
+                      />
 
-                    <label
-                      className="mt-6 block text-gray-300 text-sm font-bold mb-2"
-                      htmlFor="username"
-                    >
-                      Moles
-                    </label>
-                    <input
-                      className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                      type="text"
-                      value={inputMoles}
-                      onChange={handleMolesChange}
-                    />
-                  </div>
-                </form>
-              </div>
-
-              <div className="w-full flex justify-center items-center">
-                <button
-                  onClick={() => reset()}
-                  className="bg-indigo-500 py-1 px-2 lg:w-1/4 md:w-1/3 rounded-md hover:bg-indigo-600"
-                >
-                  Reset
-                </button>
-              </div>
-
-              {/* Your content goes here */}
-
-              <div className="m-8">
-                <div className="md:hidden pb-8 flex flex-wrap justify-center">
-                  {data.elements.map((element, index) => (
-                    <div
-                      key={index}
-                      onClick={() =>
-                        elementStates(element.mass, element.symbol)
-                      }
-                      className={`${
-                        colors[element.color]
-                      } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
-                    >
-                      <div className="text-sm"> {element.number}</div>
-
-                      <div> {element.symbol}</div>
+                      <label
+                        className="mt-6 block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                        htmlFor="username"
+                      >
+                        Moles
+                      </label>
+                      <input
+                        className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        type="text"
+                        value={inputMoles}
+                        onChange={handleMolesChange}
+                      />
                     </div>
-                  ))}
+                  </form>
                 </div>
-              </div>
-              <div
-                className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-                  style={{
-                    clipPath:
-                      "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-                  }}
-                />
-              </div>
 
-              <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
-                <tbody>
-                  <tr>
-                    <td
-                      onClick={() =>
-                        specialSetElements(0, data.elements[0].symbol)
-                      }
-                      className={`${colors.color1} + ${style} `}
-                    >
-                      1<br></br>H
-                    </td>
-                    <td
-                      className={`${colors.none} cursor-default  `}
-                      colSpan="16"
-                    ></td>
-                    <td
-                      onClick={() =>
-                        specialSetElements(1, data.elements[1].symbol)
-                      }
-                      className={`${colors.color9} + ${style}`}
-                    >
-                      2<br></br>He
-                    </td>
-                  </tr>
+                <div className="w-full flex justify-center items-center">
+                  <button
+                    onClick={() => reset()}
+                    className="bg-indigo-500 py-1 px-2 lg:w-1/4 md:w-1/3 text-white  rounded-md hover:bg-indigo-600"
+                  >
+                    Reset
+                  </button>
+                </div>
 
-                  <tr>
-                    <td
-                      onClick={() =>
-                        specialSetElements(2, data.elements[2].symbol)
-                      }
-                      className={`${colors.color2} + ${style}`}
-                    >
-                      3<br></br>Li
-                    </td>
-                    <td
-                      onClick={() =>
-                        specialSetElements(3, data.elements[3].symbol)
-                      }
-                      className={`${colors.color3} + ${style}`}
-                    >
-                      4<br></br>Be
-                    </td>
-                    <td
-                      className={`${colors.none} cursor-default `}
-                      colSpan="10"
-                    ></td>
-                    {data.fiveTen.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td
-                      onClick={() =>
-                        specialSetElements(10, data.elements[10].symbol)
-                      }
-                      className={`${colors.color2} + ${style}`}
-                    >
-                      11<br></br>Na
-                    </td>
-                    <td
-                      onClick={() =>
-                        specialSetElements(11, data.elements[11].symbol)
-                      }
-                      className={`${colors.color3} + ${style}`}
-                    >
-                      12<br></br>Mg
-                    </td>
-                    <td
-                      className={`${colors.none} cursor-default`}
-                      colSpan="10"
-                    ></td>
-                    {data.thirteenEighteen.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {data.row1.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {data.row2.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {data.row3.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
+                {/* Your content goes here */}
 
-                  <tr>
-                    {data.eightyseven118.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-
-                  <tr>
-                    <td
-                      className="cursor-default   "
-                      colSpan="2"
-                      rowSpan="2"
-                    ></td>
-                    {data.fiftyseven71.map((element, key) => (
-                      <td
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        key={key}
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                    <td className=" " colSpan="1" rowSpan="1"></td>
-                  </tr>
-
-                  <tr>
-                    {data.eightynineonehundredand3.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() =>
-                          elementStates(element.mass, element.symbol)
-                        }
-                        className={colors[element.color] + style || ""}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-
-                    <td className="cursor-default "></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div className="text-center mt-24 m-8">
-                <h1 className=" text-center font-bold text-2xl m-8">
-                  Common Polyatomic Ions
-                </h1>
-                <div className="mx-auto text-center font-bold text-sm md:text-base mt-4">
-                  <div className="mx-auto flex flex-wrap -m-2">
-                    {" "}
-                    {data.dataArray.map((element, index) => (
+                <div className="m-8">
+                  <div className="md:hidden pb-8 flex flex-wrap justify-center">
+                    {data.elements.map((element, index) => (
                       <div
                         key={index}
-                        className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
-                        onClick={() => {
-                          setGrams(parseFloat(grams + element.mass)),
-                            setInputGrams(
-                              parseFloat(inputGrams) + parseFloat(element.mass)
-                            );
-                          console.log(
-                            parseFloat(inputGrams) + parseFloat(element.mass)
-                          );
-                          setPolyatomic(
-                            polyatomic
-                              ? element.formula + " + " + polyatomic
-                              : element.formula
-                          );
-                          scrollToTop();
-                        }}
+                        onClick={() =>
+                          elementStates(element.mass, element.symbol)
+                        }
+                        className={`${
+                          colors[element.color]
+                        } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
                       >
-                        {element.name + " " + element.formula}
+                        <div className="text-sm"> {element.number}</div>
+
+                        <div> {element.symbol}</div>
                       </div>
                     ))}
                   </div>
                 </div>
+                <div
+                  className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                    style={{
+                      clipPath:
+                        "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                    }}
+                  />
+                </div>
+
+                <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
+                  <tbody>
+                    <tr>
+                      <td
+                        onClick={() =>
+                          specialSetElements(0, data.elements[0].symbol)
+                        }
+                        className={`${colors.color1} + ${style} `}
+                      >
+                        1<br></br>H
+                      </td>
+                      <td
+                        className={`${colors.none} cursor-default  `}
+                        colSpan="16"
+                      ></td>
+                      <td
+                        onClick={() =>
+                          specialSetElements(1, data.elements[1].symbol)
+                        }
+                        className={`${colors.color9} + ${style}`}
+                      >
+                        2<br></br>He
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td
+                        onClick={() =>
+                          specialSetElements(2, data.elements[2].symbol)
+                        }
+                        className={`${colors.color2} + ${style}`}
+                      >
+                        3<br></br>Li
+                      </td>
+                      <td
+                        onClick={() =>
+                          specialSetElements(3, data.elements[3].symbol)
+                        }
+                        className={`${colors.color3} + ${style}`}
+                      >
+                        4<br></br>Be
+                      </td>
+                      <td
+                        className={`${colors.none} cursor-default `}
+                        colSpan="10"
+                      ></td>
+                      {data.fiveTen.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      <td
+                        onClick={() =>
+                          specialSetElements(10, data.elements[10].symbol)
+                        }
+                        className={`${colors.color2} + ${style}`}
+                      >
+                        11<br></br>Na
+                      </td>
+                      <td
+                        onClick={() =>
+                          specialSetElements(11, data.elements[11].symbol)
+                        }
+                        className={`${colors.color3} + ${style}`}
+                      >
+                        12<br></br>Mg
+                      </td>
+                      <td
+                        className={`${colors.none} cursor-default`}
+                        colSpan="10"
+                      ></td>
+                      {data.thirteenEighteen.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {data.row1.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {data.row2.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {data.row3.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+
+                    <tr>
+                      {data.eightyseven118.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+
+                    <tr>
+                      <td
+                        className="cursor-default   "
+                        colSpan="2"
+                        rowSpan="2"
+                      ></td>
+                      {data.fiftyseven71.map((element, key) => (
+                        <td
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          key={key}
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                      <td className=" " colSpan="1" rowSpan="1"></td>
+                    </tr>
+
+                    <tr>
+                      {data.eightynineonehundredand3.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() =>
+                            elementStates(element.mass, element.symbol)
+                          }
+                          className={colors[element.color] + style || ""}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+
+                      <td className="cursor-default "></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div className="text-center mt-24 m-8">
+                  <h1 className=" text-center font-bold text-2xl m-8">
+                    Common Polyatomic Ions
+                  </h1>
+                  <div className="mx-auto text-center font-bold text-sm md:text-base mt-4">
+                    <div className="mx-auto flex flex-wrap -m-2">
+                      {" "}
+                      {data.dataArray.map((element, index) => (
+                        <div
+                          key={index}
+                          className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
+                          onClick={() => {
+                            setGrams(parseFloat(grams + element.mass)),
+                              setInputGrams(
+                                parseFloat(inputGrams) +
+                                  parseFloat(element.mass)
+                              );
+                            console.log(
+                              parseFloat(inputGrams) + parseFloat(element.mass)
+                            );
+                            setPolyatomic(
+                              polyatomic
+                                ? element.formula + " + " + polyatomic
+                                : element.formula
+                            );
+                            scrollToTop();
+                          }}
+                        >
+                          {element.name + " " + element.formula}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

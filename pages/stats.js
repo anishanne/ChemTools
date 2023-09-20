@@ -40,9 +40,10 @@ const colors = {
   none: "  cursor-default",
 };
 const style =
-  "  rounded-lg text-center font-bold align-middle w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
-  " border-2 border-gray-200 cursor-pointer border-gray-800 rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
+  " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
+
 const navigation = {
   main: [
     { name: "About", href: "/about" },
@@ -883,898 +884,904 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative  pb-8 lg:bg-none bg-gradient-to-t from-black via-20% via-[#120126] to-black">
-        <Head>
-          <title>ChemTools</title>
-          <Source description={"Element information at your fingertips."} />
-        </Head>{" "}
-        <div className="z-0">
+      <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
+        <div className="relative pb-8">
           {" "}
-          <Navbar
-            sidebarOpen={sidebarOpen}
-            setSidebarOpen={setSidebarOpen}
-            page="Element Info"
-          />
-          <div className=" md:hidden unhidden flex flex-col md:pl-64">
-            <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
-              <div className="w-full flex justify-between items-center">
-                <button
-                  type="button"
-                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
-                  onClick={() => setSidebarOpen(true)}
-                >
-                  <span className="sr-only">Open sidebar</span>
-                  <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-                <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+          <Head>
+            <title>ChemTools</title>
+            <Source description={"Element information at your fingertips."} />
+          </Head>{" "}
+          <div className="z-0">
+            {" "}
+            <Navbar
+              sidebarOpen={sidebarOpen}
+              setSidebarOpen={setSidebarOpen}
+              page="Element Info"
+            />
+            <div className=" md:hidden unhidden flex flex-col md:pl-64">
+              <div className="mb-8 sticky top-0 z-10 flex h-16 flex-shrink-0  ">
+                <div className="w-full flex justify-between items-center">
+                  <button
+                    type="button"
+                    className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
+                    onClick={() => setSidebarOpen(true)}
+                  >
+                    <span className="sr-only">Open sidebar</span>
+                    <Bars3BottomLeftIcon
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <main className="sm:pb-80">
-          <div
-            className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
-            aria-hidden="true"
-          >
+          <main className="sm:pb-80">
             <div
-              className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
-              style={{
-                clipPath:
-                  "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-              }}
-            />
-          </div>
-          <div className="h-full   text-wrap">
-            <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-              <div className="flex justify-left h-full w-full   text-lg">
-                {" "}
-                <div className="top-0 z-0 w-full flex  flex-shrink-0 p   ">
-                  <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                    <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                      Element Info
-                    </h1>
-                    <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                      View the info on all the elements in the periodic table
-                    </p>
-                    <hr className="mx-8 text-white mt-8 border-dotted "></hr>
-                  </div>{" "}
-                </div>
-              </div>
-              <div className="w-full max-w-xs"></div>
-              <div className="m-8 ">
-                <div className="md:hidden pb-8 flex flex-wrap justify-center">
-                  {data.elements.map((element, index) => (
-                    <div
-                      key={index}
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].ionization_energies
-                        );
-                        setOxidation(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].oxidationStates
-                        );
-                        setAffinity(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].electron_affinity
-                        );
-                        setAppearance(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].appearance
-                        );
-                        setBoil(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].boil
-                        );
-                        setConfiguration(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].electron_configuration
-                        );
-                        setDense(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].density
-                        );
-                        setMelt(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].melt
-                        );
-                        setElectronegativity(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].en
-                        );
-                        setPhase(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].phase
-                        );
-                        setName(
-                          data.elements.filter(
-                            (name) => name.symbol === element.symbol
-                          )[0].name
-                        );
-
-                        setSymbol(element.symbol);
-                      }}
-                      className={`${
-                        colors[element.color]
-                      } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
-                    >
-                      <div className="text-sm"> {element.number}</div>
-                      <div> {element.symbol}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
-                <tbody className="">
-                  <tr>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[0].ionization_energies);
-                        setAffinity(data?.elements[0].electron_affinity);
-                        setAppearance(data.elements[0].appearance);
-                        setBoil(data.elements[0].boil);
-                        setConfiguration(
-                          data.elements[0].electron_configuration
-                        );
-                        setDense(data.elements[0].density);
-                        setMelt(data.elements[0].melt);
-                        setName(data.elements[0].name);
-                        setSymbol(data.elements[0].symbol);
-                        setOxidation(data.elements[0].oxidationStates);
-
-                        setElectronegativity(data.elements[0].en);
-                        setPhase(data.elements[0].phase);
-                      }}
-                      className={`${colors.color1 + style} `}
-                    >
-                      1<br></br>H
-                    </td>
-                    <td
-                      className={`${colors.none} cursor-default `}
-                      colSpan="16"
-                    ></td>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[1].ionization_energies);
-                        setAffinity(data?.elements[1].electron_affinity);
-                        setAppearance(data.elements[1].appearance);
-                        setBoil(data.elements[1].boil);
-                        setConfiguration(
-                          data.elements[31].electron_configuration
-                        );
-                        setDense(data.elements[1].density);
-                        setMelt(data.elements[1].melt);
-                        setName(data.elements[1].name);
-                        setSymbol(data.elements[1].symbol);
-                        setOxidation(data.elements[1].oxidationStates);
-
-                        setElectronegativity(data.elements[1].en);
-                        setPhase(data.elements[1].phase);
-                      }}
-                      className={colors.color9 + style}
-                    >
-                      2<br></br>He
-                    </td>
-                  </tr>
-                  <tr>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[2].ionization_energies);
-                        setAffinity(data?.elements[2].electron_affinity);
-                        setAppearance(data.elements[2].appearance);
-                        setBoil(data.elements[2].boil);
-                        setConfiguration(
-                          data.elements[2].electron_configuration
-                        );
-                        setDense(data.elements[2].density);
-                        setMelt(data.elements[2].melt);
-                        setName(data.elements[2].name);
-                        setSymbol(data.elements[2].symbol);
-                        setOxidation(data.elements[2].oxidationStates);
-
-                        setElectronegativity(data.elements[2].en);
-                        setPhase(data.elements[2].phase);
-                      }}
-                      className={colors.color2 + style}
-                    >
-                      3<br></br>Li
-                    </td>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[3].ionization_energies);
-                        setAffinity(data?.elements[3].electron_affinity);
-                        setAppearance(data.elements[3].appearance);
-                        setOxidation(data.elements[3].oxidationStates);
-
-                        setBoil(data.elements[3].boil);
-                        setConfiguration(
-                          data.elements[3].electron_configuration
-                        );
-                        setDense(data.elements[3].density);
-                        setMelt(data.elements[3].melt);
-                        setElectronegativity(data.elements[3].en);
-                        setName(data.elements[3].name);
-                        setSymbol(data.elements[3].symbol);
-                        setPhase(data.elements[3].phase);
-                      }}
-                      className={colors.color3 + style}
-                    >
-                      4<br></br>Be
-                    </td>
-                    <td
-                      className={`${colors.none} cursor-default `}
-                      colSpan="10"
-                    ></td>
-                    {fiveTen.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[10].ionization_energies);
-                        setAffinity(data?.elements[10].electron_affinity);
-                        setAppearance(data.elements[10].appearance);
-                        setBoil(data.elements[10].boil);
-                        setConfiguration(
-                          data.elements[10].electron_configuration
-                        );
-                        setDense(data.elements[10].density);
-                        setMelt(data.elements[10].melt);
-                        setElectronegativity(data.elements[10].en);
-                        setPhase(data.elements[10].phase);
-                        setName(data.elements[10].name);
-                        setSymbol(data.elements[10].symbol);
-                        setOxidation(data.elements[10].oxidationStates);
-                      }}
-                      className={colors.color2 + style}
-                    >
-                      11<br></br>Na
-                    </td>
-                    <td
-                      onClick={() => {
-                        setInfoOpen(true);
-                        setIonization(data.elements[11].ionization_energies);
-                        setAffinity(data?.elements[11].electron_affinity);
-                        setAppearance(data.elements[11].appearance);
-                        setBoil(data.elements[11].boil);
-                        setConfiguration(
-                          data.elements[11].electron_configuration
-                        );
-                        setDense(data.elements[11].density);
-                        setMelt(data.elements[11].melt);
-                        setOxidation(data.elements[11].oxidationStates);
-                        setElectronegativity(data.elements[11].en);
-                        setPhase(data.elements[11].phase);
-                        setName(data.elements[11].name);
-                        setSymbol(data.elements[11].symbol);
-                      }}
-                      className={colors.color3 + style}
-                    >
-                      12<br></br>Mg
-                    </td>
-
-                    <td
-                      className={`${colors.none} cursor-default`}
-                      colSpan="10"
-                    ></td>
-                    {thirteenEighteen.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {row1.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {row2.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {row3.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    {eightyseven118.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                  </tr>
-
-                  <tr>
-                    <td
-                      className="cursor-default   "
-                      colSpan="2"
-                      rowSpan="2"
-                    ></td>
-                    {fiftyseven71.map((element, key) => (
-                      <td
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        key={key}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                    <td
-                      className="  cursor-default border-gray-800"
-                      colSpan="1"
-                      rowSpan="1"
-                    ></td>
-                  </tr>
-
-                  <tr>
-                    {eightynineonehundredand3.map((element, key) => (
-                      <td
-                        key={key}
-                        onClick={() => {
-                          setInfoOpen(true);
-                          setIonization(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].ionization_energies
-                          );
-                          setOxidation(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].oxidationStates
-                          );
-                          setAffinity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_affinity
-                          );
-                          setAppearance(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].appearance
-                          );
-                          setBoil(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].boil
-                          );
-                          setConfiguration(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].electron_configuration
-                          );
-                          setDense(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].density
-                          );
-                          setMelt(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].melt
-                          );
-                          setElectronegativity(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].en
-                          );
-                          setPhase(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].phase
-                          );
-                          setName(
-                            data.elements.filter(
-                              (name) => name.symbol === element.symbol
-                            )[0].name
-                          );
-                          setSymbol(element.symbol);
-                        }}
-                        className={element.color}
-                      >
-                        {element.number}
-                        <br></br>
-                        {element.symbol}
-                      </td>
-                    ))}
-                    <td className="cursor-default "></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <Info
-                open={info}
-                setOpen={setInfoOpen}
-                ionization={ionization}
-                electronegativity={electronegativity}
-                configuration={configuration}
-                boil={boil}
-                affinity={affinity}
-                melt={melt}
-                dense={dense}
-                phase={phase}
-                appearance={appearance}
-                name={name}
-                oxidation={oxidation}
-                symbol={symbol}
+              className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
+              aria-hidden="true"
+            >
+              <div
+                className="aspect-[1318/752] w-full md:w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-40 lg:opacity-25"
+                style={{
+                  clipPath:
+                    "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+                }}
               />
             </div>
-          </div>
-        </main>
+            <div className="h-full   text-wrap">
+              <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
+                <div className="flex justify-left h-full w-full   text-lg">
+                  {" "}
+                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p   ">
+                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
+                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
+                        Element Info
+                      </h1>
+                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
+                        View the info on all the elements in the periodic table
+                      </p>
+                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
+                    </div>{" "}
+                  </div>
+                </div>
+                <div className="w-full max-w-xs"></div>
+                <div className="m-8 ">
+                  <div className="md:hidden pb-8 flex flex-wrap justify-center">
+                    {data.elements.map((element, index) => (
+                      <div
+                        key={index}
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].ionization_energies
+                          );
+                          setOxidation(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].oxidationStates
+                          );
+                          setAffinity(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].electron_affinity
+                          );
+                          setAppearance(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].appearance
+                          );
+                          setBoil(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].boil
+                          );
+                          setConfiguration(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].electron_configuration
+                          );
+                          setDense(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].density
+                          );
+                          setMelt(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].melt
+                          );
+                          setElectronegativity(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].en
+                          );
+                          setPhase(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].phase
+                          );
+                          setName(
+                            data.elements.filter(
+                              (name) => name.symbol === element.symbol
+                            )[0].name
+                          );
+
+                          setSymbol(element.symbol);
+                        }}
+                        className={`${
+                          colors[element.color]
+                        } h-12 text-center flex flex-col items-center justify-center text-base ${style2}`}
+                      >
+                        <div className="text-sm"> {element.number}</div>
+                        <div> {element.symbol}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
+                  <tbody className="">
+                    <tr>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[0].ionization_energies);
+                          setAffinity(data?.elements[0].electron_affinity);
+                          setAppearance(data.elements[0].appearance);
+                          setBoil(data.elements[0].boil);
+                          setConfiguration(
+                            data.elements[0].electron_configuration
+                          );
+                          setDense(data.elements[0].density);
+                          setMelt(data.elements[0].melt);
+                          setName(data.elements[0].name);
+                          setSymbol(data.elements[0].symbol);
+                          setOxidation(data.elements[0].oxidationStates);
+
+                          setElectronegativity(data.elements[0].en);
+                          setPhase(data.elements[0].phase);
+                        }}
+                        className={`${colors.color1 + style} `}
+                      >
+                        1<br></br>H
+                      </td>
+                      <td
+                        className={`${colors.none} cursor-default `}
+                        colSpan="16"
+                      ></td>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[1].ionization_energies);
+                          setAffinity(data?.elements[1].electron_affinity);
+                          setAppearance(data.elements[1].appearance);
+                          setBoil(data.elements[1].boil);
+                          setConfiguration(
+                            data.elements[31].electron_configuration
+                          );
+                          setDense(data.elements[1].density);
+                          setMelt(data.elements[1].melt);
+                          setName(data.elements[1].name);
+                          setSymbol(data.elements[1].symbol);
+                          setOxidation(data.elements[1].oxidationStates);
+
+                          setElectronegativity(data.elements[1].en);
+                          setPhase(data.elements[1].phase);
+                        }}
+                        className={colors.color9 + style}
+                      >
+                        2<br></br>He
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[2].ionization_energies);
+                          setAffinity(data?.elements[2].electron_affinity);
+                          setAppearance(data.elements[2].appearance);
+                          setBoil(data.elements[2].boil);
+                          setConfiguration(
+                            data.elements[2].electron_configuration
+                          );
+                          setDense(data.elements[2].density);
+                          setMelt(data.elements[2].melt);
+                          setName(data.elements[2].name);
+                          setSymbol(data.elements[2].symbol);
+                          setOxidation(data.elements[2].oxidationStates);
+
+                          setElectronegativity(data.elements[2].en);
+                          setPhase(data.elements[2].phase);
+                        }}
+                        className={colors.color2 + style}
+                      >
+                        3<br></br>Li
+                      </td>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[3].ionization_energies);
+                          setAffinity(data?.elements[3].electron_affinity);
+                          setAppearance(data.elements[3].appearance);
+                          setOxidation(data.elements[3].oxidationStates);
+
+                          setBoil(data.elements[3].boil);
+                          setConfiguration(
+                            data.elements[3].electron_configuration
+                          );
+                          setDense(data.elements[3].density);
+                          setMelt(data.elements[3].melt);
+                          setElectronegativity(data.elements[3].en);
+                          setName(data.elements[3].name);
+                          setSymbol(data.elements[3].symbol);
+                          setPhase(data.elements[3].phase);
+                        }}
+                        className={colors.color3 + style}
+                      >
+                        4<br></br>Be
+                      </td>
+                      <td
+                        className={`${colors.none} cursor-default `}
+                        colSpan="10"
+                      ></td>
+                      {fiveTen.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[10].ionization_energies);
+                          setAffinity(data?.elements[10].electron_affinity);
+                          setAppearance(data.elements[10].appearance);
+                          setBoil(data.elements[10].boil);
+                          setConfiguration(
+                            data.elements[10].electron_configuration
+                          );
+                          setDense(data.elements[10].density);
+                          setMelt(data.elements[10].melt);
+                          setElectronegativity(data.elements[10].en);
+                          setPhase(data.elements[10].phase);
+                          setName(data.elements[10].name);
+                          setSymbol(data.elements[10].symbol);
+                          setOxidation(data.elements[10].oxidationStates);
+                        }}
+                        className={colors.color2 + style}
+                      >
+                        11<br></br>Na
+                      </td>
+                      <td
+                        onClick={() => {
+                          setInfoOpen(true);
+                          setIonization(data.elements[11].ionization_energies);
+                          setAffinity(data?.elements[11].electron_affinity);
+                          setAppearance(data.elements[11].appearance);
+                          setBoil(data.elements[11].boil);
+                          setConfiguration(
+                            data.elements[11].electron_configuration
+                          );
+                          setDense(data.elements[11].density);
+                          setMelt(data.elements[11].melt);
+                          setOxidation(data.elements[11].oxidationStates);
+                          setElectronegativity(data.elements[11].en);
+                          setPhase(data.elements[11].phase);
+                          setName(data.elements[11].name);
+                          setSymbol(data.elements[11].symbol);
+                        }}
+                        className={colors.color3 + style}
+                      >
+                        12<br></br>Mg
+                      </td>
+
+                      <td
+                        className={`${colors.none} cursor-default`}
+                        colSpan="10"
+                      ></td>
+                      {thirteenEighteen.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {row1.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {row2.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {row3.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+                    <tr>
+                      {eightyseven118.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                    </tr>
+
+                    <tr>
+                      <td
+                        className="cursor-default   "
+                        colSpan="2"
+                        rowSpan="2"
+                      ></td>
+                      {fiftyseven71.map((element, key) => (
+                        <td
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          key={key}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                      <td
+                        className="  cursor-default border-gray-800"
+                        colSpan="1"
+                        rowSpan="1"
+                      ></td>
+                    </tr>
+
+                    <tr>
+                      {eightynineonehundredand3.map((element, key) => (
+                        <td
+                          key={key}
+                          onClick={() => {
+                            setInfoOpen(true);
+                            setIonization(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].ionization_energies
+                            );
+                            setOxidation(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].oxidationStates
+                            );
+                            setAffinity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_affinity
+                            );
+                            setAppearance(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].appearance
+                            );
+                            setBoil(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].boil
+                            );
+                            setConfiguration(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].electron_configuration
+                            );
+                            setDense(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].density
+                            );
+                            setMelt(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].melt
+                            );
+                            setElectronegativity(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].en
+                            );
+                            setPhase(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].phase
+                            );
+                            setName(
+                              data.elements.filter(
+                                (name) => name.symbol === element.symbol
+                              )[0].name
+                            );
+                            setSymbol(element.symbol);
+                          }}
+                          className={element.color}
+                        >
+                          {element.number}
+                          <br></br>
+                          {element.symbol}
+                        </td>
+                      ))}
+                      <td className="cursor-default "></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <Info
+                  open={info}
+                  setOpen={setInfoOpen}
+                  ionization={ionization}
+                  electronegativity={electronegativity}
+                  configuration={configuration}
+                  boil={boil}
+                  affinity={affinity}
+                  melt={melt}
+                  dense={dense}
+                  phase={phase}
+                  appearance={appearance}
+                  name={name}
+                  oxidation={oxidation}
+                  symbol={symbol}
+                />
+              </div>
+            </div>
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

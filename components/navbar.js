@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
+import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   HomeIcon,
@@ -84,7 +86,12 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                   </div>
                 </Transition.Child>
                 <div className=" flex flex-shrink-0 items-center px-4">
-                  <img className="w-42 h-48 mx-auto " src="chemlogo.png" />
+                  <Image
+                    width={200}
+                    height={220}
+                    heightclassName=" mx-auto "
+                    src="/chemlogo.png"
+                  />
                 </div>
                 <div className="z-0 text-2xl mt-5 h-0 flex-1 overflow-y-auto">
                   <nav className="space-y-1 text-2xl px-2">
@@ -127,10 +134,14 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex min-h-0 flex-1 flex-col  ">
           <div className="flex h-36 lg:h-48 flex-shrink-0 items-center  px-4 0">
-            <img
-              className=" md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex md:h-42 md:w-48 lg:h-48 lg:w-52 "
-              src="chemlogo.png"
-            />
+            <div className="relative overflow-hidden md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex ">
+              <Image
+                width={200}
+                height={220}
+                heightclassName=" mx-auto "
+                src="/chemlogo.png"
+              />
+            </div>
           </div>
           <div className="z-10 flex flex-1 flex-col  overflow-y-auto">
             <nav className="flex-1 space-y-1 px-8 py-4 ">

@@ -213,7 +213,15 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+                  <div className=" flex flex-shrink-0 items-center px-4">
+                    <Image
+                      width={70}
+                      height={90}
+                      heightclassName=" mx-auto "
+                      src="/chemlogo.png"
+                      alt="ChemTools"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

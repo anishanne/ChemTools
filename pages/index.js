@@ -26,7 +26,7 @@ const featuredTestimonial = {
     name: "Leah Miller",
     handle:
       "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
-    imageUrl: "mrsmiller.jpg",
+    imageUrl: "/mrsmiller.jpg",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };
@@ -157,7 +157,15 @@ export default function Home() {
                   <span className="sr-only">Open sidebar</span>
                   <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <img className="w-16 h-16  mr-4" src="chemlogo.png" />
+                <div className=" flex flex-shrink-0 items-center px-4">
+                  <Image
+                    width={70}
+                    height={90}
+                    heightclassName=" mx-auto "
+                    src="/chemlogo.png"
+                    alt="ChemTools"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -265,11 +273,15 @@ export default function Home() {
                       <p>{`“${featuredTestimonial.body}”`}</p>
                     </blockquote>
                     <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
-                      <img
-                        className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
-                        src={featuredTestimonial.author.imageUrl}
-                        alt=""
-                      />
+                      <div className="relative overflow-hidden">
+                        <Image
+                          width={100}
+                          height={100}
+                          className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
+                          src="/mrsmiller.jpg"
+                          alt=""
+                        />
+                      </div>
                       <div className="flex-auto">
                         <div className="font-semibold">
                           {featuredTestimonial.author.name}

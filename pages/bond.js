@@ -7,6 +7,7 @@ import React from "react";
 import PolarCovalent from "../components/bondTypes";
 import Footer from "../components/footer";
 import Source from "../components/source";
+import Link from "next/link";
 import {
   calculateElectronegativityDifference,
   getBondType,
@@ -110,15 +111,17 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <div className=" flex flex-shrink-0 items-center px-4">
-                    <Image
-                      width={70}
-                      height={90}
-                      className=" mx-auto "
-                      src="/chemlogo.png"
-                      alt="ChemTools"
-                    />
-                  </div>
+                  <Link href="/">
+                    <div className=" flex flex-shrink-0 items-center px-4">
+                      <Image
+                        width={70}
+                        height={90}
+                        className=" mx-auto "
+                        src="/chemlogo.png"
+                        alt="ChemTools"
+                      />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

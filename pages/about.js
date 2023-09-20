@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import data from "../data.json";
 import { useState } from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 import { useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/router";
@@ -61,15 +61,17 @@ export default function Home() {
                   <span className="sr-only">Open sidebar</span>
                   <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <div className=" flex flex-shrink-0 items-center px-4">
-                  <Image
-                    width={70}
-                    height={90}
-                    className=" mx-auto "
-                    src="/chemlogo.png"
-                    alt="ChemTools"
-                  />
-                </div>
+                <Link href="/">
+                  <div className=" flex flex-shrink-0 items-center px-4">
+                    <Image
+                      width={70}
+                      height={90}
+                      className=" mx-auto "
+                      src="/chemlogo.png"
+                      alt="ChemTools"
+                    />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

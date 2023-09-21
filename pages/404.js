@@ -18,10 +18,10 @@ export default function Example() {
         </div>
         <div className="text-center">
           <p className="text-base font-semibold text-indigo-600">404</p>
-          <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             Page not found
           </h1>
-          <p className="mt-6 text-base leading-7 text-gray-200">
+          <p className="mt-6 text-base leading-7 text-gray-700 dark:text-gray-200">
             Sorry, we couldn’t find the page you’re looking for.
           </p>
 
@@ -35,7 +35,7 @@ export default function Example() {
             </Link>
             <Link
               href="mailto:mishrarnav@gmail.com?subject=Chem Tools Support"
-              className="text-sm font-semibold cursor-pointer text-gray-200"
+              className="text-sm font-semibold cursor-pointer text-gray-600 dark:text-gray-200"
             >
               Contact support <span aria-hidden="true">&rarr;</span>
             </Link>

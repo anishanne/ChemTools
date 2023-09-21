@@ -1,6 +1,6 @@
 const navigation = {
   main: [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/index" },
     {
       name: "Contact",
       href: "mailto:mishrarnav@gmail.com?subject=Chem Tools Support",

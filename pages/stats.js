@@ -912,14 +912,14 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <Link href="/">
+                  <Link href="/index">
                     <div className=" flex flex-shrink-0 items-center px-4">
                       <Image
                         width={70}
                         height={90}
                         className=" mx-auto "
                         src="/chemlogo.png"
-                        alt="ChemTools"
+                        alt="Chemtools Logo"
                       />
                     </div>
                   </Link>

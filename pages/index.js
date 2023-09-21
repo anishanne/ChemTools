@@ -279,7 +279,7 @@ export default function Home() {
                           height={100}
                           className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
                           src="/mrsmiller.jpg"
-                          alt=""
+                          alt="Featured Testimonial Image"
                         />
                       </div>
                       <div className="flex-auto">

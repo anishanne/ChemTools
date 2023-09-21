@@ -20,7 +20,7 @@ import {
 
 import Link from "next/link";
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon },
+  { name: "Home", href: "/index", icon: HomeIcon },
   { name: "Molar Mass", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Character", href: "/bond", icon: CubeTransparentIcon },
@@ -85,13 +85,14 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                     </button>
                   </div>
                 </Transition.Child>
-                <Link href="/">
+                <Link href="/index">
                   <div className=" flex flex-shrink-0 items-center px-4">
                     <Image
                       width={200}
                       height={220}
                       className=" mx-auto "
                       src="/chemlogo.png"
+                      alt="Chemtools Logo"
                     />
                   </div>
                 </Link>
@@ -136,13 +137,14 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex min-h-0 flex-1 flex-col  ">
           <div className="flex h-36 lg:h-48 flex-shrink-0 items-center  px-4 0">
-            <Link href="/">
+            <Link href="/index">
               <div className="relative overflow-hidden md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex ">
                 <Image
                   width={200}
                   height={220}
                   className=" mx-auto "
                   src="/chemlogo.png"
+                  alt="Chemtools Logo"
                 />
               </div>
             </Link>

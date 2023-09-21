@@ -61,7 +61,7 @@ export default function Home() {
                   <span className="sr-only">Open sidebar</span>
                   <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <Link href="/">
+                <Link href="/index">
                   <div className=" flex flex-shrink-0 items-center px-4">
                     <Image
                       width={70}

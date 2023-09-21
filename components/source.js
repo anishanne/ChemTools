@@ -15,7 +15,7 @@ export default function Source({ description }) {
       <meta property="og:site_name" content="ChemTools" />
       <meta
         name="keywords"
-        content="chem chemistry tools acid base moles mass gram bond character ionic covalent electronegativity periodic table elements"
+        content="chem chemistry tools acid base moles mass gram bond character interactive help ionic covalent electronegativity periodic table elements"
       ></meta>
     </>
   );

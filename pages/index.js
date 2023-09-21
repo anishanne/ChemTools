@@ -21,7 +21,7 @@ import {
   BeakerIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
-  body: "Chem Tools is an amazing one stop shop. It's a great supplemental tool for students basic chemistry needs. Joey and Arnav are thorough, dedicated and hard working both inside and outide the classroom. This tool will be utilized for years to come and is a wonderful legacy to leave behind!",
+  body: "Chem Tools is an amazing one stop shop. It's a great supplemental tool for students' basic chemistry needs. Joey and Arnav are thorough, dedicated, and hard working both inside and outide the classroom. This tool will be utilized for years to come and is a wonderful legacy to leave behind!",
   author: {
     name: "Leah Miller",
     handle:

@@ -78,21 +78,12 @@ export default function Classwork({ open, setOpen, bondType }) {
                               </p>
                             ) : bondType === "Ionic" ? (
                               <p className="text-center text-2xl font-medium text-gray-700 dark:text-white">
-                                Ionic diatomic compounds undergo a complete
-                                transfer of electrons from one atom to another,
-                                resulting in the formation of ions with opposite
-                                charges. This transfer of electrons leads to the
-                                creation of an ionic bond, which is
-                                characterized by strong electrostatic
-                                attractions between the positively charged
-                                cation and the negatively charged anion. Due to
-                                these strong forces, ionic diatomic compounds
-                                have very high melting and boiling points,
-                                making them typically solid at room temperature.
-                                They also have good electrical conductivity when
-                                dissolved in water or in a molten state, as
-                                their ions can move freely and conduct
-                                electricity. Additionally, ionic diatomic
+                                Ionic diatomic compounds are compounds that
+                                transfer of electrons from one atom to anotherwhich 
+                                results in the formation of ions with opposite
+                                charges. This creates an ionic bond, which is
+                                has strong electrostatic
+                                attractions between the cation and anion. Additionally, ionic diatomic
                                 compounds tend to be more soluble in polar
                                 solvents and have a crystalline structure in
                                 their solid form.

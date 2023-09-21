@@ -41,7 +41,7 @@ export default function Home() {
         <div className="relative pb-8">
           {" "}
           <Head>
-            <title>ChemTools</title>
+            <title>ChemTools: Acid Base Calculator</title>
             <Source
               description={
                 "Using ChemTools, calculate pH, pOH, and more - all in one place."

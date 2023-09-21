@@ -888,7 +888,7 @@ export default function Home() {
         <div className="relative pb-8">
           {" "}
           <Head>
-            <title>ChemTools</title>
+            <title>ChemTools: Element Stats</title>
             <Source description={"Element information at your fingertips."} />
           </Head>{" "}
           <div className="z-0">

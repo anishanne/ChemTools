@@ -46,7 +46,7 @@ export default function Home() {
                 "Using ChemTools, find sig figs, balance equations, and more."
               }
             />
-            <title>ChemTools</title>
+            <title>ChemTools: Other Utilities</title>
           </Head>{" "}
           <div className="z-0">
             {" "}

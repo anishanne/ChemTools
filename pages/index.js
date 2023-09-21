@@ -134,7 +134,7 @@ export default function Home() {
         <div className="relative pb-8">
           {" "}
           <Head>
-            <title>ChemTools</title>
+            <title>ChemTools: Home</title>
             <Source
               description={
                 "ChemTools, transforming chemistry education one student at a time."

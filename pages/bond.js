@@ -83,7 +83,7 @@ export default function Home() {
         <div className="relative pb-8">
           {" "}
           <Head>
-            <title>ChemTools</title>
+            <title>ChemTools: Bond Character</title>
             <Source
               description={
                 "Using ChemTools, find the bond character of any compound."

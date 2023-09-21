@@ -40,7 +40,7 @@ export default function Home() {
       <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
         <div className="relative pb-8">
           <Head>
-            <title>ChemTools</title>
+            <title>ChemTools: Solubility</title>
             <Source
               description={"Using ChemTools, find solubility of compounds."}
             />

@@ -42,7 +42,7 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  "  rounded-lg text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg transition ease-in-out delay-0 hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -111,7 +111,7 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <Link href="/index">
+                  <Link href="/">
                     <div className=" flex flex-shrink-0 items-center px-4">
                       <Image
                         width={70}
@@ -143,17 +143,16 @@ export default function Home() {
             <div className="h-full my-auto pb-8   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
                 <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
-                  <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                  <div className="mx-auto max-w-4xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       Bond Character Calculator
                     </h2>
-                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                    <p className="mt-6 text-2xl leading-8 dark:text-white text-gray-600">
                       Calculate the bond character between any two elements by
                       clicking on the elements on our interactive periodic table
                     </p>
                   </div>
                 </div>
-                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
 
                 {element1 ? (
                   <div className="mx-8 grid mt-32 grid-cols-1 md:grid-cols-5">

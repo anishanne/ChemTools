@@ -52,7 +52,7 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  "  rounded-lg text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg transition ease-in-out delay-0 hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -213,7 +213,7 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <Link href="/index">
+                  <Link href="/">
                     <div className=" flex flex-shrink-0 items-center px-4">
                       <Image
                         width={70}
@@ -244,20 +244,19 @@ export default function Home() {
             <div className="h-full  text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
                 <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
-                  <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                  <div className="mx-auto max-w-5xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       Gram Formula Mass Calculator
                     </h2>
-                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                    <p className="mt-6 text-2xl leading-8 dark:text-white text-gray-600">
                       Calculate the gram formula mass of any compound by
                       clicking on the elements on our interactive periodic table
                     </p>
                   </div>
                 </div>
-                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
 
                 <div className="flex justify-center   ">
-                  <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-36 shadow-md bg-gray-400 dark:border dark:border-gray-300 dark:border-dotted dark:bg-transparent  rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
+                  <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-36 shadow-md bg-gray-300 dark:border dark:border-gray-700  dark:bg-transparent  rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
                     <div className="mb-3">
                       <label
                         className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
@@ -591,26 +590,24 @@ export default function Home() {
                   </tbody>
                 </table>
 
-                <div className="text-center mt-24 m-8">
+                <div className="text-center mx-auto max-w-7xl mt-24 m-8">
                   <h1 className=" text-center font-bold text-2xl m-8">
                     Common Polyatomic Ions
                   </h1>
-                  <div className="mx-auto text-center font-bold text-sm md:text-base mt-4">
-                    <div className="mx-auto flex flex-wrap -m-2">
+                  <div className="mx-8 text-center font-bold text-sm md:text-base mt-4">
+                    <div className="mx-auto flex flex-wrap m-2">
                       {" "}
                       {data.dataArray.map((element, index) => (
                         <div
                           key={index}
-                          className=" p-3 w-fit md:w-72 mx-auto border border-white rounded-lg m-2 hover:bg-gray-800   cursor-pointer"
+                          className=" p-3 w-fit transition ease-in-out delay-0 hover:scale-110 mx-auto border border-gray-400 rounded-lg m-2 hover:bg-gray-800   cursor-pointer"
                           onClick={() => {
                             setGrams(parseFloat(grams + element.mass)),
                               setInputGrams(
                                 parseFloat(inputGrams) +
                                   parseFloat(element.mass)
                               );
-                            console.log(
-                              parseFloat(inputGrams) + parseFloat(element.mass)
-                            );
+
                             setPolyatomic(
                               polyatomic
                                 ? element.formula + " + " + polyatomic

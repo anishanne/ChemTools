@@ -85,7 +85,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                     </button>
                   </div>
                 </Transition.Child>
-                <Link href="/index">
+                <Link href="/">
                   <div className=" flex flex-shrink-0 items-center px-4">
                     <Image
                       width={200}
@@ -137,7 +137,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex min-h-0 flex-1 flex-col  ">
           <div className="flex h-36 lg:h-48 flex-shrink-0 items-center  px-4 0">
-            <Link href="/index">
+            <Link href="/">
               <div className="relative overflow-hidden md:unhidden lg:m-6 hidden lg:mr-9 md:inline-flex ">
                 <Image
                   width={200}
@@ -173,7 +173,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
             </nav>
             <div className="m-2  font-semibold">
               <h2 className=" m-8 justify-items-center text-center  text-gray-900 dark:text-gray-100 text-sm">
-                Made By: Arnav Mishra and Joseph "Money" Marra
+                Made By: Arnav Mishra and Joe Marra
               </h2>
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function Example() {
               Go back home
             </Link>
             <Link
-              href="mailto:mishrarnav@gmail.com?subject=Chem Tools Support"
+              href="mailto:mishrarnav@gmail.com,joey.marra2007@gmail.com?subject=Chem Tools Support"
               className="text-sm font-semibold cursor-pointer text-gray-600 dark:text-gray-200"
             >
               Contact support <span aria-hidden="true">&rarr;</span>

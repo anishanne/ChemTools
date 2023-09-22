@@ -30,6 +30,7 @@ const featuredTestimonial = {
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };
+
 const testimonials = [
   [
     [
@@ -133,7 +134,18 @@ const features = [
     href: "/bond",
   },
 ];
+
 export default function Home() {
+  // useEffect(() => {
+  //   // Redirect to an external website after a delay (e.g., 3 seconds)
+  //   const redirectTimer = setTimeout(() => {
+  //     window.location.href = "https://classroomplanner.vercel.app"; // Replace with the external URL
+  //   }, 1000); // 3 seconds in milliseconds
+
+  //   // Clear the timer when the component unmounts (optional)
+  //   return () => clearTimeout(redirectTimer);
+  // }, []);
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
@@ -158,7 +170,7 @@ export default function Home() {
               <div className="w-full flex justify-between items-center">
                 <button
                   type="button"
-                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-indigo-500 text-gray-500 md:hidden"
+                  className="px-4 focus:outline-none focus:ring-2 focus:ring-inset h-16 focus:ring-blue-500 text-gray-500 md:hidden"
                   onClick={() => setSidebarOpen(true)}
                 >
                   <span className="sr-only">Open sidebar</span>
@@ -211,45 +223,49 @@ export default function Home() {
                 <div className="relative z-0  py-8 ">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <div className=" mx-auto w-full ">
-                      <div className="hidden relative sm:mb-8 mx-auto sm:flex sm:justify-center">
-                        <div className=" rounded-full px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-300/10 hover:ring-gray-200">
-                          Welcome to our new home Update your Bookmarks
-                          <span aria-hidden="true">&rarr;</span>
+                      <div className=" relative mb-10 mx-auto sm:flex sm:justify-center">
+                        <div className=" rounded-full cursor-pointer px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-400 hover:ring-gray-200">
+                          Welcome to our new home
+                          <span className="text-blue-600" aria-hidden="true">
+                            {" "}
+                            &rarr; chemtools.app
+                          </span>
                         </div>
                       </div>
                       <div className="text-center mx-auto">
-                        <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                        <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                           ChemTools
                         </h1>
 
-                        <p className="mt-6 text-lg leading-8 dark:text-gray-200 text-gray-600">
+                        <p className="mt-6 text-xl leading-8 dark:text-gray-200 text-gray-600">
                           ChemTools is the next generation online platform
                           designed for chemistry students and professionals,
                           offering a variety of resources including calculators
                           for chemistry and information on the periodic table.
                         </p>
                       </div>
+                      <h2 className="text-4xl mt-8 font-bold text-blue-500">
+                        Transforming chemistry education
+                      </h2>
+                      <p className="mt-8 text-2xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-2xl">
+                        One Student At a Time
+                      </p>
                     </div>
 
-                    {/* <h2 className="text-5xl font-bold text-blue-500">
-                      Transforming chemistry education.
-                    </h2>
-                    <p className="mt-8 text-3xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-4xl">
-                      One Student At a Time.
-                    </p>
-                    <p className="mx-auto mt-8 max-w-prose text-xl text-gray-800 dark:text-gray-300">
-                      ChemTools is the next generation online platform designed
-                      for chemistry students and professionals, offering a
-                      variety of resources including calculators for chemistry
-                      and information on the periodic table.
-                    </p> */}
                     <div className="mt-16">
                       <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        {features.map((feature) => (
+                        {features.map((feature, index) => (
                           <Link key={feature.name} href={feature.href}>
-                            <div key={feature.name} className="pt-6 ">
-                              <div className="flow-root lg:h-60 h-auto  rounded-lg bg-gray-1000 px-4 pb-6 hover:brightness-125  dark:border-gray-600 border-gray-900 border-4 ">
-                                <div className="-mt-6 ">
+                            <div
+                              key={feature.name}
+                              className={`pt-6 ${
+                                index >= 4
+                                  ? "sm:col-span-1 justify-center"
+                                  : "sm:col-span-2"
+                              }`}
+                            >
+                              <div className="flow-root h-auto rounded-lg bg-gray-1000 px-2 pb-6 hover:border-blue-500 transition ease-in-out delay-0 hover:scale-110 dark:border-gray-600 border-gray-900 border-4">
+                                <div className="-mt-6">
                                   <div>
                                     <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
                                       <feature.icon
@@ -261,7 +277,7 @@ export default function Home() {
                                   <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-800 dark:text-gray-50">
                                     {feature.name}
                                   </h3>
-                                  <p className="mt-5 my-auto  text-base text-gray-600 dark:text-gray-300">
+                                  <p className="mt-5 my-auto text-base text-gray-600 dark:text-gray-300">
                                     {feature.description}
                                   </p>
                                 </div>
@@ -279,15 +295,16 @@ export default function Home() {
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-4xl sm:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-600">
+                    <h2 className="text-xl font-semibold leading-7 text-blue-600">
                       Teacher Testimonials
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                      Let's see what others have to say
+                      See what our amazing teachers have to say
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
-                      ChemTools offers the widest variety of interactive
-                      chemistry education tools compared to our competitors.
+                      ChemTools has been positively reviewed by some of John Jay
+                      High School's best teachers. We don't just have
+                      reactions... we have solutions
                     </p>
                   </div>
                 </div>
@@ -303,10 +320,23 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <div className="sm:mx-auto mx-8 mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-800 dark:text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                  <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-white border  shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
+                <div className="sm:mx-auto mx-8 mt-8 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-800 dark:text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+                  <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-gray-400 border  shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
                     <blockquote className="sm:p-12 p-4 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
-                      <p>{`“${featuredTestimonial.body}”`}</p>
+                      <p>
+                        Chem Tools is an{" "}
+                        <span className="font-bold text-blue-500">
+                          amazing one stop shop
+                        </span>
+                        . It's a great supplemental tool for students' basic
+                        chemistry needs. Joey and Arnav are thorough, dedicated,
+                        and hard working both inside and outside the classroom.
+                        This tool will be{" "}
+                        <span className="font-bold text-blue-500">
+                          utilized for years to come
+                        </span>{" "}
+                        and is a wonderful legacy to leave behind!
+                      </p>
                     </blockquote>
                     <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
                       <div className="relative overflow-hidden">
@@ -319,10 +349,8 @@ export default function Home() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <div className="font-semibold">
-                          {featuredTestimonial.author.name}
-                        </div>
-                        <div className="text-gray-800 dark:text-gray-300">{`${featuredTestimonial.author.handle}`}</div>
+                        <div className="font-bold">{"Leah Miller"}</div>
+                        <div className="text-gray-800 dark:text-gray-300">{`John Jay High School AP Chemistry Teacher and Science Olympiad Coach`}</div>
                       </div>
                     </figcaption>
                   </figure>

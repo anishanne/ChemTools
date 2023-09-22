@@ -69,7 +69,7 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </button>
-                  <Link href="/index">
+                  <Link href="/">
                     <div className=" flex flex-shrink-0 items-center px-4">
                       <Image
                         width={70}
@@ -101,16 +101,15 @@ export default function Home() {
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
                 <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
                   <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       Other Utilities
                     </h2>
-                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                    <p className="mt-6 text-2xl leading-8 dark:text-white text-gray-600">
                       Sig figs and balancing equations have you stumped? We have
                       to tools for you!
                     </p>
                   </div>
                 </div>
-                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
                 <div className="relative z-0 py-16 sm:py-24 lg:py-20">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <h2 className="text-5xl font-bold text-blue-500"></h2>

@@ -61,7 +61,7 @@ export default function Home() {
                   <span className="sr-only">Open sidebar</span>
                   <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
-                <Link href="/index">
+                <Link href="/">
                   <div className=" flex flex-shrink-0 items-center px-4">
                     <Image
                       width={70}
@@ -93,39 +93,38 @@ export default function Home() {
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
                 <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
                   <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       About
                     </h2>
-                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                    <p className="mt-6 text-2xl leading-8 dark:text-white text-gray-600">
                       Here's what we do and why we do it
                     </p>
                   </div>
                 </div>
-                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
 
-                <div className="mx-auto  mt-36 max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-10">
+                <div className="mx-auto  mt-16 max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-10">
                   <div className="lg:pr-4">
                     <div className="max-w-xl text-base leading-7 text-gray-600 dark:text-white lg:max-w-full">
                       <div className=" m-8 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div>
                           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-4xl text-center">
-                            Chem Tools
+                            ChemTools
                           </h1>
                           <p className="mt-6 my-8 text-xl sm:text-left text-center  leading-8 text-gray-600 dark:text-white">
-                            At Chem Tools, we're all about simplifying chemistry
+                            At ChemTools, we're all about simplifying chemistry
                             making your chemistry experience hassle-free. While
                             we may not be changing the world, we're certainly
                             making your chemistry journey a whole lot easier.
                           </p>
                           <p className="mt-6 my-8 text-xl sm:text-left text-center leading-8 text-gray-600 dark:text-white">
-                            Thank you for choosing Chem Tools; we're here to
+                            Thank you for choosing ChemTools; we're here to
                             support you on your journey to chemistry success!
                           </p>
                           <ul
                             role="list"
                             className="mt-8 space-y-8 text-gray-600 dark:text-white"
                           >
-                            <li className="flex gap-x-3">
+                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ClockIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"
@@ -137,11 +136,13 @@ export default function Home() {
                                 <br></br>
                                 Without having to waste time looking up info in
                                 the reference table and performing calculations,
-                                you can focus on what's important: learning
-                                chemistry.
+                                you can focus on what's important:{" "}
+                                <span className="font-bold text-blue-500">
+                                  learning chemistry.
+                                </span>
                               </span>
                             </li>
-                            <li className="flex gap-x-3">
+                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ChartPieIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"
@@ -155,7 +156,7 @@ export default function Home() {
                                 effortless to find the information you need.
                               </span>
                             </li>
-                            <li className="flex gap-x-3">
+                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ExclamationTriangleIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"
@@ -185,16 +186,27 @@ export default function Home() {
                             About the Team
                           </h1>
                           <p className=" mt-6 text-center">
-                            <strong>Arnav</strong> is a senior at John Jay
-                            currently making light pink titrations.
+                            <strong className="text-blue-500">Arnav</strong> is
+                            a senior at John Jay currently making light pink
+                            titrations. Arnav took AP Chemistry in his junior
+                            year and he was the best student ever. He is
+                            universally loved by all his fans because of his
+                            light pink titrations. If you need light pink
+                            titrations, feel free to contact him at
+                            arnav@walterwhite.com.
                           </p>
                           {/* <img
                           className=" rounded-lg my-8 mx-auto"
                           src="/smurfcat.jpeg"
                         ></img> */}
                           <p className=" mt-6 text-center">
-                            <strong>Joe</strong> is a junior at John Jay who
-                            loves Nutella Biscuits
+                            <strong className="text-blue-500">Joe</strong> is a
+                            junior at John Jay who loves Nutella Biscuits. His
+                            pronouns are Him/Him. He is also universally loved
+                            but not as much as Arnav. He is a great coder but
+                            sometimes he does very stupid things like making
+                            purple titrations. He needs a lot of assistance with
+                            his titrations and therefore works on ChemTools.
                           </p>
                           {/*}  <img
                           className="h-64  rounded-lg my-8 mx-auto"

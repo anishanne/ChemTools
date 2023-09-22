@@ -42,7 +42,7 @@ const testimonials = [
   [
     [
       {
-        body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work!",
+        body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work! ",
         author: {
           name: "Ian Freedman",
           handle: "Science Olympiad Coach and Physics Teacher at John Jay",
@@ -96,7 +96,7 @@ const features = [
   {
     name: "Utilities",
     description:
-      "Sig figs and balancing equations have you stumped? We have the tools for you!",
+      "Sig figs and balancing equations have you stumped? We've the tools for you!",
     icon: StarIcon,
     href: "/utilities",
   },
@@ -205,7 +205,7 @@ export default function Home() {
                         </h1>
                         <h2 className="my-2 mb-8 text-xl">
                           {" "}
-                          Taking Chemistry to the next energy level
+                          Taking chemistry to the next energy level
                         </h2>
                       </div>
                       <h2 className="text-4xl mt-8 font-bold text-blue-500">

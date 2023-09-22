@@ -5117,7 +5117,12 @@
     { "name": "Thiocyanate", "formula": "SCN⁻", "mass": 58.08 },
     { "name": "Sulfite", "formula": "SO₃²⁻", "mass": 80.06 },
     { "name": "Sulfate", "formula": "SO₄²⁻", "mass": 96.06 },
-    { "name": "Hydrogen Sulfate", "formula": "HSO₃⁻", "mass": 97.08 }
+    { "name": "Hydrogen Sulfate", "formula": "HSO₃⁻", "mass": 97.08 },
+    {
+      "name": "Nitrate",
+      "formula": "NO₃⁻",
+      "mass": 62.01
+    }
   ],
   "fiftyseven71": [
     {

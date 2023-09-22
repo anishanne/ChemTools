@@ -243,22 +243,21 @@ export default function Home() {
             </div>
             <div className="h-full  text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className="flex justify-left h-full w-full   text-lg">
-                  {" "}
-                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                        Gram Formula Mass Calculator
-                      </h1>
-                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                        Calculate the GFM of any compound
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>{" "}
+                <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
+                  <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                      Gram Formula Mass Calculator
+                    </h2>
+                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                      Calculate the gram formula mass of any compound by
+                      clicking on the elements on our interactive periodic table
+                    </p>
                   </div>
                 </div>
+                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
+
                 <div className="flex justify-center   ">
-                  <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-8 shadow-md bg-gray-400 dark:bg-gray-900 rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
+                  <form className="grid grid-cols-1 md:grid-cols-2 mx-8 ml-8 mt-36 shadow-md bg-gray-400 dark:border dark:border-gray-300 dark:border-dotted dark:bg-transparent  rounded px-8 pt-6 pb-8 mb-3 bg-opacity-50 backdrop-blur-lg">
                     <div className="mb-3">
                       <label
                         className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
@@ -267,9 +266,9 @@ export default function Home() {
                         Formula
                       </label>
 
-                      <div className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white">
+                      <div className=" rounded w-full py-2 px-3 text-white focus:outline-none bg-gray-700">
                         {(h2string.length > 0 || polyatomic) && (
-                          <div className="rounded w-full text-black focus:outline-none bg-white">
+                          <div className="rounded w-full text-white focus:outline-none bg-gray-700">
                             <div className="flex flex-wrap">
                               {polyatomic}
                               {h2string.length > 0 && polyatomic ? " + " : "  "}
@@ -283,7 +282,7 @@ export default function Home() {
                                       {" "}
                                       <span className="flex items-center">
                                         {capitalizeFirstLetter(parts[0])}
-                                        <sub className="bg-white text-black">
+                                        <sub className="bg-gray-700 text-white">
                                           {count}
                                         </sub>
                                         {parts[1]}
@@ -303,7 +302,7 @@ export default function Home() {
                           </div>
                         )}
                         {h2string.length === 0 && !polyatomic && (
-                          <span className="text-black bg-white">
+                          <span className="text-white bg-gray-700">
                             Formula will Appear Here
                           </span>
                         )}
@@ -315,7 +314,7 @@ export default function Home() {
                         >
                           Gram Formula Mass
                         </label>
-                        <div className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                        <div className="shadow appearance-none  bg-gray-700 rounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline">
                           {Math.round(grams * 100) / 100}g/mol
                         </div>
                       </div>
@@ -329,8 +328,9 @@ export default function Home() {
                         Grams
                       </label>
                       <input
-                        className="border rounded w-full py-2 px-3 text-black focus:outline-none bg-white "
+                        className=" rounded w-full py-2 px-3 text-white focus:outline-none bg-gray-700 "
                         type="number"
+                        min={0}
                         value={inputGrams}
                         onChange={handleGramsChange}
                       />
@@ -342,7 +342,7 @@ export default function Home() {
                         Moles
                       </label>
                       <input
-                        className="shadow appearance-none border bg-white rounded w-full py-2 px-3 text-black mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none  bg-gray-700 rounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline"
                         type="text"
                         value={inputMoles}
                         onChange={handleMolesChange}
@@ -351,7 +351,7 @@ export default function Home() {
                   </form>
                 </div>
 
-                <div className="w-full flex justify-center items-center">
+                <div className="w-full flex justify-center mt-8 items-center">
                   <button
                     onClick={() => reset()}
                     className="bg-indigo-500 py-1 px-2 lg:w-1/4 md:w-1/3 text-white  rounded-md hover:bg-indigo-600"
@@ -359,8 +359,6 @@ export default function Home() {
                     Reset
                   </button>
                 </div>
-
-                {/* Your content goes here */}
 
                 <div className="m-8">
                   <div className="md:hidden pb-8 flex flex-wrap justify-center">
@@ -603,7 +601,7 @@ export default function Home() {
                       {data.dataArray.map((element, index) => (
                         <div
                           key={index}
-                          className=" p-3 w-fit md:w-72 mx-auto  hover:text-blue-500 cursor-pointer"
+                          className=" p-3 w-fit md:w-72 mx-auto border border-white rounded-lg m-2 hover:bg-gray-800   cursor-pointer"
                           onClick={() => {
                             setGrams(parseFloat(grams + element.mass)),
                               setInputGrams(

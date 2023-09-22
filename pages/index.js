@@ -26,7 +26,7 @@ const featuredTestimonial = {
     name: "Leah Miller",
     handle:
       "John Jay High School AP Chemistry Teacher and Science Olympiad Coach",
-    imageUrl: "/mrsmiller.jpg",
+    imageUrl: "/miller.jpeg",
     logoUrl: "https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg",
   },
 };
@@ -110,21 +110,28 @@ const features = [
     icon: CubeTransparentIcon,
     href: "/bond",
   },
-  // {
-  // 	name: "Advanced Security",
-  // 	description: "Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.",
-  // 	icon: ShieldCheckIcon,
-  // },
-  // {
-  // 	name: "Powerful API",
-  // 	description: "Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.",
-  // 	icon: CogIcon,
-  // },
-  // {
-  // 	name: "Database Backups",
-  // 	description: "Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.",
-  // 	icon: ServerIcon,
-  // },
+  {
+    name: "Acid Base",
+    description:
+      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
+    icon: CubeTransparentIcon,
+    href: "/bond",
+  },
+
+  {
+    name: "Solubility",
+    description:
+      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
+    icon: CubeTransparentIcon,
+    href: "/bond",
+  },
+  {
+    name: "Utilities",
+    description:
+      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
+    icon: CubeTransparentIcon,
+    href: "/bond",
+  },
 ];
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -182,25 +189,49 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="h-full   text-wrap">
+            <div className="h-full  text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
                 <div className="flex justify-left h-full w-full   text-lg">
                   {" "}
-                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p  ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center sm:text-5xl mb-6 dark:text-white text-gray-800 text-4xl font-bold md:text-7xl">
-                        ChemTools
-                      </h1>
-                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                        Taking chemistry to the next energy level
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>{" "}
+                  <div className="relative isolate px-6 pt-14 lg:px-8">
+                    <div
+                      className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                      aria-hidden="true"
+                    >
+                      <div
+                        className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style={{
+                          clipPath:
+                            "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="relative z-0  py-8 ">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                    <h2 className="text-5xl font-bold text-blue-500">
+                    <div className=" mx-auto w-full ">
+                      <div className="hidden relative sm:mb-8 mx-auto sm:flex sm:justify-center">
+                        <div className=" rounded-full px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-300/10 hover:ring-gray-200">
+                          Welcome to our new home Update your Bookmarks
+                          <span aria-hidden="true">&rarr;</span>
+                        </div>
+                      </div>
+                      <div className="text-center mx-auto">
+                        <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                          ChemTools
+                        </h1>
+
+                        <p className="mt-6 text-lg leading-8 dark:text-gray-200 text-gray-600">
+                          ChemTools is the next generation online platform
+                          designed for chemistry students and professionals,
+                          offering a variety of resources including calculators
+                          for chemistry and information on the periodic table.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* <h2 className="text-5xl font-bold text-blue-500">
                       Transforming chemistry education.
                     </h2>
                     <p className="mt-8 text-3xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-4xl">
@@ -211,13 +242,13 @@ export default function Home() {
                       for chemistry students and professionals, offering a
                       variety of resources including calculators for chemistry
                       and information on the periodic table.
-                    </p>
+                    </p> */}
                     <div className="mt-16">
-                      <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                      <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         {features.map((feature) => (
                           <Link key={feature.name} href={feature.href}>
                             <div key={feature.name} className="pt-6 ">
-                              <div className="flow-root lg:h-60 h-72  rounded-lg bg-gray-1000 px-4 pb-4 hover:brightness-125  dark:border-gray-900 border-4 ">
+                              <div className="flow-root lg:h-60 h-auto  rounded-lg bg-gray-1000 px-4 pb-6 hover:brightness-125  dark:border-gray-600 border-gray-900 border-4 ">
                                 <div className="-mt-6 ">
                                   <div>
                                     <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">
@@ -246,14 +277,19 @@ export default function Home() {
             </div>
             <div className="md:ml-52 mt-16 lg:ml-64">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="sm:mx-auto max-w-xl mx-8 text-center">
-                  <h2 className="text-4xl font-semibold leading-8 tracking-tight text-indigo-600">
-                    Teacher Testimonials
-                  </h2>
-                  <br></br>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-600 dark:text-gray-50 sm:text-4xl">
-                    Here's what others are saying about ChemTools
-                  </p>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div className="mx-auto max-w-4xl sm:text-center">
+                    <h2 className="text-base font-semibold leading-7 text-indigo-600">
+                      Teacher Testimonials
+                    </h2>
+                    <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                      Let's see what others have to say
+                    </p>
+                    <p className="mt-6 text-lg leading-8 text-gray-300">
+                      ChemTools offers the widest variety of interactive
+                      chemistry education tools compared to our competitors.
+                    </p>
+                  </div>
                 </div>
                 <div
                   className="lg:absolute hidden inset-x-0 -z-20 lg:flex justify-center overflow-hidden blur-3xl"
@@ -268,8 +304,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="sm:mx-auto mx-8 mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-800 dark:text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                  <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-white border-2 shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
-                    <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
+                  <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-white border  shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
+                    <blockquote className="sm:p-12 p-4 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
                       <p>{`“${featuredTestimonial.body}”`}</p>
                     </blockquote>
                     <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
@@ -278,7 +314,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           className="h-auto aspect-auto w-12 flex-none rounded-full bg-black"
-                          src="/mrsmiller.jpg"
+                          src="/miller.jpeg"
                           alt="Featured Testimonial Image"
                         />
                       </div>
@@ -291,49 +327,49 @@ export default function Home() {
                     </figcaption>
                   </figure>
                   {/* {testimonials.map((columnGroup, columnGroupIdx) => (
-                  <div
-                    key={columnGroupIdx}
-                    className="space-y-8 xl:contents xl:space-y-0"
-                  >
-                    {columnGroup.map((column, columnIdx) => (
-                      <div
-                        key={columnIdx}
-                        className={classNames(
-                          (columnGroupIdx === 0 && columnIdx === 0) ||
-                            (columnGroupIdx === testimonials.length - 1 &&
-                              columnIdx === columnGroup.length - 1)
-                            ? "xl:row-span-2"
-                            : "xl:row-start-1",
-                          "space-y-8"
-                        )}
-                      >
-                        {column.map((testimonial) => (
-                          <figure
-                            key={testimonial.author.handle}
-                            className="rounded-2xl bg-black border-white border-2 p-6 shadow-lg ring-1 ring-gray-900/5"
-                          >
-                            <blockquote className="text-gray-50">
-                              <p>{`“${testimonial.body}”`}</p>
-                            </blockquote>
-                            <figcaption className="mt-6 flex items-center gap-x-4">
-                              <img
-                                className="h-10 w-10 rounded-full bg-gray-50"
-                                src={testimonial.author.imageUrl}
-                                alt=""
-                              />
-                              <div>
-                                <div className="font-semibold">
-                                  {testimonial.author.name}
+                    <div
+                      key={columnGroupIdx}
+                      className="space-y-8 xl:contents xl:space-y-0"
+                    >
+                      {columnGroup.map((column, columnIdx) => (
+                        <div
+                          key={columnIdx}
+                          className={classNames(
+                            (columnGroupIdx === 0 && columnIdx === 0) ||
+                              (columnGroupIdx === testimonials.length - 1 &&
+                                columnIdx === columnGroup.length - 1)
+                              ? "xl:row-span-2"
+                              : "xl:row-start-1",
+                            "space-y-8"
+                          )}
+                        >
+                          {column.map((testimonial) => (
+                            <figure
+                              key={testimonial.author.handle}
+                              className="rounded-2xl bg-black border-white border-2 p-6 shadow-lg ring-1 ring-gray-900/5"
+                            >
+                              <blockquote className="text-gray-50">
+                                <p>{`“${testimonial.body}”`}</p>
+                              </blockquote>
+                              <figcaption className="mt-6 flex items-center gap-x-4">
+                                <img
+                                  className="h-10 w-10 rounded-full bg-gray-50"
+                                  src={testimonial.author.imageUrl}
+                                  alt=""
+                                />
+                                <div>
+                                  <div className="font-semibold">
+                                    {testimonial.author.name}
+                                  </div>
+                                  <div className="text-gray-300">{`@${testimonial.author.handle}`}</div>
                                 </div>
-                                <div className="text-gray-300">{`@${testimonial.author.handle}`}</div>
-                              </div>
-                            </figcaption>
-                          </figure>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                ))} */}
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ))} */}
                 </div>
               </div>
             </div>

@@ -142,23 +142,21 @@ export default function Home() {
             </div>
             <div className="h-full my-auto pb-8   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className="flex justify-left h-full w-full   text-lg">
-                  {" "}
-                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                        Bond Character
-                      </h1>
-                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                        Calculate the bond character between any two elements
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>{" "}
+                <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
+                  <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                      Bond Character Calculator
+                    </h2>
+                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                      Calculate the bond character between any two elements by
+                      clicking on the elements on our interactive periodic table
+                    </p>
                   </div>
                 </div>
+                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
 
                 {element1 ? (
-                  <div className="mx-8 grid  grid-cols-1 md:grid-cols-5">
+                  <div className="mx-8 grid mt-32 grid-cols-1 md:grid-cols-5">
                     {" "}
                     {element1 ? (
                       <>
@@ -200,7 +198,7 @@ export default function Home() {
                       <div className="w-full col-span-1"></div>
                     )}
                     <button
-                      className="mt-8  bg-indigo-500 py-1 px-2 h-1/2 md:h-1/3 w-1/3 text-white rounded-md hover:bg-indigo-600 mx-auto"
+                      className="  bg-indigo-500 py-1 px-2 h-1/2 mt-8 md:h-1/3 w-1/3 text-white rounded-md hover:bg-indigo-600 mx-auto"
                       onClick={() => {
                         setElement1();
                         setElement2();
@@ -213,7 +211,7 @@ export default function Home() {
                 ) : (
                   <div className="flex mx-auto items-center">
                     <button
-                      className="m-8 mx-auto text-xl text-center bg-indigo-500 text-white py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
+                      className="mt-32 mx-auto text-xl text-center bg-indigo-500 text-white py-1 px-2 h-1/3  rounded-md hover:bg-indigo-600"
                       onClick={() => {
                         setElement1();
                         setElement2();

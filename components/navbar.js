@@ -20,7 +20,7 @@ import {
 
 import Link from "next/link";
 const navigation = [
-  { name: "Home", href: "/index", icon: HomeIcon },
+  { name: "Home", href: "/", icon: HomeIcon },
   { name: "Molar Mass", href: "/masses", icon: BeakerIcon },
   { name: "Element Info", href: "/stats", icon: NewspaperIcon },
   { name: "Bond Character", href: "/bond", icon: CubeTransparentIcon },
@@ -104,7 +104,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                           className={`${
                             page === item.name
                               ? "p-8  dark:bg-gray-800 bg-gray-300  dark:text-white text-gray-900"
-                              : "p-8 text-gray-800 dark:text-gray-100  hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-900"
+                              : "p-8 text-gray-800 dark:text-gray-100  hover:bg-gray-300 dark:hover:bg-gray-700 dark:hover:text-white hover:text-gray-900"
                           }
 													group flex cursor-pointer text-lg items-center rounded-md px-2 py-2 font-medium`}
                         >
@@ -112,7 +112,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, page }) {
                             className={`${
                               page === item.name
                                 ? "dark:text-gray-300 text-gray-900"
-                                : "text-gray-300 group-hover:text-gray-900"
+                                : "text-gray-300 dark:group-hover:text-white group-hover:text-gray-900"
                             }
 														mr-4 h-6 w-6 flex-shrink-0`}
                             aria-hidden="true"

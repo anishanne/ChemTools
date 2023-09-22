@@ -3,7 +3,7 @@ const navigation = {
     { name: "Home", href: "/index" },
     {
       name: "Contact",
-      href: "mailto:mishrarnav@gmail.com?subject=Chem Tools Support",
+      href: "mailto:mishrarnav@gmail.com,joey.marra2007@gmail.com?subject=Chem Tools Support",
     },
 
     { name: "About", href: "/about" },

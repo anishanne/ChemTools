@@ -91,22 +91,19 @@ export default function Home() {
 
             <div className="h-full   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className="mx-auto  flex justify-left h-full w-full  text-lg">
-                  {" "}
-                  <div className="top-0 z-0 flex h-64 flex-shrink-0  w-full ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center my-8 text-5xl font-bold md:text-7xl">
-                        About
-                      </h1>
-                      <p className="mx-8 text-center text-2xl font-light md:text-3xl">
-                        Here's what we do and why we do it
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>
+                <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
+                  <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                      About
+                    </h2>
+                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                      Here's what we do and why we do it
+                    </p>
                   </div>
                 </div>
+                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
 
-                <div className="mx-auto  mt-16 max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-10">
+                <div className="mx-auto  mt-36 max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none  lg:items-start lg:gap-y-10">
                   <div className="lg:pr-4">
                     <div className="max-w-xl text-base leading-7 text-gray-600 dark:text-white lg:max-w-full">
                       <div className=" m-8 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">

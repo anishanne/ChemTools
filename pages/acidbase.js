@@ -99,20 +99,17 @@ export default function Home() {
             </div>
             <div className="h-full   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className="flex justify-left h-full w-full   text-lg">
-                  {" "}
-                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p   ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                        Acid Base
-                      </h1>
-                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                        pH, pOH, Ka and Kb calculations - all in one place
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>{" "}
+                <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
+                  <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                      Acid Base Calculator
+                    </h2>
+                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                      Calculate the pH, pOH, and concentration of H+ and OH-
+                    </p>
                   </div>
                 </div>
+                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
                 <div className="relative z-0 py-16 sm:py-24 lg:py-20">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <h2 className="text-5xl font-bold text-blue-500"></h2>

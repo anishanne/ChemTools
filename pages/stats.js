@@ -942,20 +942,19 @@ export default function Home() {
             </div>
             <div className="h-full   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className="flex justify-left h-full w-full   text-lg">
-                  {" "}
-                  <div className="top-0 z-0 w-full flex  flex-shrink-0 p   ">
-                    <div className="w-full col-md-9 col-sm-8 col-12 smallcenter mx-auto my-auto ml-2 md:m-16">
-                      <h1 className="text-center sm:text-5xl mb-6 text-4xl font-bold md:text-7xl">
-                        Element Info
-                      </h1>
-                      <p className="text-center mx-8 text-xl sm:text-2xl font-light md:text-3xl">
-                        View the info on all the elements in the periodic table
-                      </p>
-                      <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
-                    </div>{" "}
+                <div className=" px-6 pb-24 pt-24 sm:pt-32 lg:px-8">
+                  <div className="mx-auto max-w-2xl text-center">
+                    <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-6xl">
+                      Element Info
+                    </h2>
+                    <p className="mt-6 text-lg leading-8 dark:text-white text-gray-600">
+                      View all of the most important information about any
+                      element by clicking on the elements on our interactive
+                      periodic table
+                    </p>
                   </div>
                 </div>
+                <hr className="mx-8 bg-gray-800 dark:text-white mt-8 border-dotted "></hr>
                 <div className="w-full max-w-xs"></div>
                 <div className="m-8 ">
                   <div className="md:hidden pb-8 flex flex-wrap justify-center">
@@ -1032,7 +1031,7 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <table className="hidden md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
+                <table className="hidden mt-32 md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
                   <tbody className="">
                     <tr>
                       <td

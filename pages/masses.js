@@ -265,9 +265,9 @@ export default function Home() {
                         Formula
                       </label>
 
-                      <div className=" rounded w-full py-2 px-3 text-white focus:outline-none bg-gray-700">
+                      <div className=" rounded w-full py-2 px-3 dark:text-white focus:outline-none bg-white dark:bg-gray-700">
                         {(h2string.length > 0 || polyatomic) && (
-                          <div className="rounded w-full text-white focus:outline-none bg-gray-700">
+                          <div className="rounded w-full dark:text-white focus:outline-none bg-white dark:bg-gray-700">
                             <div className="flex flex-wrap">
                               {polyatomic}
                               {h2string.length > 0 && polyatomic ? " + " : "  "}
@@ -281,7 +281,7 @@ export default function Home() {
                                       {" "}
                                       <span className="flex items-center">
                                         {capitalizeFirstLetter(parts[0])}
-                                        <sub className="bg-gray-700 text-white">
+                                        <sub className="bg-white dark:bg-gray-700 dark:text-white">
                                           {count}
                                         </sub>
                                         {parts[1]}
@@ -301,7 +301,7 @@ export default function Home() {
                           </div>
                         )}
                         {h2string.length === 0 && !polyatomic && (
-                          <span className="text-white bg-gray-700">
+                          <span className="dark:text-white bg-white dark:bg-gray-700">
                             Formula will Appear Here
                           </span>
                         )}
@@ -313,7 +313,7 @@ export default function Home() {
                         >
                           Gram Formula Mass
                         </label>
-                        <div className="shadow appearance-none  bg-gray-700 rounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                        <div className="shadow appearance-none bg-white  dark:bg-gray-700 rounded w-full py-2 px-3 dark:text-white mb-3 leading-tight focus:outline-none focus:shadow-outline">
                           {Math.round(grams * 100) / 100}g/mol
                         </div>
                       </div>
@@ -327,7 +327,7 @@ export default function Home() {
                         Grams
                       </label>
                       <input
-                        className=" rounded w-full py-2 px-3 text-white focus:outline-none bg-gray-700 "
+                        className=" rounded w-full py-2 px-3 dark:text-white focus:outline-none bg-white dark:bg-gray-700 "
                         type="number"
                         min={0}
                         value={inputGrams}
@@ -341,7 +341,7 @@ export default function Home() {
                         Moles
                       </label>
                       <input
-                        className="shadow appearance-none  bg-gray-700 rounded w-full py-2 px-3 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none bg-white  dark:bg-gray-700 rounded w-full py-2 px-3 dark:text-white mb-3 leading-tight focus:outline-none focus:shadow-outline"
                         type="text"
                         value={inputMoles}
                         onChange={handleMolesChange}

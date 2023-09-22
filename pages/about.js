@@ -124,7 +124,7 @@ export default function Home() {
                             role="list"
                             className="mt-8 space-y-8 text-gray-600 dark:text-white"
                           >
-                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
+                            <li className="flex border border-gray-400 bg-gray-300 dark:bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ClockIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"
@@ -142,7 +142,7 @@ export default function Home() {
                                 </span>
                               </span>
                             </li>
-                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
+                            <li className="flex border border-gray-400 bg-gray-300 dark:bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ChartPieIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"
@@ -160,7 +160,7 @@ export default function Home() {
                                 you need
                               </span>
                             </li>
-                            <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
+                            <li className="flex border border-gray-400 bg-gray-300 dark:bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
                               <ExclamationTriangleIcon
                                 className="mt-1 h-5 w-5 flex-none text-indigo-600"
                                 aria-hidden="true"

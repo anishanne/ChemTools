@@ -198,8 +198,8 @@ export default function Home() {
                             titrations. He spends a majority of his time on
                             robotics, boxing and singing. He plans to go into
                             the medical field. Arnav is excited to see the
-                            future of ChemTools and how light pin his titrations
-                            can get.
+                            future of ChemTools and how light pink his
+                            titrations can get.
                           </p>
                           {/* <img
                           className=" rounded-lg my-8 mx-auto"

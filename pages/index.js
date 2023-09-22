@@ -120,24 +120,23 @@ const features = [
   },
   {
     name: "Acid Base",
-    description:
-      "Calculate pH, pOH, and concentration of H+ and OH- using ChemTools",
+    description: "Calculate pH, pOH, and concentration of H+ and OH-",
     icon: FireIcon,
-    href: "/bond",
+    href: "/acidbase",
   },
 
   {
     name: "Solubility",
     description: "Predict if a compound is soluble or insoluble",
     icon: FunnelIcon,
-    href: "/bond",
+    href: "/solubility",
   },
   {
     name: "Utilities",
     description:
       "Sig figs and balancing equations have you stumped? We have the tools for you!",
     icon: StarIcon,
-    href: "/bond",
+    href: "/utilities",
   },
 ];
 

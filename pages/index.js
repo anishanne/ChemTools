@@ -272,7 +272,7 @@ export default function Home() {
                                   : "sm:col-span-2"
                               }`}
                             >
-                              <div className="flow-root h-auto rounded-lg bg-gray-1000 px-2 pb-6 hover:border-blue-500 transition ease-in-out delay-0 hover:scale-110 dark:border-gray-600 border-gray-900 border-4">
+                              <div className="flow-root h-auto rounded-lg bg-gray-1000 px-2 pb-6 hover:border-blue-500 transition ease-in-out delay-0 hover:scale-110 dark:border-gray-600 border-gray-400 border-4">
                                 <div className="-mt-6">
                                   <div>
                                     <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 shadow-lg">

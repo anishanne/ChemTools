@@ -45,9 +45,9 @@ const testimonials = [
         body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work! ",
         author: {
           name: "Ian Freedman",
-          handle: "Science Olympiad Coach and Physics Teacher at John Jay",
+          handle: "John Jay High School AP Physics Teacher and Science Olympiad Coach",
           imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            "/freedman.jpeg",
         },
       },
       // More testimonials...

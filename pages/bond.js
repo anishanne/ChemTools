@@ -42,7 +42,7 @@ const colors = {
   none: " cursor-default",
 };
 const style =
-  "  rounded-lg transition ease-in-out delay-0 hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg lg:transition ease-in-out delay-0 lg:hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 

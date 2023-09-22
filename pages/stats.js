@@ -40,7 +40,7 @@ const colors = {
   none: "  cursor-default",
 };
 const style =
-  "  rounded-lg transition ease-in-out delay-0 hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
+  "  rounded-lg lg:transition ease-in-out delay-0 lg:hover:scale-110 text-center font-bold align-middle text-white w-12 hover:brightness-150 hover:text-black";
 const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
@@ -948,9 +948,8 @@ export default function Home() {
                       Element Info
                     </h2>
                     <p className="mt-6 text-2xl leading-8 dark:text-white text-gray-600">
-                      View all of the most important information about any
-                      element by clicking on the elements on our interactive
-                      periodic table
+                      View all of the important information about any element by
+                      clicking on the elements on our interactive periodic table
                     </p>
                   </div>
                 </div>

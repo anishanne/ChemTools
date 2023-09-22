@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <div className="h-full my-auto pb-8   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className=" px-6 sm:pb-24 pt-24 sm:pt-32 lg:px-8">
+                <div className=" px-6  pt-24 sm:pt-32 lg:px-8">
                   <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       Bond Character Calculator
@@ -155,7 +155,7 @@ export default function Home() {
                 </div>
 
                 {element1 ? (
-                  <div className="mx-8 grid mt-32 grid-cols-1 md:grid-cols-5">
+                  <div className="mx-8 grid mt-8 grid-cols-1 md:grid-cols-5">
                     {" "}
                     {element1 ? (
                       <>

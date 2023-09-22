@@ -1029,7 +1029,7 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <table className="hidden mt-32 md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent mt-8 cursor-pointer">
+                <table className="hidden mt-8 md:table border-separate border-spacing-1 max-w-7xl mx-auto w-11/12    border-transparent  cursor-pointer">
                   <tbody className="">
                     <tr>
                       <td

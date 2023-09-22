@@ -42,50 +42,12 @@ const testimonials = [
   [
     [
       {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work!",
         author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
+          name: "Ian Freedman",
+          handle: "Science Olympiad Coach and Physics Teacher at John Jay",
           imageUrl:
             "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-      },
-      // More testimonials...
-    ],
-    [
-      {
-        body: "Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.",
-        author: {
-          name: "Lindsay Walton",
-          handle: "lindsaywalton",
-          imageUrl:
-            "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-      },
-      // More testimonials...
-    ],
-  ],
-  [
-    [
-      {
-        body: "Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum perferendis recusandae saepe corrupti.",
-        author: {
-          name: "Tom Cook",
-          handle: "tomcook",
-          imageUrl:
-            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-      },
-      // More testimonials...
-    ],
-    [
-      {
-        body: "Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt excepturi rerum voluptatem minus harum.",
-        author: {
-          name: "Leonard Krasner",
-          handle: "leonardkrasner",
-          imageUrl:
-            "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         },
       },
       // More testimonials...
@@ -362,7 +324,7 @@ export default function Home() {
                       </div>
                     </figcaption>
                   </figure>
-                  {/* {testimonials.map((columnGroup, columnGroupIdx) => (
+                  {testimonials.map((columnGroup, columnGroupIdx) => (
                     <div
                       key={columnGroupIdx}
                       className="space-y-8 xl:contents xl:space-y-0"
@@ -397,7 +359,7 @@ export default function Home() {
                                   <div className="font-semibold">
                                     {testimonial.author.name}
                                   </div>
-                                  <div className="text-gray-300">{`@${testimonial.author.handle}`}</div>
+                                  <div className="text-gray-300">{`${testimonial.author.handle}`}</div>
                                 </div>
                               </figcaption>
                             </figure>
@@ -405,7 +367,7 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                  ))} */}
+                  ))}
                 </div>
               </div>
             </div>

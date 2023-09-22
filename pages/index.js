@@ -223,7 +223,7 @@ export default function Home() {
                 <div className="relative z-0  py-8 ">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <div className=" mx-auto w-full ">
-                      <div className=" relative mb-10 mx-auto sm:flex sm:justify-center">
+                      {/* <div className=" relative mb-10 mx-auto sm:flex sm:justify-center">
                         <div className=" rounded-full cursor-pointer px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-400 hover:ring-gray-200">
                           Welcome to our new home
                           <span className="text-blue-600" aria-hidden="true">
@@ -231,7 +231,7 @@ export default function Home() {
                             &rarr; chemtools.app
                           </span>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="text-center mx-auto">
                         <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                           ChemTools

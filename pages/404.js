@@ -22,7 +22,8 @@ export default function Example() {
             Page not found
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-700 dark:text-gray-200">
-            Sorry, we couldn’t find the page you’re looking for.
+            Chemistry we Live <br></br> Chemistry we Love<br></br> Chemistry we
+            Lie
           </p>
 
           <img className="rounded-full m-8 mx-auto" src="/smurfcat.jpeg"></img>

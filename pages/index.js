@@ -15,10 +15,17 @@ import {
   Bars3BottomLeftIcon,
   LockClosedIcon,
   ArrowPathIcon,
-  BookOpenIcon,
   CubeTransparentIcon,
-  NewspaperIcon,
+  HomeIcon,
+  XMarkIcon,
   BeakerIcon,
+  BookOpenIcon,
+  NewspaperIcon,
+  UserCircleIcon,
+  BoltSlashIcon,
+  StarIcon,
+  FireIcon,
+  FunnelIcon,
 } from "@heroicons/react/24/outline";
 const featuredTestimonial = {
   body: "Chem Tools is an amazing one stop shop. It's a great supplemental tool for students' basic chemistry needs. Joey and Arnav are thorough, dedicated, and hard working both inside and outide the classroom. This tool will be utilized for years to come and is a wonderful legacy to leave behind!",
@@ -114,23 +121,22 @@ const features = [
   {
     name: "Acid Base",
     description:
-      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
-    icon: CubeTransparentIcon,
+      "Calculate pH, pOH, and concentration of H+ and OH- using ChemTools",
+    icon: FireIcon,
     href: "/bond",
   },
 
   {
     name: "Solubility",
-    description:
-      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
-    icon: CubeTransparentIcon,
+    description: "Predict if a compound is soluble or insoluble",
+    icon: FunnelIcon,
     href: "/bond",
   },
   {
     name: "Utilities",
     description:
-      "Predict bond type on any two elements by clicking any two elements on the periodic table!",
-    icon: CubeTransparentIcon,
+      "Sig figs and balancing equations have you stumped? We have the tools for you!",
+    icon: StarIcon,
     href: "/bond",
   },
 ];
@@ -236,24 +242,27 @@ export default function Home() {
                         <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                           ChemTools
                         </h1>
-
-                        <p className="mt-6 text-xl leading-8 dark:text-gray-200 text-gray-600">
-                          ChemTools is the next generation online platform
-                          designed for chemistry students and professionals,
-                          offering a variety of resources including calculators
-                          for chemistry and information on the periodic table.
-                        </p>
+                        <h2 className="my-2 mb-8 text-xl">
+                          {" "}
+                          Taking Chemistry to the next energy level
+                        </h2>
                       </div>
                       <h2 className="text-4xl mt-8 font-bold text-blue-500">
                         Transforming chemistry education
                       </h2>
-                      <p className="mt-8 text-2xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-2xl">
+                      <p className="mt-8 text-4xl font-bold tracking-tight text-gray-600 dark:text-gray-200 sm:text-2xl">
                         One Student At a Time
+                      </p>
+                      <p className="mt-6 text-xl leading-8 dark:text-gray-200 text-gray-600">
+                        ChemTools is the next generation online platform
+                        designed for chemistry students and professionals,
+                        offering a variety of resources including calculators
+                        for chemistry and information on the periodic table.
                       </p>
                     </div>
 
                     <div className="mt-16">
-                      <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                      <div className="grid grid-cols-1  gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
                         {features.map((feature, index) => (
                           <Link key={feature.name} href={feature.href}>
                             <div

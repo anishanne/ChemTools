@@ -153,7 +153,11 @@ export default function Home() {
                                 </strong>{" "}
                                 <br></br>
                                 Our straightforward interface makes it
-                                effortless to find the information you need.
+                                effortless to{" "}
+                                <span className="font-bold text-blue-500">
+                                  find the information
+                                </span>{" "}
+                                you need
                               </span>
                             </li>
                             <li className="flex border border-gray-400  bg-gray-900 transition ease-in-out delay-0 hover:scale-110 rounded-lg p-3 gap-x-3">
@@ -166,7 +170,10 @@ export default function Home() {
                                   Reduce Mistakes
                                 </strong>{" "}
                                 <br></br>
-                                Our calculators help you get accurate results
+                                Our calculators help you get{" "}
+                                <span className="font-bold text-blue-500">
+                                  accurate results
+                                </span>{" "}
                                 free from human error.
                               </span>
                             </li>
@@ -188,12 +195,11 @@ export default function Home() {
                           <p className=" mt-6 text-center">
                             <strong className="text-blue-500">Arnav</strong> is
                             a senior at John Jay currently making light pink
-                            titrations. Arnav took AP Chemistry in his junior
-                            year and he was the best student ever. He is
-                            universally loved by all his fans because of his
-                            light pink titrations. If you need light pink
-                            titrations, feel free to contact him at
-                            arnav@walterwhite.com.
+                            titrations. He spends a majority of his time on
+                            robotics, boxing and singing. He plans to go into
+                            the medical field. Arnav is excited to see the
+                            future of ChemTools and how light pin his titrations
+                            can get.
                           </p>
                           {/* <img
                           className=" rounded-lg my-8 mx-auto"
@@ -201,17 +207,20 @@ export default function Home() {
                         ></img> */}
                           <p className=" mt-6 text-center">
                             <strong className="text-blue-500">Joe</strong> is a
-                            junior at John Jay who loves Nutella Biscuits. His
-                            pronouns are Him/Him. He is also universally loved
-                            but not as much as Arnav. He is a great coder but
-                            sometimes he does very stupid things like making
-                            purple titrations. He needs a lot of assistance with
-                            his titrations and therefore works on ChemTools.
+                            junior at John Jay who loves Nutella Biscuits. He
+                            enjoys spending most of his time coding, doing
+                            robotics, playing piano, and playing basketball. He
+                            hopes to major in computer science in college. Joe
+                            has been working very hard here at ChemTools, and
+                            can't wait to buy himself some Nutella Biscuits.
                           </p>
-                          {/*}  <img
-                          className="h-64  rounded-lg my-8 mx-auto"
-                          src="/strawberryele.jpeg"
-                        ></img> */}
+                          <Image
+                            height={500}
+                            width={500}
+                            className="h-84  rounded-lg my-8 mx-auto"
+                            src="/chemlogo.png"
+                            alt="ChemTools Logo"
+                          ></Image>
                         </div>
                       </div>
                     </div>

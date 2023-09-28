@@ -60,7 +60,7 @@ const testimonials = [
         author: {
           name: "Brent DiVittorio",
           handle: "John Jay High School AP Bio Teacher and CX Coach",
-          imageUrl: "",
+          imageUrl: "/brent.png",
         },
       },
       // More testimonials...

@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useEffect } from "react";
 import React from "react";
+import {}
 import { useRouter } from "next/router";
 import Info from "../components/info";
 import Navbar from "../components/navbar";

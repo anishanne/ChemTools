@@ -45,9 +45,22 @@ const testimonials = [
         body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work! ",
         author: {
           name: "Ian Freedman",
-          handle: "John Jay High School AP Physics Teacher and Science Olympiad Coach",
-          imageUrl:
-            "/freedman.jpeg",
+          handle:
+            "John Jay High School AP Physics Teacher and Science Olympiad Coach",
+          imageUrl: "/freedman.jpeg",
+        },
+      },
+      // More testimonials...
+    ],
+  ],
+  [
+    [
+      {
+        body: "An absolute 🔥 program for chemistry students at all levels of learning. With a sleek and fast UI, it's no wonder why this is a top choice for students. Clunky reference tables will soon be that of the past!",
+        author: {
+          name: "Brent DiVittorio",
+          handle: "John Jay High School AP Bio Teacher and CX Coach",
+          imageUrl: "",
         },
       },
       // More testimonials...
@@ -344,10 +357,10 @@ export default function Home() {
                           {column.map((testimonial) => (
                             <figure
                               key={testimonial.author.handle}
-                              className="rounded-2xl bg-black border-white border-2 p-6 shadow-lg ring-1 ring-gray-900/5"
+                              className="rounded-2xl bg-black border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
                             >
                               <blockquote className="text-gray-50">
-                                <p>{`“${testimonial.body}”`}</p>
+                                <p>{`${testimonial.body}`}</p>
                               </blockquote>
                               <figcaption className="mt-6 flex items-center gap-x-4">
                                 <img

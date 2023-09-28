@@ -91,7 +91,7 @@ export default function Home() {
 
             <div className="h-full   text-wrap">
               <div className="  md:ml-48 lg:ml-72 md:mx-auto text-wrap ">
-                <div className=" px-6 p-16 pt-24 sm:pt-32 lg:px-8">
+                <div className=" px-6 p-16  pt-24 sm:pt-32 lg:px-8">
                   <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-4xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                       About

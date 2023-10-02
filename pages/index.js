@@ -46,8 +46,8 @@ const testimonials = [
           <p>
             Written by students for students, ChemTools has some{" "}
             <span className="font-bold text-blue-500">
-              AMAZING tools for anyone who wants to learn chemistry!
-            </span>{" "}
+              AMAZING tools</span>{" "} for anyone who wants to learn chemistry!
+            
             With continued support and encouragement, I can see this turning
             into a robust and powerful site for chemistry students everywhere!
             So if you like ChemTools, please tell Arnav and Joe to keep up the
@@ -69,8 +69,9 @@ const testimonials = [
       {
         body: (
           <p>
-            An absolute 🔥 program for chemistry students at all levels of
-            learning. With a sleek and fast UI, it's no wonder why this is a top
+            An absolute 🔥 program for chemistry students at  <span className="font-bold text-blue-500">
+              all levels of
+            learning.</span>{" "} With a sleek and fast UI, it's no wonder why this is a top
             choice for students. Clunky reference tables will soon be that of
             the past!
           </p>
@@ -307,7 +308,7 @@ export default function Home() {
                       ChemTools has been positively reviewed by some of John Jay
                       High School's best teachers.
                     </p>
-                    <p className="mt-6 text-xl font-bold leading-8 text-gray-300">
+                    <p className="mt-6 text-xl font-bold leading-8 ">
                       We don't just have reactions... we have solutions
                     </p>
                   </div>
@@ -331,7 +332,7 @@ export default function Home() {
                         "Great Supplemental Tool"
                       </p>
                       <br></br>
-                      <p className="text-center">
+                      <p className="text-center te">
                         "Chem Tools is an{" "}
                         <span className="font-bold text-blue-500">
                           amazing one stop shop
@@ -387,10 +388,10 @@ export default function Home() {
                               className="rounded-2xl bg-black border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
                             >
                               <blockquote className="font-bold text-center text-lg text-gray-50">
-                                <p>{`"${testimonial.header}"`}</p>
+                                <p className = "font-bold text-2xl">{`"${testimonial.header}"`}</p>
                               </blockquote>
                               <br></br>{" "}
-                              <blockquote className="text-center text-gray-50">
+                              <blockquote className="text-center text-lg text-gray-50">
                                 <p>{testimonial.body}</p>
                               </blockquote>
                               <figcaption className="mt-6 flex items-center gap-x-4">

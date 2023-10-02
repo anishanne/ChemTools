@@ -43,16 +43,14 @@ const testimonials = [
     [
       {
         body: (
-          <p>
+          <div>
             Written by students for students, ChemTools has some{" "}
-            <span className="font-bold text-blue-500">
-              AMAZING tools</span>{" "} for anyone who wants to learn chemistry!
-            
-            With continued support and encouragement, I can see this turning
-            into a robust and powerful site for chemistry students everywhere!
-            So if you like ChemTools, please tell Arnav and Joe to keep up the
-            good work!
-          </p>
+            <span className="font-bold text-blue-500">AMAZING tools</span> for
+            anyone who wants to learn chemistry! With continued support and
+            encouragement, I can see this turning into a robust and powerful
+            site for chemistry students everywhere! So if you like ChemTools,
+            please tell Arnav and Joe to keep up the good work!
+          </div>
         ),
         header: "Robust and Powerful Site",
         author: {
@@ -68,13 +66,14 @@ const testimonials = [
     [
       {
         body: (
-          <p>
-            An absolute 🔥 program for chemistry students at  <span className="font-bold text-blue-500">
-              all levels of
-            learning.</span>{" "} With a sleek and fast UI, it's no wonder why this is a top
-            choice for students. Clunky reference tables will soon be that of
-            the past!
-          </p>
+          <div>
+            An absolute 🔥 program for chemistry students at{" "}
+            <span className="font-bold text-blue-500">
+              all levels of learning.
+            </span>{" "}
+            With a sleek and fast UI, it's no wonder why this is a top choice
+            for students. Clunky reference tables will soon be that of the past!
+          </div>
         ),
         header: "Top Choice for Students",
         author: {
@@ -296,7 +295,7 @@ export default function Home() {
             </div>
             <div className="md:ml-52 mt-16 lg:ml-64">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto text-center max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-4xl sm:text-center">
                     <h2 className="text-3xl font-bold leading-7 text-blue-600">
                       Teacher Testimonials
@@ -388,11 +387,11 @@ export default function Home() {
                               className="rounded-2xl bg-black border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
                             >
                               <blockquote className="font-bold text-center text-lg text-gray-50">
-                                <p className = "font-bold text-2xl">{`"${testimonial.header}"`}</p>
+                                <p className="font-bold text-2xl">{`"${testimonial.header}"`}</p>
                               </blockquote>
                               <br></br>{" "}
                               <blockquote className="text-center text-lg text-gray-50">
-                                <p>{testimonial.body}</p>
+                                {testimonial.body}
                               </blockquote>
                               <figcaption className="mt-6 flex items-center gap-x-4">
                                 <img

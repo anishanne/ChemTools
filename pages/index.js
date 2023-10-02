@@ -278,7 +278,7 @@ export default function Home() {
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-4xl sm:text-center">
-                    <h2 className="text-xl font-semibold leading-7 text-blue-600">
+                    <h2 className="text-3xl font-bold leading-7 text-blue-600">
                       Teacher Testimonials
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -286,7 +286,10 @@ export default function Home() {
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
                       ChemTools has been positively reviewed by some of John Jay
-                      High School's best teachers. We don't just have
+                      High School's best teachers.
+                    </p>
+                    <p className="mt-6 text-lg leading-8 text-gray-300">
+                      We don't just have
                       reactions... we have solutions
                     </p>
                   </div>
@@ -307,7 +310,7 @@ export default function Home() {
                   <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-gray-400 border  shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
                     <blockquote className="sm:p-12 p-4 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
                       <p>
-                        Chem Tools is an{" "}
+                        "Chem Tools is an{" "}
                         <span className="font-bold text-blue-500">
                           amazing one stop shop
                         </span>
@@ -318,7 +321,7 @@ export default function Home() {
                         <span className="font-bold text-blue-500">
                           utilized for years to come
                         </span>{" "}
-                        and is a wonderful legacy to leave behind!
+                        and is a wonderful legacy to leave behind!"
                       </p>
                     </blockquote>
                     <figcaption className="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">

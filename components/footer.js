@@ -5,9 +5,7 @@ const navigation = {
       name: "Contact",
       href: "mailto:mishrarnav@gmail.com,joey.marra2007@gmail.com?subject=Chem Tools Support",
     },
-    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
-   
   ],
 };
 export default function Example() {

@@ -270,7 +270,9 @@ export default function Home() {
                           <div className="rounded w-full dark:text-white focus:outline-none bg-white dark:bg-gray-700">
                             <div className="flex flex-wrap">
                               {polyatomic}
-                              {h2string.length > 0 && polyatomic ? " + " : "  "}
+                              {h2string.length > 0 && polyatomic && (
+                                <span style={{ whiteSpace: "pre" }}> + </span>
+                              )}
                               {h2string.map((text, index) => {
                                 const match = text.match(/\d+/);
                                 if (match) {

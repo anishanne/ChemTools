@@ -42,11 +42,22 @@ const testimonials = [
   [
     [
       {
-        body: "Written by students for students, ChemTools has some AMAZING tools for anyone who wants to learn chemistry! With continued support and encouragement, I can see this turning into a robust and powerful site for chemistry students everywhere! So if you like ChemTools, please tell Arnav and Joe to keep up the good work! ",
+        body: (
+          <p>
+            Written by students for students, ChemTools has some{" "}
+            <span className="font-bold text-blue-500">
+              AMAZING tools for anyone who wants to learn chemistry!
+            </span>{" "}
+            With continued support and encouragement, I can see this turning
+            into a robust and powerful site for chemistry students everywhere!
+            So if you like ChemTools, please tell Arnav and Joe to keep up the
+            good work!
+          </p>
+        ),
+        header: "Robust and Powerful Site",
         author: {
           name: "Ian Freedman",
-          handle:
-            "John Jay High School AP Physics Teacher and Science Olympiad Coach",
+          handle: "AP Physics Teacher and Science Olympiad Coach",
           imageUrl: "/freedman.jpeg",
         },
       },
@@ -56,10 +67,18 @@ const testimonials = [
   [
     [
       {
-        body: "An absolute 🔥 program for chemistry students at all levels of learning. With a sleek and fast UI, it's no wonder why this is a top choice for students. Clunky reference tables will soon be that of the past!",
+        body: (
+          <p>
+            An absolute 🔥 program for chemistry students at all levels of
+            learning. With a sleek and fast UI, it's no wonder why this is a top
+            choice for students. Clunky reference tables will soon be that of
+            the past!
+          </p>
+        ),
+        header: "Top Choice for Students",
         author: {
           name: "Brent DiVittorio",
-          handle: "John Jay High School AP Bio Teacher and CX Coach",
+          handle: "AP Biology Teacher and XC Coach",
           imageUrl: "/brent.png",
         },
       },
@@ -109,7 +128,7 @@ const features = [
   {
     name: "Utilities",
     description:
-      "Sig figs and balancing equations have you stumped? We've the tools for you!",
+      "Sig figs and balancing equations have you stumped? We got what you need!",
     icon: StarIcon,
     href: "/utilities",
   },
@@ -288,9 +307,8 @@ export default function Home() {
                       ChemTools has been positively reviewed by some of John Jay
                       High School's best teachers.
                     </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-300">
-                      We don't just have
-                      reactions... we have solutions
+                    <p className="mt-6 text-xl font-bold leading-8 text-gray-300">
+                      We don't just have reactions... we have solutions
                     </p>
                   </div>
                 </div>
@@ -306,10 +324,14 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <div className="sm:mx-auto mx-8 mt-8 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-800 dark:text-gray-200 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-                  <figure className="col-span-2  block rounded-2xl bg-white dark:bg-black border-gray-400 border  shadow-lg ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1">
+                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+                  <figure className="rounded-2xl bg-white dark:bg-black border border-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
                     <blockquote className="sm:p-12 p-4 text-xl font-semibold leading-8 tracking-tight text-gray-700 dark:text-gray-50">
-                      <p>
+                      <p className=" text-3xl font-bold text-center">
+                        "Great Supplemental Tool"
+                      </p>
+                      <br></br>
+                      <p className="text-center">
                         "Chem Tools is an{" "}
                         <span className="font-bold text-blue-500">
                           amazing one stop shop
@@ -335,8 +357,10 @@ export default function Home() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <div className="font-bold">{"Leah Miller"}</div>
-                        <div className="text-gray-800 dark:text-gray-300">{`John Jay High School AP Chemistry Teacher and Science Olympiad Coach`}</div>
+                        <div className="font-bold text-gray-800 dark:text-gray-300">
+                          {"Leah Miller"}
+                        </div>
+                        <div className="text-gray-800 dark:text-gray-300">{`AP Chemistry Teacher and Science Olympiad Coach`}</div>
                       </div>
                     </figcaption>
                   </figure>
@@ -362,8 +386,12 @@ export default function Home() {
                               key={testimonial.author.handle}
                               className="rounded-2xl bg-black border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
                             >
-                              <blockquote className="text-gray-50">
-                                <p>{`${testimonial.body}`}</p>
+                              <blockquote className="font-bold text-center text-lg text-gray-50">
+                                <p>{`"${testimonial.header}"`}</p>
+                              </blockquote>
+                              <br></br>{" "}
+                              <blockquote className="text-center text-gray-50">
+                                <p>{testimonial.body}</p>
                               </blockquote>
                               <figcaption className="mt-6 flex items-center gap-x-4">
                                 <img
@@ -372,7 +400,7 @@ export default function Home() {
                                   alt=""
                                 />
                                 <div>
-                                  <div className="font-semibold">
+                                  <div className=" text-gray-800 dark:text-gray-300 font-semibold">
                                     {testimonial.author.name}
                                   </div>
                                   <div className="text-gray-300">{`${testimonial.author.handle}`}</div>

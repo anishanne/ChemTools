@@ -11,6 +11,9 @@ import Info from "../components/info";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Source from "../components/source";
+import { Switch } from "@headlessui/react";
+
+import { countSigFigs } from "../utils/calculator";
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
@@ -21,6 +24,7 @@ import {
   CubeTransparentIcon,
   NewspaperIcon,
 } from "@heroicons/react/24/outline";
+
 const navigation = {
   main: [
     { name: "About", href: "/about" },
@@ -31,9 +35,28 @@ const navigation = {
     { name: "Home", href: "/" },
   ],
 };
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sigFigsInput, setSigFigsInput] = useState("");
+  const [sigFigsResult, setSigFigsResult] = useState("");
+  const [enabled, setEnabled] = useState(false);
+
+  const handleSigFigsInputChange = (e) => {
+    const { value } = e.target;
+
+    setSigFigsInput(value);
+  };
+
+  const handleSigFigsCalculate = () => {
+    const result = countSigFigs(sigFigsInput);
+    setSigFigsResult(
+      `The number ${sigFigsInput} has ${result} significant figures.`
+    );
+  };
 
   return (
     <>
@@ -110,14 +133,58 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="relative z-0 py-16 sm:py-24 lg:py-20">
-                  <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-                    <h2 className="text-5xl font-bold text-blue-500"></h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl"></p>
-                    <p className="mx-auto mt-5 max-w-prose text-xl text-white-300"></p>
-                    <h2 className="text-5xl mt-8 font-semibold">Coming Soon</h2>
-                    <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
-                    <p className="mx-auto mt-5 max-w-prose text-xl text-gray-300"></p>
+                <div className="relative z-0 mx-8 md:mr-16 ">
+                  <div className="sm:rounded-lg border border-gray-500 flex">
+                    <div className="flex-grow px-4 py-5 sm:p-6">
+                      <h3 className="text-base font-semibold leading-6 text-gray-50">
+                        {enabled ? "Sig Fig Converter" : "Sig Fig Counter"}
+                      </h3>
+                      <div className="mt-2 max-w-xl text-sm text-gray-300">
+                        <p>
+                          {enabled
+                            ? "Change the amount of Significant Figures in any number"
+                            : "Count the amount of Significant Figures in any number"}
+                        </p>
+                      </div>
+                      <form className="mt-5 sm:flex sm:items-center">
+                        <div className="w-full sm:max-w-xs">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 sm:text-sm sm:leading-6"
+                            placeholder="12345"
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          className="mt-3 inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:ml-3 sm:mt-0 sm:w-auto"
+                        >
+                          Calculate
+                        </button>
+                      </form>
+                    </div>
+                    <div className="sm:p-6 p-5  flex items-center flex-col">
+                      <p className="text-gray-50 pb-8">
+                        {enabled ? "Sig Fig Counter" : "Sig Fig Converter"}
+                      </p>
+                      <Switch
+                        checked={enabled}
+                        onChange={setEnabled}
+                        className={classNames(
+                          enabled ? "bg-indigo-600" : "bg-gray-200",
+                          "relative inline-flex h-6 w-11 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                        )}
+                      >
+                        <span
+                          aria-hidden="true"
+                          className={classNames(
+                            enabled ? "translate-x-5" : "translate-x-0",
+                            "pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                          )}
+                        />
+                      </Switch>
+                    </div>
                   </div>
                 </div>
               </div>

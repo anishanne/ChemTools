@@ -10,9 +10,9 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Source from "../components/source";
-import { Fragment } from 'react'
-import { Transition } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/24/outline'
+import { Fragment } from "react";
+import { Transition } from "@headlessui/react";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
@@ -138,31 +138,30 @@ const features = [
 ];
 
 export default function Home() {
-useEffect(() => {
-  const targetHostname = "www.chemistrytools.org"; // Target hostname
-  const currentHostname = window.location.hostname;
+  // useEffect(() => {
+  //   const targetHostname = "www.chemistrytools.org"; // Target hostname
+  //   const currentHostname = window.location.hostname;
 
-  if (currentHostname !== targetHostname) {
-    const redirectTimer = setTimeout(() => {
-      window.location.href = `https://${targetHostname}`;
-    }, 1000); // 1 second in milliseconds
+  //   if (currentHostname !== targetHostname) {
+  //     const redirectTimer = setTimeout(() => {
+  //       window.location.href = `https://${targetHostname}`;
+  //     }, 1000); // 1 second in milliseconds
 
-    // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
-  }
-}, []);
-    const [show, setShow] = useState(true)
-
+  //     // Clear the timer when the component unmounts (optional)
+  //     return () => clearTimeout(redirectTimer);
+  //   }
+  // }, []);
+  const [show, setShow] = useState(true);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
+      {/*
       <div
         aria-live="assertive"
         className="z-10 pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6"
       >
         <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
-          {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
           <Transition
             show={show}
             as={Fragment}
@@ -177,18 +176,33 @@ useEffect(() => {
               <div className="p-4 bg-opacity-20">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                    <CheckCircleIcon
+                      className="h-6 w-6 text-green-400"
+                      aria-hidden="true"
+                    />
                   </div>
-                  <div onClick={()=> window.location.href="https://www.chemistrytools.org/"} className="cursor-pointer ml-3 w-0 flex-1 pt-0.5">
-                    <p className="text-sm font-medium dark:text-white text-gray-700">Welcome to our new home!</p>
-                    <p className="mt-1 text-sm dark:text-gray-200 text-gray-500">Update your bookmarks! <span className="text-blue-400">www.chemistrytools.org</span></p>
+                  <div
+                    onClick={() =>
+                      (window.location.href = "https://www.chemistrytools.org/")
+                    }
+                    className="cursor-pointer ml-3 w-0 flex-1 pt-0.5"
+                  >
+                    <p className="text-sm font-medium dark:text-white text-gray-700">
+                      Welcome to our new home!
+                    </p>
+                    <p className="mt-1 text-sm dark:text-gray-200 text-gray-500">
+                      Update your bookmarks!{" "}
+                      <span className="text-blue-400">
+                        www.chemistrytools.org
+                      </span>
+                    </p>
                   </div>
                   <div className="ml-4 flex flex-shrink-0">
                     <button
                       type="button"
                       className="inline-flex rounded-md dark:bg-gray-700 bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       onClick={() => {
-                        setShow(false)
+                        setShow(false);
                       }}
                     >
                       <span className="sr-only">Close</span>
@@ -201,6 +215,7 @@ useEffect(() => {
           </Transition>
         </div>
       </div>
+    */}
       <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
         <div className="relative pb-8">
           {" "}
@@ -275,7 +290,13 @@ useEffect(() => {
                 <div className="relative z-0  py-8 ">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <div className=" mx-auto w-full ">
-                      <div onClick={()=> window.location.href="https://www.chemistrytools.org/"} className=" cursor-pointer relative mb-10 mx-auto sm:flex sm:justify-center">
+                      {/* <div
+                        onClick={() =>
+                          (window.location.href =
+                            "https://www.chemistrytools.org/")
+                        }
+                        className=" cursor-pointer relative mb-10 mx-auto sm:flex sm:justify-center"
+                      >
                         <div className=" rounded-full cursor-pointer px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-400 hover:ring-gray-200">
                           Welcome to our new home
                           <span className="text-blue-600" aria-hidden="true">
@@ -283,7 +304,7 @@ useEffect(() => {
                             &rarr; chemistrytools.org
                           </span>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="text-center mx-auto">
                         <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                           ChemTools

@@ -57,19 +57,19 @@ const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
- useEffect(() => {
-  const targetHostname = "www.chemistrytools.org"; // Target hostname
-  const currentHostname = window.location.hostname;
+  //  useEffect(() => {
+  //   const targetHostname = "www.chemistrytools.org"; // Target hostname
+  //   const currentHostname = window.location.hostname;
 
-  if (currentHostname !== targetHostname) {
-    const redirectTimer = setTimeout(() => {
-      window.location.href = `https://${targetHostname}`;
-    }, 1000); // 1 second in milliseconds
+  //   if (currentHostname !== targetHostname) {
+  //     const redirectTimer = setTimeout(() => {
+  //       window.location.href = `https://${targetHostname}`;
+  //     }, 1000); // 1 second in milliseconds
 
-    // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
-  }
-}, []);
+  //     // Clear the timer when the component unmounts (optional)
+  //     return () => clearTimeout(redirectTimer);
+  //   }
+  // }, []);
   const [grams, setGrams] = useState(0);
   const [elementString, setElements] = useState([]);
   const [h2string, setH2] = useState("");

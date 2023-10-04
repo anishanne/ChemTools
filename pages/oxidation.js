@@ -1,6 +1,6 @@
 // pages/index.js
 import React, { useState } from "react";
-import {useEffect} from "react"
+import { useEffect } from "react";
 
 import {
   calculateMolarity,
@@ -13,19 +13,19 @@ import {
 } from "../utils/calculator";
 
 export default function Calculations() {
-  useEffect(() => {
-  const targetHostname = "www.chemistrytools.org"; // Target hostname
-  const currentHostname = window.location.hostname;
+  //   useEffect(() => {
+  //   const targetHostname = "www.chemistrytools.org"; // Target hostname
+  //   const currentHostname = window.location.hostname;
 
-  if (currentHostname !== targetHostname) {
-    const redirectTimer = setTimeout(() => {
-      window.location.href = `https://${targetHostname}`;
-    }, 1000); // 1 second in milliseconds
+  //   if (currentHostname !== targetHostname) {
+  //     const redirectTimer = setTimeout(() => {
+  //       window.location.href = `https://${targetHostname}`;
+  //     }, 1000); // 1 second in milliseconds
 
-    // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
-  }
-}, []);
+  //     // Clear the timer when the component unmounts (optional)
+  //     return () => clearTimeout(redirectTimer);
+  //   }
+  // }, []);
   const [products, setProducts] = useState([{ coeff: "", concentration: "" }]);
   const [reactants, setReactants] = useState([
     { coeff: "", concentration: "" },

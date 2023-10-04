@@ -3,13 +3,15 @@ import {useEffect} from "react"
 
 export default function Example() {
   useEffect(() => {
-    // Redirect to an external website after a delay (e.g., 3 seconds)
-    const redirectTimer = setTimeout(() => {
+    if ("https://www.chemistrytools.org" in window.location.href  ) return
+    else{ const redirectTimer = setTimeout(() => {
       window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
     }, 1000); // 3 seconds in milliseconds
 
     // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
+    return () => clearTimeout(redirectTimer);}
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+   
   }, []);
   return (
     <>

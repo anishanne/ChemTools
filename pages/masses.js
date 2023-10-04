@@ -57,14 +57,16 @@ const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
-  useEffect(() => {
-    // Redirect to an external website after a delay (e.g., 3 seconds)
-    const redirectTimer = setTimeout(() => {
+   useEffect(() => {
+    if ("https://www.chemistrytools.org" in window.location.href  ) return
+    else{ const redirectTimer = setTimeout(() => {
       window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
     }, 1000); // 3 seconds in milliseconds
 
     // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
+    return () => clearTimeout(redirectTimer);}
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+   
   }, []);
   const [grams, setGrams] = useState(0);
   const [elementString, setElements] = useState([]);

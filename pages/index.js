@@ -139,13 +139,15 @@ const features = [
 
 export default function Home() {
   useEffect(() => {
-    // Redirect to an external website after a delay (e.g., 3 seconds)
-    const redirectTimer = setTimeout(() => {
+    if ("https://www.chemistrytools.org" in window.location.href  ) return
+    else{ const redirectTimer = setTimeout(() => {
       window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
     }, 1000); // 3 seconds in milliseconds
 
     // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
+    return () => clearTimeout(redirectTimer);}
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+   
   }, []);
     const [show, setShow] = useState(true)
 
@@ -169,8 +171,8 @@ export default function Home() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg dark:bg-gray-700 bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="p-4">
+            <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg dark:bg-gray-700 bg-opacity-50 bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="p-4 bg-opacity-20">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />

@@ -54,15 +54,17 @@ export function countSigFigs(number) {
     if (char === ".") {
       decimal = true;
       continue;
-    } else if (char === "0" && leadingZeros) {
-      // Ignore leading zeros
-      continue;
-    } else if (char === "0" && !leadingZeros) {
+      
+    } 
+    if (char === "0" && !leadingZeros) {
       // Count trailing zeros
       if (decimal) {
         count++;
       }
-    } else {
+    }  else if (char === "0" && leadingZeros) {
+      // Ignore leading zeros
+      continue;
+    }  else {
       // Count non-zero digits
       count++;
       leadingZeros = false;

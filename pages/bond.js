@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import data from "../data.json";
 import { useState } from "react";
+import {useEffect} from "react"
+
 import React from "react";
 import PolarCovalent from "../components/bondTypes";
 import Footer from "../components/footer";
@@ -47,6 +49,15 @@ const style2 =
   " border-2 border-gray-200 cursor-pointer border-gray-300 dark:border-gray-800 text-white rounded-lg text-center font-bold align-middle  text-base w-12 hover:brightness-150 hover:text-black";
 
 export default function Home() {
+  useEffect(() => {
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+    const redirectTimer = setTimeout(() => {
+      window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
+    }, 1000); // 3 seconds in milliseconds
+
+    // Clear the timer when the component unmounts (optional)
+    return () => clearTimeout(redirectTimer);
+  }, []);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

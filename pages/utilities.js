@@ -40,8 +40,19 @@ function classNames(...classes) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+    const redirectTimer = setTimeout(() => {
+      window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
+    }, 1000); // 3 seconds in milliseconds
+
+    // Clear the timer when the component unmounts (optional)
+    return () => clearTimeout(redirectTimer);
+  }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sigFigsInput, setSigFigsInput] = useState("");
+  const [sigFigsNumbers, setSigFigsNumbers] = useState("")
+    const [sigFigsNumberResult, setSigFigsNumberResult] = useState("")
   const [sigFigsResult, setSigFigsResult] = useState("");
   const [enabled, setEnabled] = useState(false);
 
@@ -50,6 +61,10 @@ export default function Home() {
 
     setSigFigsInput(value);
   };
+   const handleSigFigsNumbersInputChange =  (e) => {
+    const { value } = e.target;
+    setSigFigsNumbers(value);
+  };
 
   const handleSigFigsCalculate = () => {
     const result = countSigFigs(sigFigsInput);
@@ -57,6 +72,16 @@ export default function Home() {
       `The number ${sigFigsInput} has ${result} significant figures.`
     );
   };
+
+  function roundToSignificantFigures(number, significantFigures) {
+  if (significantFigures > 20){
+    setSigFigsNumberResult("That's too many sig figs, try something lower")
+  }else{
+  setSigFigsNumberResult(`${((+number).toPrecision(significantFigures))}`)
+
+  }
+}
+
 
   return (
     <>
@@ -134,35 +159,50 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative z-0 mx-8 md:mr-16 ">
-                  <div className="sm:rounded-lg border border-gray-500 flex">
+                  <div className="md:rounded-lg border border-gray-500 flex">
                     <div className="flex-grow px-4 py-5 sm:p-6">
-                      <h3 className="text-base font-semibold leading-6 text-gray-50">
-                        {enabled ? "Sig Fig Converter" : "Sig Fig Counter"}
-                      </h3>
-                      <div className="mt-2 max-w-xl text-sm text-gray-300">
+                     
+                      <div className="mt-2 max-w-xl font-bold text-lg text-gray-50">
                         <p>
                           {enabled
                             ? "Change the amount of Significant Figures in any number"
                             : "Count the amount of Significant Figures in any number"}
                         </p>
                       </div>
-                      <form className="mt-5 sm:flex sm:items-center">
-                        <div className="w-full sm:max-w-xs">
+                      <div className="mt-5 lg:flex lg:items-center">
+                        <div className="text-black w-full sm:max-w-xs">
                           <input
-                            type="email"
+                            type="number"
                             name="email"
                             id="email"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 sm:text-sm sm:leading-6"
+                            value={sigFigsInput}
+                            onChange={handleSigFigsInputChange}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
                             placeholder="12345"
                           />
                         </div>
+                        {enabled ? 
+                         <div className="text-black w-full mt-4 lg:mt-0 lg:ml-4 sm:max-w-xs  lg:mx-auto">
+                          <input
+                            type="number"
+                            name="email"
+                            id="email"
+                            value={sigFigsNumbers}
+                            onChange={handleSigFigsNumbersInputChange}
+                            className="block w-full mx-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
+                            placeholder="# of Sig Figs"
+                          />
+                        </div> : null
+                        }
                         <button
-                          type="submit"
-                          className="mt-3 inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:ml-3 sm:mt-0 sm:w-auto"
+                         onClick={enabled ? ()=> roundToSignificantFigures(sigFigsInput, sigFigsNumbers) : handleSigFigsCalculate}
+                          className="mt-3 inline-flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 lg:ml-3 lg:mt-0 w-1/3 sm:w-1/4 lg:w-24"
                         >
                           Calculate
                         </button>
-                      </form>
+                        <div className="mx-auto lg:mt-0 mt-4  lg:ml-4 ">{!enabled ? sigFigsResult : sigFigsNumberResult}</div>
+                      </div>
+                      
                     </div>
                     <div className="sm:p-6 p-5  flex items-center flex-col">
                       <p className="text-gray-50 pb-8">

@@ -10,6 +10,9 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Source from "../components/source";
+import { Fragment } from 'react'
+import { Transition } from '@headlessui/react'
+import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import {
   CloudArrowUpIcon,
   Bars3BottomLeftIcon,
@@ -135,24 +138,70 @@ const features = [
 ];
 
 export default function Home() {
-  // useEffect(() => {
-  //   // Redirect to an external website after a delay (e.g., 3 seconds)
-  //   const redirectTimer = setTimeout(() => {
-  //     window.location.href = "https://classroomplanner.vercel.app"; // Replace with the external URL
-  //   }, 1000); // 3 seconds in milliseconds
+  useEffect(() => {
+    // Redirect to an external website after a delay (e.g., 3 seconds)
+    const redirectTimer = setTimeout(() => {
+      window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
+    }, 1000); // 3 seconds in milliseconds
 
-  //   // Clear the timer when the component unmounts (optional)
-  //   return () => clearTimeout(redirectTimer);
-  // }, []);
+    // Clear the timer when the component unmounts (optional)
+    return () => clearTimeout(redirectTimer);
+  }, []);
+    const [show, setShow] = useState(true)
+
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
+      <div
+        aria-live="assertive"
+        className="z-10 pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6"
+      >
+        <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
+          {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
+          <Transition
+            show={show}
+            as={Fragment}
+            enter="transform ease-out duration-300 transition"
+            enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+            enterTo="translate-y-0 opacity-100 sm:translate-x-0"
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg dark:bg-gray-700 bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="p-4">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                  </div>
+                  <div onClick={()=> window.location.href="https://www.chemistrytools.org/"} className="cursor-pointer ml-3 w-0 flex-1 pt-0.5">
+                    <p className="text-sm font-medium dark:text-white text-gray-700">Welcome to our new home!</p>
+                    <p className="mt-1 text-sm dark:text-gray-200 text-gray-500">Update your bookmarks! <span className="text-blue-400">www.chemistrytools.org</span></p>
+                  </div>
+                  <div className="ml-4 flex flex-shrink-0">
+                    <button
+                      type="button"
+                      className="inline-flex rounded-md dark:bg-gray-700 bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      onClick={() => {
+                        setShow(false)
+                      }}
+                    >
+                      <span className="sr-only">Close</span>
+                      <XMarkIcon className="h-5 w-5" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Transition>
+        </div>
+      </div>
       <div className="  lg:bg-none bg-gradient-to-t from-white via-20% via-indigo-50 to-white dark:bg-gradient-to-t dark:from-black dark:via-20% dark:via-[#120126] dark:to-black">
         <div className="relative pb-8">
           {" "}
           <Head>
-            <title>ChemTools: Home</title>
+            <title>ChemTools</title>
             <Source
               description={
                 "ChemTools, transforming chemistry education one student at a time."
@@ -222,15 +271,15 @@ export default function Home() {
                 <div className="relative z-0  py-8 ">
                   <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                     <div className=" mx-auto w-full ">
-                      {/* <div className=" relative mb-10 mx-auto sm:flex sm:justify-center">
+                      <div onClick={()=> window.location.href="https://www.chemistrytools.org/"} className=" cursor-pointer relative mb-10 mx-auto sm:flex sm:justify-center">
                         <div className=" rounded-full cursor-pointer px-3 py-1 text-sm leading-6 dark:text-gray-300 text-gray-600 ring-1 ring-gray-400 hover:ring-gray-200">
                           Welcome to our new home
                           <span className="text-blue-600" aria-hidden="true">
                             {" "}
-                            &rarr; chemtools.app
+                            &rarr; chemistrytools.org
                           </span>
                         </div>
-                      </div> */}
+                      </div>
                       <div className="text-center mx-auto">
                         <h1 className="text-5xl  font-bold tracking-tight dark:text-white text-gray-900 sm:text-7xl">
                           ChemTools
@@ -300,15 +349,15 @@ export default function Home() {
                     <h2 className="text-3xl font-bold leading-7 text-blue-600">
                       Teacher Testimonials
                     </h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <p className="mt-2 text-3xl font-bold tracking-tight  dark:text-white text-gray-900 sm:text-4xl">
                       See what our amazing teachers have to say
                     </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-300">
+                    <p className="mt-6 text-lg leading-8 dark:text-gray-300 text-gray-900">
                       ChemTools has been positively reviewed by some of John Jay
                       High School's best teachers.
                     </p>
-                    <p className="mt-6 text-xl font-bold leading-8 ">
-                      We don't just have reactions... we have solutions
+                    <p className="mt-6 text-xl font-bold leading-8">
+                      We don't just have reactions... we have solutions!
                     </p>
                   </div>
                 </div>
@@ -331,7 +380,7 @@ export default function Home() {
                         "Great Supplemental Tool"
                       </p>
                       <br></br>
-                      <p className="text-center te">
+                      <p className="text-center">
                         "Chem Tools is an{" "}
                         <span className="font-bold text-blue-500">
                           amazing one stop shop
@@ -384,13 +433,13 @@ export default function Home() {
                           {column.map((testimonial) => (
                             <figure
                               key={testimonial.author.handle}
-                              className="rounded-2xl bg-black border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
+                              className="rounded-2xl dark:bg-black bg-white border-white border p-6 shadow-lg ring-1 ring-gray-900/5"
                             >
                               <blockquote className="font-bold text-center text-lg text-gray-50">
-                                <p className="font-bold text-2xl">{`"${testimonial.header}"`}</p>
+                                <p className="font-bold text-2xl dark:text-white text-gray-900">{`"${testimonial.header}"`}</p>
                               </blockquote>
                               <br></br>{" "}
-                              <blockquote className="text-center text-lg text-gray-50">
+                              <blockquote className="text-center text-lg dark:text-white text-gray-900">
                                 {testimonial.body}
                               </blockquote>
                               <figcaption className="mt-6 flex items-center gap-x-4">
@@ -400,10 +449,10 @@ export default function Home() {
                                   alt=""
                                 />
                                 <div>
-                                  <div className=" text-gray-800 dark:text-gray-300 font-semibold">
+                                  <div className=" dark:text-white text-gray-900 font-semibold">
                                     {testimonial.author.name}
                                   </div>
-                                  <div className="text-gray-300">{`${testimonial.author.handle}`}</div>
+                                  <div className="dark:text-white text-gray-900">{`${testimonial.author.handle}`}</div>
                                 </div>
                               </figcaption>
                             </figure>

@@ -40,23 +40,23 @@ function classNames(...classes) {
 }
 
 export default function Home() {
-   useEffect(() => {
-  const targetHostname = "www.chemistrytools.org"; // Tparget hostname
-  const currentHostname = window.location.hostname;
+  useEffect(() => {
+    const targetHostname = "www.chemistrytools.org"; // Tparget hostname
+    const currentHostname = window.location.hostname;
 
-  if (currentHostname !== targetHostname) {
-    const redirectTimer = setTimeout(() => {
-      window.location.href = `https://${targetHostname}`;
-    }, 1000); // 1 second in milliseconds
+    if (currentHostname !== targetHostname) {
+      const redirectTimer = setTimeout(() => {
+        window.location.href = `https://${targetHostname}`;
+      }, 1000); // 1 second in milliseconds
 
-    // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
-  }
-}, []);
+      // Clear the timer when the component unmounts (optional)
+      return () => clearTimeout(redirectTimer);
+    }
+  }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sigFigsInput, setSigFigsInput] = useState("");
-  const [sigFigsNumbers, setSigFigsNumbers] = useState("")
-    const [sigFigsNumberResult, setSigFigsNumberResult] = useState("")
+  const [sigFigsNumbers, setSigFigsNumbers] = useState("");
+  const [sigFigsNumberResult, setSigFigsNumberResult] = useState("");
   const [sigFigsResult, setSigFigsResult] = useState("");
   const [enabled, setEnabled] = useState(false);
 
@@ -65,7 +65,7 @@ export default function Home() {
 
     setSigFigsInput(value);
   };
-   const handleSigFigsNumbersInputChange =  (e) => {
+  const handleSigFigsNumbersInputChange = (e) => {
     const { value } = e.target;
     setSigFigsNumbers(value);
   };
@@ -78,14 +78,12 @@ export default function Home() {
   };
 
   function roundToSignificantFigures(number, significantFigures) {
-  if (significantFigures > 20){
-    setSigFigsNumberResult("That's too many sig figs, try something lower")
-  }else{
-  setSigFigsNumberResult(`${((+number).toPrecision(significantFigures))}`)
-
+    if (significantFigures > 20) {
+      setSigFigsNumberResult("That's too many sig figs, try something lower");
+    } else {
+      setSigFigsNumberResult(`${(+number).toPrecision(significantFigures)}`);
+    }
   }
-}
-
 
   return (
     <>
@@ -165,7 +163,6 @@ export default function Home() {
                 <div className="relative z-0 mx-8 md:mr-16 ">
                   <div className="md:rounded-lg border border-gray-500 flex">
                     <div className="flex-grow px-4 py-5 sm:p-6">
-                     
                       <div className="mt-2 max-w-xl font-bold text-lg dark:text-gray-50 text-gray-90">
                         <p>
                           {enabled
@@ -181,32 +178,41 @@ export default function Home() {
                             id="email"
                             value={sigFigsInput}
                             onChange={handleSigFigsInputChange}
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
+                            className="block w-full rounded-md border-0 py-1.5 dark:bg-gray-700 bg-white dark:text-white text-gray-900 shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
                             placeholder="Enter the number"
                           />
                         </div>
-                        {enabled ? 
-                         <div className="text-black w-full mt-4 lg:mt-0 lg:ml-4 sm:max-w-xs  lg:mx-auto">
-                          <input
-                            type="number"
-                            name="email"
-                            id="email"
-                            value={sigFigsNumbers}
-                            onChange={handleSigFigsNumbersInputChange}
-                            className="block w-full mx-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
-                            placeholder="# of Sig Figs"
-                          />
-                        </div> : null
-                        }
+                        {enabled ? (
+                          <div className="text-black w-full mt-4 lg:mt-0 lg:ml-4 sm:max-w-xs  lg:mx-auto">
+                            <input
+                              type="number"
+                              name="email"
+                              id="email"
+                              value={sigFigsNumbers}
+                              onChange={handleSigFigsNumbersInputChange}
+                              className="block w-full mx-auto rounded-md border-0 py-1.5 dark:bg-gray-700 bg-white dark:text-white text-gray-900 shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
+                              placeholder="# of Sig Figs"
+                            />
+                          </div>
+                        ) : null}
                         <button
-                         onClick={enabled ? ()=> roundToSignificantFigures(sigFigsInput, sigFigsNumbers) : handleSigFigsCalculate}
+                          onClick={
+                            enabled
+                              ? () =>
+                                  roundToSignificantFigures(
+                                    sigFigsInput,
+                                    sigFigsNumbers
+                                  )
+                              : handleSigFigsCalculate
+                          }
                           className="mt-3 inline-flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 lg:ml-3 lg:mt-0 w-1/3 sm:w-1/4 lg:w-24"
                         >
                           Calculate
                         </button>
-                        <div className="mx-auto lg:mt-0 mt-4  lg:ml-4 ">{!enabled ? sigFigsResult : sigFigsNumberResult}</div>
+                        <div className="mx-auto lg:mt-0 mt-4  lg:ml-4 ">
+                          {!enabled ? sigFigsResult : sigFigsNumberResult}
+                        </div>
                       </div>
-                      
                     </div>
                     <div className="sm:p-6 p-5  flex items-center flex-col">
                       <p className="dark:text-gray-50 text-gray-900 pb-8">
@@ -216,7 +222,9 @@ export default function Home() {
                         checked={enabled}
                         onChange={setEnabled}
                         className={classNames(
-                          enabled ? "bg-indigo-600" : "bg-gray-400 dark:bg-gray-200",
+                          enabled
+                            ? "bg-indigo-600"
+                            : "bg-gray-400 dark:bg-gray-200",
                           "relative inline-flex h-6 w-11 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
                         )}
                       >

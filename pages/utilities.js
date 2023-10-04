@@ -40,19 +40,19 @@ function classNames(...classes) {
 }
 
 export default function Home() {
-   useEffect(() => {
-  const targetHostname = "www.chemistrytools.org"; // Target hostname
-  const currentHostname = window.location.hostname;
+//    useEffect(() => {
+//   const targetHostname = "www.chemistrytools.org"; // Tparget hostname
+//   const currentHostname = window.location.hostname;
 
-  if (currentHostname !== targetHostname) {
-    const redirectTimer = setTimeout(() => {
-      window.location.href = `https://${targetHostname}`;
-    }, 1000); // 1 second in milliseconds
+//   if (currentHostname !== targetHostname) {
+//     const redirectTimer = setTimeout(() => {
+//       window.location.href = `https://${targetHostname}`;
+//     }, 1000); // 1 second in milliseconds
 
-    // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);
-  }
-}, []);
+//     // Clear the timer when the component unmounts (optional)
+//     return () => clearTimeout(redirectTimer);
+//   }
+// }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sigFigsInput, setSigFigsInput] = useState("");
   const [sigFigsNumbers, setSigFigsNumbers] = useState("")
@@ -166,7 +166,7 @@ export default function Home() {
                   <div className="md:rounded-lg border border-gray-500 flex">
                     <div className="flex-grow px-4 py-5 sm:p-6">
                      
-                      <div className="mt-2 max-w-xl font-bold text-lg text-gray-50">
+                      <div className="mt-2 max-w-xl font-bold text-lg dark:text-gray-50 text-gray-90">
                         <p>
                           {enabled
                             ? "Change the amount of Significant Figures in any number"
@@ -182,7 +182,7 @@ export default function Home() {
                             value={sigFigsInput}
                             onChange={handleSigFigsInputChange}
                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 px-4 md:text-sm md:leading-6"
-                            placeholder="12345"
+                            placeholder="Enter the number"
                           />
                         </div>
                         {enabled ? 
@@ -209,14 +209,14 @@ export default function Home() {
                       
                     </div>
                     <div className="sm:p-6 p-5  flex items-center flex-col">
-                      <p className="text-gray-50 pb-8">
+                      <p className="dark:text-gray-50 text-gray-900 pb-8">
                         {enabled ? "Sig Fig Counter" : "Sig Fig Converter"}
                       </p>
                       <Switch
                         checked={enabled}
                         onChange={setEnabled}
                         className={classNames(
-                          enabled ? "bg-indigo-600" : "bg-gray-200",
+                          enabled ? "bg-indigo-600" : "bg-gray-400 dark:bg-gray-200",
                           "relative inline-flex h-6 w-11 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
                         )}
                       >

@@ -138,17 +138,19 @@ const features = [
 ];
 
 export default function Home() {
-  useEffect(() => {
-    if ("https://www.chemistrytools.org" in window.location.href  ) return
-    else{ const redirectTimer = setTimeout(() => {
-      window.location.href = "https://www.chemistrytools.org/"; // Replace with the external URL
-    }, 1000); // 3 seconds in milliseconds
+useEffect(() => {
+  const targetHostname = "www.chemistrytools.org"; // Target hostname
+  const currentHostname = window.location.hostname;
+
+  if (currentHostname !== targetHostname) {
+    const redirectTimer = setTimeout(() => {
+      window.location.href = `https://${targetHostname}`;
+    }, 1000); // 1 second in milliseconds
 
     // Clear the timer when the component unmounts (optional)
-    return () => clearTimeout(redirectTimer);}
-    // Redirect to an external website after a delay (e.g., 3 seconds)
-   
-  }, []);
+    return () => clearTimeout(redirectTimer);
+  }
+}, []);
     const [show, setShow] = useState(true)
 
 

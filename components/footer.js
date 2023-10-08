@@ -3,9 +3,14 @@ const navigation = {
     { name: "Home", href: "/" },
     {
       name: "Contact",
-      href: "mailto:mishrarnav@gmail.com,joey.marra2007@gmail.com?subject=Chem Tools Support",
+      href: "mailto:chemistrytoolsapp@gmail.com,mishrarnav@gmail.com,joey.marra2007@gmail.com?subject=Chem Tools Support",
     },
+
     { name: "About", href: "/about" },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/chem.tools/",
+    },
   ],
 };
 export default function Example() {
